@@ -1,11 +1,11 @@
 ---
-id: IND-000262
+id: IND-000192
 title: Marketing Agencies AI Opportunities
-document_type: Blueprint
+document_type: Industry Blueprint
 category: Marketing Agencies
 phase: Phase 13
 owner: Chief Industry Solutions Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,7 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - industry-blueprint
+  - marketing-agencies
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,182 +30,93 @@ standards:
 
 # Marketing Agencies AI Opportunities
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 13 Prompt](../../../01_PHASES/PHASE_13_INDUSTRY_BLUEPRINTS_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Marketing Agencies Pack](./README.md) · [Phase 13 Prompt](../../../01_PHASES/PHASE_13_INDUSTRY_BLUEPRINTS_MASTER_PROMPT.md)
+
+**Industry:** Marketing Agencies  •  **Document:** AI Opportunities
 
 ## Executive Summary
 
-This document defines **Marketing Agencies AI Opportunities** within the AIBOS Enterprise v2.0 framework (Phase 13). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+The highest-value AI opportunities for Marketing Agencies, prioritised for impact and feasibility.
 
-## Business Challenges
+## High-Value AI Use Cases
 
-This section (Business Challenges) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Use Case | Description | Value |
+| --- | --- | --- |
+| Content/creative generation | Produce copy and creative at scale. | High |
+| Campaign optimisation | Optimise targeting and spend. | High |
+| SEO/GEO optimisation | Optimise for search and AI engines. | High |
+| Reporting automation | Generate client reports and insights. | High |
+| Audience research | Synthesise audience and competitor insight. | High |
 
-## Business Goals
+## RAG Opportunities
 
-This section (Business Goals) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Ground answers in Marketing Agencies knowledge sources with citations.
+- Enable semantic search across documents and records.
+- Keep responses current via scheduled re-indexing.
 
-## AI Opportunities
+## MCP Opportunities
 
-This section (AI Opportunities) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Expose core systems as governed MCP tools for agents.
+- Enforce least-privilege scopes and human approval.
+- Audit every tool invocation.
 
-## Recommended AI Use Cases
+## Customer Experience Improvements
 
-This section (Recommended AI Use Cases) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Faster, 24/7, personalised service.
+- Consistent, accurate, grounded answers.
+- Proactive outreach based on predictions.
 
-## AI Agent Portfolio
+## Internal Productivity Gains
 
-This section (AI Agent Portfolio) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Automate repetitive, rules-based work.
+- Assist experts with drafting and synthesis.
+- Reduce cycle times across core processes.
 
-## Business Capability Map
+## Prioritisation (Value vs Effort)
 
-This section (Business Capability Map) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
-
-## Target Operating Model
-
-This section (Target Operating Model) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
-
-## Reference Architecture
-
-This section (Reference Architecture) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
-
-## Technology Stack
-
-- Cloud-native runtime and managed services.
-- API-first interfaces (OpenAPI) and event-driven messaging.
-- Vector database and RAG components where applicable.
-- OpenTelemetry-based observability.
-
-## Data Sources
-
-This section (Data Sources) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
-
-## Integration Patterns
-
-This section (Integration Patterns) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
-
-## Security Controls
-
-- Authentication and authorisation enforced.
-- Encryption in transit and at rest.
-- Audit logging and continuous monitoring.
-
-## Privacy Controls
-
-- Data minimisation.
-- Purpose limitation.
-- Retention and secure-deletion policies.
-
-## Compliance Mapping
-
-| Standard | Application |
-| --- | --- |
-| ISO 42001 | AI management system alignment. |
-| ISO 27001 | Information security controls. |
-| NIST AI RMF | AI risk management. |
-| OWASP LLM Top 10 | LLM threat mitigation. |
-
-## Governance Model
-
-This section (Governance Model) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Use Case | Value | Effort | Sequence |
+| --- | --- | --- | --- |
+| Content/creative generation | High | Medium | 1 |
+| Campaign optimisation | High | Medium | 2 |
+| SEO/GEO optimisation | High | Medium | 3 |
+| Reporting automation | High | Medium | 4 |
+| Audience research | High | Medium | 5 |
 
 ## Required Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Specialist Skills](../../PHASE_05_SKILLS/README.md).
 
 ## Required Rules
 
-- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Rules](../../PHASE_06_RULES/README.md).
 
 ## Required Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Required Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Required Templates
 
-- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Templates](../../PHASE_09_TEMPLATES/README.md).
 
 ## Knowledge Dependencies
 
-- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
-
-## KPIs
-
-- Coverage and completeness.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
-
-## ROI Metrics
-
-This section (ROI Metrics) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
-
-## Cost Considerations
-
-This section (Cost Considerations) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
-
-## Risks
-
-- Scope drift over time.
-- Inconsistent adoption across teams.
-- Over-automation without adequate oversight.
-
-## Adoption Roadmap
-
-| Horizon | Focus | Outcome |
-| --- | --- | --- |
-| 0-30 days | Discover and assess | Baseline established |
-| 31-60 days | Design and build | Pilot delivered |
-| 61-90 days | Validate and scale | Production rollout |
-
-## Change Management
-
-This section (Change Management) for **Marketing Agencies AI Opportunities** is defined in line with the AIBOS root standards and the governing Phase 13 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
-
-## Mermaid Architecture Diagrams
-
-```mermaid
-flowchart TD
-    A[Trigger] --> B[Process Inputs]
-    B --> C{High-risk action?}
-    C -->|Yes| D[Human Approval]
-    C -->|No| E[AI Agent Executes]
-    D --> E
-    E --> F[Validate Output]
-    F --> G[Record Audit Trail]
-```
+See the [Enterprise Knowledge base](../../PHASE_10_KNOWLEDGE/README.md).
 
 ## Validation Checklist
 
-- [ ] YAML front matter is present and valid.
-- [ ] All mandatory sections are complete.
-- [ ] Terminology matches the AIBOS Enterprise Glossary.
-- [ ] Cross-references resolve to existing documents.
-- [ ] RFC 2119 keywords are used correctly.
-- [ ] Security and privacy considerations are addressed.
-- [ ] Version history is updated.
-- [ ] No secrets or sensitive data are exposed.
+- [ ] YAML front matter present and valid.
+- [ ] Industry-specific content is accurate and actionable.
+- [ ] Cross-references resolve.
+- [ ] Security, privacy and compliance addressed.
+- [ ] No secrets or sensitive data exposed.
 
 ## References
 
 - [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
-- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
 - [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
 - [Phase 13 Master Prompt](../../../01_PHASES/PHASE_13_INDUSTRY_BLUEPRINTS_MASTER_PROMPT.md)
 
@@ -212,4 +124,4 @@ flowchart TD
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, focused industry blueprint. |
