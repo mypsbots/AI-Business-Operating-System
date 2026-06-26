@@ -49,59 +49,94 @@ Reduced duplication, faster safe delivery, improved compliance posture and scala
 
 ## Developer Value
 
-This section (Developer Value) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Faster delivery through reuse and automation.
+- Higher quality and consistency by default.
+- Lower risk via built-in security and governance.
 
 ## Functional Requirements
 
-This section (Functional Requirements) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The capability MUST deliver its defined user/business outcomes.
+- Inputs are validated; outputs are correct and consistent.
+- Errors and edge cases are handled gracefully.
+- Behaviour is covered by tests.
 
 ## Non-functional Requirements
 
-This section (Non-functional Requirements) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Performance: defined latency/throughput targets (p95/p99).
+- Reliability: availability SLOs and error budgets.
+- Security and privacy by design.
+- Scalability, maintainability and accessibility (WCAG 2.2 AA).
 
 ## Public Interfaces
 
-This section (Public Interfaces) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## Commands/APIs
 
-This section (Commands/APIs) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Contracts described by OpenAPI (or typed CLI help).
+- Versioned with a clear deprecation policy.
+- AuthN/AuthZ, validation and consistent errors.
+- Documented with examples for humans and agents.
 
 ## Configuration Model
 
-This section (Configuration Model) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Configuration via environment, separate from code (Twelve-Factor).
+- Validated at startup; safe, documented defaults.
+- No secrets in config — use a secrets manager.
 
 ## Authentication
 
-This section (Authentication) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Standard protocols (OIDC/OAuth 2.1).
+- MFA for privileged access; strong password hashing.
+- Short-lived, scoped tokens; session revocation.
 
 ## Authorisation
 
-This section (Authorisation) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Least privilege, deny by default, server-side checks.
+- RBAC/ABAC modelled explicitly.
+- Privileged actions audited; periodic access reviews.
 
 ## Extension Points
 
-This section (Extension Points) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Well-defined extension points and stable interfaces.
+- Versioned contracts and backward compatibility.
+- Sandboxing and least privilege for extensions.
 
 ## Plugin Architecture
 
-This section (Plugin Architecture) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Experience layer: apps, assistants and channels.
+- Orchestration layer: agents, tools (MCP) and workflows.
+- AI layer: LLMs, RAG, evaluation and guardrails.
+- Data layer: sources, pipelines, vector store and governance.
+- Platform layer: cloud, security and observability.
 
 ## Versioning Strategy
 
-This section (Versioning Strategy) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Semantic Versioning (MAJOR.MINOR.PATCH).
+- Backward compatibility within a major version.
+- Documented deprecation policy and changelog.
 
 ## Backward Compatibility
 
-This section (Backward Compatibility) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Backward compatibility within a major version.
+- Deprecations announced with a migration path.
+- Contract tests guard against breakage.
 
 ## Error Handling
 
-This section (Error Handling) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Detect, capture and classify the error with context.
+- Apply a safe fallback or stop safely.
+- Retry idempotently where safe; otherwise escalate.
+- Open an incident if customer impact is possible.
 
 ## Observability
 
-This section (Observability) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Emit metrics, logs and traces (OpenTelemetry).
+- Alert on SLOs and symptoms, not noise.
+- Dashboards for key services, with runbooks linked.
 
 ## Security Controls
 
@@ -117,15 +152,22 @@ This section (Observability) for **Architecture Validation** is defined in line 
 
 ## Performance Targets
 
-This section (Performance Targets) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Defined performance budgets/SLAs (p95/p99).
+- Load and stress testing before major releases.
+- Profiling and caching to remove bottlenecks.
 
 ## Testing Strategy
 
-This section (Testing Strategy) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Automated tests proportional to risk, gating merges.
+- Evaluation of AI quality and safety before release.
+- Continuous measurement and regression detection.
 
 ## CI/CD Integration
 
-This section (CI/CD Integration) for **Architecture Validation** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## Required Skills
 

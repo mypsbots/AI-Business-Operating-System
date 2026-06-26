@@ -41,7 +41,11 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Agent Persona
 
-This section (Agent Persona) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Agent | Role | Authority | Human Approval |
+| --- | --- | --- | --- |
+| Orchestrator | Plans and delegates | Coordinate | For high-risk plans |
+| Specialist agents | Execute scoped tasks | Least-privilege | For risky actions |
+| Reviewer agent | Validates outputs | Read/assess | N/A |
 
 ## Responsibilities
 
@@ -51,51 +55,81 @@ This section (Agent Persona) for **Operations Agents** is defined in line with t
 
 ## Authority Boundaries
 
-This section (Authority Boundaries) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Authority is explicit, least-privilege and scoped to the task.
+- Allowed: low-risk, reversible actions within scope.
+- Requires approval: high-risk, irreversible or external actions.
+- All actions are logged and auditable.
 
 ## Allowed Decisions
 
-This section (Allowed Decisions) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Low-risk, reversible actions within the granted scope.
+- Drafting, analysis and recommendations for human review.
+- Routine tasks explicitly delegated to the agent.
 
 ## Forbidden Decisions
 
-This section (Forbidden Decisions) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Taking irreversible or high-risk actions without human approval.
+- Accessing data or systems outside granted least-privilege scope.
+- Spending beyond defined cost/loop limits.
+- Bypassing guardrails, logging or audit.
 
 ## Human Approval Points
 
-This section (Human Approval Points) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Required before any irreversible or high-risk action.
+- Required before external or customer-facing communications.
+- Required before financial or regulated decisions.
+- Captured with identity, timestamp and rationale.
 
 ## Inputs
 
-This section (Inputs) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The request/context that initiated the work.
+- Relevant data, artefacts and configuration.
+- Applicable rules, standards and prior decisions.
 
 ## Outputs
 
-This section (Outputs) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The validated result of the work.
+- Evidence and an audit trail.
+- Follow-up actions and updated cross-references.
 
 ## Memory Strategy
 
-This section (Memory Strategy) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Short-term working context for the active task.
+- Governed long-term memory for reuse, with access control.
+- Provenance and freshness tracked for grounding.
 
 ## Context Strategy
 
-This section (Context Strategy) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Ground responses in approved, current sources (RAG).
+- Manage short-term working context and long-term memory.
+- Track provenance and freshness; enforce access control.
 
 ## Tool Permissions
 
-This section (Tool Permissions) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Authority is explicit, least-privilege and scoped to the task.
+- Allowed: low-risk, reversible actions within scope.
+- Requires approval: high-risk, irreversible or external actions.
+- All actions are logged and auditable.
 
 ## External Integrations
 
-This section (External Integrations) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## Communication Protocol
 
-This section (Communication Protocol) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- An orchestrator delegates tasks to specialist agents/teams.
+- Context and decisions are shared through governed memory.
+- Hand-offs carry full context and an audit trail.
+- Conflicts follow a defined resolution path.
 
 ## Handover Rules
 
-This section (Handover Rules) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Hand-offs carry complete context and current state.
+- Ownership and next actions are explicit.
+- An audit trail records the transition.
 
 ## Collaboration Matrix
 
@@ -107,23 +141,36 @@ This section (Handover Rules) for **Operations Agents** is defined in line with 
 
 ## Escalation Path
 
-This section (Escalation Path) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Owner -> domain lead -> Governance Division.
+- Severity-based timelines for response.
+- Clear hand-off with full context and audit trail.
 
 ## Failure Recovery
 
-This section (Failure Recovery) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Detect, capture and classify the error with context.
+- Apply a safe fallback or stop safely.
+- Retry idempotently where safe; otherwise escalate.
+- Open an incident if customer impact is possible.
 
 ## Error Handling
 
-This section (Error Handling) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Detect, capture and classify the error with context.
+- Apply a safe fallback or stop safely.
+- Retry idempotently where safe; otherwise escalate.
+- Open an incident if customer impact is possible.
 
 ## Observability
 
-This section (Observability) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Emit metrics, logs and traces (OpenTelemetry).
+- Alert on SLOs and symptoms, not noise.
+- Dashboards for key services, with runbooks linked.
 
 ## Cost Optimisation
 
-This section (Cost Optimisation) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Model/compute (token) costs — align to actual usage.
+- Platform, data and integration costs.
+- Run and oversight costs (human-in-the-loop, monitoring).
+- Track against budget and optimise continuously (FinOps).
 
 ## Security Controls
 
@@ -155,7 +202,9 @@ This section (Cost Optimisation) for **Operations Agents** is defined in line wi
 
 ## Quality Metrics
 
-This section (Quality Metrics) for **Operations Agents** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Automated tests proportional to risk, gating merges.
+- Evaluation of AI quality and safety before release.
+- Continuous measurement and regression detection.
 
 ## Validation Checklist
 

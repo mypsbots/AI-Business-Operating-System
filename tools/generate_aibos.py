@@ -531,10 +531,505 @@ status: draft
     if n in narrative:
         return narrative[n]
 
-    return (f"This section ({name}) for **{title}** is defined in line with the "
-            f"AIBOS root standards and the governing {phase} master prompt. See "
-            f"the [repository catalogue]({lr('ROOT_INDEX.md')}) and the "
-            f"[root standards]({lr('00_ROOT')}) for related material.")
+    # Keyword-aware, section-appropriate content so every section is useful and
+    # varied (rather than a single generic placeholder). Keyed on the section name.
+    def has(*words):
+        return any(w in n for w in words)
+
+    if has("challenge", "pain point", "problem"):
+        return bullets([
+            f"Complexity and fragmentation that make {title.lower()} hard to scale.",
+            "Manual, repetitive work that is slow and error-prone.",
+            "Governance, security and compliance obligations to uphold.",
+            "Change management and adoption across teams."])
+    if has("goal", "objective", "outcome") and not has("learning"):
+        return bullets([
+            f"Deliver {title.lower()} consistently and at scale.",
+            "Increase speed and quality while reducing cost.",
+            "Maintain security, privacy and compliance.",
+            "Enable safe AI augmentation with human oversight."])
+    if has("opportunit", "use case", "use-case"):
+        return bullets([
+            "Conversational assistants grounded in approved sources (RAG).",
+            "Workflow automation for repetitive, rules-based tasks.",
+            "Predictive analytics to anticipate issues and demand.",
+            "AI-assisted drafting, synthesis and decision support.",
+            "Always with human-in-the-loop for high-risk actions."])
+    if has("capability map", "capability model", "capabilities"):
+        return table(["Capability", "Description"],
+                     [["Discover", "Understand needs and data."],
+                      ["Build", "Implement with reusable components."],
+                      ["Operate", "Run safely with observability."],
+                      ["Govern", "Oversee risk, security and compliance."],
+                      ["Improve", "Measure and iterate continuously."]])
+    if has("operating model", "target operating"):
+        return bullets([
+            "AI agents augment teams under human oversight.",
+            "A shared platform provides data, RAG, agents and automation.",
+            "A centre of excellence sets standards; teams deliver value.",
+            "Continuous measurement against defined success metrics."])
+    if has("architecture", "solution design", "blueprint") and "decision" not in n:
+        return bullets([
+            "Experience layer: apps, assistants and channels.",
+            "Orchestration layer: agents, tools (MCP) and workflows.",
+            "AI layer: LLMs, RAG, evaluation and guardrails.",
+            "Data layer: sources, pipelines, vector store and governance.",
+            "Platform layer: cloud, security and observability."])
+    if has("data source", "data input"):
+        return bullets([
+            "Core line-of-business systems and databases.",
+            "Event streams and operational telemetry.",
+            "Documents and knowledge bases (for RAG).",
+            "Third-party and reference data, governed for access."])
+    if has("data model", "entities", "schema") and "json" not in n and "yaml" not in n:
+        return bullets([
+            "Core entities are modelled with clear keys and ownership.",
+            "Events capture state changes for analytics and agents.",
+            "Sensitive data carries classification and retention rules."])
+    if has("integration", "interface", "interop"):
+        return bullets([
+            "Event-driven integration with idempotent consumers.",
+            "Governed APIs (OpenAPI) and MCP tools for system access.",
+            "Retry, back-off and dead-letter handling for resilience.",
+            "Monitoring and alerting on every integration."])
+    if has("governance", "oversight", "control model"):
+        return bullets([
+            "Risk-tiered oversight aligned to ISO 42001 and NIST AI RMF.",
+            "Human-in-the-loop for high-impact decisions.",
+            "Audit trails, evaluation gates and model documentation.",
+            "Clear ownership, approval and escalation paths."])
+    if has("agent", "portfolio") and phase not in ("Phase 05",):
+        return table(["Agent", "Role", "Authority", "Human Approval"],
+                     [["Orchestrator", "Plans and delegates", "Coordinate",
+                       "For high-risk plans"],
+                      ["Specialist agents", "Execute scoped tasks",
+                       "Least-privilege", "For risky actions"],
+                      ["Reviewer agent", "Validates outputs", "Read/assess", "N/A"]])
+    if has("automation", "workflow"):
+        return bullets([
+            "Identify repeatable, rules-based steps to automate.",
+            "Combine deterministic steps with AI-agent steps for reliability.",
+            "Add human approval checkpoints for high-risk actions.",
+            "Instrument cost, success rate and audit trails."])
+    if has("cost", "pricing", "licensing", "budget"):
+        return bullets([
+            "Model/compute (token) costs — align to actual usage.",
+            "Platform, data and integration costs.",
+            "Run and oversight costs (human-in-the-loop, monitoring).",
+            "Track against budget and optimise continuously (FinOps)."])
+    if has("roi", "return on investment", "value realisation", "business value"):
+        return bullets([
+            "Cost savings from automation and efficiency.",
+            "Revenue uplift from better experience and decisions.",
+            "Payback period and net benefit per initiative.",
+            "Baseline before deployment and measure the delta."])
+    if has("change management", "adoption", "enablement", "training"):
+        return bullets([
+            "Engage stakeholders and communicate early and often.",
+            "Train teams and redesign processes around AI plus humans.",
+            "Pilot, measure and scale what works.",
+            "Manage expectations with transparent metrics."])
+    if has("monitoring", "observability", "telemetry"):
+        return bullets([
+            "Emit metrics, logs and traces (OpenTelemetry).",
+            "Alert on SLOs and symptoms, not noise.",
+            "Dashboards for key services, with runbooks linked."])
+    if has("testing", "quality", "evaluation") and "model" not in n:
+        return bullets([
+            "Automated tests proportional to risk, gating merges.",
+            "Evaluation of AI quality and safety before release.",
+            "Continuous measurement and regression detection."])
+    if has("support", "maintenance", "operations runbook", "run book"):
+        return bullets([
+            "Defined SLAs, on-call and escalation.",
+            "Runbooks for common operational tasks.",
+            "Knowledge base and AI-assisted support with oversight."])
+    if has("ecosystem", "marketplace", "partner"):
+        return bullets([
+            "Reusable, versioned, well-documented assets.",
+            "Clear contribution, review and certification process.",
+            "Security and licence due diligence for third-party assets."])
+    if has("certification", "exam", "curriculum", "competency"):
+        return bullets([
+            "Defined competencies mapped to the relevant skills.",
+            "Assessment via knowledge checks and practical tasks.",
+            "Recertification on a defined cadence."])
+    if has("stakeholder", "audience", "persona"):
+        return bullets([
+            "Executives and sponsors (value and risk).",
+            "Delivery teams (build and operate).",
+            "Governance, security and compliance functions.",
+            "End users and AI agents that consume this artefact."])
+    if has("principle", "tenet", "philosophy"):
+        return bullets(["AI First", "Security by Design", "Privacy by Design",
+                        "Zero Trust", "Documentation as Code", "Human-in-the-Loop"])
+    if has("forbidden", "prohibited", "not allowed", "out-of-bounds"):
+        return bullets([
+            "Taking irreversible or high-risk actions without human approval.",
+            "Accessing data or systems outside granted least-privilege scope.",
+            "Spending beyond defined cost/loop limits.",
+            "Bypassing guardrails, logging or audit."])
+    if has("allowed decision", "permitted", "in-scope decision", "can decide"):
+        return bullets([
+            "Low-risk, reversible actions within the granted scope.",
+            "Drafting, analysis and recommendations for human review.",
+            "Routine tasks explicitly delegated to the agent."])
+    if has("authority", "boundaries", "permission", "delegation"):
+        return bullets([
+            "Authority is explicit, least-privilege and scoped to the task.",
+            "Allowed: low-risk, reversible actions within scope.",
+            "Requires approval: high-risk, irreversible or external actions.",
+            "All actions are logged and auditable."])
+    if has("approval", "sign-off", "sign off"):
+        return bullets([
+            "Required before any irreversible or high-risk action.",
+            "Required before external or customer-facing communications.",
+            "Required before financial or regulated decisions.",
+            "Captured with identity, timestamp and rationale."])
+    if has("escalation"):
+        return bullets([
+            "Owner -> domain lead -> Governance Division.",
+            "Severity-based timelines for response.",
+            "Clear hand-off with full context and audit trail."])
+    if has("collaboration", "handoff", "hand-off", "communication", "coordination",
+           "protocol", "interaction model"):
+        return bullets([
+            "An orchestrator delegates tasks to specialist agents/teams.",
+            "Context and decisions are shared through governed memory.",
+            "Hand-offs carry full context and an audit trail.",
+            "Conflicts follow a defined resolution path."])
+    if has("memory", "context management", "state management", "knowledge sharing"):
+        return bullets([
+            "Short-term working context for the active task.",
+            "Governed long-term memory for reuse, with access control.",
+            "Provenance and freshness tracked for grounding."])
+    if has("orchestration", "routing", "workflow overview"):
+        return bullets([
+            "A planner decomposes goals into steps.",
+            "Deterministic and agent steps are combined for reliability.",
+            "Human checkpoints gate high-risk steps.",
+            "Results are aggregated, validated and recorded."])
+    if has("failure", "recovery", "fallback", "exception", "error handling",
+           "resilience"):
+        return bullets([
+            "Detect, capture and classify the error with context.",
+            "Apply a safe fallback or stop safely.",
+            "Retry idempotently where safe; otherwise escalate.",
+            "Open an incident if customer impact is possible."])
+    if has("guardrail", "safety control", "safeguard"):
+        return bullets([
+            "Input and output filtering (PII, toxicity, injection).",
+            "Schema/format validation of outputs.",
+            "Action gating with human-in-the-loop for high risk.",
+            "Monitoring, evaluation and incident response."])
+    if has("trigger", "event"):
+        return bullets([
+            "A request or task is submitted.",
+            "A scheduled cycle or threshold is reached.",
+            "An upstream event or signal is received."])
+    if has("input"):
+        return bullets([
+            "The request/context that initiated the work.",
+            "Relevant data, artefacts and configuration.",
+            "Applicable rules, standards and prior decisions."])
+    if has("output", "deliverable"):
+        return bullets([
+            "The validated result of the work.",
+            "Evidence and an audit trail.",
+            "Follow-up actions and updated cross-references."])
+    if has("role", "persona", "responsib"):
+        return bullets([
+            "Owner — accountable for this artefact/workflow.",
+            "Contributors — execute within their authority (human or AI).",
+            "Reviewers/Approvers — validate and sign off.",
+            "Governance — oversee risk, security and compliance."])
+    if has("prerequisite", "precondition", "entry criteria"):
+        return bullets([
+            "Required inputs, access and approvals are available.",
+            "Relevant rules, standards and checklists are known.",
+            "The work item is well-formed enough to proceed."])
+    if has("tool", "technology", "platform", "tooling"):
+        return bullets([
+            "Cloud-native services and managed platforms.",
+            "Git, CI/CD and Infrastructure as Code.",
+            "AI tooling: model providers, RAG and MCP servers.",
+            "Observability and security-scanning tooling."])
+    if has("metric", "kpi", "measure", "success"):
+        return bullets([
+            "Adoption and coverage.",
+            "Quality and validation pass rate.",
+            "Cycle time and efficiency.",
+            "Business outcome versus target."])
+    if has("non-functional", "nonfunctional"):
+        return bullets([
+            "Performance: defined latency/throughput targets (p95/p99).",
+            "Reliability: availability SLOs and error budgets.",
+            "Security and privacy by design.",
+            "Scalability, maintainability and accessibility (WCAG 2.2 AA)."])
+    if has("functional requirement"):
+        return bullets([
+            "The capability MUST deliver its defined user/business outcomes.",
+            "Inputs are validated; outputs are correct and consistent.",
+            "Errors and edge cases are handled gracefully.",
+            "Behaviour is covered by tests."])
+    if has("organis", "organiz", "team structure", "org chart", "required teams"):
+        return bullets([
+            "Cross-functional teams aligned to value streams.",
+            "Clear ownership, RACI and decision rights.",
+            "A centre of excellence sets standards; teams deliver.",
+            "Human roles augmented by AI agents under oversight."])
+    if has("mission"):
+        return (f"To operate {title} to a consistent, enterprise-grade standard that "
+                "delivers measurable value while balancing autonomy with human "
+                "oversight.")
+    if has("okr"):
+        return bullets(["Objective: raise enterprise consistency and value.",
+                        "Key result: 95%+ validation pass rate.",
+                        "Key result: measurable reuse and cycle-time reduction."])
+    if has("context strategy", "context"):
+        return bullets([
+            "Ground responses in approved, current sources (RAG).",
+            "Manage short-term working context and long-term memory.",
+            "Track provenance and freshness; enforce access control."])
+    if has("scenario", "business case", "example use"):
+        return bullets([
+            f"A representative {title.lower()} situation and its goals.",
+            "The actors, triggers and expected outcome.",
+            "How AIBOS standards and agents apply, with human oversight."])
+    if has("repository structure", "folder layout", "repo structure", "project layout"):
+        return fenced("text", "project/\n  src/        # application code\n"
+                              "  infra/      # infrastructure as code\n"
+                              "  docs/       # documentation\n"
+                              "  tests/      # automated tests\n"
+                              "  .github/    # CI/CD workflows")
+    if has("deployment", "release model"):
+        return bullets([
+            "Automated, versioned, traceable deployments via CI/CD.",
+            "Progressive delivery (canary/blue-green) for risky changes.",
+            "Post-deploy health checks with automatic rollback."])
+    if has("infrastructure"):
+        return bullets([
+            "Cloud-native, defined as code (Terraform/Pulumi).",
+            "Containerised workloads with orchestration.",
+            "Managed data, networking and security services.",
+            "Observability and cost controls built in."])
+    if has("ai component", "ml component", "model component"):
+        return bullets([
+            "LLM/model providers via a gateway.",
+            "RAG pipeline: ingestion, retrieval and grounding.",
+            "Evaluation and guardrails.",
+            "Agent framework with tracing and tool (MCP) access."])
+    if has("data flow", "dataflow"):
+        return bullets([
+            "Sources -> ingestion/validation -> storage.",
+            "Retrieval/embedding for AI grounding.",
+            "Processing and serving to apps and agents.",
+            "Telemetry and audit captured throughout."])
+    if has("api contract", "api spec", "endpoints", "commands/api", "commands", "cli"):
+        return bullets([
+            "Contracts described by OpenAPI (or typed CLI help).",
+            "Versioned with a clear deprecation policy.",
+            "AuthN/AuthZ, validation and consistent errors.",
+            "Documented with examples for humans and agents."])
+    if has("config"):
+        return bullets([
+            "Configuration via environment, separate from code (Twelve-Factor).",
+            "Validated at startup; safe, documented defaults.",
+            "No secrets in config — use a secrets manager."])
+    if has("secret"):
+        return bullets([
+            "Stored in a managed secrets manager, never in code/config.",
+            "Injected at runtime; rotated on schedule and on compromise.",
+            "Least-privilege access, audited; CI secret-scanning enabled."])
+    if has("logging", "log strategy"):
+        return bullets([
+            "Structured, centralised logs with correlation IDs.",
+            "No secrets or unmasked PII in logs.",
+            "Retention aligned to policy; security events captured."])
+    if has("alert"):
+        return bullets([
+            "Alert on SLOs and symptoms, not noise.",
+            "Every alert is actionable with a linked runbook.",
+            "Severity-based routing to on-call."])
+    if has("rollback"):
+        return bullets([
+            "A tested rollback path restores a known-good version.",
+            "Database changes are backward compatible.",
+            "Rollback is fast and may be automated on failed health checks."])
+    if has("scalab", "capacity"):
+        return bullets([
+            "Stateless, horizontally scalable services.",
+            "Caching, queues and autoscaling for load.",
+            "Performance budgets and load testing."])
+    if has("implementation phase", "phases", "milestone", "sprint plan"):
+        return table(["Phase", "Focus", "Outcome"],
+                     [["Phase 1", "Foundations and a pilot", "Validated value"],
+                      ["Phase 2", "Harden and integrate", "Production rollout"],
+                      ["Phase 3", "Scale across the portfolio", "Broad adoption"]])
+    if has("migration"):
+        return bullets([
+            "Assess current state and define target state.",
+            "Migrate incrementally with backward compatibility.",
+            "Validate at each step; keep a rollback path."])
+    if has("risk"):
+        return bullets(["Scope drift and unclear ownership.",
+                        "Weak data foundations or access.",
+                        "Insufficient oversight on high-risk actions.",
+                        "Change resistance and adoption gaps."])
+    if has("business model", "commercial model", "revenue", "monetis", "monetiz"):
+        return bullets([
+            "Clear value proposition and target customers.",
+            "Pricing aligned to a value metric.",
+            "Cost structure and margin understood.",
+            "Growth and retention levers identified."])
+    if has("dashboard", "reporting"):
+        return bullets([
+            "Executive view of outcomes and KPIs.",
+            "Operational view of health and throughput.",
+            "Governance view of risk, security and compliance."])
+    if has("version"):
+        return bullets([
+            "Semantic Versioning (MAJOR.MINOR.PATCH).",
+            "Backward compatibility within a major version.",
+            "Documented deprecation policy and changelog."])
+    if has("dependency", "dependencies"):
+        return bullets([
+            "Pin and scan dependencies (SCA) for vulnerabilities.",
+            "Keep dependencies patched and minimal.",
+            "Track licences and provenance (SBOM)."])
+    if has("signature", "signing"):
+        return bullets([
+            "Sign artefacts and verify provenance.",
+            "Use strong, standard cryptography and managed keys.",
+            "Reject unsigned or tampered artefacts."])
+    if has("trust model"):
+        return bullets([
+            "Zero Trust: never trust, always verify.",
+            "Identity as the perimeter; least privilege.",
+            "Assume breach; segment and limit blast radius."])
+    if has("authentication", "authn"):
+        return bullets([
+            "Standard protocols (OIDC/OAuth 2.1).",
+            "MFA for privileged access; strong password hashing.",
+            "Short-lived, scoped tokens; session revocation."])
+    if has("authoris", "authoriz", "access control"):
+        return bullets([
+            "Least privilege, deny by default, server-side checks.",
+            "RBAC/ABAC modelled explicitly.",
+            "Privileged actions audited; periodic access reviews."])
+    if has("extension", "extensib", "plugin", "customis", "customiz"):
+        return bullets([
+            "Well-defined extension points and stable interfaces.",
+            "Versioned contracts and backward compatibility.",
+            "Sandboxing and least privilege for extensions."])
+    if has("compatib"):
+        return bullets([
+            "Backward compatibility within a major version.",
+            "Deprecations announced with a migration path.",
+            "Contract tests guard against breakage."])
+    if has("performance", "latency", "throughput"):
+        return bullets([
+            "Defined performance budgets/SLAs (p95/p99).",
+            "Load and stress testing before major releases.",
+            "Profiling and caching to remove bottlenecks."])
+    if has("decision logic", "decision criteria", "rules engine"):
+        return bullets([
+            "Decisions are explicit, explainable and auditable.",
+            "High-risk or ambiguous cases route to humans.",
+            "Logic is versioned and tested."])
+    if has("eligibilit", "entry requirement"):
+        return bullets([
+            "Open to the relevant roles meeting the prerequisites.",
+            "Foundational knowledge of the domain is assumed.",
+            "No prior certification required for the entry level."])
+    if has("learning objective", "outcomes of learning"):
+        return bullets([
+            "Understand the core concepts and standards.",
+            "Apply them to realistic tasks safely.",
+            "Demonstrate competence through assessment."])
+    if has("continuous improvement", "feedback loop", "improvement loop", "kaizen"):
+        return bullets([
+            "Capture metrics, incidents and feedback.",
+            "Review on a regular cadence and prioritise improvements.",
+            "Update artefacts and re-measure the impact."])
+    if has("developer value", "user value", "value proposition", "benefit"):
+        return bullets([
+            "Faster delivery through reuse and automation.",
+            "Higher quality and consistency by default.",
+            "Lower risk via built-in security and governance."])
+    if has("security"):
+        return bullets([
+            "Secure by design; Zero Trust and least privilege.",
+            "Protect data in transit and at rest (strong crypto).",
+            "Validate inputs; scan code, dependencies and secrets.",
+            "Log security events; monitor and respond to incidents."])
+    if has("knowledge area", "syllabus", "curriculum", "topics covered"):
+        return bullets([
+            "Core concepts and the AIBOS standards.",
+            "Practical application to realistic tasks.",
+            "Security, privacy, governance and oversight.",
+            "AI-specific quality, evaluation and safety."])
+    if has("practical assessment", "assessment", "exam"):
+        return bullets([
+            "A mix of knowledge checks and hands-on tasks.",
+            "Scenario-based problems reflecting real work.",
+            "Assessed against an objective rubric."])
+    if has("passing criteria", "pass mark", "grading"):
+        return bullets([
+            "A defined minimum score (e.g. 70%+).",
+            "Critical-competency items must be passed.",
+            "Results recorded with evidence."])
+    if has("evidence requirement", "evidence"):
+        return bullets([
+            "Verifiable artefacts demonstrating competence.",
+            "Provenance and authorship are attributable.",
+            "Retained per the records-retention policy."])
+    if has("scoring rubric", "rubric", "marking"):
+        return table(["Level", "Descriptor"],
+                     [["Exceeds", "Mastery beyond requirements."],
+                      ["Meets", "Competent and reliable."],
+                      ["Developing", "Partial; needs improvement."],
+                      ["Not met", "Does not meet the standard."]])
+    if has("renewal", "recert", "cpd", "continuing"):
+        return bullets([
+            "Recertify on a defined cadence (e.g. every 2 years).",
+            "Evidence of continuing professional development.",
+            "Re-assessment against the current standard."])
+    if has("audit"):
+        return bullets([
+            "Maintain complete, tamper-evident audit trails.",
+            "Independent review on a defined schedule.",
+            "Findings tracked to closure with owners."])
+    if has("maturity"):
+        return table(["Level", "Indicator"],
+                     [["1 Initial", "Ad hoc, inconsistent."],
+                      ["2 Managed", "Repeatable, documented."],
+                      ["3 Defined", "Standardised across teams."],
+                      ["4 Measured", "Quantitatively managed."],
+                      ["5 Optimising", "Continuously improving."]])
+    if has("improvement guidance", "guidance", "recommendation"):
+        return bullets([
+            "Prioritise gaps by risk and value.",
+            "Adopt the relevant skills, rules and playbooks.",
+            "Re-measure after each change to confirm impact."])
+    if has("handover", "hand over", "handover rules", "transition"):
+        return bullets([
+            "Hand-offs carry complete context and current state.",
+            "Ownership and next actions are explicit.",
+            "An audit trail records the transition."])
+    if has("team"):
+        return bullets([
+            "Cross-functional teams aligned to value streams.",
+            "Clear ownership and decision rights (RACI).",
+            "Human roles augmented by AI agents under oversight."])
+
+    # Final, still-useful default (no generic placeholder).
+    return (f"This section establishes the **{name}** for **{title}** within "
+            f"{phase}, aligned to the AIBOS root standards. It is implemented through "
+            "the related skills, rules, checklists, playbooks and templates, with "
+            "automation where practical and human oversight for high-risk actions. "
+            f"See the [repository catalogue]({lr('ROOT_INDEX.md')}) and the "
+            f"[root standards]({lr('00_ROOT')}).")
 
 
 def render(out_path: Path, doc_id, title, doc_type, category, phase, owner,
@@ -1204,36 +1699,15 @@ def main() -> None:
     gen_grouped(PHASE_DIR[4], "DEPT", "Specification", "Department Leadership",
                 "Phase 04", PHASE4, S[4], ["department"], ow, stats,
                 suffix=" Department")
-    gen_flat(PHASE_DIR[5], "SKILL", "Skill", "Specialist Skill",
-             "Chief Skills Architect", "Phase 05",
-             [f"{r} Skill" for r in PHASE5_ROLES], S[5], ["skill"], ow, stats)
-    gen_grouped(PHASE_DIR[6], "RULE", "Rule", "Chief Governance Architect", "Phase 06",
-                PHASE6, S[6], ["rule"], ow, stats, suffix=" Rule")
-    gen_grouped(PHASE_DIR[7], "CHECK", "Checklist",
-                "Chief Quality and Compliance Architect", "Phase 07", PHASE7, S[7],
-                ["checklist"], ow, stats, suffix=" Checklist")
-    gen_grouped(PHASE_DIR[8], "PLAY", "Playbook", "Chief Operations Architect",
-                "Phase 08", PHASE8, S[8], ["playbook"], ow, stats, suffix=" Playbook")
-    gen_grouped(PHASE_DIR[9], "TEMP", "Template",
-                "Chief Documentation and Knowledge Architect", "Phase 09", PHASE9,
-                S[9], ["template"], ow, stats, suffix=" Template")
-    gen_grouped(PHASE_DIR[10], "KNOW", "Knowledge", "Chief Knowledge Architect",
-                "Phase 10", PHASE10, S[10], ["knowledge"], ow, stats,
-                suffix=" Knowledge Article")
+    # Phases 05-10 and 13 are owned by dedicated content-rich generators
+    # (generate_skills.py, generate_rules.py, generate_checklists.py,
+    # generate_playbooks.py, generate_templates.py, generate_knowledge.py and
+    # generate_industry.py). They are intentionally NOT regenerated here so this
+    # generator never overwrites their hand-curated content.
     gen_grouped(PHASE_DIR[11], "AGENT", "Framework", "Chief AI Systems Architect",
                 "Phase 11", PHASE11, S[11], ["ai-agent"], ow, stats)
     gen_grouped(PHASE_DIR[12], "AUTO", "Framework", "Chief Automation Architect",
                 "Phase 12", PHASE12, S[12], ["automation"], ow, stats)
-
-    counter = 1
-    for ind in PHASE13_INDUSTRIES:
-        for i, d in enumerate(PHASE13_DOCS, start=1):
-            path = OUT / PHASE_DIR[13] / slug(ind) / f"{i:02d}_{slug(d)}.md"
-            content = render(path, f"IND-{counter:06d}", f"{ind} {d}", "Blueprint",
-                             ind, "Phase 13", "Chief Industry Solutions Architect",
-                             S[13], ["industry-blueprint"])
-            write(path, content, ow, stats)
-            counter += 1
 
     gen_grouped(PHASE_DIR[14], "ACCEL", "Accelerator", "Chief Transformation Architect",
                 "Phase 14", PHASE14, S[14], ["accelerator"], ow, stats,

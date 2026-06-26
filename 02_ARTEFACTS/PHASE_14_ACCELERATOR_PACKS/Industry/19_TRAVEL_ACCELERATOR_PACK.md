@@ -37,23 +37,38 @@ This document defines **Travel Accelerator Pack** within the AIBOS Enterprise v2
 
 ## Business Problem
 
-This section (Business Problem) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Complexity and fragmentation that make travel accelerator pack hard to scale.
+- Manual, repetitive work that is slow and error-prone.
+- Governance, security and compliance obligations to uphold.
+- Change management and adoption across teams.
 
 ## Business Outcome
 
-This section (Business Outcome) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Deliver travel accelerator pack consistently and at scale.
+- Increase speed and quality while reducing cost.
+- Maintain security, privacy and compliance.
+- Enable safe AI augmentation with human oversight.
 
 ## Target Audience
 
-This section (Target Audience) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Executives and sponsors (value and risk).
+- Delivery teams (build and operate).
+- Governance, security and compliance functions.
+- End users and AI agents that consume this artefact.
 
 ## Prerequisites
 
-This section (Prerequisites) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Required inputs, access and approvals are available.
+- Relevant rules, standards and checklists are known.
+- The work item is well-formed enough to proceed.
 
 ## Implementation Phases
 
-This section (Implementation Phases) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Phase | Focus | Outcome |
+| --- | --- | --- |
+| Phase 1 | Foundations and a pilot | Validated value |
+| Phase 2 | Harden and integrate | Production rollout |
+| Phase 3 | Scale across the portfolio | Broad adoption |
 
 ## 30/60/90 Day Roadmap
 
@@ -65,11 +80,18 @@ This section (Implementation Phases) for **Travel Accelerator Pack** is defined 
 
 ## Architecture Overview
 
-This section (Architecture Overview) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Experience layer: apps, assistants and channels.
+- Orchestration layer: agents, tools (MCP) and workflows.
+- AI layer: LLMs, RAG, evaluation and guardrails.
+- Data layer: sources, pipelines, vector store and governance.
+- Platform layer: cloud, security and observability.
 
 ## Required Teams
 
-This section (Required Teams) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Cross-functional teams aligned to value streams.
+- Clear ownership, RACI and decision rights.
+- A centre of excellence sets standards; teams deliver.
+- Human roles augmented by AI agents under oversight.
 
 ## Required AI Agents
 
@@ -128,7 +150,10 @@ This section (Required Teams) for **Travel Accelerator Pack** is defined in line
 
 ## Infrastructure
 
-This section (Infrastructure) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Cloud-native, defined as code (Terraform/Pulumi).
+- Containerised workloads with orchestration.
+- Managed data, networking and security services.
+- Observability and cost controls built in.
 
 ## Security Controls
 
@@ -147,39 +172,66 @@ This section (Infrastructure) for **Travel Accelerator Pack** is defined in line
 
 ## Automation Opportunities
 
-This section (Automation Opportunities) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Conversational assistants grounded in approved sources (RAG).
+- Workflow automation for repetitive, rules-based tasks.
+- Predictive analytics to anticipate issues and demand.
+- AI-assisted drafting, synthesis and decision support.
+- Always with human-in-the-loop for high-risk actions.
 
 ## Integration Map
 
-This section (Integration Map) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## Migration Strategy
 
-This section (Migration Strategy) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Assess current state and define target state.
+- Migrate incrementally with backward compatibility.
+- Validate at each step; keep a rollback path.
 
 ## Change Management Plan
 
-This section (Change Management Plan) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Engage stakeholders and communicate early and often.
+- Train teams and redesign processes around AI plus humans.
+- Pilot, measure and scale what works.
+- Manage expectations with transparent metrics.
 
 ## Success Metrics
 
-This section (Success Metrics) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Adoption and coverage.
+- Quality and validation pass rate.
+- Cycle time and efficiency.
+- Business outcome versus target.
 
 ## KPI Dashboard
 
-This section (KPI Dashboard) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Adoption and coverage.
+- Quality and validation pass rate.
+- Cycle time and efficiency.
+- Business outcome versus target.
 
 ## ROI Model
 
-This section (ROI Model) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Cost savings from automation and efficiency.
+- Revenue uplift from better experience and decisions.
+- Payback period and net benefit per initiative.
+- Baseline before deployment and measure the delta.
 
 ## Cost Estimate
 
-This section (Cost Estimate) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Model/compute (token) costs — align to actual usage.
+- Platform, data and integration costs.
+- Run and oversight costs (human-in-the-loop, monitoring).
+- Track against budget and optimise continuously (FinOps).
 
 ## Risk Register
 
-This section (Risk Register) for **Travel Accelerator Pack** is defined in line with the AIBOS root standards and the governing Phase 14 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Scope drift and unclear ownership.
+- Weak data foundations or access.
+- Insufficient oversight on high-risk actions.
+- Change resistance and adoption gaps.
 
 ## Validation Checklist
 

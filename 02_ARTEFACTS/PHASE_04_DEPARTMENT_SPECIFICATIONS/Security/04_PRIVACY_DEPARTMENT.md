@@ -37,7 +37,7 @@ This document defines **Privacy Department** within the AIBOS Enterprise v2.0 fr
 
 ## Department Mission
 
-This section (Department Mission) for **Privacy Department** is defined in line with the AIBOS root standards and the governing Phase 04 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+To operate Privacy Department to a consistent, enterprise-grade standard that delivers measurable value while balancing autonomy with human oversight.
 
 ## Vision
 
@@ -71,11 +71,17 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Organisational Structure
 
-This section (Organisational Structure) for **Privacy Department** is defined in line with the AIBOS root standards and the governing Phase 04 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Cross-functional teams aligned to value streams.
+- Clear ownership, RACI and decision rights.
+- A centre of excellence sets standards; teams deliver.
+- Human roles augmented by AI agents under oversight.
 
 ## Required Specialist Roles
 
-This section (Required Specialist Roles) for **Privacy Department** is defined in line with the AIBOS root standards and the governing Phase 04 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Owner — accountable for this artefact/workflow.
+- Contributors — execute within their authority (human or AI).
+- Reviewers/Approvers — validate and sign off.
+- Governance — oversee risk, security and compliance.
 
 ## Required Skills
 
@@ -85,19 +91,29 @@ This section (Required Specialist Roles) for **Privacy Department** is defined i
 
 ## Department KPIs
 
-This section (Department KPIs) for **Privacy Department** is defined in line with the AIBOS root standards and the governing Phase 04 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Adoption and coverage.
+- Quality and validation pass rate.
+- Cycle time and efficiency.
+- Business outcome versus target.
 
 ## Department OKRs
 
-This section (Department OKRs) for **Privacy Department** is defined in line with the AIBOS root standards and the governing Phase 04 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Objective: raise enterprise consistency and value.
+- Key result: 95%+ validation pass rate.
+- Key result: measurable reuse and cycle-time reduction.
 
 ## Decision Authority
 
-This section (Decision Authority) for **Privacy Department** is defined in line with the AIBOS root standards and the governing Phase 04 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Authority is explicit, least-privilege and scoped to the task.
+- Allowed: low-risk, reversible actions within scope.
+- Requires approval: high-risk, irreversible or external actions.
+- All actions are logged and auditable.
 
 ## Escalation Path
 
-This section (Escalation Path) for **Privacy Department** is defined in line with the AIBOS root standards and the governing Phase 04 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Owner -> domain lead -> Governance Division.
+- Severity-based timelines for response.
+- Clear hand-off with full context and audit trail.
 
 ## Collaboration Matrix
 

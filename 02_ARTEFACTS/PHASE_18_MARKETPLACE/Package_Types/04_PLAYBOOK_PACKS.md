@@ -41,7 +41,9 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Supported Package Types
 
-This section (Supported Package Types) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Defined SLAs, on-call and escalation.
+- Runbooks for common operational tasks.
+- Knowledge base and AI-assisted support with oversight.
 
 ## Metadata Schema
 
@@ -64,7 +66,9 @@ status: draft
 
 ## Semantic Versioning Strategy
 
-This section (Semantic Versioning Strategy) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Semantic Versioning (MAJOR.MINOR.PATCH).
+- Backward compatibility within a major version.
+- Documented deprecation policy and changelog.
 
 ## Compatibility Matrix
 
@@ -76,43 +80,70 @@ This section (Semantic Versioning Strategy) for **Playbook Packs** is defined in
 
 ## Dependency Management
 
-This section (Dependency Management) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Pin and scan dependencies (SCA) for vulnerabilities.
+- Keep dependencies patched and minimal.
+- Track licences and provenance (SBOM).
 
 ## Publishing Workflow
 
-This section (Publishing Workflow) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Identify repeatable, rules-based steps to automate.
+- Combine deterministic steps with AI-agent steps for reliability.
+- Add human approval checkpoints for high-risk actions.
+- Instrument cost, success rate and audit trails.
 
 ## Validation Workflow
 
-This section (Validation Workflow) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Identify repeatable, rules-based steps to automate.
+- Combine deterministic steps with AI-agent steps for reliability.
+- Add human approval checkpoints for high-risk actions.
+- Instrument cost, success rate and audit trails.
 
 ## Review Workflow
 
-This section (Review Workflow) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Identify repeatable, rules-based steps to automate.
+- Combine deterministic steps with AI-agent steps for reliability.
+- Add human approval checkpoints for high-risk actions.
+- Instrument cost, success rate and audit trails.
 
 ## Approval Process
 
-This section (Approval Process) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Required before any irreversible or high-risk action.
+- Required before external or customer-facing communications.
+- Required before financial or regulated decisions.
+- Captured with identity, timestamp and rationale.
 
 ## Digital Signature Requirements
 
-This section (Digital Signature Requirements) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Sign artefacts and verify provenance.
+- Use strong, standard cryptography and managed keys.
+- Reject unsigned or tampered artefacts.
 
 ## Security Requirements
 
-This section (Security Requirements) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Secure by design; Zero Trust and least privilege.
+- Protect data in transit and at rest (strong crypto).
+- Validate inputs; scan code, dependencies and secrets.
+- Log security events; monitor and respond to incidents.
 
 ## Trust Model
 
-This section (Trust Model) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Zero Trust: never trust, always verify.
+- Identity as the perimeter; least privilege.
+- Assume breach; segment and limit blast radius.
 
 ## Licensing Options
 
-This section (Licensing Options) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Model/compute (token) costs — align to actual usage.
+- Platform, data and integration costs.
+- Run and oversight costs (human-in-the-loop, monitoring).
+- Track against budget and optimise continuously (FinOps).
 
 ## Commercial Model
 
-This section (Commercial Model) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Clear value proposition and target customers.
+- Pricing aligned to a value metric.
+- Cost structure and margin understood.
+- Growth and retention levers identified.
 
 ## Required Skills
 
@@ -152,19 +183,30 @@ This section (Commercial Model) for **Playbook Packs** is defined in line with t
 
 ## API Interfaces
 
-This section (API Interfaces) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## CLI Integration
 
-This section (CLI Integration) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## SDK Integration
 
-This section (SDK Integration) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## Marketplace Search Metadata
 
-This section (Marketplace Search Metadata) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Reusable, versioned, well-documented assets.
+- Clear contribution, review and certification process.
+- Security and licence due diligence for third-party assets.
 
 ## KPIs
 
@@ -175,7 +217,10 @@ This section (Marketplace Search Metadata) for **Playbook Packs** is defined in 
 
 ## Success Metrics
 
-This section (Success Metrics) for **Playbook Packs** is defined in line with the AIBOS root standards and the governing Phase 18 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Adoption and coverage.
+- Quality and validation pass rate.
+- Cycle time and efficiency.
+- Business outcome versus target.
 
 ## Validation Checklist
 

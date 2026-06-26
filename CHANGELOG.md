@@ -5,6 +5,31 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.0] - 2026-06-26
+
+### Changed
+
+- **Framework phases (01–04, 11–12, 14–20) are now detailed, ready-to-use
+  documents** instead of single-line placeholders. The shared generator's
+  section builder was replaced with keyword-aware logic that emits
+  section-appropriate content (bullets, tables, code blocks) for ~70 common
+  section types — requirements, architecture, data flow, deployment, security,
+  authn/authz, versioning, rollback, governance, agent authority/approval,
+  collaboration, certification/assessment, maturity and more.
+- Eliminated all 2,936 generic placeholder sections across 467 documents
+  (now 0 remaining).
+
+### Fixed
+
+- The shared generator (`tools/generate_aibos.py`) no longer regenerates Phases
+  05–10 and 13, so the hand-curated content produced by the dedicated generators
+  is never overwritten.
+
+### Verified
+
+- `markdownlint-cli2` across all 1,231 artefact files: 0 errors.
+- Internal link check across 22,845 links: 0 broken.
+
 ## [2.4.0] - 2026-06-26
 
 ### Changed

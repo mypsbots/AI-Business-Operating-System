@@ -55,19 +55,28 @@ Reduced duplication, faster safe delivery, improved compliance posture and scala
 
 ## Inputs
 
-This section (Inputs) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The request/context that initiated the work.
+- Relevant data, artefacts and configuration.
+- Applicable rules, standards and prior decisions.
 
 ## Outputs
 
-This section (Outputs) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The validated result of the work.
+- Evidence and an audit trail.
+- Follow-up actions and updated cross-references.
 
 ## Decision Logic
 
-This section (Decision Logic) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Decisions are explicit, explainable and auditable.
+- High-risk or ambiguous cases route to humans.
+- Logic is versioned and tested.
 
 ## Human Approval Gates
 
-This section (Human Approval Gates) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Required before any irreversible or high-risk action.
+- Required before external or customer-facing communications.
+- Required before financial or regulated decisions.
+- Captured with identity, timestamp and rationale.
 
 ## AI Agents Involved
 
@@ -77,15 +86,22 @@ This section (Human Approval Gates) for **Portfolio Optimisation** is defined in
 
 ## Memory Strategy
 
-This section (Memory Strategy) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Short-term working context for the active task.
+- Governed long-term memory for reuse, with access control.
+- Provenance and freshness tracked for grounding.
 
 ## Context Strategy
 
-This section (Context Strategy) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Ground responses in approved, current sources (RAG).
+- Manage short-term working context and long-term memory.
+- Track provenance and freshness; enforce access control.
 
 ## Governance Model
 
-This section (Governance Model) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Risk-tiered oversight aligned to ISO 42001 and NIST AI RMF.
+- Human-in-the-loop for high-impact decisions.
+- Audit trails, evaluation gates and model documentation.
+- Clear ownership, approval and escalation paths.
 
 ## Security Controls
 
@@ -110,11 +126,16 @@ This section (Governance Model) for **Portfolio Optimisation** is defined in lin
 
 ## Tool Integrations
 
-This section (Tool Integrations) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## Event Triggers
 
-This section (Event Triggers) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- A request or task is submitted.
+- A scheduled cycle or threshold is reached.
+- An upstream event or signal is received.
 
 ## KPIs
 
@@ -130,15 +151,22 @@ This section (Event Triggers) for **Portfolio Optimisation** is defined in line 
 
 ## Error Recovery
 
-This section (Error Recovery) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Detect, capture and classify the error with context.
+- Apply a safe fallback or stop safely.
+- Retry idempotently where safe; otherwise escalate.
+- Open an incident if customer impact is possible.
 
 ## Escalation Strategy
 
-This section (Escalation Strategy) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Owner -> domain lead -> Governance Division.
+- Severity-based timelines for response.
+- Clear hand-off with full context and audit trail.
 
 ## Continuous Improvement Loop
 
-This section (Continuous Improvement Loop) for **Portfolio Optimisation** is defined in line with the AIBOS root standards and the governing Phase 20 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Capture metrics, incidents and feedback.
+- Review on a regular cadence and prioritise improvements.
+- Update artefacts and re-measure the impact.
 
 ## Related Skills
 

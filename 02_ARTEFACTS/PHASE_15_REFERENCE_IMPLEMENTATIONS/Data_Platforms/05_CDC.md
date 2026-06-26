@@ -41,19 +41,31 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Business Scenario
 
-This section (Business Scenario) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- A representative cdc situation and its goals.
+- The actors, triggers and expected outcome.
+- How AIBOS standards and agents apply, with human oversight.
 
 ## Functional Requirements
 
-This section (Functional Requirements) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The capability MUST deliver its defined user/business outcomes.
+- Inputs are validated; outputs are correct and consistent.
+- Errors and edge cases are handled gracefully.
+- Behaviour is covered by tests.
 
 ## Non-functional Requirements
 
-This section (Non-functional Requirements) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Performance: defined latency/throughput targets (p95/p99).
+- Reliability: availability SLOs and error budgets.
+- Security and privacy by design.
+- Scalability, maintainability and accessibility (WCAG 2.2 AA).
 
 ## Architecture Overview
 
-This section (Architecture Overview) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Experience layer: apps, assistants and channels.
+- Orchestration layer: agents, tools (MCP) and workflows.
+- AI layer: LLMs, RAG, evaluation and guardrails.
+- Data layer: sources, pipelines, vector store and governance.
+- Platform layer: cloud, security and observability.
 
 ## Mermaid Architecture Diagrams
 
@@ -70,11 +82,25 @@ flowchart TD
 
 ## Repository Structure
 
-This section (Repository Structure) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+```text
+project/
+  src/        # application code
+  infra/      # infrastructure as code
+  docs/       # documentation
+  tests/      # automated tests
+  .github/    # CI/CD workflows
+```
 
 ## Folder Layout
 
-This section (Folder Layout) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+```text
+project/
+  src/        # application code
+  infra/      # infrastructure as code
+  docs/       # documentation
+  tests/      # automated tests
+  .github/    # CI/CD workflows
+```
 
 ## Technology Stack
 
@@ -85,11 +111,16 @@ This section (Folder Layout) for **CDC** is defined in line with the AIBOS root 
 
 ## Deployment Model
 
-This section (Deployment Model) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Automated, versioned, traceable deployments via CI/CD.
+- Progressive delivery (canary/blue-green) for risky changes.
+- Post-deploy health checks with automatic rollback.
 
 ## Infrastructure Components
 
-This section (Infrastructure Components) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Cloud-native, defined as code (Terraform/Pulumi).
+- Containerised workloads with orchestration.
+- Managed data, networking and security services.
+- Observability and cost controls built in.
 
 ## Security Controls
 
@@ -99,51 +130,81 @@ This section (Infrastructure Components) for **CDC** is defined in line with the
 
 ## AI Components
 
-This section (AI Components) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- LLM/model providers via a gateway.
+- RAG pipeline: ingestion, retrieval and grounding.
+- Evaluation and guardrails.
+- Agent framework with tracing and tool (MCP) access.
 
 ## Data Flow
 
-This section (Data Flow) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Sources -> ingestion/validation -> storage.
+- Retrieval/embedding for AI grounding.
+- Processing and serving to apps and agents.
+- Telemetry and audit captured throughout.
 
 ## Integration Flow
 
-This section (Integration Flow) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## API Contracts
 
-This section (API Contracts) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Contracts described by OpenAPI (or typed CLI help).
+- Versioned with a clear deprecation policy.
+- AuthN/AuthZ, validation and consistent errors.
+- Documented with examples for humans and agents.
 
 ## Configuration Strategy
 
-This section (Configuration Strategy) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Configuration via environment, separate from code (Twelve-Factor).
+- Validated at startup; safe, documented defaults.
+- No secrets in config — use a secrets manager.
 
 ## Secrets Strategy
 
-This section (Secrets Strategy) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Stored in a managed secrets manager, never in code/config.
+- Injected at runtime; rotated on schedule and on compromise.
+- Least-privilege access, audited; CI secret-scanning enabled.
 
 ## Monitoring Strategy
 
-This section (Monitoring Strategy) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Emit metrics, logs and traces (OpenTelemetry).
+- Alert on SLOs and symptoms, not noise.
+- Dashboards for key services, with runbooks linked.
 
 ## Logging Strategy
 
-This section (Logging Strategy) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Structured, centralised logs with correlation IDs.
+- No secrets or unmasked PII in logs.
+- Retention aligned to policy; security events captured.
 
 ## Testing Strategy
 
-This section (Testing Strategy) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Automated tests proportional to risk, gating merges.
+- Evaluation of AI quality and safety before release.
+- Continuous measurement and regression detection.
 
 ## Scalability Strategy
 
-This section (Scalability Strategy) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Stateless, horizontally scalable services.
+- Caching, queues and autoscaling for load.
+- Performance budgets and load testing.
 
 ## Disaster Recovery
 
-This section (Disaster Recovery) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Detect, capture and classify the error with context.
+- Apply a safe fallback or stop safely.
+- Retry idempotently where safe; otherwise escalate.
+- Open an incident if customer impact is possible.
 
 ## Cost Optimisation
 
-This section (Cost Optimisation) for **CDC** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Model/compute (token) costs — align to actual usage.
+- Platform, data and integration costs.
+- Run and oversight costs (human-in-the-loop, monitoring).
+- Track against budget and optimise continuously (FinOps).
 
 ## Required Skills
 

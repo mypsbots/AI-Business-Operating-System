@@ -51,7 +51,10 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Stakeholders
 
-This section (Stakeholders) for **Information Architecture** is defined in line with the AIBOS root standards and the governing Phase 01 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Executives and sponsors (value and risk).
+- Delivery teams (build and operate).
+- Governance, security and compliance functions.
+- End users and AI agents that consume this artefact.
 
 ## Business Value
 
@@ -59,7 +62,11 @@ Reduced duplication, faster safe delivery, improved compliance posture and scala
 
 ## Architecture
 
-This section (Architecture) for **Information Architecture** is defined in line with the AIBOS root standards and the governing Phase 01 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Experience layer: apps, assistants and channels.
+- Orchestration layer: agents, tools (MCP) and workflows.
+- AI layer: LLMs, RAG, evaluation and guardrails.
+- Data layer: sources, pipelines, vector store and governance.
+- Platform layer: cloud, security and observability.
 
 ## Guiding Principles
 

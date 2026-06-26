@@ -59,15 +59,23 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Organisational Structure
 
-This section (Organisational Structure) for **Finance Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Cross-functional teams aligned to value streams.
+- Clear ownership, RACI and decision rights.
+- A centre of excellence sets standards; teams deliver.
+- Human roles augmented by AI agents under oversight.
 
 ## Leadership Roles
 
-This section (Leadership Roles) for **Finance Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Owner — accountable for this artefact/workflow.
+- Contributors — execute within their authority (human or AI).
+- Reviewers/Approvers — validate and sign off.
+- Governance — oversee risk, security and compliance.
 
 ## Teams
 
-This section (Teams) for **Finance Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Cross-functional teams aligned to value streams.
+- Clear ownership and decision rights (RACI).
+- Human roles augmented by AI agents under oversight.
 
 ## Collaboration Matrix
 
@@ -102,7 +110,9 @@ This section (Teams) for **Finance Division** is defined in line with the AIBOS 
 
 ## Quality Gates
 
-This section (Quality Gates) for **Finance Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Automated tests proportional to risk, gating merges.
+- Evaluation of AI quality and safety before release.
+- Continuous measurement and regression detection.
 
 ## Required Skills
 
@@ -142,15 +152,22 @@ Maintain human-in-the-loop controls, minimise hallucinations, prefer verified kn
 
 ## Reporting Structure
 
-This section (Reporting Structure) for **Finance Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Executive view of outcomes and KPIs.
+- Operational view of health and throughput.
+- Governance view of risk, security and compliance.
 
 ## Decision Authority
 
-This section (Decision Authority) for **Finance Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Authority is explicit, least-privilege and scoped to the task.
+- Allowed: low-risk, reversible actions within scope.
+- Requires approval: high-risk, irreversible or external actions.
+- All actions are logged and auditable.
 
 ## Escalation Path
 
-This section (Escalation Path) for **Finance Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Owner -> domain lead -> Governance Division.
+- Severity-based timelines for response.
+- Clear hand-off with full context and audit trail.
 
 ## Risks
 

@@ -49,23 +49,39 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Business Objectives
 
-This section (Business Objectives) for **ASFE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Deliver asfe specification consistently and at scale.
+- Increase speed and quality while reducing cost.
+- Maintain security, privacy and compliance.
+- Enable safe AI augmentation with human oversight.
 
 ## Stakeholders
 
-This section (Stakeholders) for **ASFE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Executives and sponsors (value and risk).
+- Delivery teams (build and operate).
+- Governance, security and compliance functions.
+- End users and AI agents that consume this artefact.
 
 ## Architecture Principles
 
-This section (Architecture Principles) for **ASFE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Experience layer: apps, assistants and channels.
+- Orchestration layer: agents, tools (MCP) and workflows.
+- AI layer: LLMs, RAG, evaluation and guardrails.
+- Data layer: sources, pipelines, vector store and governance.
+- Platform layer: cloud, security and observability.
 
 ## Governance Model
 
-This section (Governance Model) for **ASFE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Risk-tiered oversight aligned to ISO 42001 and NIST AI RMF.
+- Human-in-the-loop for high-impact decisions.
+- Audit trails, evaluation gates and model documentation.
+- Clear ownership, approval and escalation paths.
 
 ## Roles and Responsibilities
 
-This section (Roles and Responsibilities) for **ASFE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Owner — accountable for this artefact/workflow.
+- Contributors — execute within their authority (human or AI).
+- Reviewers/Approvers — validate and sign off.
+- Governance — oversee risk, security and compliance.
 
 ## Standards Mapping
 
@@ -83,7 +99,9 @@ This section (Roles and Responsibilities) for **ASFE Specification** is defined 
 
 ## Quality Gates
 
-This section (Quality Gates) for **ASFE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+- Automated tests proportional to risk, gating merges.
+- Evaluation of AI quality and safety before release.
+- Continuous measurement and regression detection.
 
 ## KPIs
 

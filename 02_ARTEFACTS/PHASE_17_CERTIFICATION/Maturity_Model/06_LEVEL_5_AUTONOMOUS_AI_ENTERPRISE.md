@@ -41,23 +41,35 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Target Audience
 
-This section (Target Audience) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Executives and sponsors (value and risk).
+- Delivery teams (build and operate).
+- Governance, security and compliance functions.
+- End users and AI agents that consume this artefact.
 
 ## Eligibility
 
-This section (Eligibility) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Open to the relevant roles meeting the prerequisites.
+- Foundational knowledge of the domain is assumed.
+- No prior certification required for the entry level.
 
 ## Learning Objectives
 
-This section (Learning Objectives) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Understand the core concepts and standards.
+- Apply them to realistic tasks safely.
+- Demonstrate competence through assessment.
 
 ## Competency Framework
 
-This section (Competency Framework) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Defined competencies mapped to the relevant skills.
+- Assessment via knowledge checks and practical tasks.
+- Recertification on a defined cadence.
 
 ## Knowledge Areas
 
-This section (Knowledge Areas) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Core concepts and the AIBOS standards.
+- Practical application to realistic tasks.
+- Security, privacy, governance and oversight.
+- AI-specific quality, evaluation and safety.
 
 ## Required Skills
 
@@ -97,35 +109,56 @@ This section (Knowledge Areas) for **Level 5 Autonomous AI Enterprise** is defin
 
 ## Assessment Blueprint
 
-This section (Assessment Blueprint) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Experience layer: apps, assistants and channels.
+- Orchestration layer: agents, tools (MCP) and workflows.
+- AI layer: LLMs, RAG, evaluation and guardrails.
+- Data layer: sources, pipelines, vector store and governance.
+- Platform layer: cloud, security and observability.
 
 ## Practical Assessments
 
-This section (Practical Assessments) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- A mix of knowledge checks and hands-on tasks.
+- Scenario-based problems reflecting real work.
+- Assessed against an objective rubric.
 
 ## Passing Criteria
 
-This section (Passing Criteria) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- A defined minimum score (e.g. 70%+).
+- Critical-competency items must be passed.
+- Results recorded with evidence.
 
 ## Evidence Requirements
 
-This section (Evidence Requirements) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Verifiable artefacts demonstrating competence.
+- Provenance and authorship are attributable.
+- Retained per the records-retention policy.
 
 ## Scoring Rubric
 
-This section (Scoring Rubric) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Level | Descriptor |
+| --- | --- |
+| Exceeds | Mastery beyond requirements. |
+| Meets | Competent and reliable. |
+| Developing | Partial; needs improvement. |
+| Not met | Does not meet the standard. |
 
 ## Renewal Requirements
 
-This section (Renewal Requirements) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Recertify on a defined cadence (e.g. every 2 years).
+- Evidence of continuing professional development.
+- Re-assessment against the current standard.
 
 ## CPD Requirements
 
-This section (CPD Requirements) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Recertify on a defined cadence (e.g. every 2 years).
+- Evidence of continuing professional development.
+- Re-assessment against the current standard.
 
 ## Audit Requirements
 
-This section (Audit Requirements) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Maintain complete, tamper-evident audit trails.
+- Independent review on a defined schedule.
+- Findings tracked to closure with owners.
 
 ## Compliance Mapping
 
@@ -138,11 +171,19 @@ This section (Audit Requirements) for **Level 5 Autonomous AI Enterprise** is de
 
 ## Maturity Indicators
 
-This section (Maturity Indicators) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Level | Indicator |
+| --- | --- |
+| 1 Initial | Ad hoc, inconsistent. |
+| 2 Managed | Repeatable, documented. |
+| 3 Defined | Standardised across teams. |
+| 4 Measured | Quantitatively managed. |
+| 5 Optimising | Continuously improving. |
 
 ## Improvement Guidance
 
-This section (Improvement Guidance) for **Level 5 Autonomous AI Enterprise** is defined in line with the AIBOS root standards and the governing Phase 17 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Prioritise gaps by risk and value.
+- Adopt the relevant skills, rules and playbooks.
+- Re-measure after each change to confirm impact.
 
 ## Metrics
 

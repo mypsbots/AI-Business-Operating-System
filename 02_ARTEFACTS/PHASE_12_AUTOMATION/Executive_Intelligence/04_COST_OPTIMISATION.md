@@ -49,19 +49,28 @@ Reduced duplication, faster safe delivery, improved compliance posture and scala
 
 ## Trigger Events
 
-This section (Trigger Events) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- A request or task is submitted.
+- A scheduled cycle or threshold is reached.
+- An upstream event or signal is received.
 
 ## Inputs
 
-This section (Inputs) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The request/context that initiated the work.
+- Relevant data, artefacts and configuration.
+- Applicable rules, standards and prior decisions.
 
 ## Outputs
 
-This section (Outputs) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The validated result of the work.
+- Evidence and an audit trail.
+- Follow-up actions and updated cross-references.
 
 ## Workflow Description
 
-This section (Workflow Description) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Identify repeatable, rules-based steps to automate.
+- Combine deterministic steps with AI-agent steps for reliability.
+- Add human approval checkpoints for high-risk actions.
+- Instrument cost, success rate and audit trails.
 
 ## Mermaid Diagram
 
@@ -84,15 +93,25 @@ flowchart TD
 
 ## Human Approval Points
 
-This section (Human Approval Points) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Required before any irreversible or high-risk action.
+- Required before external or customer-facing communications.
+- Required before financial or regulated decisions.
+- Captured with identity, timestamp and rationale.
 
 ## Automation Opportunities
 
-This section (Automation Opportunities) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Conversational assistants grounded in approved sources (RAG).
+- Workflow automation for repetitive, rules-based tasks.
+- Predictive analytics to anticipate issues and demand.
+- AI-assisted drafting, synthesis and decision support.
+- Always with human-in-the-loop for high-risk actions.
 
 ## Tool Integrations
 
-This section (Tool Integrations) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## Required Skills
 
@@ -132,11 +151,15 @@ This section (Tool Integrations) for **Cost Optimisation** is defined in line wi
 
 ## Monitoring Strategy
 
-This section (Monitoring Strategy) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Emit metrics, logs and traces (OpenTelemetry).
+- Alert on SLOs and symptoms, not noise.
+- Dashboards for key services, with runbooks linked.
 
 ## Alerting Strategy
 
-This section (Alerting Strategy) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Alert on SLOs and symptoms, not noise.
+- Every alert is actionable with a linked runbook.
+- Severity-based routing to on-call.
 
 ## Metrics
 
@@ -158,11 +181,16 @@ This section (Alerting Strategy) for **Cost Optimisation** is defined in line wi
 
 ## Error Handling
 
-This section (Error Handling) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Detect, capture and classify the error with context.
+- Apply a safe fallback or stop safely.
+- Retry idempotently where safe; otherwise escalate.
+- Open an incident if customer impact is possible.
 
 ## Rollback Strategy
 
-This section (Rollback Strategy) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- A tested rollback path restores a known-good version.
+- Database changes are backward compatible.
+- Rollback is fast and may be automated on failed health checks.
 
 ## Security Controls
 
@@ -187,11 +215,16 @@ This section (Rollback Strategy) for **Cost Optimisation** is defined in line wi
 
 ## Cost Optimisation
 
-This section (Cost Optimisation) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Model/compute (token) costs — align to actual usage.
+- Platform, data and integration costs.
+- Run and oversight costs (human-in-the-loop, monitoring).
+- Track against budget and optimise continuously (FinOps).
 
 ## Continuous Improvement Loop
 
-This section (Continuous Improvement Loop) for **Cost Optimisation** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Capture metrics, incidents and feedback.
+- Review on a regular cadence and prioritise improvements.
+- Update artefacts and re-measure the impact.
 
 ## Validation Checklist
 

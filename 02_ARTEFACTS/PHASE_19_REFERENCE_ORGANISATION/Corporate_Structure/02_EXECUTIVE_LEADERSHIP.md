@@ -45,15 +45,24 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Organisational Context
 
-This section (Organisational Context) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Cross-functional teams aligned to value streams.
+- Clear ownership, RACI and decision rights.
+- A centre of excellence sets standards; teams deliver.
+- Human roles augmented by AI agents under oversight.
 
 ## Business Model
 
-This section (Business Model) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Clear value proposition and target customers.
+- Pricing aligned to a value metric.
+- Cost structure and margin understood.
+- Growth and retention levers identified.
 
 ## Organisation Chart
 
-This section (Organisation Chart) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Cross-functional teams aligned to value streams.
+- Clear ownership, RACI and decision rights.
+- A centre of excellence sets standards; teams deliver.
+- Human roles augmented by AI agents under oversight.
 
 ## Mermaid Diagrams
 
@@ -70,15 +79,25 @@ flowchart TD
 
 ## Team Structure
 
-This section (Team Structure) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Cross-functional teams aligned to value streams.
+- Clear ownership, RACI and decision rights.
+- A centre of excellence sets standards; teams deliver.
+- Human roles augmented by AI agents under oversight.
 
 ## AI Agent Structure
 
-This section (AI Agent Structure) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Agent | Role | Authority | Human Approval |
+| --- | --- | --- | --- |
+| Orchestrator | Plans and delegates | Coordinate | For high-risk plans |
+| Specialist agents | Execute scoped tasks | Least-privilege | For risky actions |
+| Reviewer agent | Validates outputs | Read/assess | N/A |
 
 ## Roles and Responsibilities
 
-This section (Roles and Responsibilities) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Owner — accountable for this artefact/workflow.
+- Contributors — execute within their authority (human or AI).
+- Reviewers/Approvers — validate and sign off.
+- Governance — oversee risk, security and compliance.
 
 ## RACI
 
@@ -88,7 +107,10 @@ This section (Roles and Responsibilities) for **Executive Leadership** is define
 
 ## Governance
 
-This section (Governance) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Risk-tiered oversight aligned to ISO 42001 and NIST AI RMF.
+- Human-in-the-loop for high-impact decisions.
+- Audit trails, evaluation gates and model documentation.
+- Clear ownership, approval and escalation paths.
 
 ## Decision Matrix
 
@@ -100,7 +122,9 @@ This section (Governance) for **Executive Leadership** is defined in line with t
 
 ## Escalation Model
 
-This section (Escalation Model) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Owner -> domain lead -> Governance Division.
+- Severity-based timelines for response.
+- Clear hand-off with full context and audit trail.
 
 ## Skills Mapping
 
@@ -158,7 +182,10 @@ This section (Escalation Model) for **Executive Leadership** is defined in line 
 
 ## CI/CD Integration
 
-This section (CI/CD Integration) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Event-driven integration with idempotent consumers.
+- Governed APIs (OpenAPI) and MCP tools for system access.
+- Retry, back-off and dead-letter handling for resilience.
+- Monitoring and alerting on every integration.
 
 ## Security Controls
 
@@ -190,7 +217,9 @@ This section (CI/CD Integration) for **Executive Leadership** is defined in line
 
 ## Dashboards
 
-This section (Dashboards) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Executive view of outcomes and KPIs.
+- Operational view of health and throughput.
+- Governance view of risk, security and compliance.
 
 ## Risks
 
@@ -200,7 +229,9 @@ This section (Dashboards) for **Executive Leadership** is defined in line with t
 
 ## Continuous Improvement
 
-This section (Continuous Improvement) for **Executive Leadership** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Capture metrics, incidents and feedback.
+- Review on a regular cadence and prioritise improvements.
+- Update artefacts and re-measure the impact.
 
 ## Validation Checklist
 
