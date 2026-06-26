@@ -2,10 +2,10 @@
 id: SKILL-000024
 title: RAG Engineer Skill
 document_type: Skill
-category: Specialist Skill
+category: AI Engineering Skill
 phase: Phase 05
 owner: Chief Skills Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - skill
+  - ai-engineering-skill
+  - rag-engineer
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,252 +31,127 @@ standards:
 
 # RAG Engineer Skill
 
-> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [Generated Index](../README.md) · [Phase 05 Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [All Skills](README.md) · [Phase 05 Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
 
-## Executive Summary
+## At a Glance
 
-This document defines **RAG Engineer Skill** within the AIBOS Enterprise v2.0 framework (Phase 05). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+Builds Retrieval-Augmented Generation systems — connecting LLMs to your knowledge so answers are grounded, current and citable.
 
-## Mission
+| Field | Detail |
+| --- | --- |
+| Role | RAG Engineer |
+| Category | AI Engineering |
+| Typically reports to | AI Engineering Lead |
+| Filled by | A human, an AI agent, or both (human-in-the-loop) |
+| AI automation | AI-native role. |
+| Key collaborators | LLM Engineer, Data Engineer, Knowledge Manager |
 
-To operate RAG Engineer Skill to a consistent, enterprise-grade standard that balances autonomy with human oversight.
+## How to Use This Document
 
-## Vision
+- **Hiring managers** — use it as a job description, scorecard and interview guide (see *Required Skills* and *Sample Interview Questions*).
+- **People in or entering the role** — use *Learning Path* and *Career Progression* to plan development.
+- **AI / automation teams** — use *Role Summary*, *Responsibilities* and *Required Skills* as the basis for an AI agent's instructions/system prompt.
+- **Team & quality leads** — use *KPIs* and *Deliverables* to set expectations and measure performance.
 
-RAG Engineer Skill contributes to an AI-native enterprise that is secure, governed, automated and continuously improving.
+## Role Summary
 
-## Role Purpose
+**Mission:** Give LLMs accurate, up-to-date, grounded knowledge with citations.
 
-This section (Role Purpose) for **RAG Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+Builds Retrieval-Augmented Generation systems — connecting LLMs to your knowledge so answers are grounded, current and citable.
 
-## Scope
+## Key Responsibilities
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+- Design ingestion, chunking and embedding pipelines.
+- Build retrieval (vector/hybrid/rerank) and grounding.
+- Implement citations and reduce hallucination.
+- Evaluate retrieval and answer quality.
+- Optimise cost, freshness and latency.
 
-## Responsibilities
+## Required Skills
 
-- Own and maintain this artefact.
-- Ensure alignment with the root standards.
-- Validate outputs before publication.
+### Technical Skills
 
-## Out of Scope
+- Embeddings, vector databases and chunking strategies.
+- Hybrid search and re-ranking.
+- Evaluation (faithfulness, recall, precision).
+- Data pipelines and freshness.
 
-- Responsibilities owned by other roles or departments.
-- Decisions outside the role's delegated authority.
-- High-risk actions without human approval.
+### Business Skills
 
-## Services Provided
+- Mapping knowledge sources to use cases.
 
-- Specialist outputs that meet the AIBOS Definition of Done.
-- Reviews and guidance within the role's authority.
-- Reusable artefacts contributed back to the enterprise.
+### AI Skills
 
-## Services Consumed
+- Grounding, citation and hallucination mitigation; RAG evals.
 
-- Inputs and decisions from upstream roles and divisions.
-- Shared platforms, tooling and knowledge.
-- Governance approvals for high-risk actions.
+### Soft Skills
 
-## Required Technical Skills
+- Clear written and verbal communication with technical and non-technical people.
+- Structured problem solving and evidence-based decision making.
+- Collaboration across human teammates and AI agents.
+- Ownership, reliability and a continuous-learning mindset.
 
-- Proficiency with the relevant languages, frameworks and tooling.
-- Sound understanding of APIs, data structures and system design.
-- Cloud-native, CI/CD and Infrastructure-as-Code practices.
-- Disciplined version control with Git and peer code review.
+## Tools and Technologies
 
-## Required Business Skills
+- Pinecone/pgvector/Weaviate
+- LlamaIndex/LangChain
+- Rerankers (Cohere)
+- Ragas
 
-- Translating business goals into measurable outcomes.
-- Stakeholder communication and expectation management.
-- Prioritisation, planning and value-based decision making.
-- Commercial awareness of cost, ROI and risk.
+## Certifications and Qualifications
 
-## Required AI Skills
+- Vector DB certs
+- AIBOS RAG Engineering certification (Phase 17)
 
-- Prompt engineering and context design for LLMs.
-- Retrieval-Augmented Generation (RAG) and evaluation techniques.
-- Responsible AI, guardrails and hallucination mitigation.
-- Awareness of the OWASP LLM Top 10.
+## Learning Path
 
-## Required Soft Skills
+1. Foundational: embeddings, vector search, prompting.
+2. Intermediate: chunking, hybrid search, reranking, evals.
+3. Advanced: production RAG, graph RAG, optimisation.
 
-- Clear written and verbal communication.
-- Collaboration across human and AI teams.
-- Critical thinking and structured problem solving.
-- Adaptability and a continuous-learning mindset.
+## Key Performance Indicators (KPIs)
 
-## Required Certifications
+- Answer faithfulness
+- Retrieval recall/precision
+- Citation accuracy
+- Latency/cost
 
-- A relevant cloud certification (AWS, Azure or GCP).
-- A security certification where applicable.
-- The matching AIBOS role certification (see Phase 17).
+## Typical Deliverables
 
-## Recommended Learning Path
+- RAG pipeline
+- Eval reports
+- Ingestion connectors
 
-1. Study the [root standards](../../00_ROOT).
-2. Complete the relevant department specification (Phase 04).
-3. Practise with the related playbooks and templates.
-4. Pursue the matching AIBOS certification (Phase 17).
+## Collaboration and Interfaces
 
-## Required Tools
+This role works most closely with: LLM Engineer, Data Engineer, Knowledge Manager.
 
-- Git and GitHub for version control and collaboration.
-- CI/CD pipelines and Infrastructure as Code.
-- AI tooling: IDE assistants, model providers and MCP servers.
-- Observability and security-scanning tooling.
+## Career Progression
 
-## Technology Stack
+1. **ML/Backend Engineer**
+2. **RAG Engineer**
+3. **Senior**
+4. **AI Architect**
 
-- Cloud-native runtime and managed services.
-- API-first interfaces (OpenAPI) and event-driven messaging.
-- Vector database and RAG components where applicable.
-- OpenTelemetry-based observability.
+## Sample Interview Questions
 
-## Decision Authority
+1. How do you chunk documents for retrieval?
+2. How do you measure if RAG answers are grounded?
+3. How do you keep a RAG knowledge base fresh?
 
-This section (Decision Authority) for **RAG Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+## Related Resources
 
-## Collaboration Matrix
-
-| Partner | Interaction | Direction |
-| --- | --- | --- |
-| Upstream owners | Provide inputs | Inbound |
-| Downstream consumers | Consume outputs | Outbound |
-| Governance | Review and approve | Bidirectional |
-
-## RACI
-
-| Activity | Responsible | Accountable | Consulted | Informed |
-| --- | --- | --- | --- | --- |
-| Primary task | Specialist | Department Lead | Architecture | Stakeholders |
-
-## Required Rules
-
-- See **[Enterprise Rules (Phase 06)](../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Checklists
-
-- See **[Enterprise Checklists (Phase 07)](../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Playbooks
-
-- See **[Enterprise Playbooks (Phase 08)](../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Templates
-
-- See **[Enterprise Templates (Phase 09)](../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Knowledge Articles
-
-- See **[Enterprise Knowledge (Phase 10)](../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## KPIs
-
-- Coverage and completeness.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
-
-## OKRs
-
-- Objective: raise enterprise consistency.
-- Key result: 95%+ validation pass rate.
-- Key result: measurable reuse across teams.
-
-## Security Responsibilities
-
-Apply Security by Design, least privilege and Zero Trust; protect secrets; follow OWASP ASVS and the OWASP LLM Top 10.
-
-## AI Responsibilities
-
-Maintain human-in-the-loop controls, minimise hallucinations, prefer verified knowledge and preserve audit trails.
-
-## Compliance Responsibilities
-
-Map controls to ISO 27001, ISO 42001 and SOC 2; retain audit evidence.
-
-## Risks
-
-- Scope drift over time.
-- Inconsistent adoption across teams.
-- Over-automation without adequate oversight.
-
-## Anti-patterns
-
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
-
-## Best Practices
-
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
-
-## Definition of Done
-
-- Artefact validated and approved.
-- Cross-references confirmed.
-- Version history updated.
-
-## Deliverables
-
-- Validated, versioned artefacts.
-- Updated cross-references and documentation.
-- Evidence required by the relevant checklists.
-
-## Acceptance Criteria
-
-- All mandatory sections are complete.
-- Validation passes with no errors.
-- Cross-references are valid.
-
-## Validation Checklist
-
-- [ ] YAML front matter is present and valid.
-- [ ] All mandatory sections are complete.
-- [ ] Terminology matches the AIBOS Enterprise Glossary.
-- [ ] Cross-references resolve to existing documents.
-- [ ] RFC 2119 keywords are used correctly.
-- [ ] Security and privacy considerations are addressed.
-- [ ] Version history is updated.
-- [ ] No secrets or sensitive data are exposed.
-
-## Interview Questions
-
-- How would you apply the AIBOS standards in the RAG Engineer Skill role?
-- Describe how you ensure security and privacy by design.
-- How do you collaborate safely with AI agents?
-- Give an example of measuring and improving quality.
-
-## Self Assessment Matrix
-
-| Partner | Interaction | Direction |
-| --- | --- | --- |
-| Upstream owners | Provide inputs | Inbound |
-| Downstream consumers | Consume outputs | Outbound |
-| Governance | Review and approve | Bidirectional |
-
-## References
-
+- [Enterprise Rules](../PHASE_06_RULES/README.md)
+- [Enterprise Checklists](../PHASE_07_CHECKLISTS/README.md)
+- [Enterprise Playbooks](../PHASE_08_PLAYBOOKS/README.md)
+- [Enterprise Templates](../PHASE_09_TEMPLATES/README.md)
+- [Enterprise Knowledge](../PHASE_10_KNOWLEDGE/README.md)
+- [Certification & Maturity](../PHASE_17_CERTIFICATION/README.md)
 - [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
 - [Enterprise Glossary](../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
-- [Repository Catalogue (ROOT_INDEX)](../../ROOT_INDEX.md)
-- [Phase 05 Master Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
 
 ## Version History
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use skill reference. |

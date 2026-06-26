@@ -2,10 +2,10 @@
 id: SKILL-000015
 title: Site Reliability Engineer Skill
 document_type: Skill
-category: Specialist Skill
+category: Cloud and DevOps Skill
 phase: Phase 05
 owner: Chief Skills Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - skill
+  - cloud-and-devops-skill
+  - site-reliability-engineer
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,252 +31,130 @@ standards:
 
 # Site Reliability Engineer Skill
 
-> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [Generated Index](../README.md) · [Phase 05 Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [All Skills](README.md) · [Phase 05 Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
 
-## Executive Summary
+## At a Glance
 
-This document defines **Site Reliability Engineer Skill** within the AIBOS Enterprise v2.0 framework (Phase 05). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+Keeps production systems reliable using engineering and automation — owning SLOs, monitoring, incident response and toil reduction.
 
-## Mission
+| Field | Detail |
+| --- | --- |
+| Role | Site Reliability Engineer |
+| Category | Cloud and DevOps |
+| Typically reports to | SRE Lead |
+| Filled by | A human, an AI agent, or both (human-in-the-loop) |
+| AI automation | AI-assisted (incident analysis, runbook automation). |
+| Key collaborators | DevOps, Backend Engineer, Platform Engineer |
 
-To operate Site Reliability Engineer Skill to a consistent, enterprise-grade standard that balances autonomy with human oversight.
+## How to Use This Document
 
-## Vision
+- **Hiring managers** — use it as a job description, scorecard and interview guide (see *Required Skills* and *Sample Interview Questions*).
+- **People in or entering the role** — use *Learning Path* and *Career Progression* to plan development.
+- **AI / automation teams** — use *Role Summary*, *Responsibilities* and *Required Skills* as the basis for an AI agent's instructions/system prompt.
+- **Team & quality leads** — use *KPIs* and *Deliverables* to set expectations and measure performance.
 
-Site Reliability Engineer Skill contributes to an AI-native enterprise that is secure, governed, automated and continuously improving.
+## Role Summary
 
-## Role Purpose
+**Mission:** Ensure systems meet reliability targets while enabling change.
 
-This section (Role Purpose) for **Site Reliability Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+Keeps production systems reliable using engineering and automation — owning SLOs, monitoring, incident response and toil reduction.
 
-## Scope
+## Key Responsibilities
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+- Define and track SLOs, SLIs and error budgets.
+- Build monitoring, alerting and dashboards.
+- Lead incident response and post-mortems.
+- Automate toil and improve resilience.
+- Plan capacity and run chaos/DR exercises.
 
-## Responsibilities
+## Required Skills
 
-- Own and maintain this artefact.
-- Ensure alignment with the root standards.
-- Validate outputs before publication.
+### Technical Skills
 
-## Out of Scope
+- Observability (metrics, logs, traces; OpenTelemetry).
+- SLO/error-budget engineering.
+- Kubernetes, automation and scripting.
+- Incident management and resilience patterns.
 
-- Responsibilities owned by other roles or departments.
-- Decisions outside the role's delegated authority.
-- High-risk actions without human approval.
+### Business Skills
 
-## Services Provided
+- Balancing reliability against feature velocity.
 
-- Specialist outputs that meet the AIBOS Definition of Done.
-- Reviews and guidance within the role's authority.
-- Reusable artefacts contributed back to the enterprise.
+### AI Skills
 
-## Services Consumed
+- Using AIOps for anomaly detection and incident triage.
 
-- Inputs and decisions from upstream roles and divisions.
-- Shared platforms, tooling and knowledge.
-- Governance approvals for high-risk actions.
+### Soft Skills
 
-## Required Technical Skills
+- Clear written and verbal communication with technical and non-technical people.
+- Structured problem solving and evidence-based decision making.
+- Collaboration across human teammates and AI agents.
+- Ownership, reliability and a continuous-learning mindset.
 
-- Proficiency with the relevant languages, frameworks and tooling.
-- Sound understanding of APIs, data structures and system design.
-- Cloud-native, CI/CD and Infrastructure-as-Code practices.
-- Disciplined version control with Git and peer code review.
+## Tools and Technologies
 
-## Required Business Skills
+- Prometheus/Grafana
+- Datadog
+- PagerDuty
+- Kubernetes
+- OpenTelemetry
 
-- Translating business goals into measurable outcomes.
-- Stakeholder communication and expectation management.
-- Prioritisation, planning and value-based decision making.
-- Commercial awareness of cost, ROI and risk.
+## Certifications and Qualifications
 
-## Required AI Skills
+- CKA
+- Cloud certs
+- AIBOS SRE certification (Phase 17)
 
-- Prompt engineering and context design for LLMs.
-- Retrieval-Augmented Generation (RAG) and evaluation techniques.
-- Responsible AI, guardrails and hallucination mitigation.
-- Awareness of the OWASP LLM Top 10.
+## Learning Path
 
-## Required Soft Skills
+1. Foundational: Linux, networking, monitoring.
+2. Intermediate: SLOs, incident response, Kubernetes.
+3. Advanced: resilience engineering and AIOps.
 
-- Clear written and verbal communication.
-- Collaboration across human and AI teams.
-- Critical thinking and structured problem solving.
-- Adaptability and a continuous-learning mindset.
+## Key Performance Indicators (KPIs)
 
-## Required Certifications
+- SLO attainment
+- MTTR
+- Toil percentage
+- Incident frequency
 
-- A relevant cloud certification (AWS, Azure or GCP).
-- A security certification where applicable.
-- The matching AIBOS role certification (see Phase 17).
+## Typical Deliverables
 
-## Recommended Learning Path
+- SLOs and dashboards
+- Runbooks
+- Post-mortems
+- Automation
 
-1. Study the [root standards](../../00_ROOT).
-2. Complete the relevant department specification (Phase 04).
-3. Practise with the related playbooks and templates.
-4. Pursue the matching AIBOS certification (Phase 17).
+## Collaboration and Interfaces
 
-## Required Tools
+This role works most closely with: DevOps, Backend Engineer, Platform Engineer.
 
-- Git and GitHub for version control and collaboration.
-- CI/CD pipelines and Infrastructure as Code.
-- AI tooling: IDE assistants, model providers and MCP servers.
-- Observability and security-scanning tooling.
+## Career Progression
 
-## Technology Stack
-
-- Cloud-native runtime and managed services.
-- API-first interfaces (OpenAPI) and event-driven messaging.
-- Vector database and RAG components where applicable.
-- OpenTelemetry-based observability.
-
-## Decision Authority
-
-This section (Decision Authority) for **Site Reliability Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
-
-## Collaboration Matrix
-
-| Partner | Interaction | Direction |
-| --- | --- | --- |
-| Upstream owners | Provide inputs | Inbound |
-| Downstream consumers | Consume outputs | Outbound |
-| Governance | Review and approve | Bidirectional |
-
-## RACI
-
-| Activity | Responsible | Accountable | Consulted | Informed |
-| --- | --- | --- | --- | --- |
-| Primary task | Specialist | Department Lead | Architecture | Stakeholders |
-
-## Required Rules
-
-- See **[Enterprise Rules (Phase 06)](../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Checklists
-
-- See **[Enterprise Checklists (Phase 07)](../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Playbooks
-
-- See **[Enterprise Playbooks (Phase 08)](../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Templates
-
-- See **[Enterprise Templates (Phase 09)](../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Knowledge Articles
-
-- See **[Enterprise Knowledge (Phase 10)](../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## KPIs
-
-- Coverage and completeness.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
-
-## OKRs
-
-- Objective: raise enterprise consistency.
-- Key result: 95%+ validation pass rate.
-- Key result: measurable reuse across teams.
-
-## Security Responsibilities
-
-Apply Security by Design, least privilege and Zero Trust; protect secrets; follow OWASP ASVS and the OWASP LLM Top 10.
-
-## AI Responsibilities
-
-Maintain human-in-the-loop controls, minimise hallucinations, prefer verified knowledge and preserve audit trails.
-
-## Compliance Responsibilities
-
-Map controls to ISO 27001, ISO 42001 and SOC 2; retain audit evidence.
-
-## Risks
-
-- Scope drift over time.
-- Inconsistent adoption across teams.
-- Over-automation without adequate oversight.
-
-## Anti-patterns
-
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
-
-## Best Practices
-
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
-
-## Definition of Done
-
-- Artefact validated and approved.
-- Cross-references confirmed.
-- Version history updated.
-
-## Deliverables
-
-- Validated, versioned artefacts.
-- Updated cross-references and documentation.
-- Evidence required by the relevant checklists.
-
-## Acceptance Criteria
-
-- All mandatory sections are complete.
-- Validation passes with no errors.
-- Cross-references are valid.
-
-## Validation Checklist
-
-- [ ] YAML front matter is present and valid.
-- [ ] All mandatory sections are complete.
-- [ ] Terminology matches the AIBOS Enterprise Glossary.
-- [ ] Cross-references resolve to existing documents.
-- [ ] RFC 2119 keywords are used correctly.
-- [ ] Security and privacy considerations are addressed.
-- [ ] Version history is updated.
-- [ ] No secrets or sensitive data are exposed.
-
-## Interview Questions
-
-- How would you apply the AIBOS standards in the Site Reliability Engineer Skill role?
-- Describe how you ensure security and privacy by design.
-- How do you collaborate safely with AI agents?
-- Give an example of measuring and improving quality.
-
-## Self Assessment Matrix
-
-| Partner | Interaction | Direction |
-| --- | --- | --- |
-| Upstream owners | Provide inputs | Inbound |
-| Downstream consumers | Consume outputs | Outbound |
-| Governance | Review and approve | Bidirectional |
-
-## References
-
+1. **Engineer**
+2. **SRE**
+3. **Senior SRE**
+4. **SRE Lead**
+
+## Sample Interview Questions
+
+1. How do you set an SLO and error budget?
+2. Walk through how you run an incident.
+3. How do you reduce toil systematically?
+
+## Related Resources
+
+- [Enterprise Rules](../PHASE_06_RULES/README.md)
+- [Enterprise Checklists](../PHASE_07_CHECKLISTS/README.md)
+- [Enterprise Playbooks](../PHASE_08_PLAYBOOKS/README.md)
+- [Enterprise Templates](../PHASE_09_TEMPLATES/README.md)
+- [Enterprise Knowledge](../PHASE_10_KNOWLEDGE/README.md)
+- [Certification & Maturity](../PHASE_17_CERTIFICATION/README.md)
 - [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
 - [Enterprise Glossary](../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
-- [Repository Catalogue (ROOT_INDEX)](../../ROOT_INDEX.md)
-- [Phase 05 Master Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
 
 ## Version History
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use skill reference. |

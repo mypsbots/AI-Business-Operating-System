@@ -2,10 +2,10 @@
 id: SKILL-000018
 title: Compliance Specialist Skill
 document_type: Skill
-category: Specialist Skill
+category: Security Skill
 phase: Phase 05
 owner: Chief Skills Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - skill
+  - security-skill
+  - compliance-specialist
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,252 +31,127 @@ standards:
 
 # Compliance Specialist Skill
 
-> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [Generated Index](../README.md) · [Phase 05 Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [All Skills](README.md) · [Phase 05 Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
 
-## Executive Summary
+## At a Glance
 
-This document defines **Compliance Specialist Skill** within the AIBOS Enterprise v2.0 framework (Phase 05). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+Ensures the organisation meets legal, regulatory and standards obligations (SOC 2, ISO 27001, ISO 42001) through controls, audits and evidence.
 
-## Mission
+| Field | Detail |
+| --- | --- |
+| Role | Compliance Specialist |
+| Category | Security |
+| Typically reports to | Head of Governance |
+| Filled by | A human, an AI agent, or both (human-in-the-loop) |
+| AI automation | AI-assisted (control mapping, evidence collection). |
+| Key collaborators | Security Engineer, Privacy Engineer, Legal Counsel |
 
-To operate Compliance Specialist Skill to a consistent, enterprise-grade standard that balances autonomy with human oversight.
+## How to Use This Document
 
-## Vision
+- **Hiring managers** — use it as a job description, scorecard and interview guide (see *Required Skills* and *Sample Interview Questions*).
+- **People in or entering the role** — use *Learning Path* and *Career Progression* to plan development.
+- **AI / automation teams** — use *Role Summary*, *Responsibilities* and *Required Skills* as the basis for an AI agent's instructions/system prompt.
+- **Team & quality leads** — use *KPIs* and *Deliverables* to set expectations and measure performance.
 
-Compliance Specialist Skill contributes to an AI-native enterprise that is secure, governed, automated and continuously improving.
+## Role Summary
 
-## Role Purpose
+**Mission:** Keep the organisation audit-ready and compliant with minimal friction.
 
-This section (Role Purpose) for **Compliance Specialist Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+Ensures the organisation meets legal, regulatory and standards obligations (SOC 2, ISO 27001, ISO 42001) through controls, audits and evidence.
 
-## Scope
+## Key Responsibilities
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+- Map regulations/standards to internal controls.
+- Run internal audits and manage external audits.
+- Collect and maintain compliance evidence.
+- Track gaps, risks and remediation.
+- Train teams on compliance obligations.
 
-## Responsibilities
+## Required Skills
 
-- Own and maintain this artefact.
-- Ensure alignment with the root standards.
-- Validate outputs before publication.
+### Technical Skills
 
-## Out of Scope
+- Controls frameworks (SOC 2, ISO 27001/42001, NIST).
+- GRC tooling and evidence automation.
+- Risk assessment and audit methods.
 
-- Responsibilities owned by other roles or departments.
-- Decisions outside the role's delegated authority.
-- High-risk actions without human approval.
+### Business Skills
 
-## Services Provided
+- Translating obligations into pragmatic controls.
 
-- Specialist outputs that meet the AIBOS Definition of Done.
-- Reviews and guidance within the role's authority.
-- Reusable artefacts contributed back to the enterprise.
+### AI Skills
 
-## Services Consumed
+- Mapping AI governance (ISO 42001, EU AI Act) to controls.
 
-- Inputs and decisions from upstream roles and divisions.
-- Shared platforms, tooling and knowledge.
-- Governance approvals for high-risk actions.
+### Soft Skills
 
-## Required Technical Skills
+- Clear written and verbal communication with technical and non-technical people.
+- Structured problem solving and evidence-based decision making.
+- Collaboration across human teammates and AI agents.
+- Ownership, reliability and a continuous-learning mindset.
 
-- Proficiency with the relevant languages, frameworks and tooling.
-- Sound understanding of APIs, data structures and system design.
-- Cloud-native, CI/CD and Infrastructure-as-Code practices.
-- Disciplined version control with Git and peer code review.
+## Tools and Technologies
 
-## Required Business Skills
+- Vanta/Drata
+- GRC platforms
+- Risk registers
 
-- Translating business goals into measurable outcomes.
-- Stakeholder communication and expectation management.
-- Prioritisation, planning and value-based decision making.
-- Commercial awareness of cost, ROI and risk.
+## Certifications and Qualifications
 
-## Required AI Skills
+- ISO 27001 LA/LI
+- CISA
+- AIBOS Compliance certification (Phase 17)
 
-- Prompt engineering and context design for LLMs.
-- Retrieval-Augmented Generation (RAG) and evaluation techniques.
-- Responsible AI, guardrails and hallucination mitigation.
-- Awareness of the OWASP LLM Top 10.
+## Learning Path
 
-## Required Soft Skills
+1. Foundational: control frameworks, audit basics.
+2. Intermediate: evidence automation, risk scoring.
+3. Advanced: AI governance and multi-framework compliance.
 
-- Clear written and verbal communication.
-- Collaboration across human and AI teams.
-- Critical thinking and structured problem solving.
-- Adaptability and a continuous-learning mindset.
+## Key Performance Indicators (KPIs)
 
-## Required Certifications
+- Audit pass rate
+- Open findings
+- Control coverage
+- Evidence freshness
 
-- A relevant cloud certification (AWS, Azure or GCP).
-- A security certification where applicable.
-- The matching AIBOS role certification (see Phase 17).
+## Typical Deliverables
 
-## Recommended Learning Path
+- Control matrices
+- Audit reports
+- Risk registers
+- Remediation plans
 
-1. Study the [root standards](../../00_ROOT).
-2. Complete the relevant department specification (Phase 04).
-3. Practise with the related playbooks and templates.
-4. Pursue the matching AIBOS certification (Phase 17).
+## Collaboration and Interfaces
 
-## Required Tools
+This role works most closely with: Security Engineer, Privacy Engineer, Legal Counsel.
 
-- Git and GitHub for version control and collaboration.
-- CI/CD pipelines and Infrastructure as Code.
-- AI tooling: IDE assistants, model providers and MCP servers.
-- Observability and security-scanning tooling.
+## Career Progression
 
-## Technology Stack
+1. **Analyst**
+2. **Compliance Specialist**
+3. **Senior**
+4. **Compliance Manager**
 
-- Cloud-native runtime and managed services.
-- API-first interfaces (OpenAPI) and event-driven messaging.
-- Vector database and RAG components where applicable.
-- OpenTelemetry-based observability.
+## Sample Interview Questions
 
-## Decision Authority
+1. How do you prepare for a SOC 2 audit?
+2. How do you map one control to multiple frameworks?
+3. How would you approach EU AI Act compliance?
 
-This section (Decision Authority) for **Compliance Specialist Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
+## Related Resources
 
-## Collaboration Matrix
-
-| Partner | Interaction | Direction |
-| --- | --- | --- |
-| Upstream owners | Provide inputs | Inbound |
-| Downstream consumers | Consume outputs | Outbound |
-| Governance | Review and approve | Bidirectional |
-
-## RACI
-
-| Activity | Responsible | Accountable | Consulted | Informed |
-| --- | --- | --- | --- | --- |
-| Primary task | Specialist | Department Lead | Architecture | Stakeholders |
-
-## Required Rules
-
-- See **[Enterprise Rules (Phase 06)](../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Checklists
-
-- See **[Enterprise Checklists (Phase 07)](../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Playbooks
-
-- See **[Enterprise Playbooks (Phase 08)](../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Templates
-
-- See **[Enterprise Templates (Phase 09)](../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## Required Knowledge Articles
-
-- See **[Enterprise Knowledge (Phase 10)](../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
-
-## KPIs
-
-- Coverage and completeness.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
-
-## OKRs
-
-- Objective: raise enterprise consistency.
-- Key result: 95%+ validation pass rate.
-- Key result: measurable reuse across teams.
-
-## Security Responsibilities
-
-Apply Security by Design, least privilege and Zero Trust; protect secrets; follow OWASP ASVS and the OWASP LLM Top 10.
-
-## AI Responsibilities
-
-Maintain human-in-the-loop controls, minimise hallucinations, prefer verified knowledge and preserve audit trails.
-
-## Compliance Responsibilities
-
-Map controls to ISO 27001, ISO 42001 and SOC 2; retain audit evidence.
-
-## Risks
-
-- Scope drift over time.
-- Inconsistent adoption across teams.
-- Over-automation without adequate oversight.
-
-## Anti-patterns
-
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
-
-## Best Practices
-
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
-
-## Definition of Done
-
-- Artefact validated and approved.
-- Cross-references confirmed.
-- Version history updated.
-
-## Deliverables
-
-- Validated, versioned artefacts.
-- Updated cross-references and documentation.
-- Evidence required by the relevant checklists.
-
-## Acceptance Criteria
-
-- All mandatory sections are complete.
-- Validation passes with no errors.
-- Cross-references are valid.
-
-## Validation Checklist
-
-- [ ] YAML front matter is present and valid.
-- [ ] All mandatory sections are complete.
-- [ ] Terminology matches the AIBOS Enterprise Glossary.
-- [ ] Cross-references resolve to existing documents.
-- [ ] RFC 2119 keywords are used correctly.
-- [ ] Security and privacy considerations are addressed.
-- [ ] Version history is updated.
-- [ ] No secrets or sensitive data are exposed.
-
-## Interview Questions
-
-- How would you apply the AIBOS standards in the Compliance Specialist Skill role?
-- Describe how you ensure security and privacy by design.
-- How do you collaborate safely with AI agents?
-- Give an example of measuring and improving quality.
-
-## Self Assessment Matrix
-
-| Partner | Interaction | Direction |
-| --- | --- | --- |
-| Upstream owners | Provide inputs | Inbound |
-| Downstream consumers | Consume outputs | Outbound |
-| Governance | Review and approve | Bidirectional |
-
-## References
-
+- [Enterprise Rules](../PHASE_06_RULES/README.md)
+- [Enterprise Checklists](../PHASE_07_CHECKLISTS/README.md)
+- [Enterprise Playbooks](../PHASE_08_PLAYBOOKS/README.md)
+- [Enterprise Templates](../PHASE_09_TEMPLATES/README.md)
+- [Enterprise Knowledge](../PHASE_10_KNOWLEDGE/README.md)
+- [Certification & Maturity](../PHASE_17_CERTIFICATION/README.md)
 - [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
 - [Enterprise Glossary](../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
-- [Repository Catalogue (ROOT_INDEX)](../../ROOT_INDEX.md)
-- [Phase 05 Master Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
 
 ## Version History
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use skill reference. |

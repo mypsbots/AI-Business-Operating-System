@@ -5,6 +5,24 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.0] - 2026-06-26
+
+### Changed
+
+- **Phase 05 Skills are now complete, ready-to-use reference documents** rather
+  than scaffolds. Each of the 48 role documents now contains role-specific
+  content: a plain-language "At a Glance" summary, a "How to Use This Document"
+  guide, real technical/business/AI/soft skills, concrete tools, certifications,
+  a staged learning path, KPIs, deliverables, career progression and tailored
+  interview questions.
+
+### Added
+
+- `tools/skills_kb.py`: a curated knowledge base of real, role-specific content
+  for all 48 skill roles.
+- `tools/generate_skills.py`: generator that renders the knowledge base into
+  complete, cross-linked, lint-clean skill documents.
+
 ## [2.2.0] - 2026-06-26
 
 ### Changed
