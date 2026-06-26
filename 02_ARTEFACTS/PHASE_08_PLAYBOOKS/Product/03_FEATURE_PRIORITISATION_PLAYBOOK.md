@@ -5,7 +5,7 @@ document_type: Playbook
 category: Product
 phase: Phase 08
 owner: Chief Operations Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - playbook
+  - product
+  - feature_prioritisation_playbook
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,188 +31,200 @@ standards:
 
 # Feature Prioritisation Playbook
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 08 Prompt](../../../01_PHASES/PHASE_08_PLAYBOOKS_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Playbooks](../README.md) · [Phase 08 Prompt](../../../01_PHASES/PHASE_08_PLAYBOOKS_MASTER_PROMPT.md)
+
+**Playbook ID:** PLAY-000007  •  **Category:** Product
 
 ## Executive Summary
 
-This document defines **Feature Prioritisation Playbook** within the AIBOS Enterprise v2.0 framework (Phase 08). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+A repeatable, automatable workflow for **Feature Prioritisation**. Discovering customer problems and prioritising what to build to deliver measurable business and user value. It is executable by human teams and AI agents with clear human-approval points.
 
 ## Business Objective
 
-This section (Business Objective) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Make feature prioritisation consistent, fast, safe and auditable across the enterprise.
 
 ## Scope
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+Covers the end-to-end feature prioritisation workflow. Out-of-scope concerns are delegated to their own playbooks.
 
 ## Trigger Conditions
 
-This section (Trigger Conditions) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- New opportunity
+- Customer feedback
+- Quarter planning
 
 ## Preconditions
 
-This section (Preconditions) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Required inputs, access and approvals are available.
+- Relevant rules and checklists are known.
 
 ## Inputs
 
-This section (Inputs) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The request/context that triggered the workflow.
+- Relevant data, artefacts and configuration.
 
 ## Outputs
 
-This section (Outputs) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The completed outcome of the workflow.
+- Evidence, audit trail and any follow-up actions.
 
 ## Roles Responsible
 
-This section (Roles Responsible) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Product Manager
+- Team
 
 ## AI Agents Involved
 
-- See **[AI Agent Collaboration (Phase 11)](../../PHASE_11_AI_AGENT_COLLABORATION/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+- Task agent(s) that execute eligible steps.
+- Reviewer/evaluator agent that checks outputs.
+- Orchestrator that coordinates and escalates.
 
 ## Human Approval Points
 
-This section (Human Approval Points) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Before any high-risk or irreversible action.
+- At the final approval/sign-off step.
 
 ## Workflow Overview
 
-This section (Workflow Overview) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+The workflow proceeds through 4 main steps with a decision point that routes high-risk actions to human approval.
 
 ## Mermaid Workflow Diagram
 
 ```mermaid
 flowchart TD
-    A[Trigger] --> B[Process Inputs]
-    B --> C{High-risk action?}
-    C -->|Yes| D[Human Approval]
-    C -->|No| E[AI Agent Executes]
-    D --> E
-    E --> F[Validate Output]
-    F --> G[Record Audit Trail]
+    S([Trigger]) --> A0
+    A0["Product Manager: Discover and validate the problem."]
+    A1["Product Manager: Define success metrics and scope."]
+    A0 --> A1
+    A2["Team: Build and launch."]
+    A1 --> A2
+    A3["Product Manager: Review outcomes and iterate."]
+    A2 --> A3
+    A3 --> D{High-risk?}
+    D -->|Yes| H[Human approval]
+    D -->|No| E[Execute]
+    H --> E --> R([Record audit trail])
 ```
 
 ## Step-by-Step Procedure
 
-This section (Step-by-Step Procedure) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Step | Actor | Action |
+| --- | --- | --- |
+| 1 | Product Manager | Discover and validate the problem. |
+| 2 | Product Manager | Define success metrics and scope. |
+| 3 | Team | Build and launch. |
+| 4 | Product Manager | Review outcomes and iterate. |
 
 ## Decision Branches
 
-This section (Decision Branches) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- If the action is high-risk or irreversible -> require human approval.
+- If validation fails -> remediate and repeat the step.
+- If blocked -> follow the escalation path.
 
 ## Exception Handling
 
-This section (Exception Handling) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Capture the error and context.
+- Apply the documented fallback or safe-stop.
+- Open an incident if customer impact is possible.
 
 ## Escalation Path
 
-This section (Escalation Path) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Owner -> domain lead -> Governance Division, with severity-based timelines.
 
 ## Required Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Executed by holders of the relevant [Specialist Skills](../../PHASE_05_SKILLS/README.md).
 
 ## Required Rules
 
-- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Must comply with the [Enterprise Rules](../../PHASE_06_RULES/README.md).
 
 ## Required Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Validated using the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Required Templates
 
-- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Uses the [Enterprise Templates](../../PHASE_09_TEMPLATES/README.md).
 
 ## Required Knowledge Articles
 
-- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Background in the [Enterprise Knowledge base](../../PHASE_10_KNOWLEDGE/README.md).
 
 ## Automation Opportunities
 
-This section (Automation Opportunities) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Automate repeatable steps and validations in CI/CD or workflows.
+- Use AI agents for drafting, triage and checks.
+- Auto-collect evidence and update tracking systems.
 
 ## Integration Points
 
-This section (Integration Points) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- GitHub / GitLab (code, PRs, actions).
+- Jira / Linear (tracking).
+- Slack / Teams (notifications).
+- Vercel / cloud (deploy).
+- n8n / Make (orchestration).
 
 ## KPIs
 
-- Coverage and completeness.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Adoption/activation
+- Outcome vs target
+- Cycle time
 
 ## SLAs
 
-- Acknowledgement within 1 business day.
-- Resolution targets aligned to severity.
-- Reporting on breaches and trends.
+- Acknowledge triggers within 1 business day.
+- Complete standard runs within the agreed target time.
+- Resolve exceptions per severity SLA.
 
 ## Risks
 
-- Scope drift over time.
-- Inconsistent adoption across teams.
-- Over-automation without adequate oversight.
+- Building the wrong thing wastes effort.
 
 ## Best Practices
 
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
+- Validate first.
+- Prioritise ruthlessly.
+- Measure outcomes.
 
 ## Anti-patterns
 
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
+- Building without validating.
+- No success metric.
+- Feature factory.
 
 ## Definition of Done
 
-- Artefact validated and approved.
-- Cross-references confirmed.
-- Version history updated.
+- Outcome achieved and validated.
+- Audit trail recorded.
+- Follow-up actions tracked.
 
 ## Acceptance Criteria
 
-- All mandatory sections are complete.
-- Validation passes with no errors.
-- Cross-references are valid.
+- All steps completed or consciously skipped with reason.
+- Required checklist passed.
+- Approvals obtained.
 
 ## Post-Implementation Review
 
-This section (Post-Implementation Review) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Review outcomes against objectives; capture lessons and improvement actions.
 
 ## Continuous Improvement
 
-This section (Continuous Improvement) for **Feature Prioritisation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Feed metrics and lessons back into this playbook; update on a regular cadence.
 
 ## Validation Checklist
 
-- [ ] YAML front matter is present and valid.
-- [ ] All mandatory sections are complete.
-- [ ] Terminology matches the AIBOS Enterprise Glossary.
-- [ ] Cross-references resolve to existing documents.
-- [ ] RFC 2119 keywords are used correctly.
-- [ ] Security and privacy considerations are addressed.
-- [ ] Version history is updated.
-- [ ] No secrets or sensitive data are exposed.
+- [ ] Trigger and preconditions verified.
+- [ ] Steps executed in order with evidence.
+- [ ] Human approval obtained for high-risk actions.
+- [ ] Required checklist passed.
+- [ ] Audit trail recorded.
+- [ ] Cross-references resolve.
 
 ## References
 
 - [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
-- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
 - [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
 - [Phase 08 Master Prompt](../../../01_PHASES/PHASE_08_PLAYBOOKS_MASTER_PROMPT.md)
 
@@ -218,4 +232,4 @@ This section (Continuous Improvement) for **Feature Prioritisation Playbook** is
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use playbook. |

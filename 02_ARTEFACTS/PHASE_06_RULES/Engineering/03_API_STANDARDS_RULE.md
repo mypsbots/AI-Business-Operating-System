@@ -4,8 +4,8 @@ title: API Standards Rule
 document_type: Rule
 category: Engineering
 phase: Phase 06
-owner: Chief Governance Architect
-status: Draft
+owner: Head of Engineering
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - rule
+  - engineering
+  - api_standards_rule
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,187 +31,176 @@ standards:
 
 # API Standards Rule
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 06 Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Rules](../README.md) · [Phase 06 Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
+
+**Rule ID:** RULE-000007  •  **Category:** Engineering
 
 ## Executive Summary
 
-This document defines **API Standards Rule** within the AIBOS Enterprise v2.0 framework (Phase 06). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+This rule is the single source of truth for **API Standards** in the AIBOS Enterprise. Consistent, versioned, well-documented API contracts so internal teams, partners and AI agents can integrate reliably. It is mandatory within its scope and inherits the [root standards](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
 
 ## Purpose
 
-To establish the authoritative, reusable definition of API Standards Rule so that human teams and AI agents operate consistently, safely and with measurable business value.
+To set clear, enforceable, measurable expectations for api standards so that human teams and AI agents act consistently and safely.
 
 ## Scope
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+Applies to all teams, services and AI agents that perform or affect api standards across the enterprise. Concerns owned by other rules are referenced rather than duplicated.
 
 ## Business Rationale
 
-This section (Business Rationale) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Consistent, versioned, well-documented API contracts so internal teams, partners and AI agents can integrate reliably. Getting this right reduces risk, rework and cost while increasing trust, speed and compliance.
 
 ## Technical Rationale
 
-This section (Technical Rationale) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Consistent, automated enforcement makes outcomes predictable, auditable and safe to scale across humans and AI agents.
 
 ## Definitions
 
-- Canonical terms are defined in the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
-- No terminology is redefined within this document.
+- **Idempotency** — Repeating a request has no additional effect.
+- **OpenAPI** — A standard machine-readable API description.
 
 ## Mandatory Requirements (MUST)
 
-- The team MUST apply the AIBOS root standards when implementing API Standards Rule.
-- The team MUST validate every artefact before publication.
-- The team MUST require human approval for high-risk actions.
-- The team MUST maintain an auditable trail of decisions.
+- APIs MUST be described by an OpenAPI (or GraphQL/Proto) specification.
+- APIs MUST use semantic versioning and avoid breaking changes without a new version.
+- APIs MUST enforce authentication and authorisation.
+- APIs MUST validate inputs and return consistent error formats.
 
 ## Recommended Practices (SHOULD)
 
-- Teams SHOULD automate repeatable validation where practical.
-- Teams SHOULD reuse existing artefacts before creating new ones.
-- Teams SHOULD capture metrics to drive continuous improvement.
+- APIs SHOULD be paginated, idempotent where appropriate and rate-limited.
+- APIs SHOULD publish a changelog and deprecation policy.
 
 ## Optional Practices (MAY)
 
-- Teams MAY extend this artefact for domain-specific needs.
-- Teams MAY add additional tooling integrations.
+- APIs MAY expose tool/function schemas for AI-agent consumption.
 
 ## Rule Ownership Matrix
 
-| Partner | Interaction | Direction |
-| --- | --- | --- |
-| Upstream owners | Provide inputs | Inbound |
-| Downstream consumers | Consume outputs | Outbound |
-| Governance | Review and approve | Bidirectional |
+| Role | Assignment |
+| --- | --- |
+| Rule Owner | Head of Engineering |
+| Rule Approver | Chief Governance Architect |
+| Mandatory Reviewers | Security Engineer, Compliance Specialist |
+| Roles Required to Follow | All contributors within scope (human and AI) |
+| Roles Allowed to Override | Head of Engineering (with documented exception) |
+| Escalation Authority | Governance Division |
 
 ## Applicable Departments
 
-- See **[Department Specifications (Phase 04)](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+All departments performing api standards. See the [Department Specifications](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md).
 
 ## Applicable Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Roles that must follow this rule are defined in the [Specialist Skills](../../PHASE_05_SKILLS/README.md).
 
 ## Related Rules
 
-- See **[Enterprise Rules (Phase 06)](../README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See other rules in the [Enterprise Rules catalogue](../README.md).
 
 ## Related Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Validated via the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Related Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Operationalised through the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Related Templates
 
-- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Supported by the [Enterprise Templates](../../PHASE_09_TEMPLATES/README.md).
 
 ## Related Knowledge Articles
 
-- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Explained in the [Enterprise Knowledge base](../../PHASE_10_KNOWLEDGE/README.md).
 
 ## Security Considerations
 
-Apply Security by Design, least privilege and Zero Trust; protect secrets and follow OWASP guidance.
+Apply Security by Design, least privilege and Zero Trust. Protect secrets and follow OWASP ASVS and the OWASP LLM Top 10 where AI is involved.
 
 ## Privacy Considerations
 
-Apply data minimisation, purpose limitation and retention controls.
+Apply data minimisation, purpose limitation and retention controls to any personal data touched by this rule.
 
 ## AI Considerations
 
-Maintain human-in-the-loop controls and minimise hallucination risk.
+Where AI agents apply this rule, keep a human in the loop for high-risk actions, maintain audit trails and mitigate hallucination.
 
 ## Compliance Requirements
 
 | Standard | Application |
 | --- | --- |
-| ISO 42001 | AI management system alignment. |
-| ISO 27001 | Information security controls. |
-| NIST AI RMF | AI risk management. |
-| OWASP LLM Top 10 | LLM threat mitigation. |
+| OpenAPI | Applies to this rule. |
+| OAuth 2.1 | Applies to this rule. |
 
 ## Exceptions Process
 
-This section (Exceptions Process) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Exceptions MUST be requested from the rule owner (Head of Engineering), be time-boxed, risk-assessed and recorded. Unapproved deviations are non-compliant.
 
 ## Approval Authority
 
-This section (Approval Authority) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+This rule is approved by the Chief Governance Architect; exceptions are approved by Head of Engineering.
 
 ## Enforcement Model
 
-This section (Enforcement Model) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Enforced through automated checks in CI, peer review and the related checklists. Violations are flagged, tracked and remediated.
 
 ## Metrics
 
-- Quality score.
-- Defect density.
-- Review turnaround.
+- Breaking-change incidents
+- Spec coverage
+- p95 latency
+- Time-to-integrate
 
 ## KPIs
 
-- Coverage and completeness.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Breaking-change incidents
+- Spec coverage
+- p95 latency
+- Time-to-integrate
 
 ## Risks
 
-- Scope drift over time.
-- Inconsistent adoption across teams.
-- Over-automation without adequate oversight.
+- Breaking changes disrupt integrations and agents.
 
 ## Anti-patterns
 
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
+- Breaking changes shipped silently.
+- Inconsistent error formats.
+- Undocumented endpoints.
 
 ## Best Practices
 
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
+- Design API-first from the spec.
+- Contract-test against the spec.
+- Treat the API as a product with clear DX.
 
 ## Acceptance Criteria
 
-- All mandatory sections are complete.
-- Validation passes with no errors.
-- Cross-references are valid.
+- All MUST requirements are satisfied.
+- Validation checklist passes.
+- Ownership and exceptions are documented.
+- Cross-references resolve.
 
 ## Validation Checklist
 
-- [ ] YAML front matter is present and valid.
-- [ ] All mandatory sections are complete.
-- [ ] Terminology matches the AIBOS Enterprise Glossary.
+- [ ] OpenAPI/GraphQL spec present and valid.
+- [ ] Versioning strategy applied; no unversioned breaking change.
+- [ ] AuthN/AuthZ enforced on every endpoint.
+- [ ] Input validation and consistent error schema.
+- [ ] Rate limiting and pagination where relevant.
+- [ ] Idempotency for unsafe operations.
+- [ ] Documentation published.
+- [ ] RFC-2119 keywords used correctly.
 - [ ] Cross-references resolve to existing documents.
-- [ ] RFC 2119 keywords are used correctly.
-- [ ] Security and privacy considerations are addressed.
-- [ ] Version history is updated.
-- [ ] No secrets or sensitive data are exposed.
+- [ ] No secrets or sensitive data exposed.
+- [ ] Version history updated.
 
 ## References
 
 - [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
 - [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
 - [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
 - [Phase 06 Master Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
 
@@ -217,4 +208,4 @@ This section (Enforcement Model) for **API Standards Rule** is defined in line w
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use rule. |

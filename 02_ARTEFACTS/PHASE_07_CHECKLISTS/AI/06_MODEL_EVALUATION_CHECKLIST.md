@@ -5,7 +5,7 @@ document_type: Checklist
 category: AI
 phase: Phase 07
 owner: Chief Quality and Compliance Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - checklist
+  - ai
+  - model_evaluation_checklist
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,147 +31,155 @@ standards:
 
 # Model Evaluation Checklist
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 07 Prompt](../../../01_PHASES/PHASE_07_CHECKLISTS_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Checklists](../README.md) · [Phase 07 Prompt](../../../01_PHASES/PHASE_07_CHECKLISTS_MASTER_PROMPT.md)
+
+**Checklist ID:** CHECK-000022  •  **Category:** AI
 
 ## Purpose
 
-To establish the authoritative, reusable definition of Model Evaluation Checklist so that human teams and AI agents operate consistently, safely and with measurable business value.
+To validate model evaluation objectively and repeatably before it passes its quality gate. Every item is binary (Pass/Fail) and auditable.
 
 ## Scope
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+Applies whenever model evaluation is performed or reviewed, by human reviewers or AI agents.
 
 ## Prerequisites
 
-This section (Prerequisites) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The relevant rule(s) and standards have been read.
+- Required inputs and access are available.
+- The artefact under review is complete enough to assess.
 
 ## Inputs
 
-This section (Inputs) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- The artefact or change under review.
+- Relevant requirements, designs and acceptance criteria.
 
 ## Outputs
 
-This section (Outputs) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- A completed checklist with Pass/Fail per item.
+- Recorded evidence and a sign-off decision.
 
 ## Roles Responsible
 
-This section (Roles Responsible) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Reviewer (human or AI agent) — performs the checklist.
+- Approver — signs off the quality gate.
+- Owner of the artefact — remediates failures.
 
 ## Quality Gate
 
-This section (Quality Gate) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+This checklist is the gate for model evaluation; the artefact MUST NOT progress until all mandatory items pass.
 
 ## Acceptance Criteria
 
-- All mandatory sections are complete.
-- Validation passes with no errors.
-- Cross-references are valid.
+- All mandatory items pass.
+- Evidence is captured for each item.
+- Failures are remediated or formally accepted.
 
 ## Validation Steps
 
-- [ ] YAML front matter is present and valid.
-- [ ] All mandatory sections are complete.
-- [ ] Terminology matches the AIBOS Enterprise Glossary.
-- [ ] Cross-references resolve to existing documents.
-- [ ] RFC 2119 keywords are used correctly.
-- [ ] Security and privacy considerations are addressed.
-- [ ] Version history is updated.
-- [ ] No secrets or sensitive data are exposed.
+- [ ] Evaluation dataset/golden set defined.
+- [ ] Quality + safety metrics measured.
+- [ ] Regression check on changes.
+- [ ] Eval runs in CI.
+- [ ] Results reviewed and recorded.
 
 ## Pass / Fail Criteria
 
-This section (Pass / Fail Criteria) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- **Pass** — all mandatory items are satisfied with evidence.
+- **Fail** — any mandatory item is unmet; remediate and re-run.
+- **Conditional** — minor items deferred with an approved exception.
 
 ## Evidence Required
 
-This section (Evidence Required) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Links to passing CI runs, scans or test reports.
+- Screenshots or logs demonstrating each check.
+- Reviewer and approver identities and timestamps.
 
 ## Required Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Reviewers should hold the relevant [Specialist Skills](../../PHASE_05_SKILLS/README.md).
 
 ## Required Rules
 
-- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+This checklist enforces the [Enterprise Rules](../../PHASE_06_RULES/README.md).
 
 ## Related Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Used within the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Related Templates
 
-- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Supported by the [Enterprise Templates](../../PHASE_09_TEMPLATES/README.md).
 
 ## Related Knowledge Articles
 
-- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Background in the [Enterprise Knowledge base](../../PHASE_10_KNOWLEDGE/README.md).
 
 ## Security Validation
 
-This section (Security Validation) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- [ ] Authentication and authorisation enforced on all sensitive actions.
+- [ ] No secrets or credentials exposed in code, config, logs or output.
+- [ ] Inputs validated and outputs safely encoded.
+- [ ] Dependencies scanned; no unresolved critical vulnerabilities.
 
 ## Privacy Validation
 
-This section (Privacy Validation) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- [ ] Personal data is minimised and lawfully processed.
+- [ ] Sensitive data is masked in logs and encrypted at rest/in transit.
+- [ ] Retention and deletion rules are respected.
 
 ## AI Validation
 
-This section (AI Validation) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- [ ] AI outputs are grounded/cited where factual.
+- [ ] Human-in-the-loop approval exists for high-risk AI actions.
+- [ ] Prompt-injection and unsafe-output guardrails are in place.
 
 ## Compliance Validation
 
-| Standard | Application |
-| --- | --- |
-| ISO 42001 | AI management system alignment. |
-| ISO 27001 | Information security controls. |
-| NIST AI RMF | AI risk management. |
-| OWASP LLM Top 10 | LLM threat mitigation. |
+- [ ] Relevant controls (ISO 27001/42001, SOC 2) are satisfied.
+- [ ] Evidence is captured and retained for audit.
+- [ ] Exceptions are documented and approved.
 
 ## Accessibility Validation
 
-This section (Accessibility Validation) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- [ ] UI meets WCAG 2.2 AA (contrast, labels, keyboard).
+- [ ] Automated accessibility scan passes.
 
 ## Performance Validation
 
-This section (Performance Validation) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- [ ] Performance budgets/SLAs are met (p95/p99).
+- [ ] No unresolved performance regressions.
 
 ## Deployment Readiness
 
-This section (Deployment Readiness) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- [ ] Deployment is automated, versioned and traceable.
+- [ ] Post-deploy health checks pass.
 
 ## Rollback Readiness
 
-This section (Rollback Readiness) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- [ ] A tested rollback path exists.
+- [ ] Database changes are backward compatible.
 
 ## Reviewer Sign-off
 
-This section (Reviewer Sign-off) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Field | Value |
+| --- | --- |
+| Reviewer | _(name / agent)_ |
+| Decision | Pass / Fail |
+| Date | _(date)_ |
+| Notes | _(notes)_ |
 
 ## Escalation Process
 
-This section (Escalation Process) for **Model Evaluation Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+If items cannot be resolved, escalate to the artefact owner, then to the governing rule owner, then to the Governance Division.
 
 ## Risks
 
-- Scope drift over time.
-- Inconsistent adoption across teams.
-- Over-automation without adequate oversight.
+- Unevaluated AI silently regresses or harms.
 
 ## References
 
 - [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
-- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
 - [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
 - [Phase 07 Master Prompt](../../../01_PHASES/PHASE_07_CHECKLISTS_MASTER_PROMPT.md)
 
@@ -177,4 +187,4 @@ This section (Escalation Process) for **Model Evaluation Checklist** is defined 
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use checklist. |

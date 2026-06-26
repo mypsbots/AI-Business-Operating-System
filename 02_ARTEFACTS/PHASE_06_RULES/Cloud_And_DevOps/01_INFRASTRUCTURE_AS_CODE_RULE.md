@@ -4,8 +4,8 @@ title: Infrastructure as Code Rule
 document_type: Rule
 category: Cloud And DevOps
 phase: Phase 06
-owner: Chief Governance Architect
-status: Draft
+owner: Head of Platform
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - rule
+  - cloud-and-devops
+  - infrastructure_as_code_rule
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,187 +31,169 @@ standards:
 
 # Infrastructure as Code Rule
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 06 Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Rules](../README.md) · [Phase 06 Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
+
+**Rule ID:** RULE-000029  •  **Category:** Cloud And DevOps
 
 ## Executive Summary
 
-This document defines **Infrastructure as Code Rule** within the AIBOS Enterprise v2.0 framework (Phase 06). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+This rule is the single source of truth for **Infrastructure as Code** in the AIBOS Enterprise. Defining and provisioning infrastructure through version-controlled, reviewed code rather than manual changes. It is mandatory within its scope and inherits the [root standards](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
 
 ## Purpose
 
-To establish the authoritative, reusable definition of Infrastructure as Code Rule so that human teams and AI agents operate consistently, safely and with measurable business value.
+To set clear, enforceable, measurable expectations for infrastructure as code so that human teams and AI agents act consistently and safely.
 
 ## Scope
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+Applies to all teams, services and AI agents that perform or affect infrastructure as code across the enterprise. Concerns owned by other rules are referenced rather than duplicated.
 
 ## Business Rationale
 
-This section (Business Rationale) for **Infrastructure as Code Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Defining and provisioning infrastructure through version-controlled, reviewed code rather than manual changes. Getting this right reduces risk, rework and cost while increasing trust, speed and compliance.
 
 ## Technical Rationale
 
-This section (Technical Rationale) for **Infrastructure as Code Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Consistent, automated enforcement makes outcomes predictable, auditable and safe to scale across humans and AI agents.
 
 ## Definitions
 
-- Canonical terms are defined in the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
-- No terminology is redefined within this document.
+- **Drift** — Divergence between code and real infrastructure.
 
 ## Mandatory Requirements (MUST)
 
-- The team MUST apply the AIBOS root standards when implementing Infrastructure as Code Rule.
-- The team MUST validate every artefact before publication.
-- The team MUST require human approval for high-risk actions.
-- The team MUST maintain an auditable trail of decisions.
+- Infrastructure MUST be defined as code and version-controlled.
+- Changes MUST go through review and automated plan/apply.
+- State and secrets MUST be stored securely.
 
 ## Recommended Practices (SHOULD)
 
-- Teams SHOULD automate repeatable validation where practical.
-- Teams SHOULD reuse existing artefacts before creating new ones.
-- Teams SHOULD capture metrics to drive continuous improvement.
+- Modules SHOULD be reusable and parameterised.
+- Drift SHOULD be detected and corrected.
 
 ## Optional Practices (MAY)
 
-- Teams MAY extend this artefact for domain-specific needs.
-- Teams MAY add additional tooling integrations.
+- Teams MAY use policy-as-code to gate changes.
 
 ## Rule Ownership Matrix
 
-| Partner | Interaction | Direction |
-| --- | --- | --- |
-| Upstream owners | Provide inputs | Inbound |
-| Downstream consumers | Consume outputs | Outbound |
-| Governance | Review and approve | Bidirectional |
+| Role | Assignment |
+| --- | --- |
+| Rule Owner | Head of Platform |
+| Rule Approver | Chief Governance Architect |
+| Mandatory Reviewers | Security Engineer, Compliance Specialist |
+| Roles Required to Follow | All contributors within scope (human and AI) |
+| Roles Allowed to Override | Head of Platform (with documented exception) |
+| Escalation Authority | Governance Division |
 
 ## Applicable Departments
 
-- See **[Department Specifications (Phase 04)](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+All departments performing infrastructure as code. See the [Department Specifications](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md).
 
 ## Applicable Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Roles that must follow this rule are defined in the [Specialist Skills](../../PHASE_05_SKILLS/README.md).
 
 ## Related Rules
 
-- See **[Enterprise Rules (Phase 06)](../README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See other rules in the [Enterprise Rules catalogue](../README.md).
 
 ## Related Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Validated via the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Related Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Operationalised through the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Related Templates
 
-- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Supported by the [Enterprise Templates](../../PHASE_09_TEMPLATES/README.md).
 
 ## Related Knowledge Articles
 
-- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Explained in the [Enterprise Knowledge base](../../PHASE_10_KNOWLEDGE/README.md).
 
 ## Security Considerations
 
-Apply Security by Design, least privilege and Zero Trust; protect secrets and follow OWASP guidance.
+Apply Security by Design, least privilege and Zero Trust. Protect secrets and follow OWASP ASVS and the OWASP LLM Top 10 where AI is involved.
 
 ## Privacy Considerations
 
-Apply data minimisation, purpose limitation and retention controls.
+Apply data minimisation, purpose limitation and retention controls to any personal data touched by this rule.
 
 ## AI Considerations
 
-Maintain human-in-the-loop controls and minimise hallucination risk.
+Where AI agents apply this rule, keep a human in the loop for high-risk actions, maintain audit trails and mitigate hallucination.
 
 ## Compliance Requirements
 
 | Standard | Application |
 | --- | --- |
-| ISO 42001 | AI management system alignment. |
-| ISO 27001 | Information security controls. |
-| NIST AI RMF | AI risk management. |
-| OWASP LLM Top 10 | LLM threat mitigation. |
+| ISO 27001 | Information security baseline. |
 
 ## Exceptions Process
 
-This section (Exceptions Process) for **Infrastructure as Code Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Exceptions MUST be requested from the rule owner (Head of Platform), be time-boxed, risk-assessed and recorded. Unapproved deviations are non-compliant.
 
 ## Approval Authority
 
-This section (Approval Authority) for **Infrastructure as Code Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+This rule is approved by the Chief Governance Architect; exceptions are approved by Head of Platform.
 
 ## Enforcement Model
 
-This section (Enforcement Model) for **Infrastructure as Code Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Enforced through automated checks in CI, peer review and the related checklists. Violations are flagged, tracked and remediated.
 
 ## Metrics
 
-- Quality score.
-- Defect density.
-- Review turnaround.
+- % infra as code
+- Drift incidents
+- Provisioning lead time
 
 ## KPIs
 
-- Coverage and completeness.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- % infra as code
+- Drift incidents
+- Provisioning lead time
 
 ## Risks
 
-- Scope drift over time.
-- Inconsistent adoption across teams.
-- Over-automation without adequate oversight.
+- Manual changes cause drift and outages.
 
 ## Anti-patterns
 
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
+- Manual console changes ('click-ops').
+- Unreviewed applies.
+- Secrets in tfvars committed.
 
 ## Best Practices
 
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
+- Modularise.
+- Review plans.
+- Detect drift.
 
 ## Acceptance Criteria
 
-- All mandatory sections are complete.
-- Validation passes with no errors.
-- Cross-references are valid.
+- All MUST requirements are satisfied.
+- Validation checklist passes.
+- Ownership and exceptions are documented.
+- Cross-references resolve.
 
 ## Validation Checklist
 
-- [ ] YAML front matter is present and valid.
-- [ ] All mandatory sections are complete.
-- [ ] Terminology matches the AIBOS Enterprise Glossary.
+- [ ] All infra defined as code (no manual prod changes).
+- [ ] Change reviewed; plan inspected before apply.
+- [ ] State stored securely (remote, locked).
+- [ ] No secrets in code.
+- [ ] Drift detection in place.
+- [ ] RFC-2119 keywords used correctly.
 - [ ] Cross-references resolve to existing documents.
-- [ ] RFC 2119 keywords are used correctly.
-- [ ] Security and privacy considerations are addressed.
-- [ ] Version history is updated.
-- [ ] No secrets or sensitive data are exposed.
+- [ ] No secrets or sensitive data exposed.
+- [ ] Version history updated.
 
 ## References
 
 - [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
 - [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
 - [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
 - [Phase 06 Master Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
 
@@ -217,4 +201,4 @@ This section (Enforcement Model) for **Infrastructure as Code Rule** is defined 
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use rule. |

@@ -4,8 +4,8 @@ title: Secrets Management Rule
 document_type: Rule
 category: Security
 phase: Phase 06
-owner: Chief Governance Architect
-status: Draft
+owner: CISO
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - rule
+  - security
+  - secrets_management_rule
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,187 +31,170 @@ standards:
 
 # Secrets Management Rule
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 06 Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Rules](../README.md) · [Phase 06 Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
+
+**Rule ID:** RULE-000024  •  **Category:** Security
 
 ## Executive Summary
 
-This document defines **Secrets Management Rule** within the AIBOS Enterprise v2.0 framework (Phase 06). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+This rule is the single source of truth for **Secrets Management** in the AIBOS Enterprise. Securely storing, distributing and rotating credentials, keys and tokens so they never leak. It is mandatory within its scope and inherits the [root standards](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
 
 ## Purpose
 
-To establish the authoritative, reusable definition of Secrets Management Rule so that human teams and AI agents operate consistently, safely and with measurable business value.
+To set clear, enforceable, measurable expectations for secrets management so that human teams and AI agents act consistently and safely.
 
 ## Scope
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+Applies to all teams, services and AI agents that perform or affect secrets management across the enterprise. Concerns owned by other rules are referenced rather than duplicated.
 
 ## Business Rationale
 
-This section (Business Rationale) for **Secrets Management Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Securely storing, distributing and rotating credentials, keys and tokens so they never leak. Getting this right reduces risk, rework and cost while increasing trust, speed and compliance.
 
 ## Technical Rationale
 
-This section (Technical Rationale) for **Secrets Management Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Consistent, automated enforcement makes outcomes predictable, auditable and safe to scale across humans and AI agents.
 
 ## Definitions
 
-- Canonical terms are defined in the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
-- No terminology is redefined within this document.
+- **Secret** — A credential, key or token that grants access.
 
 ## Mandatory Requirements (MUST)
 
-- The team MUST apply the AIBOS root standards when implementing Secrets Management Rule.
-- The team MUST validate every artefact before publication.
-- The team MUST require human approval for high-risk actions.
-- The team MUST maintain an auditable trail of decisions.
+- Secrets MUST be stored in a managed secrets manager, never in code or config.
+- Secrets MUST be rotated on a schedule and on compromise.
+- Access to secrets MUST be least-privilege and audited.
 
 ## Recommended Practices (SHOULD)
 
-- Teams SHOULD automate repeatable validation where practical.
-- Teams SHOULD reuse existing artefacts before creating new ones.
-- Teams SHOULD capture metrics to drive continuous improvement.
+- Secrets SHOULD be injected at runtime, not baked into images.
+- CI SHOULD scan for accidentally committed secrets.
 
 ## Optional Practices (MAY)
 
-- Teams MAY extend this artefact for domain-specific needs.
-- Teams MAY add additional tooling integrations.
+- Teams MAY use dynamic, short-lived secrets.
 
 ## Rule Ownership Matrix
 
-| Partner | Interaction | Direction |
-| --- | --- | --- |
-| Upstream owners | Provide inputs | Inbound |
-| Downstream consumers | Consume outputs | Outbound |
-| Governance | Review and approve | Bidirectional |
+| Role | Assignment |
+| --- | --- |
+| Rule Owner | CISO |
+| Rule Approver | Chief Governance Architect |
+| Mandatory Reviewers | Security Engineer, Compliance Specialist |
+| Roles Required to Follow | All contributors within scope (human and AI) |
+| Roles Allowed to Override | CISO (with documented exception) |
+| Escalation Authority | Governance Division |
 
 ## Applicable Departments
 
-- See **[Department Specifications (Phase 04)](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+All departments performing secrets management. See the [Department Specifications](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md).
 
 ## Applicable Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Roles that must follow this rule are defined in the [Specialist Skills](../../PHASE_05_SKILLS/README.md).
 
 ## Related Rules
 
-- See **[Enterprise Rules (Phase 06)](../README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See other rules in the [Enterprise Rules catalogue](../README.md).
 
 ## Related Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Validated via the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Related Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Operationalised through the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Related Templates
 
-- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Supported by the [Enterprise Templates](../../PHASE_09_TEMPLATES/README.md).
 
 ## Related Knowledge Articles
 
-- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Explained in the [Enterprise Knowledge base](../../PHASE_10_KNOWLEDGE/README.md).
 
 ## Security Considerations
 
-Apply Security by Design, least privilege and Zero Trust; protect secrets and follow OWASP guidance.
+Apply Security by Design, least privilege and Zero Trust. Protect secrets and follow OWASP ASVS and the OWASP LLM Top 10 where AI is involved.
 
 ## Privacy Considerations
 
-Apply data minimisation, purpose limitation and retention controls.
+Apply data minimisation, purpose limitation and retention controls to any personal data touched by this rule.
 
 ## AI Considerations
 
-Maintain human-in-the-loop controls and minimise hallucination risk.
+Where AI agents apply this rule, keep a human in the loop for high-risk actions, maintain audit trails and mitigate hallucination.
 
 ## Compliance Requirements
 
 | Standard | Application |
 | --- | --- |
-| ISO 42001 | AI management system alignment. |
-| ISO 27001 | Information security controls. |
-| NIST AI RMF | AI risk management. |
-| OWASP LLM Top 10 | LLM threat mitigation. |
+| ISO 27001 | Applies to this rule. |
+| OWASP ASVS | Applies to this rule. |
 
 ## Exceptions Process
 
-This section (Exceptions Process) for **Secrets Management Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Exceptions MUST be requested from the rule owner (CISO), be time-boxed, risk-assessed and recorded. Unapproved deviations are non-compliant.
 
 ## Approval Authority
 
-This section (Approval Authority) for **Secrets Management Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+This rule is approved by the Chief Governance Architect; exceptions are approved by CISO.
 
 ## Enforcement Model
 
-This section (Enforcement Model) for **Secrets Management Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Enforced through automated checks in CI, peer review and the related checklists. Violations are flagged, tracked and remediated.
 
 ## Metrics
 
-- Quality score.
-- Defect density.
-- Review turnaround.
+- Secret-leak incidents
+- Rotation compliance
+- Time-to-rotate
 
 ## KPIs
 
-- Coverage and completeness.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Secret-leak incidents
+- Rotation compliance
+- Time-to-rotate
 
 ## Risks
 
-- Scope drift over time.
-- Inconsistent adoption across teams.
-- Over-automation without adequate oversight.
+- Leaked secrets cause immediate compromise.
 
 ## Anti-patterns
 
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
+- Secrets in .env committed to Git.
+- Shared static credentials.
+- No rotation.
 
 ## Best Practices
 
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
+- Use a vault.
+- Rotate automatically.
+- Scan history for leaks.
 
 ## Acceptance Criteria
 
-- All mandatory sections are complete.
-- Validation passes with no errors.
-- Cross-references are valid.
+- All MUST requirements are satisfied.
+- Validation checklist passes.
+- Ownership and exceptions are documented.
+- Cross-references resolve.
 
 ## Validation Checklist
 
-- [ ] YAML front matter is present and valid.
-- [ ] All mandatory sections are complete.
-- [ ] Terminology matches the AIBOS Enterprise Glossary.
+- [ ] No secrets in source, config or images.
+- [ ] Secrets stored in a managed vault.
+- [ ] Rotation schedule defined and followed.
+- [ ] Access least-privilege and audited.
+- [ ] CI secret-scanning enabled.
+- [ ] RFC-2119 keywords used correctly.
 - [ ] Cross-references resolve to existing documents.
-- [ ] RFC 2119 keywords are used correctly.
-- [ ] Security and privacy considerations are addressed.
-- [ ] Version history is updated.
-- [ ] No secrets or sensitive data are exposed.
+- [ ] No secrets or sensitive data exposed.
+- [ ] Version history updated.
 
 ## References
 
 - [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
 - [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
 - [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
 - [Phase 06 Master Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
 
@@ -217,4 +202,4 @@ This section (Enforcement Model) for **Secrets Management Rule** is defined in l
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use rule. |
