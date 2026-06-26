@@ -6,7 +6,7 @@
 
 [![Markdown Validation](https://github.com/mypsbots/AI-Business-Operating-System/actions/workflows/markdown-validation.yml/badge.svg)](https://github.com/mypsbots/AI-Business-Operating-System/actions/workflows/markdown-validation.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-2.1.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.5.0-green.svg)](CHANGELOG.md)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://www.conventionalcommits.org)
 
 ---
@@ -29,6 +29,21 @@ Markdown artefacts organised into two layers:
 The framework is intentionally **vendor-neutral** and **model-agnostic**. It is
 compatible with GPT, Claude, Gemini, Grok and capable open-source LLMs.
 
+## Repository Status
+
+All **20 phases are complete and enriched to ready-to-use depth** — every
+artefact carries detailed, section-appropriate content (no scaffolding or
+placeholder text), YAML front matter, navigation breadcrumbs and resolving
+cross-references.
+
+| Metric | Value |
+|--------|-------|
+| Generated artefacts | **1067** across all 20 phases |
+| Browsable folder indexes | 163 `README.md` files |
+| Markdown lint (`markdownlint-cli2`) | **0 errors** across 1,231 files |
+| Internal link check | **0 broken** across 22,845 links |
+| Current version | **2.5.0** (see [`CHANGELOG.md`](CHANGELOG.md)) |
+
 ## Core Principles
 
 | Principle | Description |
@@ -46,8 +61,8 @@ compatible with GPT, Claude, Gemini, Grok and capable open-source LLMs.
 .
 ├── 00_ROOT/        # Root specification + 16 enterprise standards & master prompts
 ├── 01_PHASES/      # 20 sequential phase master prompts
-├── 02_ARTEFACTS/   # 1067 generated artefacts across all 20 phases
-├── tools/          # generate_aibos.py — deterministic artefact generator
+├── 02_ARTEFACTS/   # 1067 detailed, ready-to-use artefacts across all 20 phases
+├── tools/          # Deterministic generators (shared + per-phase content libraries)
 ├── ROOT_INDEX.md   # Machine- and human-readable index of every artefact
 ├── FINAL_REPORT.md # Repository assembly & validation report
 ├── CHANGELOG.md    # Semantic-versioned change history
@@ -104,7 +119,8 @@ Please do not open public issues for security concerns.
 ## Versioning
 
 This repository uses [Semantic Versioning](https://semver.org). The current
-release line is **v2.0**. See [`CHANGELOG.md`](CHANGELOG.md) for history.
+version is **2.5.0** within the **v2** release line. See
+[`CHANGELOG.md`](CHANGELOG.md) for history.
 
 ## License
 

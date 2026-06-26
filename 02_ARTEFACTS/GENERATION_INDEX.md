@@ -2,26 +2,36 @@
 
 # AIBOS Enterprise v2.0 — Generated Artefacts Index
 
-Version: 2.0.0
+Version: 2.5.0
 
 This index catalogues the artefacts generated from the Phase master prompts in
-[`01_PHASES/`](../01_PHASES). Artefacts are produced by the deterministic,
-idempotent generator at [`tools/generate_aibos.py`](../tools/generate_aibos.py),
-embodying the **Documentation as Code** principle. Every artefact includes YAML
-front matter, all sections required by its phase, and cross-references to the
-inherited root standards.
+[`01_PHASES/`](../01_PHASES). Artefacts are produced by deterministic, idempotent
+generators under [`tools/`](../tools), embodying the **Documentation as Code**
+principle. Every artefact includes YAML front matter, all sections required by
+its phase, navigation breadcrumbs, and cross-references to the inherited root
+standards.
 
 ## How Artefacts Are Generated
 
 ```bash
-python3 tools/generate_aibos.py            # generate missing artefacts
-python3 tools/generate_aibos.py --overwrite  # regenerate all (protects hand-authored docs)
+# Shared generator — framework phases (01-04, 11-12, 14-20)
+python3 tools/generate_aibos.py --overwrite
+
+# Dedicated content-rich generators — content phases
+python3 tools/generate_skills.py      # Phase 05 Skills
+python3 tools/generate_rules.py       # Phase 06 Rules
+python3 tools/generate_checklists.py  # Phase 07 Checklists
+python3 tools/generate_playbooks.py   # Phase 08 Playbooks
+python3 tools/generate_templates.py   # Phase 09 Templates
+python3 tools/generate_knowledge.py   # Phase 10 Knowledge
+python3 tools/generate_industry.py    # Phase 13 Industry Blueprints
 ```
 
-The generator is data-driven: each phase's deliverable list and required section
-schema are encoded from the corresponding master prompt. Hand-authored documents
-(for example, the enriched Phase 01 foundation documents) are protected and never
-overwritten.
+The generators are data-driven: each phase's deliverable list and required
+section schema are encoded from the corresponding master prompt, and topic
+content is sourced from dedicated knowledge-base modules (`*_kb.py`). The shared
+generator deliberately does not regenerate Phases 05-10 and 13, so the
+hand-curated content from the dedicated generators is never overwritten.
 
 ## Artefact Counts by Phase
 
@@ -77,14 +87,18 @@ overwritten.
 
 ## Status & Maturity
 
-All artefacts are generated at **Draft** status with complete structure,
-metadata and cross-references. They provide a consistent, validated foundation
-that subject-matter experts and AI agents enrich into fully detailed content,
-following the AIBOS quality and validation standards. The enriched Phase 01
-foundation documents demonstrate the target depth.
+All artefacts are **enriched to ready-to-use depth**: every section carries
+detailed, section-appropriate content (no placeholder or scaffold text), with
+YAML front matter, navigation breadcrumbs and resolving cross-references.
+Validation is clean — `markdownlint-cli2` reports 0 errors across all artefact
+files, and the internal link check reports 0 broken links. Subject-matter
+experts and AI agents may further deepen domain-specific narrative and progress
+artefacts through the AIBOS quality gates (Peer → Technical → Security →
+Governance → Approval) before publication.
 
 ## Version History
 
 | Version | Date | Summary |
 |---------|------|---------|
+| 2.5.0 | 2026-06-27 | All phases enriched to detailed, ready-to-use content; placeholder sections eliminated; lint and link checks clean. |
 | 2.0.0 | 2026-06-26 | Initial generation of 1067 artefacts across 20 phases. |

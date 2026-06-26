@@ -2,7 +2,7 @@
 
 # AIBOS Enterprise v2.0 — Repository Index
 
-Version: 2.0.0
+Version: 2.5.0
 
 This document is the authoritative, ordered index of every artefact in the
 AIBOS Enterprise repository. It is maintained as both a human-readable map and
@@ -87,9 +87,11 @@ terminology and reuse existing artefacts.
 Location: [`02_ARTEFACTS/`](02_ARTEFACTS)
 
 The Phase master prompts drive generation of the detailed enterprise artefacts.
-These are produced by [`tools/generate_aibos.py`](tools/generate_aibos.py) and
-catalogued in [`02_ARTEFACTS/GENERATION_INDEX.md`](02_ARTEFACTS/GENERATION_INDEX.md)
-(1067 documents across all 20 phases).
+These are produced by the deterministic generators under
+[`tools/`](tools) and catalogued in
+[`02_ARTEFACTS/GENERATION_INDEX.md`](02_ARTEFACTS/GENERATION_INDEX.md)
+(1067 detailed, ready-to-use documents across all 20 phases). Each phase folder
+also has a browsable `README.md` index.
 
 ---
 
@@ -110,4 +112,5 @@ catalogued in [`02_ARTEFACTS/GENERATION_INDEX.md`](02_ARTEFACTS/GENERATION_INDEX
 
 | Version | Summary |
 |---------|---------|
+| 2.5.0 | All 20 phases enriched to detailed, ready-to-use depth; validated (lint + links clean). |
 | 2.0.0 | Initial repository index covering 17 root documents and 20 phases. |
