@@ -1,0 +1,9 @@
+# Default owners for everything in the repository.
+# These owners are requested for review on every pull request.
+*       @mypsbots
+
+# Root standards require maintainer review.
+/00_ROOT/   @mypsbots
+
+# Phase prompts.
+/01_PHASES/ @mypsbots

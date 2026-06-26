@@ -1,0 +1,19 @@
+# Normalise line endings to LF for text files
+* text=auto eol=lf
+
+# Explicit text types
+*.md      text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.json    text eol=lf
+*.txt     text eol=lf
+
+# Treat common binaries as binary
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.pdf     binary
+
+# Mark generated/docs for language statistics (GitHub Linguist)
+*.md linguist-documentation
