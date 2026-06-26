@@ -5,6 +5,25 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-06-26
+
+### Changed
+
+- Generator now emits **working relative Markdown links** (e.g. `../../ROOT_INDEX.md`)
+  computed from each document's location, replacing bare inline references that did
+  not resolve from nested folders.
+- Cross-reference sections (Required Rules, Checklists, Playbooks, etc.) now link to
+  the correct phase artefacts folder instead of repeating identical boilerplate.
+- Skill sub-competency sections (Technical, Business, AI, Soft) now carry distinct,
+  role-appropriate content instead of duplicated text.
+
+### Added
+
+- A navigation breadcrumb (Home · Catalogue · Generated Index · Phase Prompt) at the
+  top of every generated artefact.
+- A browsable `README.md` index in every artefacts folder (163 indexes) so the
+  repository is easy to surf directly on GitHub.
+
 ## [2.1.0] - 2026-06-26
 
 ### Added

@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """AIBOS Enterprise v2.0 artefact generator.
 
-Generates schema-compliant Markdown artefacts for Phases 1-20 from the
-master prompts under ``01_PHASES``. Output is written to ``02_ARTEFACTS``.
+Generates schema-compliant, cross-linked Markdown artefacts for Phases 1-20 from
+the master prompts under ``01_PHASES``. Output is written to ``02_ARTEFACTS``.
 
 Design goals:
-- Deterministic, idempotent (skips files that already exist unless --overwrite).
-- Every document includes YAML front matter and all required sections per phase.
-- Output is markdownlint-clean (blank lines around headings, lists, tables,
-  fenced code blocks; single trailing newline; no trailing whitespace).
+- Deterministic and idempotent (``--overwrite`` regenerates everything).
+- Every document includes YAML front matter, a navigation breadcrumb, all the
+  sections required by its phase, and **working relative links** to the
+  inherited standards and related phase artefacts.
+- A browsable ``README.md`` index is written into every folder so the repository
+  is easy to navigate on GitHub.
+- Output is markdownlint-clean.
 
 This embodies the "Documentation as Code" principle from
 AIBOS_ROOT_SPECIFICATION.md.
@@ -17,7 +20,7 @@ AIBOS_ROOT_SPECIFICATION.md.
 from __future__ import annotations
 
 import argparse
-import datetime as _dt
+import os
 import re
 from pathlib import Path
 
@@ -26,59 +29,112 @@ VERSION = "2.0.0"
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "02_ARTEFACTS"
 
-STANDARDS = [
-    "ISO 42001",
-    "ISO 27001",
-    "NIST AI RMF",
-    "SOC 2",
-    "OWASP ASVS",
-    "OWASP LLM Top 10",
-    "WCAG 2.2 AA",
+STANDARDS = ["ISO 42001", "ISO 27001", "NIST AI RMF", "SOC 2", "OWASP ASVS",
+             "OWASP LLM Top 10", "WCAG 2.2 AA"]
+
+PHASE_DIR = {
+    1: "PHASE_01_ENTERPRISE_ARCHITECTURE",
+    2: "PHASE_02_ENTERPRISE_SPECIFICATIONS",
+    3: "PHASE_03_DIVISION_SPECIFICATIONS",
+    4: "PHASE_04_DEPARTMENT_SPECIFICATIONS",
+    5: "PHASE_05_SKILLS",
+    6: "PHASE_06_RULES",
+    7: "PHASE_07_CHECKLISTS",
+    8: "PHASE_08_PLAYBOOKS",
+    9: "PHASE_09_TEMPLATES",
+    10: "PHASE_10_KNOWLEDGE",
+    11: "PHASE_11_AI_AGENT_COLLABORATION",
+    12: "PHASE_12_AUTOMATION",
+    13: "PHASE_13_INDUSTRY_BLUEPRINTS",
+    14: "PHASE_14_ACCELERATOR_PACKS",
+    15: "PHASE_15_REFERENCE_IMPLEMENTATIONS",
+    16: "PHASE_16_SDK_CLI",
+    17: "PHASE_17_CERTIFICATION",
+    18: "PHASE_18_MARKETPLACE",
+    19: "PHASE_19_REFERENCE_ORGANISATION",
+    20: "PHASE_20_META_ORCHESTRATOR",
+}
+
+PHASE_TITLE = {
+    1: "Enterprise Architecture", 2: "Enterprise Specifications",
+    3: "Division Specifications", 4: "Department Specifications",
+    5: "Specialist Skills", 6: "Enterprise Rules", 7: "Enterprise Checklists",
+    8: "Enterprise Playbooks", 9: "Enterprise Templates", 10: "Enterprise Knowledge",
+    11: "AI Agent Collaboration", 12: "Enterprise Automation",
+    13: "Industry Blueprints", 14: "Accelerator Packs",
+    15: "Reference Implementations", 16: "SDK and CLI",
+    17: "Certification and Maturity", 18: "Marketplace",
+    19: "Reference Organisation", 20: "Meta-Orchestrator",
+}
+
+PHASE_PROMPT = {
+    1: "PHASE_01_ENTERPRISE_ARCHITECTURE_MASTER_PROMPT.md",
+    2: "PHASE_02_ENTERPRISE_SPECIFICATIONS_MASTER_PROMPT.md",
+    3: "PHASE_03_DIVISION_SPECIFICATIONS_MASTER_PROMPT.md",
+    4: "PHASE_04_DEPARTMENT_SPECIFICATIONS_MASTER_PROMPT.md",
+    5: "PHASE_05_SKILLS_MASTER_PROMPT.md",
+    6: "PHASE_06_RULES_MASTER_PROMPT.md",
+    7: "PHASE_07_CHECKLISTS_MASTER_PROMPT.md",
+    8: "PHASE_08_PLAYBOOKS_MASTER_PROMPT.md",
+    9: "PHASE_09_TEMPLATES_MASTER_PROMPT.md",
+    10: "PHASE_10_KNOWLEDGE_MASTER_PROMPT.md",
+    11: "PHASE_11_AI_AGENT_COLLABORATION_MASTER_PROMPT.md",
+    12: "PHASE_12_ENTERPRISE_AUTOMATION_CONTINUOUS_IMPROVEMENT_MASTER_PROMPT.md",
+    13: "PHASE_13_INDUSTRY_BLUEPRINTS_MASTER_PROMPT.md",
+    14: "PHASE_14_ENTERPRISE_ACCELERATOR_PACKS_MASTER_PROMPT.md",
+    15: "PHASE_15_ENTERPRISE_REFERENCE_IMPLEMENTATIONS_MASTER_PROMPT.md",
+    16: "PHASE_16_AIBOS_SDK_CLI_MASTER_PROMPT.md",
+    17: "PHASE_17_AIBOS_CERTIFICATION_MATURITY_MASTER_PROMPT.md",
+    18: "PHASE_18_AIBOS_MARKETPLACE_EXTENSION_FRAMEWORK_MASTER_PROMPT.md",
+    19: "PHASE_19_AIBOS_REFERENCE_AI_ORGANISATION_MASTER_PROMPT.md",
+    20: "PHASE_20_AIBOS_META_ORCHESTRATOR_AUTONOMOUS_ENTERPRISE_MASTER_PROMPT.md",
+}
+
+# Section keyword -> phase number, used to link cross-reference sections to the
+# correct phase artefacts folder.
+XREF_KEYWORDS = [
+    ("checklist", 7), ("playbook", 8), ("template", 9), ("knowledge", 10),
+    ("industry", 13), ("blueprint", 13), ("department", 4), ("agent", 11),
+    ("automation", 12), ("marketplace", 18), ("sdk", 16), ("skill", 5),
+    ("rule", 6),
 ]
 
+ACRONYMS = {"AI", "API", "SDK", "CLI", "RAG", "MCP", "BI", "QA", "SRE", "IAM",
+            "KPI", "OKR", "UX", "SEO", "AEO", "GEO", "IP", "HR", "PMO", "ETL",
+            "CDC", "SBOM", "SOP", "PRD", "ADR", "ROI", "SME", "GA", "LTS",
+            "OWASP", "ISO", "NIST", "SOC", "WCAG", "GDPR", "CI", "CD", "LLM",
+            "LLMS", "FAQ", "AIBOS", "ASFE", "AIAE", "AICE", "MVP", "SAAS"}
+
 
 # --------------------------------------------------------------------------- #
-# Helpers
+# Link + formatting helpers
 # --------------------------------------------------------------------------- #
+def rellink(from_dir: Path, target: Path) -> str:
+    return os.path.relpath(target, from_dir).replace(os.sep, "/")
+
+
 def slug(text: str) -> str:
-    """Convert a title to an UPPER_SNAKE_CASE filename component."""
     text = text.replace("&", "and").replace("/", " ").replace("+", " plus ")
     text = re.sub(r"[^0-9A-Za-z]+", "_", text).strip("_")
     return text.upper()
 
 
-def front_matter(doc_id: str, title: str, doc_type: str, category: str,
-                 phase: str, owner: str, tags: list[str],
-                 related: list[str]) -> str:
-    tag_lines = "\n".join(f"  - {t}" for t in tags) or "  - aibos"
-    rel_lines = "\n".join(f"  - {r}" for r in related) or "  - AIBOS_ROOT_SPECIFICATION.md"
-    std_lines = "\n".join(f"  - {s}" for s in STANDARDS)
-    return (
-        "---\n"
-        f"id: {doc_id}\n"
-        f"title: {title}\n"
-        f"document_type: {doc_type}\n"
-        f"category: {category}\n"
-        f"phase: {phase}\n"
-        f"owner: {owner}\n"
-        "status: Draft\n"
-        "lifecycle: Active\n"
-        "classification: Internal\n"
-        f"version: {VERSION}\n"
-        f"created: {DATE}\n"
-        f"updated: {DATE}\n"
-        "tags:\n"
-        f"{tag_lines}\n"
-        "related_documents:\n"
-        f"{rel_lines}\n"
-        "standards:\n"
-        f"{std_lines}\n"
-        "---"
-    )
+def display(name: str) -> str:
+    name = re.sub(r"\.md$", "", name)
+    name = re.sub(r"^\d+_", "", name)
+    words = name.replace("_", " ").split()
+    out = []
+    for w in words:
+        out.append(w.upper() if w.upper() in ACRONYMS else w.capitalize())
+    return " ".join(out) or name
 
 
 def bullets(items: list[str]) -> str:
     return "\n".join(f"- {i}" for i in items)
+
+
+def numbered(items: list[str]) -> str:
+    return "\n".join(f"{i}. {t}" for i, t in enumerate(items, start=1))
 
 
 def checkboxes(items: list[str]) -> str:
@@ -96,6 +152,32 @@ def fenced(lang: str, code: str) -> str:
     return f"```{lang}\n{code.strip()}\n```"
 
 
+def front_matter(doc_id, title, doc_type, category, phase, owner, tags, related):
+    tag_lines = "\n".join(f"  - {t}" for t in tags) or "  - aibos"
+    rel_lines = "\n".join(f"  - {r}" for r in related)
+    std_lines = "\n".join(f"  - {s}" for s in STANDARDS)
+    return ("---\n"
+            f"id: {doc_id}\n"
+            f"title: {title}\n"
+            f"document_type: {doc_type}\n"
+            f"category: {category}\n"
+            f"phase: {phase}\n"
+            f"owner: {owner}\n"
+            "status: Draft\n"
+            "lifecycle: Active\n"
+            "classification: Internal\n"
+            f"version: {VERSION}\n"
+            f"created: {DATE}\n"
+            f"updated: {DATE}\n"
+            "tags:\n"
+            f"{tag_lines}\n"
+            "related_documents:\n"
+            f"{rel_lines}\n"
+            "standards:\n"
+            f"{std_lines}\n"
+            "---")
+
+
 MERMAID_FLOW = fenced("mermaid", """
 flowchart TD
     A[Trigger] --> B[Process Inputs]
@@ -107,21 +189,28 @@ flowchart TD
     F --> G[Record Audit Trail]
 """)
 
-VERSION_TABLE = table(
-    ["Version", "Date", "Summary"],
-    [[VERSION, DATE, "Initial generated artefact."]],
-)
+VERSION_TABLE = table(["Version", "Date", "Summary"],
+                      [[VERSION, DATE, "Initial generated artefact."]])
 
 
 # --------------------------------------------------------------------------- #
 # Section content builder
 # --------------------------------------------------------------------------- #
+def xref_phase(name: str):
+    n = name.lower()
+    for kw, p in XREF_KEYWORDS:
+        if kw in n:
+            return p
+    return None
+
+
 def build_section(name: str, ctx: dict) -> str:
     title = ctx["title"]
     phase = ctx["phase"]
+    lr = ctx["link_root"]
+    ld = ctx["link_dir"]
     n = name.lower()
 
-    # Structured renderings by pattern -------------------------------------- #
     if name == "Version History":
         return VERSION_TABLE
     if name == "Validation Checklist" or n == "validation steps":
@@ -158,7 +247,7 @@ flowchart TD
   }
 }
 """)
-    if n == "yaml schema" or n == "required metadata" or n == "metadata schema":
+    if n in ("yaml schema", "required metadata", "metadata schema"):
         return fenced("yaml", """
 id: DOC-000000
 title: Example
@@ -166,59 +255,79 @@ version: 2.0.0
 owner: Owning Team
 classification: Internal
 """)
-    if n in ("example completed template", "sample usage", "examples", "package manifest"):
+    if n in ("example completed template", "sample usage", "examples",
+             "package manifest"):
         return fenced("yaml", f"""
 # Example for: {title}
 name: example
 version: {VERSION}
 status: draft
 """)
+
+    # Cross-reference sections -> real relative links ----------------------- #
+    # The four skill sub-competency sections are differentiated below; they must
+    # not be treated as generic cross-references even though they contain "skill".
+    SKILL_SUBSKILLS = {"required technical skills", "required business skills",
+                       "required ai skills", "required soft skills"}
+    p = xref_phase(name)
+    if p is not None and n not in SKILL_SUBSKILLS and (
+        n.startswith(("required", "related", "applicable", "supporting",
+                      "governing")) or n.endswith("mapping")
+        or n in ("ai agents involved", "knowledge dependencies",
+                 "applicable departments", "marketplace assets", "sdk usage")):
+        return bullets([
+            f"See **[{PHASE_TITLE[p]} (Phase {p:02d})]({ld(p)})** for the "
+            "relevant artefacts.",
+            f"Inherited standards: [AIBOS Root Specification]"
+            f"({lr('00_ROOT/AIBOS_ROOT_SPECIFICATION.md')}).",
+            f"Full catalogue: [ROOT_INDEX]({lr('ROOT_INDEX.md')}).",
+        ])
+
+    if name == "References":
+        return bullets([
+            f"[AIBOS Root Specification]({lr('00_ROOT/AIBOS_ROOT_SPECIFICATION.md')})",
+            f"[Enterprise Glossary]({lr('00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md')})",
+            f"[Document Schema]({lr('00_ROOT/AIBOS_DOCUMENT_SCHEMA.md')})",
+            f"[Repository Catalogue (ROOT_INDEX)]({lr('ROOT_INDEX.md')})",
+            f"[Phase {ctx['num']:02d} Master Prompt]({ctx['link_prompt']()})",
+        ])
+
     if "raci" in n:
-        return table(
-            ["Activity", "Responsible", "Accountable", "Consulted", "Informed"],
-            [["Primary task", "Specialist", "Department Lead", "Architecture", "Stakeholders"]],
-        )
+        return table(["Activity", "Responsible", "Accountable", "Consulted", "Informed"],
+                     [["Primary task", "Specialist", "Department Lead", "Architecture",
+                       "Stakeholders"]])
     if "matrix" in n:
-        return table(
-            ["Partner", "Interaction", "Direction"],
-            [["Upstream owners", "Provide inputs", "Inbound"],
-             ["Downstream consumers", "Consume outputs", "Outbound"],
-             ["Governance", "Review and approve", "Bidirectional"]],
-        )
+        return table(["Partner", "Interaction", "Direction"],
+                     [["Upstream owners", "Provide inputs", "Inbound"],
+                      ["Downstream consumers", "Consume outputs", "Outbound"],
+                      ["Governance", "Review and approve", "Bidirectional"]])
     if "30/60/90" in n or "roadmap" in n:
-        return table(
-            ["Horizon", "Focus", "Outcome"],
-            [["0-30 days", "Discover and assess", "Baseline established"],
-             ["31-60 days", "Design and build", "Pilot delivered"],
-             ["61-90 days", "Validate and scale", "Production rollout"]],
-        )
+        return table(["Horizon", "Focus", "Outcome"],
+                     [["0-30 days", "Discover and assess", "Baseline established"],
+                      ["31-60 days", "Design and build", "Pilot delivered"],
+                      ["61-90 days", "Validate and scale", "Production rollout"]])
     if n == "mandatory requirements (must)":
         return bullets([
             f"The team MUST apply the AIBOS root standards when implementing {title}.",
             "The team MUST validate every artefact before publication.",
             "The team MUST require human approval for high-risk actions.",
-            "The team MUST maintain an auditable trail of decisions.",
-        ])
+            "The team MUST maintain an auditable trail of decisions."])
     if n == "recommended practices (should)":
         return bullets([
             "Teams SHOULD automate repeatable validation where practical.",
             "Teams SHOULD reuse existing artefacts before creating new ones.",
-            "Teams SHOULD capture metrics to drive continuous improvement.",
-        ])
+            "Teams SHOULD capture metrics to drive continuous improvement."])
     if n == "optional practices (may)":
         return bullets([
             "Teams MAY extend this artefact for domain-specific needs.",
-            "Teams MAY add additional tooling integrations.",
-        ])
+            "Teams MAY add additional tooling integrations."])
     if n in ("standards mapping", "compliance mapping", "compliance requirements",
-             "compliance controls", "external standards"):
-        return table(
-            ["Standard", "Application"],
-            [["ISO 42001", "AI management system alignment."],
-             ["ISO 27001", "Information security controls."],
-             ["NIST AI RMF", "AI risk management."],
-             ["OWASP LLM Top 10", "LLM threat mitigation."]],
-        )
+             "compliance controls", "external standards", "compliance validation"):
+        return table(["Standard", "Application"],
+                     [["ISO 42001", "AI management system alignment."],
+                      ["ISO 27001", "Information security controls."],
+                      ["NIST AI RMF", "AI risk management."],
+                      ["OWASP LLM Top 10", "LLM threat mitigation."]])
     if n == "faqs":
         return ("**Q: How does this artefact relate to the AIBOS standards?**\n\n"
                 "A: It inherits and must not contradict the root standards.\n\n"
@@ -226,35 +335,81 @@ status: draft
                 f"A: {ctx['owner']}.")
     if n == "definitions":
         return bullets([
-            "Refer to `00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md` for canonical terms.",
-            "No terminology is redefined within this document.",
-        ])
-    if (n.startswith("required ") or n.startswith("related ")
-            or n.startswith("applicable ") or n.startswith("supporting ")
-            or n.startswith("governing ") or n.endswith("mapping")
-            or n in ("upstream dependencies", "downstream consumers",
-                     "dependencies", "knowledge dependencies",
-                     "required industry blueprints", "related industry blueprints")):
-        return bullets([
-            "Inherits all root standards under `00_ROOT/`.",
-            "Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.",
-            "See `ROOT_INDEX.md` for the full catalogue.",
-        ])
-    if n in ("kpis", "metrics", "quality metrics", "success metrics",
-             "okrs", "slas", "slos", "slas/slos", "roi metrics", "roi model",
-             "maturity indicators", "performance targets"):
-        return bullets([
-            "Coverage and completeness of the artefact.",
-            "Validation pass rate (target 95%+).",
-            "Cycle time from draft to approval.",
-            "Reuse rate across the enterprise.",
-        ])
-    if n == "validation rules":
-        return bullets([
-            "All placeholders are resolved before use.",
-            "Required metadata fields are populated.",
-            "Output conforms to the AIBOS Document Schema.",
-        ])
+            f"Canonical terms are defined in the "
+            f"[Enterprise Glossary]({lr('00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md')}).",
+            "No terminology is redefined within this document."])
+
+    # Skill-specific differentiated content --------------------------------- #
+    skill_sections = {
+        "required technical skills": [
+            "Proficiency with the relevant languages, frameworks and tooling.",
+            "Sound understanding of APIs, data structures and system design.",
+            "Cloud-native, CI/CD and Infrastructure-as-Code practices.",
+            "Disciplined version control with Git and peer code review."],
+        "required business skills": [
+            "Translating business goals into measurable outcomes.",
+            "Stakeholder communication and expectation management.",
+            "Prioritisation, planning and value-based decision making.",
+            "Commercial awareness of cost, ROI and risk."],
+        "required ai skills": [
+            "Prompt engineering and context design for LLMs.",
+            "Retrieval-Augmented Generation (RAG) and evaluation techniques.",
+            "Responsible AI, guardrails and hallucination mitigation.",
+            "Awareness of the OWASP LLM Top 10."],
+        "required soft skills": [
+            "Clear written and verbal communication.",
+            "Collaboration across human and AI teams.",
+            "Critical thinking and structured problem solving.",
+            "Adaptability and a continuous-learning mindset."],
+        "required certifications": [
+            "A relevant cloud certification (AWS, Azure or GCP).",
+            "A security certification where applicable.",
+            "The matching AIBOS role certification (see Phase 17)."],
+        "required tools": [
+            "Git and GitHub for version control and collaboration.",
+            "CI/CD pipelines and Infrastructure as Code.",
+            "AI tooling: IDE assistants, model providers and MCP servers.",
+            "Observability and security-scanning tooling."],
+        "technology stack": [
+            "Cloud-native runtime and managed services.",
+            "API-first interfaces (OpenAPI) and event-driven messaging.",
+            "Vector database and RAG components where applicable.",
+            "OpenTelemetry-based observability."],
+        "services provided": [
+            "Specialist outputs that meet the AIBOS Definition of Done.",
+            "Reviews and guidance within the role's authority.",
+            "Reusable artefacts contributed back to the enterprise."],
+        "services consumed": [
+            "Inputs and decisions from upstream roles and divisions.",
+            "Shared platforms, tooling and knowledge.",
+            "Governance approvals for high-risk actions."],
+        "out of scope": [
+            "Responsibilities owned by other roles or departments.",
+            "Decisions outside the role's delegated authority.",
+            "High-risk actions without human approval."],
+        "deliverables": [
+            "Validated, versioned artefacts.",
+            "Updated cross-references and documentation.",
+            "Evidence required by the relevant checklists."],
+        "interview questions": [
+            f"How would you apply the AIBOS standards in the {title} role?",
+            "Describe how you ensure security and privacy by design.",
+            "How do you collaborate safely with AI agents?",
+            "Give an example of measuring and improving quality."],
+    }
+    if n in skill_sections:
+        return bullets(skill_sections[n])
+    if n == "recommended learning path":
+        return numbered([
+            f"Study the [root standards]({lr('00_ROOT')}).",
+            "Complete the relevant department specification (Phase 04).",
+            "Practise with the related playbooks and templates.",
+            "Pursue the matching AIBOS certification (Phase 17)."])
+    if n == "self assessment matrix":
+        return table(["Level", "Indicator"],
+                     [["Foundational", "Understands the standards and applies guidance."],
+                      ["Proficient", "Delivers independently to the Definition of Done."],
+                      ["Advanced", "Mentors others and improves the standards."]])
 
     # Narrative defaults ---------------------------------------------------- #
     narrative = {
@@ -277,18 +432,18 @@ status: draft
             f"To operate {title} to a consistent, enterprise-grade standard that "
             "balances autonomy with human oversight.",
         "business purpose":
-            f"{title} exists to deliver measurable value while upholding the "
-            "AIBOS principles of security, privacy and accountability.",
+            f"{title} exists to deliver measurable value while upholding the AIBOS "
+            "principles of security, privacy and accountability.",
         "business value":
-            "Reduced duplication, faster safe delivery, improved compliance "
-            "posture and scalable AI augmentation.",
+            "Reduced duplication, faster safe delivery, improved compliance posture "
+            "and scalable AI augmentation.",
         "objectives":
             bullets(["Establish a clear, governed definition.",
                      "Enable consistent execution by humans and AI agents.",
                      "Provide measurable acceptance criteria."]),
         "responsibilities":
             bullets(["Own and maintain this artefact.",
-                     "Ensure alignment with root standards.",
+                     "Ensure alignment with the root standards.",
                      "Validate outputs before publication."]),
         "guiding principles":
             bullets(["AI First", "Security by Design", "Privacy by Design",
@@ -304,6 +459,15 @@ status: draft
         "assumptions":
             bullets(["Root standards are adopted enterprise-wide.",
                      "Executive sponsorship is sustained."]),
+        "dependencies":
+            bullets(["Inherits the root standards in `00_ROOT/`.",
+                     "Depends on earlier phases as defined by the master prompt."]),
+        "upstream dependencies":
+            bullets(["Receives inputs from earlier phases and divisions.",
+                     "Relies on the inherited root standards."]),
+        "downstream consumers":
+            bullets(["Dependent divisions, departments and artefacts.",
+                     "AI agents that consume this document for grounding."]),
         "acceptance criteria":
             bullets(["All mandatory sections are complete.",
                      "Validation passes with no errors.",
@@ -311,19 +475,25 @@ status: draft
         "security responsibilities":
             "Apply Security by Design, least privilege and Zero Trust; protect "
             "secrets; follow OWASP ASVS and the OWASP LLM Top 10.",
-        "ai responsibilities":
-            "Maintain human-in-the-loop controls, minimise hallucinations, prefer "
-            "verified knowledge and preserve audit trails.",
-        "compliance responsibilities":
-            "Map controls to ISO 27001, ISO 42001 and SOC 2; retain evidence for "
-            "audit.",
+        "security considerations":
+            "Apply Security by Design, least privilege and Zero Trust; protect "
+            "secrets and follow OWASP guidance.",
         "security controls":
             bullets(["Authentication and authorisation enforced.",
                      "Encryption in transit and at rest.",
-                     "Audit logging and monitoring."]),
+                     "Audit logging and continuous monitoring."]),
+        "ai responsibilities":
+            "Maintain human-in-the-loop controls, minimise hallucinations, prefer "
+            "verified knowledge and preserve audit trails.",
+        "ai considerations":
+            "Maintain human-in-the-loop controls and minimise hallucination risk.",
+        "privacy considerations":
+            "Apply data minimisation, purpose limitation and retention controls.",
         "privacy controls":
             bullets(["Data minimisation.", "Purpose limitation.",
-                     "Retention and secure deletion policies."]),
+                     "Retention and secure-deletion policies."]),
+        "compliance responsibilities":
+            "Map controls to ISO 27001, ISO 42001 and SOC 2; retain audit evidence.",
         "best practices":
             bullets(["Reuse before build.",
                      "Automate validation.",
@@ -336,23 +506,64 @@ status: draft
             bullets(["Artefact validated and approved.",
                      "Cross-references confirmed.",
                      "Version history updated."]),
+        "kpis":
+            bullets(["Coverage and completeness.",
+                     "Validation pass rate (target 95%+).",
+                     "Cycle time from draft to approval.",
+                     "Reuse rate across the enterprise."]),
+        "metrics":
+            bullets(["Quality score.", "Defect density.", "Review turnaround."]),
+        "okrs":
+            bullets(["Objective: raise enterprise consistency.",
+                     "Key result: 95%+ validation pass rate.",
+                     "Key result: measurable reuse across teams."]),
+        "slas":
+            bullets(["Acknowledgement within 1 business day.",
+                     "Resolution targets aligned to severity.",
+                     "Reporting on breaches and trends."]),
+        "slos":
+            bullets(["Availability and latency targets defined per service.",
+                     "Error budgets tracked and reviewed."]),
+        "slas/slos":
+            bullets(["Service-level objectives defined and monitored.",
+                     "Error budgets and breach handling defined."]),
     }
     if n in narrative:
         return narrative[n]
 
-    # Generic fallback ------------------------------------------------------ #
     return (f"This section ({name}) for **{title}** is defined in line with the "
-            f"AIBOS root standards and the governing {phase} master prompt. "
-            "See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the "
-            "inherited standards.")
+            f"AIBOS root standards and the governing {phase} master prompt. See "
+            f"the [repository catalogue]({lr('ROOT_INDEX.md')}) and the "
+            f"[root standards]({lr('00_ROOT')}) for related material.")
 
 
-def render(doc_id: str, title: str, doc_type: str, category: str, phase: str,
-           owner: str, sections: list[str], tags: list[str],
-           related: list[str]) -> str:
-    ctx = {"title": title, "phase": phase, "owner": owner}
-    parts = [front_matter(doc_id, title, doc_type, category, phase, owner, tags, related),
-             "", f"# {title}", ""]
+def render(out_path: Path, doc_id, title, doc_type, category, phase, owner,
+           sections, tags) -> str:
+    num = int(phase.split()[1])
+    from_dir = out_path.parent
+
+    def lr(t):
+        return rellink(from_dir, ROOT / t)
+
+    def ld(p):
+        return rellink(from_dir, OUT / PHASE_DIR[p] / "README.md")
+
+    def link_prompt():
+        return rellink(from_dir, ROOT / "01_PHASES" / PHASE_PROMPT[num])
+
+    ctx = {"title": title, "phase": phase, "owner": owner, "num": num,
+           "link_root": lr, "link_dir": ld, "link_prompt": link_prompt}
+
+    related = ["ROOT_INDEX.md", "00_ROOT/AIBOS_ROOT_SPECIFICATION.md",
+               f"01_PHASES/{PHASE_PROMPT[num]}"]
+    nav = ("> **Navigate:** "
+           f"[Home]({lr('README.md')}) · "
+           f"[Catalogue]({lr('ROOT_INDEX.md')}) · "
+           f"[Generated Index]({rellink(from_dir, OUT / 'README.md')}) · "
+           f"[Phase {num:02d} Prompt]({link_prompt()})")
+
+    parts = [front_matter(doc_id, title, doc_type, category, phase, owner, tags,
+                          related), "", f"# {title}", "", nav, ""]
     for s in sections:
         parts.append(f"## {s}")
         parts.append("")
@@ -363,25 +574,59 @@ def render(doc_id: str, title: str, doc_type: str, category: str, phase: str,
     return text
 
 
-# Hand-authored documents that must never be overwritten by the generator.
-PROTECTED = {
-    "PHASE_01_ENTERPRISE_ARCHITECTURE/01_ENTERPRISE_VISION.md",
-    "PHASE_01_ENTERPRISE_ARCHITECTURE/02_BUSINESS_CAPABILITIES.md",
-    "PHASE_01_ENTERPRISE_ARCHITECTURE/03_OPERATING_MODEL.md",
-}
-
-
 def write(path: Path, content: str, overwrite: bool, stats: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    rel = path.relative_to(OUT).as_posix()
-    if rel in PROTECTED:
-        stats["skipped"] += 1
-        return
     if path.exists() and not overwrite:
         stats["skipped"] += 1
         return
     path.write_text(content, encoding="utf-8")
     stats["written"] += 1
+
+
+# --------------------------------------------------------------------------- #
+# Folder index (README.md) generation
+# --------------------------------------------------------------------------- #
+def build_indexes(stats: dict) -> None:
+    for dirpath, dirnames, filenames in os.walk(OUT):
+        d = Path(dirpath)
+        dirnames.sort()
+        subdirs = sorted(n for n in dirnames)
+        md_files = sorted(f for f in filenames
+                          if f.endswith(".md") and f != "README.md")
+        if not subdirs and not md_files:
+            continue
+
+        title = "Generated Artefacts" if d == OUT else display(d.name)
+        parts = [f"# {title} — Index", ""]
+
+        # Navigation
+        up = rellink(d, (ROOT / "README.md") if d == OUT
+                     else (d.parent / "README.md"))
+        nav = (f"> **Navigate:** [Up]({up}) · "
+               f"[Catalogue]({rellink(d, ROOT / 'ROOT_INDEX.md')}) · "
+               f"[Generated Index]({rellink(d, OUT / 'README.md')})")
+        parts += [nav, ""]
+
+        if d == OUT:
+            parts += ["This folder contains the artefacts generated from the "
+                      "Phase master prompts. Browse by phase below.", ""]
+
+        if subdirs:
+            parts.append("## Sections")
+            parts.append("")
+            parts.append(bullets(
+                [f"[{display(s)}]({s}/README.md)" for s in subdirs]))
+            parts.append("")
+
+        if md_files:
+            parts.append("## Documents")
+            parts.append("")
+            parts.append(bullets([f"[{display(f)}]({f})" for f in md_files]))
+            parts.append("")
+
+        text = re.sub(r"\n{3,}", "\n\n", "\n".join(parts)).rstrip() + "\n"
+        (d / "README.md").write_text(text, encoding="utf-8")
+        stats["indexes"] += 1
 
 
 # --------------------------------------------------------------------------- #
@@ -919,29 +1164,25 @@ PHASE20 = {
 # Generation routines
 # --------------------------------------------------------------------------- #
 def gen_flat(folder, prefix, doctype, category, owner, phase, items, sections,
-             tags, overwrite, stats):
+             tags, ow, stats):
     base = OUT / folder
     for i, title in enumerate(items, start=1):
-        doc_id = f"{prefix}-{i:06d}"
-        fname = f"{i:02d}_{slug(title)}.md"
-        content = render(doc_id, title, doctype, category, phase, owner,
-                         sections, tags, ["AIBOS_ROOT_SPECIFICATION.md"])
-        write(base / fname, content, overwrite, stats)
+        path = base / f"{i:02d}_{slug(title)}.md"
+        content = render(path, f"{prefix}-{i:06d}", title, doctype, category, phase,
+                         owner, sections, tags)
+        write(path, content, ow, stats)
 
 
-def gen_grouped(folder, prefix, doctype, owner, phase, groups, sections,
-                tags, overwrite, stats, suffix=""):
+def gen_grouped(folder, prefix, doctype, owner, phase, groups, sections, tags,
+                ow, stats, suffix=""):
     counter = 1
     for group, items in groups.items():
-        gdir = OUT / folder / group
         for i, title in enumerate(items, start=1):
-            full_title = f"{title}{suffix}"
-            doc_id = f"{prefix}-{counter:06d}"
-            fname = f"{i:02d}_{slug(full_title)}.md"
-            content = render(doc_id, full_title, doctype, group.replace('_', ' '),
-                             phase, owner, sections, tags,
-                             ["AIBOS_ROOT_SPECIFICATION.md"])
-            write(gdir / fname, content, overwrite, stats)
+            full = f"{title}{suffix}"
+            path = OUT / folder / group / f"{i:02d}_{slug(full)}.md"
+            content = render(path, f"{prefix}-{counter:06d}", full, doctype,
+                             group.replace("_", " "), phase, owner, sections, tags)
+            write(path, content, ow, stats)
             counter += 1
 
 
@@ -950,105 +1191,81 @@ def main() -> None:
     ap.add_argument("--overwrite", action="store_true")
     args = ap.parse_args()
     ow = args.overwrite
-    stats = {"written": 0, "skipped": 0}
+    stats = {"written": 0, "skipped": 0, "indexes": 0}
 
-    gen_flat("PHASE_01_ENTERPRISE_ARCHITECTURE", "ARCH", "Architecture",
-             "Enterprise Architecture", "Office of the Chief Enterprise Architect",
-             "Phase 01", PHASE1, S[1], ["enterprise-architecture"], ow, stats)
-
-    gen_flat("PHASE_02_ENTERPRISE_SPECIFICATIONS", "SPEC", "Specification",
-             "Enterprise Specification", "Office of the Chief Enterprise Architect",
-             "Phase 02", PHASE2, S[2], ["specification"], ow, stats)
-
-    gen_flat("PHASE_03_DIVISION_SPECIFICATIONS", "DIV", "Specification",
-             "Division Specification", "Division Leadership", "Phase 03",
-             PHASE3, S[3], ["division"], ow, stats)
-
-    gen_grouped("PHASE_04_DEPARTMENT_SPECIFICATIONS", "DEPT", "Specification",
-                "Department Leadership", "Phase 04", PHASE4, S[4],
-                ["department"], ow, stats, suffix=" Department")
-
-    gen_flat("PHASE_05_SKILLS", "SKILL", "Skill", "Specialist Skill",
+    gen_flat(PHASE_DIR[1], "ARCH", "Architecture", "Enterprise Architecture",
+             "Office of the Chief Enterprise Architect", "Phase 01", PHASE1, S[1],
+             ["enterprise-architecture"], ow, stats)
+    gen_flat(PHASE_DIR[2], "SPEC", "Specification", "Enterprise Specification",
+             "Office of the Chief Enterprise Architect", "Phase 02", PHASE2, S[2],
+             ["specification"], ow, stats)
+    gen_flat(PHASE_DIR[3], "DIV", "Specification", "Division Specification",
+             "Division Leadership", "Phase 03", PHASE3, S[3], ["division"], ow, stats)
+    gen_grouped(PHASE_DIR[4], "DEPT", "Specification", "Department Leadership",
+                "Phase 04", PHASE4, S[4], ["department"], ow, stats,
+                suffix=" Department")
+    gen_flat(PHASE_DIR[5], "SKILL", "Skill", "Specialist Skill",
              "Chief Skills Architect", "Phase 05",
              [f"{r} Skill" for r in PHASE5_ROLES], S[5], ["skill"], ow, stats)
-
-    gen_grouped("PHASE_06_RULES", "RULE", "Rule", "Chief Governance Architect",
-                "Phase 06", PHASE6, S[6], ["rule"], ow, stats, suffix=" Rule")
-
-    gen_grouped("PHASE_07_CHECKLISTS", "CHECK", "Checklist",
+    gen_grouped(PHASE_DIR[6], "RULE", "Rule", "Chief Governance Architect", "Phase 06",
+                PHASE6, S[6], ["rule"], ow, stats, suffix=" Rule")
+    gen_grouped(PHASE_DIR[7], "CHECK", "Checklist",
                 "Chief Quality and Compliance Architect", "Phase 07", PHASE7, S[7],
                 ["checklist"], ow, stats, suffix=" Checklist")
-
-    gen_grouped("PHASE_08_PLAYBOOKS", "PLAY", "Playbook",
-                "Chief Operations Architect", "Phase 08", PHASE8, S[8],
-                ["playbook"], ow, stats, suffix=" Playbook")
-
-    gen_grouped("PHASE_09_TEMPLATES", "TEMP", "Template",
+    gen_grouped(PHASE_DIR[8], "PLAY", "Playbook", "Chief Operations Architect",
+                "Phase 08", PHASE8, S[8], ["playbook"], ow, stats, suffix=" Playbook")
+    gen_grouped(PHASE_DIR[9], "TEMP", "Template",
                 "Chief Documentation and Knowledge Architect", "Phase 09", PHASE9,
                 S[9], ["template"], ow, stats, suffix=" Template")
-
-    gen_grouped("PHASE_10_KNOWLEDGE", "KNOW", "Knowledge", "Chief Knowledge Architect",
+    gen_grouped(PHASE_DIR[10], "KNOW", "Knowledge", "Chief Knowledge Architect",
                 "Phase 10", PHASE10, S[10], ["knowledge"], ow, stats,
                 suffix=" Knowledge Article")
+    gen_grouped(PHASE_DIR[11], "AGENT", "Framework", "Chief AI Systems Architect",
+                "Phase 11", PHASE11, S[11], ["ai-agent"], ow, stats)
+    gen_grouped(PHASE_DIR[12], "AUTO", "Framework", "Chief Automation Architect",
+                "Phase 12", PHASE12, S[12], ["automation"], ow, stats)
 
-    gen_grouped("PHASE_11_AI_AGENT_COLLABORATION", "AGENT", "Framework",
-                "Chief AI Systems Architect", "Phase 11", PHASE11, S[11],
-                ["ai-agent"], ow, stats)
-
-    gen_grouped("PHASE_12_AUTOMATION", "AUTO", "Framework",
-                "Chief Automation Architect", "Phase 12", PHASE12, S[12],
-                ["automation"], ow, stats)
-
-    # Phase 13: industry x 10 docs
     counter = 1
     for ind in PHASE13_INDUSTRIES:
-        idir = OUT / "PHASE_13_INDUSTRY_BLUEPRINTS" / slug(ind)
         for i, d in enumerate(PHASE13_DOCS, start=1):
-            title = f"{ind} {d}"
-            doc_id = f"IND-{counter:06d}"
-            fname = f"{i:02d}_{slug(d)}.md"
-            content = render(doc_id, title, "Blueprint", ind, "Phase 13",
-                             "Chief Industry Solutions Architect", S[13],
-                             ["industry-blueprint"], ["AIBOS_ROOT_SPECIFICATION.md"])
-            write(idir / fname, content, ow, stats)
+            path = OUT / PHASE_DIR[13] / slug(ind) / f"{i:02d}_{slug(d)}.md"
+            content = render(path, f"IND-{counter:06d}", f"{ind} {d}", "Blueprint",
+                             ind, "Phase 13", "Chief Industry Solutions Architect",
+                             S[13], ["industry-blueprint"])
+            write(path, content, ow, stats)
             counter += 1
 
-    gen_grouped("PHASE_14_ACCELERATOR_PACKS", "ACCEL", "Accelerator",
-                "Chief Transformation Architect", "Phase 14", PHASE14, S[14],
-                ["accelerator"], ow, stats, suffix=" Accelerator Pack")
-    # Industry accelerator packs
-    idir = OUT / "PHASE_14_ACCELERATOR_PACKS" / "Industry"
+    gen_grouped(PHASE_DIR[14], "ACCEL", "Accelerator", "Chief Transformation Architect",
+                "Phase 14", PHASE14, S[14], ["accelerator"], ow, stats,
+                suffix=" Accelerator Pack")
     for i, ind in enumerate(PHASE13_INDUSTRIES, start=1):
         title = f"{ind} Accelerator Pack"
-        content = render(f"ACCEL-9{i:05d}", title, "Accelerator", "Industry",
+        path = OUT / PHASE_DIR[14] / "Industry" / f"{i:02d}_{slug(title)}.md"
+        content = render(path, f"ACCEL-9{i:05d}", title, "Accelerator", "Industry",
                          "Phase 14", "Chief Transformation Architect", S[14],
-                         ["accelerator"], ["AIBOS_ROOT_SPECIFICATION.md"])
-        write(idir / f"{i:02d}_{slug(title)}.md", content, ow, stats)
+                         ["accelerator"])
+        write(path, content, ow, stats)
 
-    gen_grouped("PHASE_15_REFERENCE_IMPLEMENTATIONS", "IMPL", "Implementation",
-                "Chief Solution Architect", "Phase 15", PHASE15, S[15],
-                ["reference-implementation"], ow, stats)
-
-    gen_grouped("PHASE_16_SDK_CLI", "SDK", "Component", "Chief Platform Engineer",
+    gen_grouped(PHASE_DIR[15], "IMPL", "Implementation", "Chief Solution Architect",
+                "Phase 15", PHASE15, S[15], ["reference-implementation"], ow, stats)
+    gen_grouped(PHASE_DIR[16], "SDK", "Component", "Chief Platform Engineer",
                 "Phase 16", PHASE16, S[16], ["sdk-cli"], ow, stats)
-
-    gen_grouped("PHASE_17_CERTIFICATION", "CERT", "Certification",
+    gen_grouped(PHASE_DIR[17], "CERT", "Certification",
                 "Chief Governance Audit and Certification Architect", "Phase 17",
                 PHASE17, S[17], ["certification"], ow, stats)
-
-    gen_grouped("PHASE_18_MARKETPLACE", "MKT", "Marketplace",
+    gen_grouped(PHASE_DIR[18], "MKT", "Marketplace",
                 "Chief Platform Ecosystem Architect", "Phase 18", PHASE18, S[18],
                 ["marketplace"], ow, stats)
-
-    gen_grouped("PHASE_19_REFERENCE_ORGANISATION", "ORG", "Organisation",
+    gen_grouped(PHASE_DIR[19], "ORG", "Organisation",
                 "Chief Enterprise Transformation Architect", "Phase 19", PHASE19,
                 S[19], ["reference-organisation"], ow, stats)
-
-    gen_grouped("PHASE_20_META_ORCHESTRATOR", "META", "Framework",
+    gen_grouped(PHASE_DIR[20], "META", "Framework",
                 "Chief Autonomous Systems Architect", "Phase 20", PHASE20, S[20],
                 ["meta-orchestrator"], ow, stats)
 
-    print(f"Written: {stats['written']}  Skipped: {stats['skipped']}")
+    build_indexes(stats)
+    print(f"Written: {stats['written']}  Skipped: {stats['skipped']}  "
+          f"Indexes: {stats['indexes']}")
 
 
 if __name__ == "__main__":

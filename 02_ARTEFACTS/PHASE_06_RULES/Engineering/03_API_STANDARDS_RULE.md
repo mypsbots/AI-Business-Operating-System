@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - rule
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -26,6 +28,8 @@ standards:
 ---
 
 # API Standards Rule
+
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 06 Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
 
 ## Executive Summary
 
@@ -41,15 +45,15 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Business Rationale
 
-This section (Business Rationale) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Business Rationale) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Technical Rationale
 
-This section (Technical Rationale) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Technical Rationale) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Definitions
 
-- Refer to `00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md` for canonical terms.
+- Canonical terms are defined in the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
 - No terminology is redefined within this document.
 
 ## Mandatory Requirements (MUST)
@@ -80,57 +84,57 @@ This section (Technical Rationale) for **API Standards Rule** is defined in line
 
 ## Applicable Departments
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Department Specifications (Phase 04)](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Applicable Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Checklists
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Playbooks
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Templates
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Knowledge Articles
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Security Considerations
 
-This section (Security Considerations) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+Apply Security by Design, least privilege and Zero Trust; protect secrets and follow OWASP guidance.
 
 ## Privacy Considerations
 
-This section (Privacy Considerations) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+Apply data minimisation, purpose limitation and retention controls.
 
 ## AI Considerations
 
-This section (AI Considerations) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+Maintain human-in-the-loop controls and minimise hallucination risk.
 
 ## Compliance Requirements
 
@@ -143,26 +147,25 @@ This section (AI Considerations) for **API Standards Rule** is defined in line w
 
 ## Exceptions Process
 
-This section (Exceptions Process) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Exceptions Process) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Approval Authority
 
-This section (Approval Authority) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Approval Authority) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Enforcement Model
 
-This section (Enforcement Model) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Enforcement Model) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Metrics
 
-- Coverage and completeness of the artefact.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Quality score.
+- Defect density.
+- Review turnaround.
 
 ## KPIs
 
-- Coverage and completeness of the artefact.
+- Coverage and completeness.
 - Validation pass rate (target 95%+).
 - Cycle time from draft to approval.
 - Reuse rate across the enterprise.
@@ -204,7 +207,11 @@ This section (Enforcement Model) for **API Standards Rule** is defined in line w
 
 ## References
 
-This section (References) for **API Standards Rule** is defined in line with the AIBOS root standards and the governing Phase 06 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
+- [Phase 06 Master Prompt](../../../01_PHASES/PHASE_06_RULES_MASTER_PROMPT.md)
 
 ## Version History
 

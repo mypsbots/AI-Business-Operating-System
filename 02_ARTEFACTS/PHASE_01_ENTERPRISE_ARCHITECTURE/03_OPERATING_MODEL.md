@@ -6,93 +6,122 @@ category: Enterprise Architecture
 phase: Phase 01
 owner: Office of the Chief Enterprise Architect
 status: Draft
+lifecycle: Active
 classification: Internal
 version: 2.0.0
 created: 2026-06-26
 updated: 2026-06-26
 tags:
-  - operating-model
+  - enterprise-architecture
 related_documents:
-  - 02_BUSINESS_CAPABILITIES.md
-  - 04_ORGANISATION_STRUCTURE.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_01_ENTERPRISE_ARCHITECTURE_MASTER_PROMPT.md
 standards:
   - ISO 42001
+  - ISO 27001
+  - NIST AI RMF
+  - SOC 2
+  - OWASP ASVS
+  - OWASP LLM Top 10
+  - WCAG 2.2 AA
 ---
 
 # Operating Model
 
+> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [Generated Index](../README.md) · [Phase 01 Prompt](../../01_PHASES/PHASE_01_ENTERPRISE_ARCHITECTURE_MASTER_PROMPT.md)
+
 ## Executive Summary
 
-Defines how AIBOS delivers value by combining human teams and AI agents across
-governed, repeatable processes.
+This document defines **Operating Model** within the AIBOS Enterprise v2.0 framework (Phase 01). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
 
 ## Purpose
 
-To describe the people, process, technology and partner model that operationalises the enterprise capabilities.
+To establish the authoritative, reusable definition of Operating Model so that human teams and AI agents operate consistently, safely and with measurable business value.
 
 ## Scope
 
-All value streams from strategy to customer outcomes.
+Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
 
 ## Objectives
 
-- Define value streams and their owners.
-- Establish the human + AI workforce model.
-- Codify decision and governance flows.
+- Establish a clear, governed definition.
+- Enable consistent execution by humans and AI agents.
+- Provide measurable acceptance criteria.
 
 ## Stakeholders
 
-Executive leadership, division leaders, AI governance, operations.
+This section (Stakeholders) for **Operating Model** is defined in line with the AIBOS root standards and the governing Phase 01 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Business Value
 
-Predictable delivery, lower cost-to-serve and scalable AI augmentation.
+Reduced duplication, faster safe delivery, improved compliance posture and scalable AI augmentation.
 
 ## Architecture
 
-| Element | Description |
-|---------|-------------|
-| Value Streams | Product, Delivery, Go-to-Market, Operations. |
-| Workforce | Human specialists augmented by AI agents. |
-| Governance | Standards, quality gates, human-in-the-loop. |
-| Technology | Cloud-native, API-first platform. |
+This section (Architecture) for **Operating Model** is defined in line with the AIBOS root standards and the governing Phase 01 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Guiding Principles
 
-Automation First, Human-in-the-Loop, Observability First, Continuous Improvement.
+- AI First
+- Security by Design
+- Privacy by Design
+- Zero Trust
+- Documentation as Code
+- Human-in-the-Loop
 
 ## Standards Mapping
 
-ISO 42001 (operational AI governance), ITIL 4 (service operation).
+| Standard | Application |
+| --- | --- |
+| ISO 42001 | AI management system alignment. |
+| ISO 27001 | Information security controls. |
+| NIST AI RMF | AI risk management. |
+| OWASP LLM Top 10 | LLM threat mitigation. |
 
 ## Risks
 
-- Process bottlenecks; unclear hand-offs between human and AI.
+- Scope drift over time.
+- Inconsistent adoption across teams.
+- Over-automation without adequate oversight.
 
 ## Assumptions
 
-- Capabilities (doc 02) are agreed.
+- Root standards are adopted enterprise-wide.
+- Executive sponsorship is sustained.
 
 ## Dependencies
 
-- `02_BUSINESS_CAPABILITIES.md`
+- Inherits the root standards in `00_ROOT/`.
+- Depends on earlier phases as defined by the master prompt.
 
 ## Acceptance Criteria
 
-- Every value stream has an owner and KPIs.
+- All mandatory sections are complete.
+- Validation passes with no errors.
+- Cross-references are valid.
 
 ## Validation Checklist
 
-- [ ] Value streams defined.
-- [ ] Workforce model defined.
-- [ ] Cross-references valid.
+- [ ] YAML front matter is present and valid.
+- [ ] All mandatory sections are complete.
+- [ ] Terminology matches the AIBOS Enterprise Glossary.
+- [ ] Cross-references resolve to existing documents.
+- [ ] RFC 2119 keywords are used correctly.
+- [ ] Security and privacy considerations are addressed.
+- [ ] Version history is updated.
+- [ ] No secrets or sensitive data are exposed.
 
 ## References
 
-- `00_ROOT/AIBOS_EXECUTION_WORKFLOW.md`
+- [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../ROOT_INDEX.md)
+- [Phase 01 Master Prompt](../../01_PHASES/PHASE_01_ENTERPRISE_ARCHITECTURE_MASTER_PROMPT.md)
 
 ## Version History
 
 | Version | Date | Summary |
-|---------|------|---------|
-| 2.0.0 | 2026-06-26 | Initial operating model. |
+| --- | --- | --- |
+| 2.0.0 | 2026-06-26 | Initial generated artefact. |

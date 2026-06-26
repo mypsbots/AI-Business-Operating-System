@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - reference-implementation
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_15_ENTERPRISE_REFERENCE_IMPLEMENTATIONS_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -27,6 +29,8 @@ standards:
 
 # Evaluation Platform
 
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 15 Prompt](../../../01_PHASES/PHASE_15_ENTERPRISE_REFERENCE_IMPLEMENTATIONS_MASTER_PROMPT.md)
+
 ## Purpose
 
 To establish the authoritative, reusable definition of Evaluation Platform so that human teams and AI agents operate consistently, safely and with measurable business value.
@@ -37,19 +41,19 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Business Scenario
 
-This section (Business Scenario) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Business Scenario) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Functional Requirements
 
-This section (Functional Requirements) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Functional Requirements) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Non-functional Requirements
 
-This section (Non-functional Requirements) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Non-functional Requirements) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Architecture Overview
 
-This section (Architecture Overview) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Architecture Overview) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Mermaid Architecture Diagrams
 
@@ -66,119 +70,122 @@ flowchart TD
 
 ## Repository Structure
 
-This section (Repository Structure) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Repository Structure) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Folder Layout
 
-This section (Folder Layout) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Folder Layout) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Technology Stack
 
-This section (Technology Stack) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- Cloud-native runtime and managed services.
+- API-first interfaces (OpenAPI) and event-driven messaging.
+- Vector database and RAG components where applicable.
+- OpenTelemetry-based observability.
 
 ## Deployment Model
 
-This section (Deployment Model) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Deployment Model) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Infrastructure Components
 
-This section (Infrastructure Components) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Infrastructure Components) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Security Controls
 
 - Authentication and authorisation enforced.
 - Encryption in transit and at rest.
-- Audit logging and monitoring.
+- Audit logging and continuous monitoring.
 
 ## AI Components
 
-This section (AI Components) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (AI Components) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Data Flow
 
-This section (Data Flow) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Data Flow) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Integration Flow
 
-This section (Integration Flow) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Integration Flow) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## API Contracts
 
-This section (API Contracts) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (API Contracts) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Configuration Strategy
 
-This section (Configuration Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Configuration Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Secrets Strategy
 
-This section (Secrets Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Secrets Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Monitoring Strategy
 
-This section (Monitoring Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Monitoring Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Logging Strategy
 
-This section (Logging Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Logging Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Testing Strategy
 
-This section (Testing Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Testing Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Scalability Strategy
 
-This section (Scalability Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Scalability Strategy) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Disaster Recovery
 
-This section (Disaster Recovery) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Disaster Recovery) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Cost Optimisation
 
-This section (Cost Optimisation) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Cost Optimisation) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Required Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Checklists
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Playbooks
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Templates
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Knowledge
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Industry Blueprints
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Industry Blueprints (Phase 13)](../../PHASE_13_INDUSTRY_BLUEPRINTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Validation Checklist
 
@@ -193,7 +200,11 @@ This section (Cost Optimisation) for **Evaluation Platform** is defined in line 
 
 ## References
 
-This section (References) for **Evaluation Platform** is defined in line with the AIBOS root standards and the governing Phase 15 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
+- [Phase 15 Master Prompt](../../../01_PHASES/PHASE_15_ENTERPRISE_REFERENCE_IMPLEMENTATIONS_MASTER_PROMPT.md)
 
 ## Version History
 

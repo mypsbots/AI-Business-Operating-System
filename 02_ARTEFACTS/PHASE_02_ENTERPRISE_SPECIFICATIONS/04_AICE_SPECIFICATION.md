@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - specification
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_02_ENTERPRISE_SPECIFICATIONS_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -26,6 +28,8 @@ standards:
 ---
 
 # AICE Specification
+
+> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [Generated Index](../README.md) · [Phase 02 Prompt](../../01_PHASES/PHASE_02_ENTERPRISE_SPECIFICATIONS_MASTER_PROMPT.md)
 
 ## Executive Summary
 
@@ -45,23 +49,23 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Business Objectives
 
-This section (Business Objectives) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Business Objectives) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Stakeholders
 
-This section (Stakeholders) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Stakeholders) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Architecture Principles
 
-This section (Architecture Principles) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Architecture Principles) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Governance Model
 
-This section (Governance Model) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Governance Model) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Roles and Responsibilities
 
-This section (Roles and Responsibilities) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Roles and Responsibilities) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Standards Mapping
 
@@ -74,17 +78,16 @@ This section (Roles and Responsibilities) for **AICE Specification** is defined 
 
 ## Dependencies
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- Inherits the root standards in `00_ROOT/`.
+- Depends on earlier phases as defined by the master prompt.
 
 ## Quality Gates
 
-This section (Quality Gates) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Quality Gates) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## KPIs
 
-- Coverage and completeness of the artefact.
+- Coverage and completeness.
 - Validation pass rate (target 95%+).
 - Cycle time from draft to approval.
 - Reuse rate across the enterprise.
@@ -120,7 +123,11 @@ This section (Quality Gates) for **AICE Specification** is defined in line with 
 
 ## References
 
-This section (References) for **AICE Specification** is defined in line with the AIBOS root standards and the governing Phase 02 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../ROOT_INDEX.md)
+- [Phase 02 Master Prompt](../../01_PHASES/PHASE_02_ENTERPRISE_SPECIFICATIONS_MASTER_PROMPT.md)
 
 ## Version History
 

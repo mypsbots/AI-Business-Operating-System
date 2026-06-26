@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - template
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_09_TEMPLATES_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -27,25 +29,27 @@ standards:
 
 # Change Request Template
 
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 09 Prompt](../../../01_PHASES/PHASE_09_TEMPLATES_MASTER_PROMPT.md)
+
 ## Purpose
 
 To establish the authoritative, reusable definition of Change Request Template so that human teams and AI agents operate consistently, safely and with measurable business value.
 
 ## When to Use
 
-This section (When to Use) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (When to Use) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Audience
 
-This section (Audience) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Audience) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Inputs Required
 
-This section (Inputs Required) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Inputs Required) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Outputs Produced
 
-This section (Outputs Produced) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Outputs Produced) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Required Metadata
 
@@ -59,55 +63,53 @@ classification: Internal
 
 ## Placeholder Definitions
 
-This section (Placeholder Definitions) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Placeholder Definitions) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Naming Convention
 
-This section (Naming Convention) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Naming Convention) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Folder Convention
 
-This section (Folder Convention) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Folder Convention) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Required Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Checklists
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Playbooks
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Knowledge Articles
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Validation Rules
 
-- All placeholders are resolved before use.
-- Required metadata fields are populated.
-- Output conforms to the AIBOS Document Schema.
+This section (Validation Rules) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Quality Criteria
 
-This section (Quality Criteria) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Quality Criteria) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Example Completed Template
 
@@ -145,11 +147,11 @@ classification: Internal
 
 ## AI Prompt Usage Guidance
 
-This section (AI Prompt Usage Guidance) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (AI Prompt Usage Guidance) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Automation Compatibility
 
-This section (Automation Compatibility) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Automation Compatibility) for **Change Request Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Version History
 

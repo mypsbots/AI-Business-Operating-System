@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - checklist
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_07_CHECKLISTS_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -27,6 +29,8 @@ standards:
 
 # Roadmap Approval Checklist
 
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 07 Prompt](../../../01_PHASES/PHASE_07_CHECKLISTS_MASTER_PROMPT.md)
+
 ## Purpose
 
 To establish the authoritative, reusable definition of Roadmap Approval Checklist so that human teams and AI agents operate consistently, safely and with measurable business value.
@@ -37,23 +41,23 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Prerequisites
 
-This section (Prerequisites) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Prerequisites) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Inputs
 
-This section (Inputs) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Inputs) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Outputs
 
-This section (Outputs) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Outputs) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Roles Responsible
 
-This section (Roles Responsible) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Roles Responsible) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Quality Gate
 
-This section (Quality Gate) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Quality Gate) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Acceptance Criteria
 
@@ -74,81 +78,86 @@ This section (Quality Gate) for **Roadmap Approval Checklist** is defined in lin
 
 ## Pass / Fail Criteria
 
-This section (Pass / Fail Criteria) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Pass / Fail Criteria) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Evidence Required
 
-This section (Evidence Required) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Evidence Required) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Required Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Playbooks
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Templates
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Knowledge Articles
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Security Validation
 
-This section (Security Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Security Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Privacy Validation
 
-This section (Privacy Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Privacy Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## AI Validation
 
-This section (AI Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (AI Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Compliance Validation
 
-This section (Compliance Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+| Standard | Application |
+| --- | --- |
+| ISO 42001 | AI management system alignment. |
+| ISO 27001 | Information security controls. |
+| NIST AI RMF | AI risk management. |
+| OWASP LLM Top 10 | LLM threat mitigation. |
 
 ## Accessibility Validation
 
-This section (Accessibility Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Accessibility Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Performance Validation
 
-This section (Performance Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Performance Validation) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Deployment Readiness
 
-This section (Deployment Readiness) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Deployment Readiness) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Rollback Readiness
 
-This section (Rollback Readiness) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Rollback Readiness) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Reviewer Sign-off
 
-This section (Reviewer Sign-off) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Reviewer Sign-off) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Escalation Process
 
-This section (Escalation Process) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Escalation Process) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Risks
 
@@ -158,7 +167,11 @@ This section (Escalation Process) for **Roadmap Approval Checklist** is defined 
 
 ## References
 
-This section (References) for **Roadmap Approval Checklist** is defined in line with the AIBOS root standards and the governing Phase 07 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
+- [Phase 07 Master Prompt](../../../01_PHASES/PHASE_07_CHECKLISTS_MASTER_PROMPT.md)
 
 ## Version History
 

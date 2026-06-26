@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - ai-agent
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_11_AI_AGENT_COLLABORATION_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -27,6 +29,8 @@ standards:
 
 # Agent Versioning
 
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 11 Prompt](../../../01_PHASES/PHASE_11_AI_AGENT_COLLABORATION_MASTER_PROMPT.md)
+
 ## Purpose
 
 To establish the authoritative, reusable definition of Agent Versioning so that human teams and AI agents operate consistently, safely and with measurable business value.
@@ -37,61 +41,61 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Agent Persona
 
-This section (Agent Persona) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Agent Persona) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Responsibilities
 
 - Own and maintain this artefact.
-- Ensure alignment with root standards.
+- Ensure alignment with the root standards.
 - Validate outputs before publication.
 
 ## Authority Boundaries
 
-This section (Authority Boundaries) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Authority Boundaries) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Allowed Decisions
 
-This section (Allowed Decisions) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Allowed Decisions) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Forbidden Decisions
 
-This section (Forbidden Decisions) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Forbidden Decisions) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Human Approval Points
 
-This section (Human Approval Points) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Human Approval Points) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Inputs
 
-This section (Inputs) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Inputs) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Outputs
 
-This section (Outputs) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Outputs) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Memory Strategy
 
-This section (Memory Strategy) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Memory Strategy) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Context Strategy
 
-This section (Context Strategy) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Context Strategy) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Tool Permissions
 
-This section (Tool Permissions) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Tool Permissions) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## External Integrations
 
-This section (External Integrations) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (External Integrations) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Communication Protocol
 
-This section (Communication Protocol) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Communication Protocol) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Handover Rules
 
-This section (Handover Rules) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Handover Rules) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Collaboration Matrix
 
@@ -103,35 +107,35 @@ This section (Handover Rules) for **Agent Versioning** is defined in line with t
 
 ## Escalation Path
 
-This section (Escalation Path) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Escalation Path) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Failure Recovery
 
-This section (Failure Recovery) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Failure Recovery) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Error Handling
 
-This section (Error Handling) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Error Handling) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Observability
 
-This section (Observability) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Observability) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Cost Optimisation
 
-This section (Cost Optimisation) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Cost Optimisation) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Security Controls
 
 - Authentication and authorisation enforced.
 - Encryption in transit and at rest.
-- Audit logging and monitoring.
+- Audit logging and continuous monitoring.
 
 ## Privacy Controls
 
 - Data minimisation.
 - Purpose limitation.
-- Retention and secure deletion policies.
+- Retention and secure-deletion policies.
 
 ## Compliance Requirements
 
@@ -144,17 +148,14 @@ This section (Cost Optimisation) for **Agent Versioning** is defined in line wit
 
 ## KPIs
 
-- Coverage and completeness of the artefact.
+- Coverage and completeness.
 - Validation pass rate (target 95%+).
 - Cycle time from draft to approval.
 - Reuse rate across the enterprise.
 
 ## Quality Metrics
 
-- Coverage and completeness of the artefact.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+This section (Quality Metrics) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Validation Checklist
 
@@ -169,7 +170,11 @@ This section (Cost Optimisation) for **Agent Versioning** is defined in line wit
 
 ## References
 
-This section (References) for **Agent Versioning** is defined in line with the AIBOS root standards and the governing Phase 11 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
+- [Phase 11 Master Prompt](../../../01_PHASES/PHASE_11_AI_AGENT_COLLABORATION_MASTER_PROMPT.md)
 
 ## Version History
 

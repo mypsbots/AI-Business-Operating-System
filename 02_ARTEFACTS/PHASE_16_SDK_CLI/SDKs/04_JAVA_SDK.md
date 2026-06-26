@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - sdk-cli
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_16_AIBOS_SDK_CLI_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -26,6 +28,8 @@ standards:
 ---
 
 # Java SDK
+
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 16 Prompt](../../../01_PHASES/PHASE_16_AIBOS_SDK_CLI_MASTER_PROMPT.md)
 
 ## Executive Summary
 
@@ -45,122 +49,119 @@ Reduced duplication, faster safe delivery, improved compliance posture and scala
 
 ## Developer Value
 
-This section (Developer Value) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Developer Value) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Functional Requirements
 
-This section (Functional Requirements) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Functional Requirements) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Non-functional Requirements
 
-This section (Non-functional Requirements) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Non-functional Requirements) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Public Interfaces
 
-This section (Public Interfaces) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Public Interfaces) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Commands/APIs
 
-This section (Commands/APIs) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Commands/APIs) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Configuration Model
 
-This section (Configuration Model) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Configuration Model) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Authentication
 
-This section (Authentication) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Authentication) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Authorisation
 
-This section (Authorisation) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Authorisation) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Extension Points
 
-This section (Extension Points) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Extension Points) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Plugin Architecture
 
-This section (Plugin Architecture) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Plugin Architecture) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Versioning Strategy
 
-This section (Versioning Strategy) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Versioning Strategy) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Backward Compatibility
 
-This section (Backward Compatibility) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Backward Compatibility) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Error Handling
 
-This section (Error Handling) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Error Handling) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Observability
 
-This section (Observability) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Observability) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Security Controls
 
 - Authentication and authorisation enforced.
 - Encryption in transit and at rest.
-- Audit logging and monitoring.
+- Audit logging and continuous monitoring.
 
 ## Privacy Controls
 
 - Data minimisation.
 - Purpose limitation.
-- Retention and secure deletion policies.
+- Retention and secure-deletion policies.
 
 ## Performance Targets
 
-- Coverage and completeness of the artefact.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+This section (Performance Targets) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Testing Strategy
 
-This section (Testing Strategy) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Testing Strategy) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## CI/CD Integration
 
-This section (CI/CD Integration) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (CI/CD Integration) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Required Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Checklists
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Playbooks
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Templates
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Knowledge
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Sample Usage
 
@@ -197,7 +198,11 @@ flowchart TD
 
 ## References
 
-This section (References) for **Java SDK** is defined in line with the AIBOS root standards and the governing Phase 16 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
+- [Phase 16 Master Prompt](../../../01_PHASES/PHASE_16_AIBOS_SDK_CLI_MASTER_PROMPT.md)
 
 ## Version History
 

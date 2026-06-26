@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - enterprise-architecture
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_01_ENTERPRISE_ARCHITECTURE_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -26,6 +28,8 @@ standards:
 ---
 
 # Metadata Standard
+
+> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [Generated Index](../README.md) · [Phase 01 Prompt](../../01_PHASES/PHASE_01_ENTERPRISE_ARCHITECTURE_MASTER_PROMPT.md)
 
 ## Executive Summary
 
@@ -47,7 +51,7 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Stakeholders
 
-This section (Stakeholders) for **Metadata Standard** is defined in line with the AIBOS root standards and the governing Phase 01 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Stakeholders) for **Metadata Standard** is defined in line with the AIBOS root standards and the governing Phase 01 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Business Value
 
@@ -55,7 +59,7 @@ Reduced duplication, faster safe delivery, improved compliance posture and scala
 
 ## Architecture
 
-This section (Architecture) for **Metadata Standard** is defined in line with the AIBOS root standards and the governing Phase 01 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Architecture) for **Metadata Standard** is defined in line with the AIBOS root standards and the governing Phase 01 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Guiding Principles
 
@@ -88,9 +92,8 @@ This section (Architecture) for **Metadata Standard** is defined in line with th
 
 ## Dependencies
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- Inherits the root standards in `00_ROOT/`.
+- Depends on earlier phases as defined by the master prompt.
 
 ## Acceptance Criteria
 
@@ -111,7 +114,11 @@ This section (Architecture) for **Metadata Standard** is defined in line with th
 
 ## References
 
-This section (References) for **Metadata Standard** is defined in line with the AIBOS root standards and the governing Phase 01 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../ROOT_INDEX.md)
+- [Phase 01 Master Prompt](../../01_PHASES/PHASE_01_ENTERPRISE_ARCHITECTURE_MASTER_PROMPT.md)
 
 ## Version History
 

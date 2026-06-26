@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - division
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_03_DIVISION_SPECIFICATIONS_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -26,6 +28,8 @@ standards:
 ---
 
 # Data Division
+
+> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [Generated Index](../README.md) · [Phase 03 Prompt](../../01_PHASES/PHASE_03_DIVISION_SPECIFICATIONS_MASTER_PROMPT.md)
 
 ## Executive Summary
 
@@ -50,20 +54,20 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 ## Responsibilities
 
 - Own and maintain this artefact.
-- Ensure alignment with root standards.
+- Ensure alignment with the root standards.
 - Validate outputs before publication.
 
 ## Organisational Structure
 
-This section (Organisational Structure) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Organisational Structure) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Leadership Roles
 
-This section (Leadership Roles) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Leadership Roles) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Teams
 
-This section (Teams) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Teams) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Collaboration Matrix
 
@@ -75,57 +79,54 @@ This section (Teams) for **Data Division** is defined in line with the AIBOS roo
 
 ## Upstream Dependencies
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- Receives inputs from earlier phases and divisions.
+- Relies on the inherited root standards.
 
 ## Downstream Consumers
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- Dependent divisions, departments and artefacts.
+- AI agents that consume this document for grounding.
 
 ## KPIs
 
-- Coverage and completeness of the artefact.
+- Coverage and completeness.
 - Validation pass rate (target 95%+).
 - Cycle time from draft to approval.
 - Reuse rate across the enterprise.
 
 ## OKRs
 
-- Coverage and completeness of the artefact.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Objective: raise enterprise consistency.
+- Key result: 95%+ validation pass rate.
+- Key result: measurable reuse across teams.
 
 ## Quality Gates
 
-This section (Quality Gates) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Quality Gates) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Required Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
 
 ## Applicable Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
 
 ## Applicable Checklists
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
 
 ## Applicable Playbooks
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
 
 ## Security Responsibilities
 
@@ -133,7 +134,7 @@ Apply Security by Design, least privilege and Zero Trust; protect secrets; follo
 
 ## Compliance Responsibilities
 
-Map controls to ISO 27001, ISO 42001 and SOC 2; retain evidence for audit.
+Map controls to ISO 27001, ISO 42001 and SOC 2; retain audit evidence.
 
 ## AI Responsibilities
 
@@ -141,15 +142,15 @@ Maintain human-in-the-loop controls, minimise hallucinations, prefer verified kn
 
 ## Reporting Structure
 
-This section (Reporting Structure) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Reporting Structure) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Decision Authority
 
-This section (Decision Authority) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Decision Authority) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Escalation Path
 
-This section (Escalation Path) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Escalation Path) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Risks
 
@@ -182,7 +183,11 @@ This section (Escalation Path) for **Data Division** is defined in line with the
 
 ## References
 
-This section (References) for **Data Division** is defined in line with the AIBOS root standards and the governing Phase 03 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../ROOT_INDEX.md)
+- [Phase 03 Master Prompt](../../01_PHASES/PHASE_03_DIVISION_SPECIFICATIONS_MASTER_PROMPT.md)
 
 ## Version History
 

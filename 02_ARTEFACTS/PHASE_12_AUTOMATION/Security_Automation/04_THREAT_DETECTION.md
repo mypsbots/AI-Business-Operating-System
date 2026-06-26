@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - automation
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_12_ENTERPRISE_AUTOMATION_CONTINUOUS_IMPROVEMENT_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -26,6 +28,8 @@ standards:
 ---
 
 # Threat Detection
+
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 12 Prompt](../../../01_PHASES/PHASE_12_ENTERPRISE_AUTOMATION_CONTINUOUS_IMPROVEMENT_MASTER_PROMPT.md)
 
 ## Executive Summary
 
@@ -45,19 +49,19 @@ Reduced duplication, faster safe delivery, improved compliance posture and scala
 
 ## Trigger Events
 
-This section (Trigger Events) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Trigger Events) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Inputs
 
-This section (Inputs) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Inputs) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Outputs
 
-This section (Outputs) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Outputs) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Workflow Description
 
-This section (Workflow Description) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Workflow Description) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Mermaid Diagram
 
@@ -74,104 +78,103 @@ flowchart TD
 
 ## AI Agents Involved
 
-This section (AI Agents Involved) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- See **[AI Agent Collaboration (Phase 11)](../../PHASE_11_AI_AGENT_COLLABORATION/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Human Approval Points
 
-This section (Human Approval Points) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Human Approval Points) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Automation Opportunities
 
-This section (Automation Opportunities) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Automation Opportunities) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Tool Integrations
 
-This section (Tool Integrations) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Tool Integrations) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Required Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Governing Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Checklists
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Supporting Playbooks
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Templates
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Knowledge Dependencies
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Monitoring Strategy
 
-This section (Monitoring Strategy) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Monitoring Strategy) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Alerting Strategy
 
-This section (Alerting Strategy) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Alerting Strategy) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Metrics
 
-- Coverage and completeness of the artefact.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Quality score.
+- Defect density.
+- Review turnaround.
 
 ## KPIs
 
-- Coverage and completeness of the artefact.
+- Coverage and completeness.
 - Validation pass rate (target 95%+).
 - Cycle time from draft to approval.
 - Reuse rate across the enterprise.
 
 ## SLAs/SLOs
 
-- Coverage and completeness of the artefact.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Service-level objectives defined and monitored.
+- Error budgets and breach handling defined.
 
 ## Error Handling
 
-This section (Error Handling) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Error Handling) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Rollback Strategy
 
-This section (Rollback Strategy) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Rollback Strategy) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Security Controls
 
 - Authentication and authorisation enforced.
 - Encryption in transit and at rest.
-- Audit logging and monitoring.
+- Audit logging and continuous monitoring.
 
 ## Privacy Controls
 
 - Data minimisation.
 - Purpose limitation.
-- Retention and secure deletion policies.
+- Retention and secure-deletion policies.
 
 ## Compliance Mapping
 
@@ -184,11 +187,11 @@ This section (Rollback Strategy) for **Threat Detection** is defined in line wit
 
 ## Cost Optimisation
 
-This section (Cost Optimisation) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Cost Optimisation) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Continuous Improvement Loop
 
-This section (Continuous Improvement Loop) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Continuous Improvement Loop) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Validation Checklist
 
@@ -203,7 +206,11 @@ This section (Continuous Improvement Loop) for **Threat Detection** is defined i
 
 ## References
 
-This section (References) for **Threat Detection** is defined in line with the AIBOS root standards and the governing Phase 12 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
+- [Phase 12 Master Prompt](../../../01_PHASES/PHASE_12_ENTERPRISE_AUTOMATION_CONTINUOUS_IMPROVEMENT_MASTER_PROMPT.md)
 
 ## Version History
 

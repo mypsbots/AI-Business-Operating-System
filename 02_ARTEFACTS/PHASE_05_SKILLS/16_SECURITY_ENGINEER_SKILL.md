@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - skill
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -26,6 +28,8 @@ standards:
 ---
 
 # Security Engineer Skill
+
+> **Navigate:** [Home](../../README.md) · [Catalogue](../../ROOT_INDEX.md) · [Generated Index](../README.md) · [Phase 05 Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
 
 ## Executive Summary
 
@@ -41,7 +45,7 @@ Security Engineer Skill contributes to an AI-native enterprise that is secure, g
 
 ## Role Purpose
 
-This section (Role Purpose) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Role Purpose) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Scope
 
@@ -50,68 +54,85 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 ## Responsibilities
 
 - Own and maintain this artefact.
-- Ensure alignment with root standards.
+- Ensure alignment with the root standards.
 - Validate outputs before publication.
 
 ## Out of Scope
 
-This section (Out of Scope) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- Responsibilities owned by other roles or departments.
+- Decisions outside the role's delegated authority.
+- High-risk actions without human approval.
 
 ## Services Provided
 
-This section (Services Provided) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- Specialist outputs that meet the AIBOS Definition of Done.
+- Reviews and guidance within the role's authority.
+- Reusable artefacts contributed back to the enterprise.
 
 ## Services Consumed
 
-This section (Services Consumed) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- Inputs and decisions from upstream roles and divisions.
+- Shared platforms, tooling and knowledge.
+- Governance approvals for high-risk actions.
 
 ## Required Technical Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- Proficiency with the relevant languages, frameworks and tooling.
+- Sound understanding of APIs, data structures and system design.
+- Cloud-native, CI/CD and Infrastructure-as-Code practices.
+- Disciplined version control with Git and peer code review.
 
 ## Required Business Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- Translating business goals into measurable outcomes.
+- Stakeholder communication and expectation management.
+- Prioritisation, planning and value-based decision making.
+- Commercial awareness of cost, ROI and risk.
 
 ## Required AI Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- Prompt engineering and context design for LLMs.
+- Retrieval-Augmented Generation (RAG) and evaluation techniques.
+- Responsible AI, guardrails and hallucination mitigation.
+- Awareness of the OWASP LLM Top 10.
 
 ## Required Soft Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- Clear written and verbal communication.
+- Collaboration across human and AI teams.
+- Critical thinking and structured problem solving.
+- Adaptability and a continuous-learning mindset.
 
 ## Required Certifications
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- A relevant cloud certification (AWS, Azure or GCP).
+- A security certification where applicable.
+- The matching AIBOS role certification (see Phase 17).
 
 ## Recommended Learning Path
 
-This section (Recommended Learning Path) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+1. Study the [root standards](../../00_ROOT).
+2. Complete the relevant department specification (Phase 04).
+3. Practise with the related playbooks and templates.
+4. Pursue the matching AIBOS certification (Phase 17).
 
 ## Required Tools
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- Git and GitHub for version control and collaboration.
+- CI/CD pipelines and Infrastructure as Code.
+- AI tooling: IDE assistants, model providers and MCP servers.
+- Observability and security-scanning tooling.
 
 ## Technology Stack
 
-This section (Technology Stack) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- Cloud-native runtime and managed services.
+- API-first interfaces (OpenAPI) and event-driven messaging.
+- Vector database and RAG components where applicable.
+- OpenTelemetry-based observability.
 
 ## Decision Authority
 
-This section (Decision Authority) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Decision Authority) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See the [repository catalogue](../../ROOT_INDEX.md) and the [root standards](../../00_ROOT) for related material.
 
 ## Collaboration Matrix
 
@@ -129,47 +150,46 @@ This section (Decision Authority) for **Security Engineer Skill** is defined in 
 
 ## Required Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
 
 ## Required Checklists
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
 
 ## Required Playbooks
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
 
 ## Required Templates
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Templates (Phase 09)](../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
 
 ## Required Knowledge Articles
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../ROOT_INDEX.md).
 
 ## KPIs
 
-- Coverage and completeness of the artefact.
+- Coverage and completeness.
 - Validation pass rate (target 95%+).
 - Cycle time from draft to approval.
 - Reuse rate across the enterprise.
 
 ## OKRs
 
-- Coverage and completeness of the artefact.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Objective: raise enterprise consistency.
+- Key result: 95%+ validation pass rate.
+- Key result: measurable reuse across teams.
 
 ## Security Responsibilities
 
@@ -181,7 +201,7 @@ Maintain human-in-the-loop controls, minimise hallucinations, prefer verified kn
 
 ## Compliance Responsibilities
 
-Map controls to ISO 27001, ISO 42001 and SOC 2; retain evidence for audit.
+Map controls to ISO 27001, ISO 42001 and SOC 2; retain audit evidence.
 
 ## Risks
 
@@ -209,7 +229,9 @@ Map controls to ISO 27001, ISO 42001 and SOC 2; retain evidence for audit.
 
 ## Deliverables
 
-This section (Deliverables) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- Validated, versioned artefacts.
+- Updated cross-references and documentation.
+- Evidence required by the relevant checklists.
 
 ## Acceptance Criteria
 
@@ -230,7 +252,10 @@ This section (Deliverables) for **Security Engineer Skill** is defined in line w
 
 ## Interview Questions
 
-This section (Interview Questions) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- How would you apply the AIBOS standards in the Security Engineer Skill role?
+- Describe how you ensure security and privacy by design.
+- How do you collaborate safely with AI agents?
+- Give an example of measuring and improving quality.
 
 ## Self Assessment Matrix
 
@@ -242,7 +267,11 @@ This section (Interview Questions) for **Security Engineer Skill** is defined in
 
 ## References
 
-This section (References) for **Security Engineer Skill** is defined in line with the AIBOS root standards and the governing Phase 05 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../ROOT_INDEX.md)
+- [Phase 05 Master Prompt](../../01_PHASES/PHASE_05_SKILLS_MASTER_PROMPT.md)
 
 ## Version History
 

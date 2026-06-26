@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - playbook
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_08_PLAYBOOKS_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -27,13 +29,15 @@ standards:
 
 # Hallucination Investigation Playbook
 
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 08 Prompt](../../../01_PHASES/PHASE_08_PLAYBOOKS_MASTER_PROMPT.md)
+
 ## Executive Summary
 
 This document defines **Hallucination Investigation Playbook** within the AIBOS Enterprise v2.0 framework (Phase 08). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
 
 ## Business Objective
 
-This section (Business Objective) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Business Objective) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Scope
 
@@ -41,35 +45,37 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Trigger Conditions
 
-This section (Trigger Conditions) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Trigger Conditions) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Preconditions
 
-This section (Preconditions) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Preconditions) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Inputs
 
-This section (Inputs) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Inputs) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Outputs
 
-This section (Outputs) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Outputs) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Roles Responsible
 
-This section (Roles Responsible) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Roles Responsible) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## AI Agents Involved
 
-This section (AI Agents Involved) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- See **[AI Agent Collaboration (Phase 11)](../../PHASE_11_AI_AGENT_COLLABORATION/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Human Approval Points
 
-This section (Human Approval Points) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Human Approval Points) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Workflow Overview
 
-This section (Workflow Overview) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Workflow Overview) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Mermaid Workflow Diagram
 
@@ -86,71 +92,70 @@ flowchart TD
 
 ## Step-by-Step Procedure
 
-This section (Step-by-Step Procedure) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Step-by-Step Procedure) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Decision Branches
 
-This section (Decision Branches) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Decision Branches) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Exception Handling
 
-This section (Exception Handling) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Exception Handling) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Escalation Path
 
-This section (Escalation Path) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Escalation Path) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Required Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Checklists
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Templates
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Required Knowledge Articles
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Automation Opportunities
 
-This section (Automation Opportunities) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Automation Opportunities) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Integration Points
 
-This section (Integration Points) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Integration Points) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## KPIs
 
-- Coverage and completeness of the artefact.
+- Coverage and completeness.
 - Validation pass rate (target 95%+).
 - Cycle time from draft to approval.
 - Reuse rate across the enterprise.
 
 ## SLAs
 
-- Coverage and completeness of the artefact.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Acknowledgement within 1 business day.
+- Resolution targets aligned to severity.
+- Reporting on breaches and trends.
 
 ## Risks
 
@@ -184,11 +189,11 @@ This section (Integration Points) for **Hallucination Investigation Playbook** i
 
 ## Post-Implementation Review
 
-This section (Post-Implementation Review) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Post-Implementation Review) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Continuous Improvement
 
-This section (Continuous Improvement) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Continuous Improvement) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Validation Checklist
 
@@ -203,7 +208,11 @@ This section (Continuous Improvement) for **Hallucination Investigation Playbook
 
 ## References
 
-This section (References) for **Hallucination Investigation Playbook** is defined in line with the AIBOS root standards and the governing Phase 08 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
+- [Phase 08 Master Prompt](../../../01_PHASES/PHASE_08_PLAYBOOKS_MASTER_PROMPT.md)
 
 ## Version History
 

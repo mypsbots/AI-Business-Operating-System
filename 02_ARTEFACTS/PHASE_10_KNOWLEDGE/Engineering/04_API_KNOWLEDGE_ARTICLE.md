@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - knowledge
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -26,6 +28,8 @@ standards:
 ---
 
 # API Knowledge Article
+
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 10 Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
 
 ## Executive Summary
 
@@ -41,20 +45,20 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Core Concepts
 
-This section (Core Concepts) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Core Concepts) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Definitions
 
-- Refer to `00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md` for canonical terms.
+- Canonical terms are defined in the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
 - No terminology is redefined within this document.
 
 ## Business Context
 
-This section (Business Context) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Business Context) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Technical Context
 
-This section (Technical Context) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Technical Context) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Best Practices
 
@@ -70,7 +74,7 @@ This section (Technical Context) for **API Knowledge Article** is defined in lin
 
 ## Design Patterns
 
-This section (Design Patterns) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Design Patterns) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Examples
 
@@ -103,55 +107,55 @@ flowchart TD
 
 ## Learning Path
 
-This section (Learning Path) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Learning Path) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Prerequisites
 
-This section (Prerequisites) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Prerequisites) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Related Skills
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Rules
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Checklists
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Playbooks
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Templates
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Related Knowledge
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Department Ownership
 
-This section (Department Ownership) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Department Ownership) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Division Ownership
 
-This section (Division Ownership) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Division Ownership) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## External Standards
 
@@ -164,19 +168,23 @@ This section (Division Ownership) for **API Knowledge Article** is defined in li
 
 ## References
 
-This section (References) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
+- [Phase 10 Master Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
 
 ## AI Retrieval Metadata
 
-This section (AI Retrieval Metadata) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (AI Retrieval Metadata) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Suggested Chunk Boundaries
 
-This section (Suggested Chunk Boundaries) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Suggested Chunk Boundaries) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Suggested Embedding Keywords
 
-This section (Suggested Embedding Keywords) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Suggested Embedding Keywords) for **API Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Version History
 

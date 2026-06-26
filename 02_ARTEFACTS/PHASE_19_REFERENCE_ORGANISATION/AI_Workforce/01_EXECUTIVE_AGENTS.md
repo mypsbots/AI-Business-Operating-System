@@ -14,7 +14,9 @@ updated: 2026-06-26
 tags:
   - reference-organisation
 related_documents:
-  - AIBOS_ROOT_SPECIFICATION.md
+  - ROOT_INDEX.md
+  - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
+  - 01_PHASES/PHASE_19_AIBOS_REFERENCE_AI_ORGANISATION_MASTER_PROMPT.md
 standards:
   - ISO 42001
   - ISO 27001
@@ -26,6 +28,8 @@ standards:
 ---
 
 # Executive Agents
+
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 19 Prompt](../../../01_PHASES/PHASE_19_AIBOS_REFERENCE_AI_ORGANISATION_MASTER_PROMPT.md)
 
 ## Executive Summary
 
@@ -41,15 +45,15 @@ Applies across the AIBOS enterprise and is inherited by all dependent artefacts.
 
 ## Organisational Context
 
-This section (Organisational Context) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Organisational Context) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Business Model
 
-This section (Business Model) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Business Model) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Organisation Chart
 
-This section (Organisation Chart) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Organisation Chart) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Mermaid Diagrams
 
@@ -66,15 +70,15 @@ flowchart TD
 
 ## Team Structure
 
-This section (Team Structure) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Team Structure) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## AI Agent Structure
 
-This section (AI Agent Structure) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (AI Agent Structure) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Roles and Responsibilities
 
-This section (Roles and Responsibilities) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Roles and Responsibilities) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## RACI
 
@@ -84,7 +88,7 @@ This section (Roles and Responsibilities) for **Executive Agents** is defined in
 
 ## Governance
 
-This section (Governance) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Governance) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Decision Matrix
 
@@ -96,67 +100,71 @@ This section (Governance) for **Executive Agents** is defined in line with the A
 
 ## Escalation Model
 
-This section (Escalation Model) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Escalation Model) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Skills Mapping
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Rules Mapping
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Checklists Mapping
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Playbooks Mapping
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Templates Mapping
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Knowledge Mapping
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Automation Mapping
 
-- Inherits all root standards under `00_ROOT/`.
-- Cross-references the relevant Phase artefacts under `02_ARTEFACTS/`.
-- See `ROOT_INDEX.md` for the full catalogue.
+- See **[Enterprise Automation (Phase 12)](../../PHASE_12_AUTOMATION/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## Marketplace Assets
 
-This section (Marketplace Assets) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- See **[Marketplace (Phase 18)](../../PHASE_18_MARKETPLACE/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## SDK Usage
 
-This section (SDK Usage) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- See **[SDK and CLI (Phase 16)](../../PHASE_16_SDK_CLI/README.md)** for the relevant artefacts.
+- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
+- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
 
 ## CI/CD Integration
 
-This section (CI/CD Integration) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (CI/CD Integration) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Security Controls
 
 - Authentication and authorisation enforced.
 - Encryption in transit and at rest.
-- Audit logging and monitoring.
+- Audit logging and continuous monitoring.
 
 ## Compliance Controls
 
@@ -169,21 +177,20 @@ This section (CI/CD Integration) for **Executive Agents** is defined in line wit
 
 ## KPIs
 
-- Coverage and completeness of the artefact.
+- Coverage and completeness.
 - Validation pass rate (target 95%+).
 - Cycle time from draft to approval.
 - Reuse rate across the enterprise.
 
 ## OKRs
 
-- Coverage and completeness of the artefact.
-- Validation pass rate (target 95%+).
-- Cycle time from draft to approval.
-- Reuse rate across the enterprise.
+- Objective: raise enterprise consistency.
+- Key result: 95%+ validation pass rate.
+- Key result: measurable reuse across teams.
 
 ## Dashboards
 
-This section (Dashboards) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Dashboards) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Risks
 
@@ -193,7 +200,7 @@ This section (Dashboards) for **Executive Agents** is defined in line with the A
 
 ## Continuous Improvement
 
-This section (Continuous Improvement) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+This section (Continuous Improvement) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
 
 ## Validation Checklist
 
@@ -208,7 +215,11 @@ This section (Continuous Improvement) for **Executive Agents** is defined in lin
 
 ## References
 
-This section (References) for **Executive Agents** is defined in line with the AIBOS root standards and the governing Phase 19 master prompt. See `ROOT_INDEX.md` for related artefacts and `00_ROOT/` for the inherited standards.
+- [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
+- [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
+- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
+- [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
+- [Phase 19 Master Prompt](../../../01_PHASES/PHASE_19_AIBOS_REFERENCE_AI_ORGANISATION_MASTER_PROMPT.md)
 
 ## Version History
 
