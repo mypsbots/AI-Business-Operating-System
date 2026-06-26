@@ -5,7 +5,7 @@ document_type: Template
 category: Strategy And Governance
 phase: Phase 09
 owner: Chief Documentation and Knowledge Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - template
+  - strategy-and-governance
+  - business_case_template
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,96 +31,131 @@ standards:
 
 # Business Case Template
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 09 Prompt](../../../01_PHASES/PHASE_09_TEMPLATES_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Templates](../README.md) · [Phase 09 Prompt](../../../01_PHASES/PHASE_09_TEMPLATES_MASTER_PROMPT.md)
+
+**Template ID:** TEMP-000001  •  **Category:** Strategy And Governance
 
 ## Purpose
 
-To establish the authoritative, reusable definition of Business Case Template so that human teams and AI agents operate consistently, safely and with measurable business value.
+Justify an investment or initiative with costs, benefits and risks.
 
 ## When to Use
 
-This section (When to Use) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Before committing budget or people to a significant initiative.
 
 ## Audience
 
-This section (Audience) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Executives, sponsors, finance and decision-makers.
 
 ## Inputs Required
 
-This section (Inputs Required) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Initiative name
+- Accountable sponsor
+- Problem/opportunity
+- Options considered
+- Estimated cost
+- Expected benefit/ROI
 
 ## Outputs Produced
 
-This section (Outputs Produced) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+A completed **Business Case Template** ready for review and use.
 
 ## Required Metadata
 
-```yaml
-id: DOC-000000
-title: Example
-version: 2.0.0
-owner: Owning Team
-classification: Internal
-```
+Every instance MUST carry: `id`, `title`, `owner`, `version`, `status`, `created`, `updated`.
 
 ## Placeholder Definitions
 
-This section (Placeholder Definitions) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Placeholder | Meaning |
+| --- | --- |
+| `{{title}}` | Initiative name |
+| `{{sponsor}}` | Accountable sponsor |
+| `{{problem}}` | Problem/opportunity |
+| `{{options}}` | Options considered |
+| `{{cost}}` | Estimated cost |
+| `{{benefit}}` | Expected benefit/ROI |
+| `{{date}}` | ISO date the document is created (YYYY-MM-DD). |
+
+## Template
+
+Copy the block below and replace every `{{placeholder}}` with real content.
+
+````markdown
+# Business Case: {{title}}
+
+- **Sponsor:** {{sponsor}}
+- **Date:** {{date}}
+- **Status:** Draft | Approved | Rejected
+
+## Problem / Opportunity
+{{problem}}
+
+## Options Considered
+1. Do nothing (baseline)
+2. {{options}}
+
+## Recommended Option
+_Which option and why._
+
+## Costs
+{{cost}} (one-off + ongoing)
+
+## Benefits & ROI
+{{benefit}}
+
+## Risks & Assumptions
+- ...
+
+## Decision
+_Approved / Rejected by, date, conditions._
+````
 
 ## Naming Convention
 
-This section (Naming Convention) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+`NN_BUSINESS_CASE.md` (zero-padded order prefix, UPPER_SNAKE_CASE).
 
 ## Folder Convention
 
-This section (Folder Convention) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Master template lives under `02_ARTEFACTS/PHASE_09_TEMPLATES/Strategy_And_Governance/`. Copy instances into the relevant project/repository location.
 
 ## Required Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Specialist Skills](../../PHASE_05_SKILLS/README.md) relevant to this artefact.
 
 ## Required Rules
 
-- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Comply with the [Enterprise Rules](../../PHASE_06_RULES/README.md).
 
 ## Required Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Validate with the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Required Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Produced within the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Required Knowledge Articles
 
-- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Background in the [Enterprise Knowledge base](../../PHASE_10_KNOWLEDGE/README.md).
 
 ## Validation Rules
 
-This section (Validation Rules) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- [ ] All `{{placeholders}}` are replaced (none remain).
+- [ ] Required metadata is present and valid.
+- [ ] No secrets or sensitive data are included.
+- [ ] Cross-references resolve.
+- [ ] Content follows the AIBOS style guide.
 
 ## Quality Criteria
 
-This section (Quality Criteria) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Consistent and reusable across teams.
+- Modular and easy to customise.
+- Machine-readable and automation-ready.
+- Version-controlled and reviewed.
 
 ## Example Completed Template
 
-```yaml
-# Example for: Business Case Template
-name: example
-version: 2.0.0
-status: draft
-```
+Fill each placeholder with concrete values. For example, replace `{{title}}` with a real value and complete each section with project-specific detail.
 
 ## JSON Schema
 
@@ -140,21 +177,27 @@ status: draft
 ```yaml
 id: DOC-000000
 title: Example
-version: 2.0.0
 owner: Owning Team
-classification: Internal
+version: 1.0.0
+status: Draft
 ```
 
 ## AI Prompt Usage Guidance
 
-This section (AI Prompt Usage Guidance) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Prompt an AI agent: "Using the Business Case Template below, produce a completed version for <context>; replace every placeholder and keep the structure."
+- Provide the source inputs (notes, tickets, data) as context.
+- Ask the agent to flag any placeholder it cannot fill confidently.
+- Always have a human review AI-completed instances before use.
 
 ## Automation Compatibility
 
-This section (Automation Compatibility) for **Business Case Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- GitHub / GitHub Actions (scaffold and validate).
+- Cursor, Claude, GPT, Gemini (AI-assisted completion).
+- n8n / Make (workflow generation).
+- MCP tools and CI/CD pipelines.
 
 ## Version History
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use template. |

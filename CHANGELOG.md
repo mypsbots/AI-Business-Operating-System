@@ -5,6 +5,35 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.0] - 2026-06-26
+
+### Changed
+
+- **Phases 06–10 are now complete, ready-to-use documents** rather than scaffolds,
+  generated from real topic-specific content libraries:
+  - Phase 06 Rules (47): RFC-2119 MUST/SHOULD/MAY, ownership matrix, compliance
+    mapping, metrics, anti-patterns and validation checklists.
+  - Phase 07 Checklists (45): binary, auditable items plus cross-cutting security,
+    privacy, AI, accessibility, performance and deployment validation.
+  - Phase 08 Playbooks (36): triggers, roles, step-by-step procedures, Mermaid
+    diagrams, decision branches, integrations, KPIs/SLAs and continuous improvement.
+  - Phase 09 Templates (35): real, copy-paste fill-in skeletons with placeholder
+    definitions, naming/folder conventions, schemas and AI-usage guidance.
+  - Phase 10 Knowledge (59): atomic, RAG-optimised explainers with core concepts,
+    definitions, examples, FAQs, a decision guide, a knowledge-graph block and
+    retrieval metadata.
+
+### Added
+
+- `tools/content_kb.py`: shared topic content library powering Rules, Checklists
+  and Playbooks.
+- `tools/templates_kb.py` and `tools/knowledge_kb.py`: content libraries for
+  Templates and Knowledge.
+- `tools/generate_rules.py`, `generate_checklists.py`, `generate_playbooks.py`,
+  `generate_templates.py`, `generate_knowledge.py`: per-phase generators.
+
+All generated files are lint-clean and every internal link resolves.
+
 ## [2.3.0] - 2026-06-26
 
 ### Changed

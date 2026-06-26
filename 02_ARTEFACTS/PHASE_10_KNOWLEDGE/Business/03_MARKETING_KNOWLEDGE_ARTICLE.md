@@ -1,193 +1,199 @@
 ---
-id: KNOW-000003
-title: Marketing Knowledge Article
-document_type: Knowledge
+id: KN-000003
+title: Marketing
+document_type: Knowledge Article
 category: Business
 phase: Phase 10
 owner: Chief Knowledge Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
 created: 2026-06-26
 updated: 2026-06-26
 tags:
-  - knowledge
+  - marketing
+  - positioning
+  - funnel
+  - SEO
+  - GEO
+  - attribution
+  - brand
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
   - 01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md
 standards:
   - ISO 42001
-  - ISO 27001
-  - NIST AI RMF
-  - SOC 2
-  - OWASP ASVS
-  - OWASP LLM Top 10
-  - WCAG 2.2 AA
 ---
 
-# Marketing Knowledge Article
+# Marketing
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 10 Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Knowledge](../README.md) · [Phase 10 Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
+
+**Knowledge ID:** KN-000003  •  **Category:** Business
+
+## Tags
+
+`marketing`, `positioning`, `funnel`, `SEO`, `GEO`, `attribution`, `brand`
 
 ## Executive Summary
 
-This document defines **Marketing Knowledge Article** within the AIBOS Enterprise v2.0 framework (Phase 10). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+Marketing creates awareness, demand and reputation by understanding the customer and communicating value through the right channels — now including visibility inside AI answer engines.
 
 ## Purpose
 
-To establish the authoritative, reusable definition of Marketing Knowledge Article so that human teams and AI agents operate consistently, safely and with measurable business value.
+To give people and AI agents a clear, reusable explanation of **Marketing** that supports learning, retrieval (RAG) and decision support.
 
 ## Scope
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+Covers the core ideas, practices and pitfalls of marketing as applied in AIBOS. Deep procedural detail lives in the related playbooks.
 
 ## Core Concepts
 
-This section (Core Concepts) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Positioning and messaging define how you are perceived.
+- The funnel: awareness -> consideration -> conversion -> retention.
+- Channels: content, SEO/AEO/GEO, paid, social, email, partnerships.
+- Attribution connects spend to outcomes.
+- Brand is the compounding asset of trust.
 
 ## Definitions
 
-- Canonical terms are defined in the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
-- No terminology is redefined within this document.
+See the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
 
 ## Business Context
 
-This section (Business Context) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Understanding marketing helps teams make better decisions, reduce risk and move faster. It connects directly to the related rules, checklists and playbooks below.
 
 ## Technical Context
 
-This section (Technical Context) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+In AIBOS, marketing is applied through the related standards and automated wherever possible, with AI agents operating under human oversight.
 
 ## Best Practices
 
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
+- Define audience, message and KPI before spending.
+- Measure attribution and iterate.
+- Optimise content for both search and AI answer engines.
 
 ## Anti-patterns
 
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
+- Chasing vanity metrics.
+- Unsubstantiated claims.
+- Ignoring privacy/consent.
 
 ## Design Patterns
 
-This section (Design Patterns) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Apply the best practices above as repeatable patterns for this topic.
 
 ## Examples
 
-```yaml
-# Example for: Marketing Knowledge Article
-name: example
-version: 2.0.0
-status: draft
-```
+- Apply the best practices above to a real marketing task and validate with the related checklist.
 
 ## FAQs
 
-**Q: How does this artefact relate to the AIBOS standards?**
+**Q: What is GEO?**
 
-A: It inherits and must not contradict the root standards.
+A: Generative Engine Optimization — making your brand visible and accurate inside AI assistants like ChatGPT and Perplexity.
 
-**Q: Who owns Marketing Knowledge Article?**
+**Q: What is a marketing funnel?**
 
-A: Chief Knowledge Architect.
+A: A model of the customer journey from awareness to retention.
 
 ## Decision Tree
 
-```mermaid
-flowchart TD
-    Q1{Meets acceptance criteria?} -->|No| R[Reject and remediate]
-    Q1 -->|Yes| Q2{High-risk?}
-    Q2 -->|Yes| H[Escalate for human approval]
-    Q2 -->|No| A[Approve and proceed]
-```
+- Is this about marketing? -> Use this article and its related rule.
+- Is it high-risk or regulated? -> Keep a human in the loop and check compliance.
+- Need to act? -> Follow the related playbook and validate with the checklist.
+- Need to produce an artefact? -> Use the related template.
 
 ## Learning Path
 
-This section (Learning Path) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Learn positioning (April Dunford).
+- Build a measurable campaign with a KPI.
+- Study SEO and the emerging GEO/AEO practices.
 
 ## Prerequisites
 
-This section (Prerequisites) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Familiarity with the AIBOS [Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md) and the basics of this domain.
 
 ## Related Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Specialist Skills](../../PHASE_05_SKILLS/README.md).
 
 ## Related Rules
 
-- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Rules](../../PHASE_06_RULES/README.md).
 
 ## Related Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Related Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Related Templates
 
-- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Templates](../../PHASE_09_TEMPLATES/README.md).
 
 ## Related Knowledge
 
-- See **[Enterprise Knowledge (Phase 10)](../README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+- [Strategy](./01_STRATEGY_KNOWLEDGE_ARTICLE.md)
+- [Finance](./02_FINANCE_KNOWLEDGE_ARTICLE.md)
+- [Sales](./04_SALES_KNOWLEDGE_ARTICLE.md)
+- [Customer Success](./05_CUSTOMER_SUCCESS_KNOWLEDGE_ARTICLE.md)
+- [Legal](./06_LEGAL_KNOWLEDGE_ARTICLE.md)
+- [Operations](./07_OPERATIONS_KNOWLEDGE_ARTICLE.md)
+
+## Knowledge Graph
+
+- **Parent topic:** Business
+- **Child topics:** see Related Knowledge below
+- **Sibling topics:** Strategy, Finance, Marketing, Sales, Customer Success, Legal
+- **Dependencies / related technologies:** marketing, positioning, funnel, SEO, GEO
+- **Related business domains:** Business
 
 ## Department Ownership
 
-This section (Department Ownership) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Owned by the relevant department(s); see [Department Specifications](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md).
 
 ## Division Ownership
 
-This section (Division Ownership) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Governed by the relevant division; see [Division Specifications](../../PHASE_03_DIVISION_SPECIFICATIONS/README.md).
 
 ## External Standards
 
-| Standard | Application |
-| --- | --- |
-| ISO 42001 | AI management system alignment. |
-| ISO 27001 | Information security controls. |
-| NIST AI RMF | AI risk management. |
-| OWASP LLM Top 10 | LLM threat mitigation. |
+- Not applicable.
 
 ## References
 
 - [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
 - [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
 - [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
 - [Phase 10 Master Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
 
 ## AI Retrieval Metadata
 
-This section (AI Retrieval Metadata) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Field | Value |
+| --- | --- |
+| Document type | Knowledge Article |
+| Domain | Business |
+| Audience | Humans, AI agents, RAG, enterprise search |
+| Keywords | marketing, positioning, funnel, SEO, GEO, attribution, brand |
 
 ## Suggested Chunk Boundaries
 
-This section (Suggested Chunk Boundaries) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Executive Summary (overview chunk).
+- Core Concepts (concept chunk).
+- Best Practices + Anti-patterns (guidance chunk).
+- FAQs (Q&A chunks, one per question).
 
 ## Suggested Embedding Keywords
 
-This section (Suggested Embedding Keywords) for **Marketing Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+`marketing`, `positioning`, `funnel`, `SEO`, `GEO`, `attribution`, `brand`
 
 ## Version History
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use knowledge article. |

@@ -1,193 +1,205 @@
 ---
-id: KNOW-000028
-title: Guardrails Knowledge Article
-document_type: Knowledge
+id: KN-000028
+title: Guardrails
+document_type: Knowledge Article
 category: Artificial Intelligence
 phase: Phase 10
 owner: Chief Knowledge Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
 created: 2026-06-26
 updated: 2026-06-26
 tags:
-  - knowledge
+  - guardrails
+  - content filtering
+  - validation
+  - jailbreak
+  - human-in-the-loop
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
   - 01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md
 standards:
-  - ISO 42001
-  - ISO 27001
-  - NIST AI RMF
-  - SOC 2
-  - OWASP ASVS
   - OWASP LLM Top 10
-  - WCAG 2.2 AA
+  - NIST AI RMF
+  - ISO 42001
 ---
 
-# Guardrails Knowledge Article
+# Guardrails
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 10 Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Knowledge](../README.md) · [Phase 10 Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
+
+**Knowledge ID:** KN-000028  •  **Category:** Artificial Intelligence
+
+## Tags
+
+`guardrails`, `content filtering`, `validation`, `jailbreak`, `human-in-the-loop`
 
 ## Executive Summary
 
-This document defines **Guardrails Knowledge Article** within the AIBOS Enterprise v2.0 framework (Phase 10). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+Guardrails are the controls that keep AI behaviour within safe, compliant and on-brand boundaries — at input, output and action levels.
 
 ## Purpose
 
-To establish the authoritative, reusable definition of Guardrails Knowledge Article so that human teams and AI agents operate consistently, safely and with measurable business value.
+To give people and AI agents a clear, reusable explanation of **Guardrails** that supports learning, retrieval (RAG) and decision support.
 
 ## Scope
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+Covers the core ideas, practices and pitfalls of guardrails as applied in AIBOS. Deep procedural detail lives in the related playbooks.
 
 ## Core Concepts
 
-This section (Core Concepts) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Input filters (PII, injection) and output filters (toxicity, policy).
+- Schema/format validation of output.
+- Action gating and human-in-the-loop.
+- Topical and jailbreak defences.
+- Monitoring and incident response.
 
 ## Definitions
 
-- Canonical terms are defined in the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
-- No terminology is redefined within this document.
+See the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
 
 ## Business Context
 
-This section (Business Context) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Understanding guardrails helps teams make better decisions, reduce risk and move faster. It connects directly to the related rules, checklists and playbooks below.
 
 ## Technical Context
 
-This section (Technical Context) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+In AIBOS, guardrails is applied through the related standards and automated wherever possible, with AI agents operating under human oversight.
 
 ## Best Practices
 
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
+- Layer guardrails at input, output and action.
+- Validate structured output.
+- Keep humans in the loop for high risk.
 
 ## Anti-patterns
 
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
+- No output validation.
+- Single-layer defences.
+- Treating guardrails as optional.
 
 ## Design Patterns
 
-This section (Design Patterns) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Apply the best practices above as repeatable patterns for this topic.
 
 ## Examples
 
-```yaml
-# Example for: Guardrails Knowledge Article
-name: example
-version: 2.0.0
-status: draft
-```
+- Apply the best practices above to a real guardrails task and validate with the related checklist.
 
 ## FAQs
 
-**Q: How does this artefact relate to the AIBOS standards?**
+**Q: Where do guardrails apply?**
 
-A: It inherits and must not contradict the root standards.
+A: At the input (filter/validate), the output (filter/validate) and the action (gate/approve) stages.
 
-**Q: Who owns Guardrails Knowledge Article?**
+**Q: Do guardrails stop all misuse?**
 
-A: Chief Knowledge Architect.
+A: No — they reduce risk; combine with evaluation, monitoring and human oversight.
 
 ## Decision Tree
 
-```mermaid
-flowchart TD
-    Q1{Meets acceptance criteria?} -->|No| R[Reject and remediate]
-    Q1 -->|Yes| Q2{High-risk?}
-    Q2 -->|Yes| H[Escalate for human approval]
-    Q2 -->|No| A[Approve and proceed]
-```
+- Is this about guardrails? -> Use this article and its related rule.
+- Is it high-risk or regulated? -> Keep a human in the loop and check compliance.
+- Need to act? -> Follow the related playbook and validate with the checklist.
+- Need to produce an artefact? -> Use the related template.
 
 ## Learning Path
 
-This section (Learning Path) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Add input/output filters.
+- Validate structured output.
+- Try a guardrails framework (NeMo, Guardrails AI).
 
 ## Prerequisites
 
-This section (Prerequisites) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Familiarity with the AIBOS [Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md) and the basics of this domain.
 
 ## Related Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Specialist Skills](../../PHASE_05_SKILLS/README.md).
 
 ## Related Rules
 
-- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Rules](../../PHASE_06_RULES/README.md).
 
 ## Related Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Related Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Related Templates
 
-- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Templates](../../PHASE_09_TEMPLATES/README.md).
 
 ## Related Knowledge
 
-- See **[Enterprise Knowledge (Phase 10)](../README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+- [LLMs](./01_LLMS_KNOWLEDGE_ARTICLE.md)
+- [Prompt Engineering](./02_PROMPT_ENGINEERING_KNOWLEDGE_ARTICLE.md)
+- [Agents](./03_AGENTS_KNOWLEDGE_ARTICLE.md)
+- [Agentic Workflows](./04_AGENTIC_WORKFLOWS_KNOWLEDGE_ARTICLE.md)
+- [RAG](./05_RAG_KNOWLEDGE_ARTICLE.md)
+- [MCP](./06_MCP_KNOWLEDGE_ARTICLE.md)
+- [Embeddings](./07_EMBEDDINGS_KNOWLEDGE_ARTICLE.md)
+- [Vector Databases](./08_VECTOR_DATABASES_KNOWLEDGE_ARTICLE.md)
+- [Evaluation](./09_EVALUATION_KNOWLEDGE_ARTICLE.md)
+- [Responsible AI](./11_RESPONSIBLE_AI_KNOWLEDGE_ARTICLE.md)
+
+## Knowledge Graph
+
+- **Parent topic:** Artificial Intelligence
+- **Child topics:** see Related Knowledge below
+- **Sibling topics:** LLMs, Prompt Engineering, Agents, Agentic Workflows, RAG, MCP
+- **Dependencies / related technologies:** guardrails, content filtering, validation, jailbreak, human-in-the-loop
+- **Related business domains:** Artificial Intelligence
 
 ## Department Ownership
 
-This section (Department Ownership) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Owned by the relevant department(s); see [Department Specifications](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md).
 
 ## Division Ownership
 
-This section (Division Ownership) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Governed by the relevant division; see [Division Specifications](../../PHASE_03_DIVISION_SPECIFICATIONS/README.md).
 
 ## External Standards
 
-| Standard | Application |
-| --- | --- |
-| ISO 42001 | AI management system alignment. |
-| ISO 27001 | Information security controls. |
-| NIST AI RMF | AI risk management. |
-| OWASP LLM Top 10 | LLM threat mitigation. |
+- OWASP LLM Top 10
+- NIST AI RMF
+- ISO 42001
 
 ## References
 
 - [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
 - [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
 - [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
 - [Phase 10 Master Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
 
 ## AI Retrieval Metadata
 
-This section (AI Retrieval Metadata) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Field | Value |
+| --- | --- |
+| Document type | Knowledge Article |
+| Domain | Artificial Intelligence |
+| Audience | Humans, AI agents, RAG, enterprise search |
+| Keywords | guardrails, content filtering, validation, jailbreak, human-in-the-loop |
 
 ## Suggested Chunk Boundaries
 
-This section (Suggested Chunk Boundaries) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Executive Summary (overview chunk).
+- Core Concepts (concept chunk).
+- Best Practices + Anti-patterns (guidance chunk).
+- FAQs (Q&A chunks, one per question).
 
 ## Suggested Embedding Keywords
 
-This section (Suggested Embedding Keywords) for **Guardrails Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+`guardrails`, `content filtering`, `validation`, `jailbreak`, `human-in-the-loop`
 
 ## Version History
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use knowledge article. |

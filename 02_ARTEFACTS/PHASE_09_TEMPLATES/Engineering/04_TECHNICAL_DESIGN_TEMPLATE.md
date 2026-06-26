@@ -5,7 +5,7 @@ document_type: Template
 category: Engineering
 phase: Phase 09
 owner: Chief Documentation and Knowledge Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
@@ -13,6 +13,8 @@ created: 2026-06-26
 updated: 2026-06-26
 tags:
   - template
+  - engineering
+  - technical_design_template
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
@@ -29,96 +31,116 @@ standards:
 
 # Technical Design Template
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 09 Prompt](../../../01_PHASES/PHASE_09_TEMPLATES_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Templates](../README.md) · [Phase 09 Prompt](../../../01_PHASES/PHASE_09_TEMPLATES_MASTER_PROMPT.md)
+
+**Template ID:** TEMP-000014  •  **Category:** Engineering
 
 ## Purpose
 
-To establish the authoritative, reusable definition of Technical Design Template so that human teams and AI agents operate consistently, safely and with measurable business value.
+Describe how a feature/system will be built.
 
 ## When to Use
 
-This section (When to Use) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Before implementation of non-trivial work.
 
 ## Audience
 
-This section (Audience) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Engineers and reviewers.
 
 ## Inputs Required
 
-This section (Inputs Required) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Design title
 
 ## Outputs Produced
 
-This section (Outputs Produced) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+A completed **Technical Design Template** ready for review and use.
 
 ## Required Metadata
 
-```yaml
-id: DOC-000000
-title: Example
-version: 2.0.0
-owner: Owning Team
-classification: Internal
-```
+Every instance MUST carry: `id`, `title`, `owner`, `version`, `status`, `created`, `updated`.
 
 ## Placeholder Definitions
 
-This section (Placeholder Definitions) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Placeholder | Meaning |
+| --- | --- |
+| `{{title}}` | Design title |
+| `{{date}}` | ISO date the document is created (YYYY-MM-DD). |
+
+## Template
+
+Copy the block below and replace every `{{placeholder}}` with real content.
+
+````markdown
+# Technical Design: {{title}}
+
+## Goals & Non-goals
+- ...
+
+## Proposed Design
+- Components, data flow, APIs.
+
+## Diagram
+```mermaid
+flowchart TD
+  A --> B --> C
+```
+
+## Alternatives
+- ...
+
+## Security, Privacy, Performance
+- ...
+
+## Testing & Rollout
+- ...
+````
 
 ## Naming Convention
 
-This section (Naming Convention) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+`NN_TECHNICAL_DESIGN.md` (zero-padded order prefix, UPPER_SNAKE_CASE).
 
 ## Folder Convention
 
-This section (Folder Convention) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Master template lives under `02_ARTEFACTS/PHASE_09_TEMPLATES/Engineering/`. Copy instances into the relevant project/repository location.
 
 ## Required Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Specialist Skills](../../PHASE_05_SKILLS/README.md) relevant to this artefact.
 
 ## Required Rules
 
-- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Comply with the [Enterprise Rules](../../PHASE_06_RULES/README.md).
 
 ## Required Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Validate with the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Required Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Produced within the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Required Knowledge Articles
 
-- See **[Enterprise Knowledge (Phase 10)](../../PHASE_10_KNOWLEDGE/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+Background in the [Enterprise Knowledge base](../../PHASE_10_KNOWLEDGE/README.md).
 
 ## Validation Rules
 
-This section (Validation Rules) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- [ ] All `{{placeholders}}` are replaced (none remain).
+- [ ] Required metadata is present and valid.
+- [ ] No secrets or sensitive data are included.
+- [ ] Cross-references resolve.
+- [ ] Content follows the AIBOS style guide.
 
 ## Quality Criteria
 
-This section (Quality Criteria) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Consistent and reusable across teams.
+- Modular and easy to customise.
+- Machine-readable and automation-ready.
+- Version-controlled and reviewed.
 
 ## Example Completed Template
 
-```yaml
-# Example for: Technical Design Template
-name: example
-version: 2.0.0
-status: draft
-```
+Fill each placeholder with concrete values. For example, replace `{{title}}` with a real value and complete each section with project-specific detail.
 
 ## JSON Schema
 
@@ -140,21 +162,27 @@ status: draft
 ```yaml
 id: DOC-000000
 title: Example
-version: 2.0.0
 owner: Owning Team
-classification: Internal
+version: 1.0.0
+status: Draft
 ```
 
 ## AI Prompt Usage Guidance
 
-This section (AI Prompt Usage Guidance) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Prompt an AI agent: "Using the Technical Design Template below, produce a completed version for <context>; replace every placeholder and keep the structure."
+- Provide the source inputs (notes, tickets, data) as context.
+- Ask the agent to flag any placeholder it cannot fill confidently.
+- Always have a human review AI-completed instances before use.
 
 ## Automation Compatibility
 
-This section (Automation Compatibility) for **Technical Design Template** is defined in line with the AIBOS root standards and the governing Phase 09 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- GitHub / GitHub Actions (scaffold and validate).
+- Cursor, Claude, GPT, Gemini (AI-assisted completion).
+- n8n / Make (workflow generation).
+- MCP tools and CI/CD pipelines.
 
 ## Version History
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use template. |

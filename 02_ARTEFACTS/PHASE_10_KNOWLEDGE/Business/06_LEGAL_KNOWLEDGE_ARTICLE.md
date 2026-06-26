@@ -1,193 +1,198 @@
 ---
-id: KNOW-000006
-title: Legal Knowledge Article
-document_type: Knowledge
+id: KN-000006
+title: Legal
+document_type: Knowledge Article
 category: Business
 phase: Phase 10
 owner: Chief Knowledge Architect
-status: Draft
+status: Published
 lifecycle: Active
 classification: Internal
 version: 2.0.0
 created: 2026-06-26
 updated: 2026-06-26
 tags:
-  - knowledge
+  - legal
+  - contracts
+  - IP
+  - GDPR
+  - EU AI Act
+  - compliance
 related_documents:
   - ROOT_INDEX.md
   - 00_ROOT/AIBOS_ROOT_SPECIFICATION.md
   - 01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md
 standards:
   - ISO 42001
-  - ISO 27001
-  - NIST AI RMF
-  - SOC 2
-  - OWASP ASVS
-  - OWASP LLM Top 10
-  - WCAG 2.2 AA
 ---
 
-# Legal Knowledge Article
+# Legal
 
-> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md) · [Phase 10 Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
+> **Navigate:** [Home](../../../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [All Knowledge](../README.md) · [Phase 10 Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
+
+**Knowledge ID:** KN-000006  •  **Category:** Business
+
+## Tags
+
+`legal`, `contracts`, `IP`, `GDPR`, `EU AI Act`, `compliance`
 
 ## Executive Summary
 
-This document defines **Legal Knowledge Article** within the AIBOS Enterprise v2.0 framework (Phase 10). It inherits every root standard and is designed to be enterprise-ready, machine-readable and AI-friendly.
+The legal function manages contracts, intellectual property, privacy and regulatory obligations to reduce risk and enable the business safely.
 
 ## Purpose
 
-To establish the authoritative, reusable definition of Legal Knowledge Article so that human teams and AI agents operate consistently, safely and with measurable business value.
+To give people and AI agents a clear, reusable explanation of **Legal** that supports learning, retrieval (RAG) and decision support.
 
 ## Scope
 
-Applies across the AIBOS enterprise and is inherited by all dependent artefacts. Concerns owned elsewhere are delegated to their owning documents to avoid duplication.
+Covers the core ideas, practices and pitfalls of legal as applied in AIBOS. Deep procedural detail lives in the related playbooks.
 
 ## Core Concepts
 
-This section (Core Concepts) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Contracts allocate risk and obligations.
+- IP (copyright, trademarks, patents) protects assets.
+- Privacy law (GDPR, CCPA) governs personal data.
+- AI regulation (EU AI Act) adds new obligations.
+- Compliance and records support audits.
 
 ## Definitions
 
-- Canonical terms are defined in the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
-- No terminology is redefined within this document.
+See the [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md).
 
 ## Business Context
 
-This section (Business Context) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Understanding legal helps teams make better decisions, reduce risk and move faster. It connects directly to the related rules, checklists and playbooks below.
 
 ## Technical Context
 
-This section (Technical Context) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+In AIBOS, legal is applied through the related standards and automated wherever possible, with AI agents operating under human oversight.
 
 ## Best Practices
 
-- Reuse before build.
-- Automate validation.
-- Keep documents atomic and cross-referenced.
+- Review contracts before signing.
+- Respect third-party licences and IP.
+- Build privacy and AI compliance in by design.
 
 ## Anti-patterns
 
-- Duplicating concepts defined elsewhere.
-- Bypassing human approval for high-risk actions.
-- Undocumented exceptions.
+- Signing unreviewed contracts.
+- Ignoring open-source licences.
+- Treating compliance as an afterthought.
 
 ## Design Patterns
 
-This section (Design Patterns) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Apply the best practices above as repeatable patterns for this topic.
 
 ## Examples
 
-```yaml
-# Example for: Legal Knowledge Article
-name: example
-version: 2.0.0
-status: draft
-```
+- Apply the best practices above to a real legal task and validate with the related checklist.
 
 ## FAQs
 
-**Q: How does this artefact relate to the AIBOS standards?**
+**Q: What is the EU AI Act?**
 
-A: It inherits and must not contradict the root standards.
+A: A risk-based EU regulation governing AI systems, with obligations scaled to risk level.
 
-**Q: Who owns Legal Knowledge Article?**
+**Q: What is DPA?**
 
-A: Chief Knowledge Architect.
+A: A Data Processing Agreement governing how a vendor handles personal data.
 
 ## Decision Tree
 
-```mermaid
-flowchart TD
-    Q1{Meets acceptance criteria?} -->|No| R[Reject and remediate]
-    Q1 -->|Yes| Q2{High-risk?}
-    Q2 -->|Yes| H[Escalate for human approval]
-    Q2 -->|No| A[Approve and proceed]
-```
+- Is this about legal? -> Use this article and its related rule.
+- Is it high-risk or regulated? -> Keep a human in the loop and check compliance.
+- Need to act? -> Follow the related playbook and validate with the checklist.
+- Need to produce an artefact? -> Use the related template.
 
 ## Learning Path
 
-This section (Learning Path) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Learn contract basics and IP types.
+- Study GDPR principles.
+- Review the EU AI Act risk tiers.
 
 ## Prerequisites
 
-This section (Prerequisites) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Familiarity with the AIBOS [Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md) and the basics of this domain.
 
 ## Related Skills
 
-- See **[Specialist Skills (Phase 05)](../../PHASE_05_SKILLS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Specialist Skills](../../PHASE_05_SKILLS/README.md).
 
 ## Related Rules
 
-- See **[Enterprise Rules (Phase 06)](../../PHASE_06_RULES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Rules](../../PHASE_06_RULES/README.md).
 
 ## Related Checklists
 
-- See **[Enterprise Checklists (Phase 07)](../../PHASE_07_CHECKLISTS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Checklists](../../PHASE_07_CHECKLISTS/README.md).
 
 ## Related Playbooks
 
-- See **[Enterprise Playbooks (Phase 08)](../../PHASE_08_PLAYBOOKS/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Playbooks](../../PHASE_08_PLAYBOOKS/README.md).
 
 ## Related Templates
 
-- See **[Enterprise Templates (Phase 09)](../../PHASE_09_TEMPLATES/README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+See the [Enterprise Templates](../../PHASE_09_TEMPLATES/README.md).
 
 ## Related Knowledge
 
-- See **[Enterprise Knowledge (Phase 10)](../README.md)** for the relevant artefacts.
-- Inherited standards: [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md).
-- Full catalogue: [ROOT_INDEX](../../../ROOT_INDEX.md).
+- [Strategy](./01_STRATEGY_KNOWLEDGE_ARTICLE.md)
+- [Finance](./02_FINANCE_KNOWLEDGE_ARTICLE.md)
+- [Marketing](./03_MARKETING_KNOWLEDGE_ARTICLE.md)
+- [Sales](./04_SALES_KNOWLEDGE_ARTICLE.md)
+- [Customer Success](./05_CUSTOMER_SUCCESS_KNOWLEDGE_ARTICLE.md)
+- [Operations](./07_OPERATIONS_KNOWLEDGE_ARTICLE.md)
+
+## Knowledge Graph
+
+- **Parent topic:** Business
+- **Child topics:** see Related Knowledge below
+- **Sibling topics:** Strategy, Finance, Marketing, Sales, Customer Success, Legal
+- **Dependencies / related technologies:** legal, contracts, IP, GDPR, EU AI Act
+- **Related business domains:** Business
 
 ## Department Ownership
 
-This section (Department Ownership) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Owned by the relevant department(s); see [Department Specifications](../../PHASE_04_DEPARTMENT_SPECIFICATIONS/README.md).
 
 ## Division Ownership
 
-This section (Division Ownership) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+Governed by the relevant division; see [Division Specifications](../../PHASE_03_DIVISION_SPECIFICATIONS/README.md).
 
 ## External Standards
 
-| Standard | Application |
-| --- | --- |
-| ISO 42001 | AI management system alignment. |
-| ISO 27001 | Information security controls. |
-| NIST AI RMF | AI risk management. |
-| OWASP LLM Top 10 | LLM threat mitigation. |
+- Not applicable.
 
 ## References
 
 - [AIBOS Root Specification](../../../00_ROOT/AIBOS_ROOT_SPECIFICATION.md)
 - [Enterprise Glossary](../../../00_ROOT/AIBOS_ENTERPRISE_GLOSSARY.md)
-- [Document Schema](../../../00_ROOT/AIBOS_DOCUMENT_SCHEMA.md)
 - [Repository Catalogue (ROOT_INDEX)](../../../ROOT_INDEX.md)
 - [Phase 10 Master Prompt](../../../01_PHASES/PHASE_10_KNOWLEDGE_MASTER_PROMPT.md)
 
 ## AI Retrieval Metadata
 
-This section (AI Retrieval Metadata) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+| Field | Value |
+| --- | --- |
+| Document type | Knowledge Article |
+| Domain | Business |
+| Audience | Humans, AI agents, RAG, enterprise search |
+| Keywords | legal, contracts, IP, GDPR, EU AI Act, compliance |
 
 ## Suggested Chunk Boundaries
 
-This section (Suggested Chunk Boundaries) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+- Executive Summary (overview chunk).
+- Core Concepts (concept chunk).
+- Best Practices + Anti-patterns (guidance chunk).
+- FAQs (Q&A chunks, one per question).
 
 ## Suggested Embedding Keywords
 
-This section (Suggested Embedding Keywords) for **Legal Knowledge Article** is defined in line with the AIBOS root standards and the governing Phase 10 master prompt. See the [repository catalogue](../../../ROOT_INDEX.md) and the [root standards](../../../00_ROOT) for related material.
+`legal`, `contracts`, `IP`, `GDPR`, `EU AI Act`, `compliance`
 
 ## Version History
 
 | Version | Date | Summary |
 | --- | --- | --- |
-| 2.0.0 | 2026-06-26 | Initial generated artefact. |
+| 2.0.0 | 2026-06-26 | Complete, ready-to-use knowledge article. |
