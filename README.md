@@ -6,7 +6,7 @@
 
 [![Markdown Validation](https://github.com/mypsbots/AI-Business-Operating-System/actions/workflows/markdown-validation.yml/badge.svg)](https://github.com/mypsbots/AI-Business-Operating-System/actions/workflows/markdown-validation.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-2.0.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.1.0-green.svg)](CHANGELOG.md)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://www.conventionalcommits.org)
 
 ---
@@ -46,6 +46,8 @@ compatible with GPT, Claude, Gemini, Grok and capable open-source LLMs.
 .
 ├── 00_ROOT/        # Root specification + 16 enterprise standards & master prompts
 ├── 01_PHASES/      # 20 sequential phase master prompts
+├── 02_ARTEFACTS/   # 1067 generated artefacts across all 20 phases
+├── tools/          # generate_aibos.py — deterministic artefact generator
 ├── ROOT_INDEX.md   # Machine- and human-readable index of every artefact
 ├── FINAL_REPORT.md # Repository assembly & validation report
 ├── CHANGELOG.md    # Semantic-versioned change history

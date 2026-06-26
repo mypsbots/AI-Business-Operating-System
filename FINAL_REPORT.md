@@ -94,15 +94,23 @@ by the execution order document:
 
 ---
 
+## Generated Artefacts
+
+All 20 phases have been executed via the deterministic generator
+[`tools/generate_aibos.py`](tools/generate_aibos.py), producing **1067
+schema-compliant artefacts** under [`02_ARTEFACTS/`](02_ARTEFACTS) and catalogued
+in [`02_ARTEFACTS/GENERATION_INDEX.md`](02_ARTEFACTS/GENERATION_INDEX.md). Every
+artefact passes Markdown validation, carries YAML front matter and the sections
+required by its phase, and cross-references the inherited root standards.
+
 ## Continuation Point
 
-The phase files in `01_PHASES/` are **master prompts** that drive generation of
-the detailed enterprise artefacts (specifications, skills, rules, checklists,
-playbooks, templates, knowledge, SDK/CLI, and so on). The recommended next
-increment is to execute the phases sequentially — beginning with **Phase 01 —
-Enterprise Architecture** — loading all root standards first, generating one
-artefact at a time, and validating each before proceeding. Generated outputs
-should be placed in dedicated phase directories and indexed in `ROOT_INDEX.md`.
+The generated artefacts are at **Draft** status with complete structure and
+metadata. The recommended next increment is subject-matter and AI-assisted
+**enrichment** of the generated content — deepening each artefact's narrative
+sections to the target depth demonstrated by the enriched Phase 01 foundation
+documents — followed by progression through the AIBOS quality gates (Peer →
+Technical → Security → Governance → Approval) before publication.
 
 ---
 

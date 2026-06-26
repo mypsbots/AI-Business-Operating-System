@@ -5,6 +5,23 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2026-06-26
+
+### Added
+
+- `tools/generate_aibos.py`: deterministic, idempotent generator that produces
+  schema-compliant Markdown artefacts from the Phase master prompts.
+- `02_ARTEFACTS/`: 1067 generated artefacts across all 20 phases, each with YAML
+  front matter, the sections required by its phase, and cross-references to the
+  inherited root standards.
+- `02_ARTEFACTS/GENERATION_INDEX.md`: catalogue of generated artefacts with
+  per-phase counts and regeneration instructions.
+
+### Notes
+
+- All generated artefacts pass Markdown validation and start at Draft status for
+  subject-matter and AI-assisted enrichment.
+
 ## [2.0.0] - 2026-06-26
 
 ### Added
@@ -26,4 +43,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Canonical `UPPER_SNAKE_CASE` filenames were preserved to maintain
   cross-reference integrity across all documents.
 
+[2.1.0]: https://github.com/mypsbots/AI-Business-Operating-System/releases/tag/v2.1.0
 [2.0.0]: https://github.com/mypsbots/AI-Business-Operating-System/releases/tag/v2.0.0

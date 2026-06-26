@@ -82,6 +82,17 @@ terminology and reuse existing artefacts.
 
 ---
 
+## Generated Artefacts
+
+Location: [`02_ARTEFACTS/`](02_ARTEFACTS)
+
+The Phase master prompts drive generation of the detailed enterprise artefacts.
+These are produced by [`tools/generate_aibos.py`](tools/generate_aibos.py) and
+catalogued in [`02_ARTEFACTS/GENERATION_INDEX.md`](02_ARTEFACTS/GENERATION_INDEX.md)
+(1067 documents across all 20 phases).
+
+---
+
 ## Repository Meta Documents
 
 | Document | Purpose |
