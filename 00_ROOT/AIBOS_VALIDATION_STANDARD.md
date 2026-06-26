@@ -2,6 +2,7 @@
 # AIBOS_VALIDATION_STANDARD.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Validation Standard
 
 Version: 2.0.0
@@ -77,24 +78,28 @@ Validation MUST be:
 # Validation Types
 
 ## Structural
+
 - Markdown syntax
 - YAML schema
 - Heading hierarchy
 - Required sections
 
 ## Metadata
+
 - Required fields
 - ID uniqueness
 - Version format
 - Owner and classification
 
 ## Content
+
 - Terminology consistency
 - Grammar and spelling
 - Duplicate detection
 - Broken references
 
 ## AI
+
 - Hallucination detection
 - Unsupported claims
 - Prompt leakage
@@ -103,18 +108,21 @@ Validation MUST be:
 - Embedding quality
 
 ## Technical
+
 - Code syntax
 - API examples
 - Mermaid diagrams
 - Configuration samples
 
 ## Security
+
 - Secret detection
 - Security guidance
 - Compliance mapping
 - OWASP alignment
 
 ## Governance
+
 - Required approvals
 - Ownership
 - Lifecycle status

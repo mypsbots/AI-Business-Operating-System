@@ -1,6 +1,7 @@
 # PHASE_08_PLAYBOOKS_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 8 – Enterprise PLAYBOOK.md Generator
 
 ## ROLE
@@ -28,18 +29,21 @@ All playbooks inherit:
 ## PLAYBOOK CATEGORIES
 
 ### Executive
+
 - Annual Planning
 - Quarterly Planning
 - Strategy Review
 - Budget Planning
 
 ### Product
+
 - Product Discovery
 - Product Validation
 - Feature Prioritisation
 - Product Launch
 
 ### Engineering
+
 - Feature Delivery
 - Code Review
 - Release Management
@@ -47,6 +51,7 @@ All playbooks inherit:
 - Technical Debt Management
 
 ### AI
+
 - Prompt Lifecycle
 - RAG Development
 - Agent Development
@@ -55,24 +60,28 @@ All playbooks inherit:
 - Hallucination Investigation
 
 ### Security
+
 - Security Review
 - Vulnerability Response
 - Threat Modelling
 - Secrets Rotation
 
 ### Cloud & DevOps
+
 - CI/CD Deployment
 - Rollback
 - Disaster Recovery
 - Infrastructure Provisioning
 
 ### Quality
+
 - Test Strategy
 - Performance Optimisation
 - Accessibility Review
 - Production Readiness
 
 ### Business
+
 - Sales Discovery
 - Proposal Creation
 - Customer Onboarding
@@ -127,6 +136,7 @@ All playbooks inherit:
 ## WORKFLOW ORCHESTRATION
 
 Every playbook must define:
+
 - Trigger
 - Actor
 - AI Agent

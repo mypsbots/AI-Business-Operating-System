@@ -1,6 +1,7 @@
 # PHASE_04_DEPARTMENT_SPECIFICATIONS_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 4 – Department Specifications Generator
 
 ## ROLE
@@ -12,6 +13,7 @@ You are the Chief Enterprise Architect responsible for decomposing every busines
 Generate enterprise-grade Department Specification documents.
 
 Each department specification becomes the parent document for future:
+
 - SKILLS.md
 - RULES.md
 - CHECKLIST.md
@@ -30,18 +32,21 @@ Departments inherit all standards from:
 ## GENERATE DEPARTMENT SPECIFICATIONS
 
 ### Executive
+
 Strategy
 Portfolio Management
 PMO
 Business Excellence
 
 ### Product
+
 Product Management
 Product Design
 Product Analytics
 Roadmap
 
 ### Engineering
+
 Frontend
 Backend
 API
@@ -50,6 +55,7 @@ Integration
 Platform Engineering
 
 ### AI
+
 Prompt Engineering
 LLM Engineering
 RAG Engineering
@@ -59,6 +65,7 @@ AI Evaluation
 AI Safety
 
 ### Data
+
 Data Engineering
 Analytics
 BI
@@ -66,6 +73,7 @@ Data Science
 ML Engineering
 
 ### Security
+
 Application Security
 Cloud Security
 IAM
@@ -74,6 +82,7 @@ Compliance
 Risk
 
 ### Cloud & DevOps
+
 Cloud Platform
 Infrastructure
 DevOps
@@ -82,12 +91,14 @@ SRE
 Observability
 
 ### Quality
+
 QA
 Test Automation
 Performance
 Accessibility
 
 ### Marketing
+
 SEO
 AEO
 GEO
@@ -96,35 +107,41 @@ Growth
 Community
 
 ### Sales
+
 Pre-Sales
 Sales Engineering
 Account Management
 Partnerships
 
 ### Customer Success
+
 Implementation
 Support
 Training
 Customer Success
 
 ### Finance
+
 Accounting
 Commercial
 Procurement
 
 ### Legal
+
 Contracts
 Licensing
 IP
 Regulatory
 
 ### Operations
+
 Service Delivery
 Release Management
 Incident Management
 Knowledge Management
 
 ### Research
+
 Innovation
 Emerging Technology
 Standards

@@ -2,6 +2,7 @@
 # AIBOS_AI_BEHAVIOUR_STANDARD.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise AI Behaviour Standard
 
 Version: 2.0.0

@@ -1,6 +1,7 @@
 # PHASE_06_RULES_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 6 – Enterprise RULES.md Generator
 
 ## ROLE
@@ -30,12 +31,14 @@ All rules inherit:
 Generate rules for:
 
 ### Governance
+
 - Decision Making
 - Change Management
 - Risk Management
 - Document Governance
 
 ### Engineering
+
 - Coding Standards
 - Architecture Standards
 - API Standards
@@ -46,6 +49,7 @@ Generate rules for:
 - Code Reviews
 
 ### AI
+
 - Prompt Engineering
 - RAG Standards
 - MCP Standards
@@ -56,6 +60,7 @@ Generate rules for:
 - Responsible AI
 
 ### Security
+
 - Secure Coding
 - Authentication
 - Authorization
@@ -66,6 +71,7 @@ Generate rules for:
 - Vulnerability Management
 
 ### Cloud & DevOps
+
 - Infrastructure as Code
 - CI/CD
 - Containers
@@ -75,6 +81,7 @@ Generate rules for:
 - Disaster Recovery
 
 ### Quality
+
 - Testing
 - Performance
 - Accessibility
@@ -82,6 +89,7 @@ Generate rules for:
 - Release Management
 
 ### Business
+
 - Product Management
 - Marketing
 - Sales

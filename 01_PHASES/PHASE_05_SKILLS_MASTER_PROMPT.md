@@ -1,6 +1,7 @@
 # PHASE_05_SKILLS_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 5 – Specialist SKILLS.md Generator
 
 ## ROLE

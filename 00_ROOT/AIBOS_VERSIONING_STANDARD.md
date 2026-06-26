@@ -2,6 +2,7 @@
 # AIBOS_VERSIONING_STANDARD.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Versioning Standard
 
 Version: 2.0.0

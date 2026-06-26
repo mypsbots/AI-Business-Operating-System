@@ -1,6 +1,7 @@
 # PHASE_19_AIBOS_REFERENCE_AI_ORGANISATION_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 19 – Reference AI Organisation Generator
 
 ## ROLE
@@ -22,6 +23,7 @@ Inherit every artefact produced in Phases 1–18.
 # GENERATE THE ORGANISATION
 
 ## Corporate Structure
+
 - Board
 - Executive Leadership
 - PMO
@@ -31,11 +33,13 @@ Inherit every artefact produced in Phases 1–18.
 - Operations
 
 ## Product Organisation
+
 - Product Portfolio
 - Roadmaps
 - Product Teams
 
 ## Engineering Organisation
+
 - Platform
 - Backend
 - Frontend
@@ -47,6 +51,7 @@ Inherit every artefact produced in Phases 1–18.
 - SRE
 
 ## AI Workforce
+
 - Executive Agents
 - Product Agents
 - Engineering Agents
@@ -58,6 +63,7 @@ Inherit every artefact produced in Phases 1–18.
 - Legal Agents
 
 ## Technology Estate
+
 - Repositories
 - Cloud Accounts
 - Networks
@@ -67,6 +73,7 @@ Inherit every artefact produced in Phases 1–18.
 - AI Platforms
 
 ## Business Operations
+
 - Marketing
 - Sales
 - Customer Success
@@ -148,6 +155,7 @@ Generate executable scenarios for:
 - Quarterly Planning
 
 Each scenario must identify:
+
 - Trigger
 - Participants
 - AI Agents

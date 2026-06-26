@@ -2,6 +2,7 @@
 # AIBOS_METADATA_STANDARD.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Metadata Standard
 
 Version: 2.0.0
@@ -91,6 +92,7 @@ dependencies: []
 # Controlled Vocabularies
 
 ## Status
+
 - Draft
 - Review
 - Approved
@@ -99,6 +101,7 @@ dependencies: []
 - Archived
 
 ## Lifecycle
+
 - Planned
 - Active
 - Maintenance
@@ -106,12 +109,14 @@ dependencies: []
 - Retired
 
 ## Classification
+
 - Public
 - Internal
 - Confidential
 - Restricted
 
 ## Priority
+
 - Low
 - Medium
 - High
@@ -170,6 +175,7 @@ Semantic Versioning:
 MAJOR.MINOR.PATCH
 
 Increment:
+
 - MAJOR for breaking changes
 - MINOR for enhancements
 - PATCH for corrections

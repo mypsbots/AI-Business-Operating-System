@@ -1,6 +1,7 @@
 # PHASE_09_TEMPLATES_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 9 – Enterprise TEMPLATE.md Generator
 
 ## ROLE
@@ -31,6 +32,7 @@ Templates inherit:
 ## TEMPLATE CATEGORIES
 
 ### Strategy & Governance
+
 - Business Case
 - Project Charter
 - Decision Record (ADR)
@@ -38,6 +40,7 @@ Templates inherit:
 - Governance Report
 
 ### Product
+
 - PRD
 - Feature Specification
 - User Story
@@ -45,6 +48,7 @@ Templates inherit:
 - Release Notes
 
 ### Engineering
+
 - API Specification
 - Database Design
 - Architecture Decision
@@ -52,6 +56,7 @@ Templates inherit:
 - Code Review Report
 
 ### AI
+
 - Prompt Template
 - Agent Specification
 - RAG Configuration
@@ -60,12 +65,14 @@ Templates inherit:
 - MCP Server Specification
 
 ### Security
+
 - Threat Model
 - Security Review
 - Incident Report
 - Vulnerability Report
 
 ### Operations
+
 - Runbook
 - SOP
 - Incident Timeline
@@ -73,6 +80,7 @@ Templates inherit:
 - Change Request
 
 ### Business
+
 - Sales Proposal
 - Discovery Questionnaire
 - Customer Success Plan

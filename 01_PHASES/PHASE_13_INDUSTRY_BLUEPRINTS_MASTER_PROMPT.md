@@ -1,6 +1,7 @@
 # PHASE_13_INDUSTRY_BLUEPRINTS_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 13 – Industry Blueprints & Reference Architectures Generator
 
 ## ROLE

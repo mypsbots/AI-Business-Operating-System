@@ -2,6 +2,7 @@
 # AIBOS_DOCUMENT_SCHEMA.md
 
 # AIBOS Enterprise v2.0
+
 ## Canonical Document Schema Standard
 
 Version: 2.0.0
@@ -155,6 +156,7 @@ Optimise every document for:
 - Enterprise search
 
 Recommended chunk size:
+
 - 500–800 tokens
 - Preserve section boundaries
 

@@ -2,6 +2,7 @@
 # AIBOS_ARCHITECTURE_PRINCIPLES.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Architecture Principles
 
 Version: 2.0.0

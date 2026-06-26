@@ -1,6 +1,7 @@
 # PHASE_10_KNOWLEDGE_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 10 – Enterprise KNOWLEDGE.md Generator
 
 ## ROLE
@@ -43,6 +44,7 @@ Knowledge inherits:
 Generate knowledge articles for:
 
 ### Business
+
 Strategy
 Finance
 Marketing
@@ -52,6 +54,7 @@ Legal
 Operations
 
 ### Engineering
+
 Architecture
 Frontend
 Backend
@@ -65,6 +68,7 @@ Observability
 Testing
 
 ### Artificial Intelligence
+
 LLMs
 Prompt Engineering
 Agents
@@ -78,6 +82,7 @@ Guardrails
 Responsible AI
 
 ### Security
+
 OWASP
 OWASP LLM Top 10
 Zero Trust
@@ -87,6 +92,7 @@ Secrets
 Incident Response
 
 ### Data
+
 Analytics
 BI
 ML
@@ -94,6 +100,7 @@ Data Engineering
 Data Governance
 
 ### SaaS
+
 Product Management
 Pricing
 Product-Led Growth
@@ -102,6 +109,7 @@ Retention
 Support
 
 ### Industry Playbooks
+
 Retail
 Healthcare
 Education

@@ -2,6 +2,7 @@
 # AIBOS_NAMING_STANDARD.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Naming Standard
 
 Version: 2.0.0

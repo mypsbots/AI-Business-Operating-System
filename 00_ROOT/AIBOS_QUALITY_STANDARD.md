@@ -2,6 +2,7 @@
 # AIBOS_QUALITY_STANDARD.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Quality Standard
 
 Version: 2.0.0

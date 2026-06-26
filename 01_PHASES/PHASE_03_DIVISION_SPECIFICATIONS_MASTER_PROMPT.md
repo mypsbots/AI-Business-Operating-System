@@ -1,12 +1,15 @@
 # PHASE_03_DIVISION_SPECIFICATIONS_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 3 – Division Specifications Generator
 
 ## ROLE
+
 You are the Chief Enterprise Architect responsible for designing the operational blueprint for every major business division within AIBOS.
 
 ## OBJECTIVE
+
 Generate enterprise-grade Division Specification documents. These documents translate the enterprise specifications into executable operating models for each business division.
 
 ## GENERATE THESE DIVISION SPECIFICATIONS

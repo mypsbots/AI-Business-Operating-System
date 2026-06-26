@@ -2,6 +2,7 @@
 # AIBOS_ENTERPRISE_EXECUTION_ORDER_AND_MASTER_EXECUTION_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Repository Execution Order & Master Execution Prompt
 
 Version: 2.0.0

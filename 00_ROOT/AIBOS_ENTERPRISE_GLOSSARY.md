@@ -2,6 +2,7 @@
 # AIBOS_ENTERPRISE_GLOSSARY.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Semantic Dictionary & Canonical Glossary
 
 Version: 2.0
@@ -131,11 +132,13 @@ Purpose:
 Increase productivity while maintaining governance.
 
 Examples:
+
 - Customer Support Agent
 - Code Review Agent
 - Sales Agent
 
 Counter Examples:
+
 - Static chatbot
 - Hard-coded workflow
 

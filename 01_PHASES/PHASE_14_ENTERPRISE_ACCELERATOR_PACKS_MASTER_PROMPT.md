@@ -1,6 +1,7 @@
 # PHASE_14_ENTERPRISE_ACCELERATOR_PACKS_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 14 – Enterprise Accelerator Packs Generator
 
 ## ROLE
@@ -36,6 +37,7 @@ Each Accelerator Pack must combine outputs from:
 # ACCELERATOR PACK CATEGORIES
 
 ## AI Product
+
 - Build AI SaaS
 - Launch MVP
 - Enterprise SaaS
@@ -43,6 +45,7 @@ Each Accelerator Pack must combine outputs from:
 - Multi-tenant Platform
 
 ## AI Consulting
+
 - AI Readiness Assessment
 - AI Strategy
 - AI Centre of Excellence
@@ -50,6 +53,7 @@ Each Accelerator Pack must combine outputs from:
 - AI Governance Rollout
 
 ## AI Engineering
+
 - Enterprise RAG
 - AI Agent Platform
 - MCP Platform
@@ -57,6 +61,7 @@ Each Accelerator Pack must combine outputs from:
 - Evaluation Platform
 
 ## Business
+
 - AI Marketing
 - AI Sales
 - AI Customer Support
@@ -66,6 +71,7 @@ Each Accelerator Pack must combine outputs from:
 - AI Operations
 
 ## Industry
+
 Generate implementation packs for every Phase 13 industry.
 
 ---
@@ -132,6 +138,7 @@ Provide detailed deliverables for every stage.
 # AI AGENT ORCHESTRATION
 
 Define:
+
 - Agent responsibilities
 - Collaboration sequence
 - Human approvals

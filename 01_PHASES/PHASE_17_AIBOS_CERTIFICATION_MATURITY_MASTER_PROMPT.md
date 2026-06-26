@@ -1,6 +1,7 @@
 # PHASE_17_AIBOS_CERTIFICATION_MATURITY_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 17 – Certification & Maturity Framework Generator
 
 ## ROLE
@@ -22,6 +23,7 @@ This phase inherits all previous phases (1–16).
 # GENERATE DOCUMENTS FOR
 
 ## Maturity Model
+
 - AIBOS Level 0 (Initial)
 - Level 1 (Managed)
 - Level 2 (Defined)
@@ -30,6 +32,7 @@ This phase inherits all previous phases (1–16).
 - Level 5 (Autonomous AI Enterprise)
 
 ## Individual Certifications
+
 - AI Developer
 - AI Engineer
 - AI Architect
@@ -43,6 +46,7 @@ This phase inherits all previous phases (1–16).
 - AI Auditor
 
 ## Organisation Certifications
+
 - Startup
 - SME
 - Enterprise
@@ -51,6 +55,7 @@ This phase inherits all previous phases (1–16).
 - Training Provider
 
 ## Audit Framework
+
 - Internal Audit
 - External Audit
 - Evidence Collection
@@ -59,6 +64,7 @@ This phase inherits all previous phases (1–16).
 - Gap Analysis
 
 ## Continuous Compliance
+
 - Compliance Monitoring
 - KPI Dashboards
 - Executive Scorecards

@@ -2,6 +2,7 @@
 # AIBOS_SECURITY_STANDARD.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Security Standard
 
 Version: 2.0.0

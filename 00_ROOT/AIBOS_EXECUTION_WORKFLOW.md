@@ -2,6 +2,7 @@
 # AIBOS_EXECUTION_WORKFLOW.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Execution Workflow
 
 Version: 2.0.0

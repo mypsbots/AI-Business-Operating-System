@@ -2,6 +2,7 @@
 # AIBOS_DESIGN_PRINCIPLES.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Design Principles
 
 Version: 2.0.0

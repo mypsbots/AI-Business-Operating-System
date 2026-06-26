@@ -2,6 +2,7 @@
 # AIBOS_GENERATION_STANDARD.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Generation Standard
 
 Version: 2.0.0

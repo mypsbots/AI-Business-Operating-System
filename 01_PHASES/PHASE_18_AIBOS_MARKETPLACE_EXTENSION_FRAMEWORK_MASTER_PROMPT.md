@@ -1,6 +1,7 @@
 # PHASE_18_AIBOS_MARKETPLACE_EXTENSION_FRAMEWORK_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 18 – Marketplace & Extension Framework Generator
 
 ## ROLE
@@ -22,6 +23,7 @@ All documents inherit outputs from Phases 1–17.
 # GENERATE DOCUMENTS FOR
 
 ## Marketplace Platform
+
 - Marketplace Architecture
 - Marketplace Governance
 - Discovery Engine
@@ -30,6 +32,7 @@ All documents inherit outputs from Phases 1–17.
 - Review & Rating System
 
 ## Package Types
+
 - Skills Packs
 - Rules Packs
 - Checklist Packs
@@ -47,6 +50,7 @@ All documents inherit outputs from Phases 1–17.
 - Compliance Packs
 
 ## Package Lifecycle
+
 - Create
 - Validate
 - Publish
@@ -56,6 +60,7 @@ All documents inherit outputs from Phases 1–17.
 - Restore
 
 ## Trust & Security
+
 - Digital Signing
 - Package Verification
 - Supply Chain Security
@@ -63,6 +68,7 @@ All documents inherit outputs from Phases 1–17.
 - Vulnerability Reporting
 
 ## Commercial
+
 - Licensing
 - Pricing Models
 - Subscription Models
@@ -70,6 +76,7 @@ All documents inherit outputs from Phases 1–17.
 - Billing Integration
 
 ## Community
+
 - Contributor Programme
 - Maintainer Guide
 - Governance Council

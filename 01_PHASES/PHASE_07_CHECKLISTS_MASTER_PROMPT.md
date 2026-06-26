@@ -1,6 +1,7 @@
 # PHASE_07_CHECKLISTS_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 7 – Enterprise CHECKLIST.md Generator
 
 ## ROLE
@@ -29,23 +30,27 @@ Every checklist inherits:
 ## GENERATE CHECKLIST CATEGORIES
 
 ### Enterprise
+
 - Executive Review
 - Governance Review
 - Risk Assessment
 - Business Readiness
 
 ### Product
+
 - Product Discovery
 - Requirements Review
 - Roadmap Approval
 - Feature Readiness
 
 ### Architecture
+
 - Architecture Review
 - Solution Design Review
 - Integration Review
 
 ### Engineering
+
 - Code Review
 - Pull Request Review
 - API Review
@@ -53,6 +58,7 @@ Every checklist inherits:
 - Infrastructure Review
 
 ### AI
+
 - Prompt Review
 - RAG Review
 - MCP Review
@@ -61,6 +67,7 @@ Every checklist inherits:
 - Model Evaluation
 
 ### Security
+
 - Secure Coding
 - Threat Modelling
 - IAM
@@ -69,6 +76,7 @@ Every checklist inherits:
 - Vulnerability Review
 
 ### Cloud & DevOps
+
 - CI/CD
 - Deployment
 - Rollback
@@ -76,6 +84,7 @@ Every checklist inherits:
 - Disaster Recovery
 
 ### Quality
+
 - Functional Testing
 - Regression
 - Performance
@@ -84,6 +93,7 @@ Every checklist inherits:
 - Release Readiness
 
 ### Business
+
 - Marketing
 - Sales
 - Customer Success

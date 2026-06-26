@@ -2,6 +2,7 @@
 # AIBOS_STYLE_GUIDE.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Documentation Style Guide
 
 Version: 2.0
@@ -97,6 +98,7 @@ Every document should follow this order:
 # Diagram Standards
 
 Use Mermaid for:
+
 - Flowcharts
 - Sequence diagrams
 - Architecture diagrams
@@ -110,6 +112,7 @@ Every diagram should include a short explanation.
 # Code Standards
 
 Examples must:
+
 - Compile or be syntactically correct.
 - Be minimal but complete.
 - Include comments where helpful.
@@ -130,6 +133,7 @@ Examples must:
 # AI Optimisation
 
 Documents should:
+
 - Use consistent terminology.
 - Be chunk-friendly for RAG.
 - Avoid duplicated definitions.

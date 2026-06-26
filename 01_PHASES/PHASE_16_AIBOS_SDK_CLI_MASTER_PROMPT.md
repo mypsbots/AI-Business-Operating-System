@@ -1,6 +1,7 @@
 # PHASE_16_AIBOS_SDK_CLI_MASTER_PROMPT.md
 
 # AIBOS Enterprise v2.0
+
 ## Phase 16 – AIBOS SDK & CLI Generator
 
 ## ROLE
@@ -22,6 +23,7 @@ These documents inherit every previous phase (1–15).
 # GENERATE DOCUMENTS FOR
 
 ## Core CLI
+
 - CLI Architecture
 - Command Reference
 - Configuration
@@ -32,6 +34,7 @@ These documents inherit every previous phase (1–15).
 - Upgrade Strategy
 
 ## SDKs
+
 - Python SDK
 - TypeScript SDK
 - Go SDK
@@ -39,6 +42,7 @@ These documents inherit every previous phase (1–15).
 - .NET SDK
 
 ## Project Scaffolding
+
 - AI SaaS Starter
 - AI Agent Starter
 - RAG Starter
@@ -46,6 +50,7 @@ These documents inherit every previous phase (1–15).
 - AI Consulting Starter
 
 ## Validation Engine
+
 - Repository Validation
 - Rules Validation
 - Skills Validation
@@ -62,6 +67,7 @@ These documents inherit every previous phase (1–15).
 - Pre-commit Hooks
 
 ## APIs
+
 - REST API
 - GraphQL API
 - MCP Interface
@@ -69,6 +75,7 @@ These documents inherit every previous phase (1–15).
 - Webhooks
 
 ## Automation
+
 - Project Bootstrap
 - Document Generator
 - Repository Synchronisation

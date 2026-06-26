@@ -2,6 +2,7 @@
 # AIBOS_REFERENCE_STANDARDS.md
 
 # AIBOS Enterprise v2.0
+
 ## Enterprise Reference Standards
 
 Version: 2.0.0
