@@ -181,11 +181,29 @@ into your Claude Desktop `claude_desktop_config.json`
 
 Restart Claude Desktop; the AIBOS tools show under the tools (plug) menu.
 
-To use the **remote** (hosted) server from Claude Desktop instead, add it as a
-custom connector (Settings → Connectors) or use the `mcp-remote` bridge shown in
-[JetBrains, Zed, Cline and other stdio-only IDEs](#jetbrains-zed-cline-and-other-stdio-only-ides),
-pointing at `https://aibos-mcp.vercel.app/mcp` with the bearer token. For the
-command-line **Claude Code**, see [Claude Code](#claude-code).
+**Using the remote (hosted) server from Claude Desktop.** Claude Desktop's config
+only accepts local (`stdio`) servers — a `type`/`url`/`headers` entry is rejected
+("not valid MCP server configurations and were skipped"). Use the `mcp-remote`
+bridge instead, with the env-var header form (no space around the colon):
+
+```json
+{
+  "mcpServers": {
+    "aibos": {
+      "command": "npx",
+      "args": [
+        "-y", "mcp-remote@latest",
+        "https://aibos-mcp.vercel.app/mcp",
+        "--header", "Authorization:${AIBOS_AUTH}"
+      ],
+      "env": { "AIBOS_AUTH": "Bearer <AIBOS_MCP_TOKEN>" }
+    }
+  }
+}
+```
+
+Then fully quit and reopen Claude Desktop. (For the command-line **Claude Code**,
+which supports remote HTTP natively, see [Claude Code](#claude-code).)
 
 ### VS Code
 
@@ -311,14 +329,21 @@ runs locally and forwards to the remote endpoint. Requires Node.js (`npx`):
     "aibos": {
       "command": "npx",
       "args": [
-        "-y", "mcp-remote",
+        "-y", "mcp-remote@latest",
         "https://aibos-mcp.vercel.app/mcp",
-        "--header", "Authorization: Bearer <AIBOS_MCP_TOKEN>"
-      ]
+        "--header", "Authorization:${AIBOS_AUTH}"
+      ],
+      "env": { "AIBOS_AUTH": "Bearer <AIBOS_MCP_TOKEN>" }
     }
   }
 }
 ```
+
+> **Important — header format.** Put the token in an `env` value and reference it
+> as `Authorization:${AIBOS_AUTH}` with **no space around the colon**. Several
+> clients (Cursor, Claude Desktop) mangle spaces inside `args`, so the common
+> `--header "Authorization: Bearer <token>"` form can arrive malformed and cause
+> a `401`. The env-var form avoids this.
 
 See [`mcp/clients/OTHER_IDES.md`](mcp/clients/OTHER_IDES.md) for more detail.
 

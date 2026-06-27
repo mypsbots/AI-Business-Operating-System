@@ -51,16 +51,22 @@ endpoint, so any stdio-only client (JetBrains plugins, Cline, Zed, etc.) works:
     "aibos": {
       "command": "npx",
       "args": [
-        "-y", "mcp-remote",
+        "-y", "mcp-remote@latest",
         "https://<your-host>/mcp",
-        "--header", "Authorization: Bearer <AIBOS_MCP_TOKEN>"
-      ]
+        "--header", "Authorization:${AIBOS_AUTH}"
+      ],
+      "env": { "AIBOS_AUTH": "Bearer <AIBOS_MCP_TOKEN>" }
     }
   }
 }
 ```
 
 (Requires Node.js for `npx`.)
+
+> Put the token in `env` and reference it as `Authorization:${AIBOS_AUTH}` with no
+> space around the colon. Some clients (Cursor, Claude Desktop) mangle spaces in
+> `args`, so the inline `--header "Authorization: Bearer <token>"` form can arrive
+> malformed and return `401`; the env-var form avoids that.
 
 ## C. Same machine, different IDE (no remote needed)
 
