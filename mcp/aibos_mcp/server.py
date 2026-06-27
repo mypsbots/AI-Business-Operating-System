@@ -16,6 +16,8 @@ your whole team.
 
 from __future__ import annotations
 
+import re
+from functools import lru_cache
 from typing import Any
 
 from mcp.server.fastmcp import FastMCP
@@ -23,7 +25,7 @@ from mcp.server.fastmcp import FastMCP
 from .backends import get_backend
 from .config import CONFIG, REPO_ROOT
 from .corpus import get_document as _get_document
-from .corpus import list_groups
+from .corpus import iter_documents, list_groups
 
 mcp = FastMCP("AIBOS", host=CONFIG.host, port=CONFIG.port)
 _backend = get_backend(CONFIG)
@@ -50,6 +52,139 @@ def _doc_hits(query: str, top_k: int, **filters: str | None) -> list[dict]:
         if len(out) >= top_k:
             break
     return out
+
+
+def _doc_hits_pref(query: str, top_k: int, phase: str,
+                   category: str | None) -> list[dict]:
+    """Prefer category-filtered results; fall back to phase-only search when the
+    category does not exist in that phase (so we never return an empty list just
+    because the taxonomy differs across phases)."""
+    if category:
+        res = _doc_hits(query, top_k, phase=phase, category=category)
+        if res:
+            return res
+    return _doc_hits(query, top_k, phase=phase)
+
+
+# --------------------------------------------------------------------------- #
+# Category resolution
+# --------------------------------------------------------------------------- #
+# A user-supplied department/industry term must be mapped to whatever bucket the
+# *target phase* actually uses (the group folders differ per phase, e.g. Phase 04
+# has "Finance"/"Sales" while Phase 06 groups those under "Business"). Each alias
+# maps a normalised term to an ordered list of candidate categories; we pick the
+# first candidate that exists in the phase being queried.
+def _norm(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+
+
+_CATEGORY_ALIASES: dict[str, list[str]] = {
+    "hr": ["Operations", "Business"],
+    "human resources": ["Operations", "Business"],
+    "people": ["Operations", "Business"],
+    "people ops": ["Operations", "Business"],
+    "talent": ["Operations", "Business"],
+    "recruiting": ["Operations", "Business"],
+    "recruitment": ["Operations", "Business"],
+    "finance": ["Finance", "Business"],
+    "accounting": ["Finance", "Business"],
+    "procurement": ["Finance", "Business"],
+    "commercial": ["Finance", "Business"],
+    "sales": ["Sales", "Business"],
+    "revenue": ["Sales", "Business"],
+    "business development": ["Sales", "Business"],
+    "marketing": ["Marketing", "Business"],
+    "growth": ["Marketing", "Business"],
+    "seo": ["Marketing", "Business"],
+    "brand": ["Marketing", "Business"],
+    "content": ["Marketing", "Business"],
+    "communications": ["Marketing", "Business"],
+    "technology": ["Engineering"],
+    "tech": ["Engineering"],
+    "it": ["Engineering"],
+    "information technology": ["Engineering"],
+    "software": ["Engineering"],
+    "software engineering": ["Engineering"],
+    "development": ["Engineering"],
+    "engineering": ["Engineering"],
+    "devops": ["Cloud And DevOps", "Infrastructure", "Engineering"],
+    "cloud": ["Cloud And DevOps", "Infrastructure", "Engineering"],
+    "infrastructure": ["Cloud And DevOps", "Infrastructure", "Engineering"],
+    "platform": ["Cloud And DevOps", "Engineering"],
+    "sre": ["Cloud And DevOps", "Observability", "Engineering"],
+    "strategy": ["Executive", "Strategy And Governance", "Business"],
+    "business strategy": ["Executive", "Strategy And Governance", "Business"],
+    "leadership": ["Executive", "Business"],
+    "executive": ["Executive", "Business"],
+    "pmo": ["Executive", "Business"],
+    "operations": ["Operations", "Business"],
+    "ops": ["Operations", "Business"],
+    "customer success": ["Customer Success", "Business"],
+    "customer support": ["Customer Success", "Business"],
+    "customer service": ["Customer Success", "Business"],
+    "support": ["Customer Success", "Business"],
+    "security": ["Security"],
+    "compliance": ["Security"],
+    "privacy": ["Security"],
+    "risk": ["Security"],
+    "iam": ["Security"],
+    "infosec": ["Security"],
+    "cybersecurity": ["Security"],
+    "data": ["Data"],
+    "analytics": ["Data"],
+    "bi": ["Data"],
+    "business intelligence": ["Data"],
+    "data science": ["Data"],
+    "ml": ["Data", "AI"],
+    "machine learning": ["Data", "AI"],
+    "quality": ["Quality"],
+    "qa": ["Quality"],
+    "testing": ["Quality"],
+    "product": ["Product"],
+    "product management": ["Product"],
+    "legal": ["Legal", "Business"],
+    "ai": ["AI", "Artificial Intelligence"],
+    "artificial intelligence": ["AI", "Artificial Intelligence"],
+    "research": ["Research"],
+    "innovation": ["Research"],
+    "governance": ["Governance", "Strategy And Governance"],
+    "ecommerce": ["E Commerce"],
+    "e commerce": ["E Commerce"],
+}
+
+
+@lru_cache(maxsize=1)
+def _category_catalogue() -> dict[str, dict[str, str]]:
+    """Map each phase label to ``{normalised_category: stored_category}`` using
+    the *actual* category values the corpus is indexed/filtered on (these come
+    from front matter when present, so they can differ from folder names, e.g.
+    folder ``RETAIL`` but stored category ``Retail``). Computed once and cached."""
+    cat: dict[str, dict[str, str]] = {}
+    for doc in iter_documents():
+        if doc.phase and doc.category:
+            cat.setdefault(doc.phase, {})[_norm(doc.category)] = doc.category
+    return cat
+
+
+def _resolve_category(phase_label: str, term: str | None) -> str | None:
+    """Map a free-text department/industry term to an existing category in the
+    given phase (e.g. ``"Phase 04"``). Returns the stored category label exactly
+    as indexed (so it matches the search filter), or ``None`` if nothing fits."""
+    if not term:
+        return None
+    cats = _category_catalogue().get(phase_label, {})
+    if not cats:
+        return None
+    n = _norm(term)
+    if n in cats:                         # direct match (e.g. "finance")
+        return cats[n]
+    for cand in _CATEGORY_ALIASES.get(n, []):
+        if _norm(cand) in cats:           # alias landed on an existing bucket
+            return cats[_norm(cand)]
+    for tok in n.split():                 # token match (e.g. "cloud security")
+        if tok in cats:
+            return cats[tok]
+    return None
 
 
 # --------------------------------------------------------------------------- #
@@ -162,10 +297,12 @@ def design_customer_solution(business_need: str, industry: str | None = None,
     q = business_need + (f" for the {industry} industry" if industry else "")
     integ_q = (f"integrate AI with {current_systems}" if current_systems
                else f"AI integration and implementation for {business_need}")
+    industry_cat = _resolve_category("Phase 13", industry)
     return {
         "business_need": business_need,
         "industry": industry,
-        "industry_blueprint": _doc_hits(q, top_k, phase="Phase 13"),
+        "matched_industry": industry_cat,
+        "industry_blueprint": _doc_hits_pref(q, top_k, "Phase 13", industry_cat),
         "accelerator_packs": _doc_hits(q, top_k, phase="Phase 14"),
         "reference_implementations": _doc_hits(integ_q, top_k, phase="Phase 15"),
         "delivery_playbooks": _doc_hits(business_need, top_k, phase="Phase 08"),
@@ -191,7 +328,11 @@ def improve_department(department: str, objective: str | None = None,
 
     Returns the department specification (Phase 04) plus the applicable skills,
     rules, checklists, playbooks, templates and knowledge articles for the
-    stated objective.
+    stated objective. The ``department`` term is resolved to the framework's
+    actual categories (see ``list_departments``), so common synonyms such as
+    "HR", "IT"/"Technology" (-> Engineering) or "Business Strategy"
+    (-> Executive) are mapped automatically; ``matched_category`` reports the
+    bucket that was used.
 
     Args:
         department: The function to improve, e.g. "Finance" or "Marketing".
@@ -199,19 +340,25 @@ def improve_department(department: str, objective: str | None = None,
         top_k: References to return per category (1-10).
     """
     top_k = max(1, min(int(top_k), 10))
+    objective = objective or ""
     q = f"{department} {objective}".strip()
     return {
         "department": department,
-        "objective": objective,
-        "department_specification": _doc_hits(q, top_k, category=department,
-                                              phase="Phase 04") or _doc_hits(
-                                              q, top_k, phase="Phase 04"),
+        "objective": objective or None,
+        "matched_category": _resolve_category("Phase 04", department),
+        "department_specification": _doc_hits_pref(
+            q, top_k, "Phase 04", _resolve_category("Phase 04", department)),
         "applicable_skills": _doc_hits(q, top_k, phase="Phase 05"),
-        "applicable_rules": _doc_hits(q, top_k, phase="Phase 06"),
-        "applicable_checklists": _doc_hits(q, top_k, phase="Phase 07"),
-        "applicable_playbooks": _doc_hits(q, top_k, phase="Phase 08"),
-        "reusable_templates": _doc_hits(q, top_k, phase="Phase 09"),
-        "knowledge": _doc_hits(q, top_k, phase="Phase 10"),
+        "applicable_rules": _doc_hits_pref(
+            q, top_k, "Phase 06", _resolve_category("Phase 06", department)),
+        "applicable_checklists": _doc_hits_pref(
+            q, top_k, "Phase 07", _resolve_category("Phase 07", department)),
+        "applicable_playbooks": _doc_hits_pref(
+            q, top_k, "Phase 08", _resolve_category("Phase 08", department)),
+        "reusable_templates": _doc_hits_pref(
+            q, top_k, "Phase 09", _resolve_category("Phase 09", department)),
+        "knowledge": _doc_hits_pref(
+            q, top_k, "Phase 10", _resolve_category("Phase 10", department)),
         "how_to_use": (
             "Start from the department specification, then apply the rules and "
             "checklists as guardrails, the playbooks as step-by-step procedures, "
