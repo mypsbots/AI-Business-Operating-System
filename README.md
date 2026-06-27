@@ -63,6 +63,9 @@ cross-references.
 ├── 01_PHASES/      # 20 sequential phase master prompts
 ├── 02_ARTEFACTS/   # 1067 detailed, ready-to-use artefacts across all 20 phases
 ├── tools/          # Deterministic generators (shared + per-phase content libraries)
+├── mcp/            # AIBOS MCP server (expose the repo to AI clients & IDEs)
+├── api/            # Vercel serverless entrypoint for the hosted MCP endpoint
+├── MCP_USAGE_GUIDE.md # How to use the MCP from every tool, IDE and AI client
 ├── ROOT_INDEX.md   # Machine- and human-readable index of every artefact
 ├── FINAL_REPORT.md # Repository assembly & validation report
 ├── CHANGELOG.md    # Semantic-versioned change history
@@ -97,6 +100,22 @@ Provide your chosen LLM with the following context, in order:
 
 Then instruct the model to **generate one artefact at a time**, validate it
 against the standards, and cross-reference previously completed work.
+
+## Use as an MCP Server
+
+The entire repository is exposed to AI clients and IDEs through the **AIBOS
+Model Context Protocol (MCP) server**, so any tool can search and use the
+framework as grounded context — for both client delivery and internal
+operations.
+
+- **Full usage guide:** [`MCP_USAGE_GUIDE.md`](MCP_USAGE_GUIDE.md) — how to
+  connect from Cursor, Claude Desktop, VS Code, Windsurf, JetBrains/Zed/Cline,
+  ChatGPT, Gemini, Grok, your own app/SaaS, and your whole team.
+- **Server details:** [`mcp/README.md`](mcp/README.md).
+- **Hosting options:** [`mcp/DEPLOY.md`](mcp/DEPLOY.md).
+
+A hosted endpoint runs at `https://aibos-mcp.vercel.app/mcp` (bearer-token
+protected); local IDEs can run it over `stdio` with zero external services.
 
 ## Standards Inheritance
 

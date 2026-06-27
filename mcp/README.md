@@ -14,6 +14,11 @@ It is built for two jobs:
    following the framework's department specs, rules, checklists, playbooks,
    templates and knowledge.
 
+> **Looking for how to connect a specific tool or IDE?** See the complete
+> [AIBOS MCP Usage Guide](../MCP_USAGE_GUIDE.md) — step-by-step setup for Cursor,
+> Claude Desktop, VS Code, Windsurf, JetBrains/Zed/Cline, ChatGPT, Gemini, Grok,
+> your own app/SaaS and team-wide access.
+
 ## What it exposes
 
 **Tools**

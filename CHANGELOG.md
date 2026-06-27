@@ -5,6 +5,29 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.0] - 2026-06-27
+
+### Added
+
+- **`MCP_USAGE_GUIDE.md` — single authoritative guide** for using the AIBOS MCP
+  server from every tool, IDE and AI client: Cursor, Claude Desktop, VS Code,
+  Windsurf, JetBrains/Zed/Cline, ChatGPT, Gemini, Grok, your own app/SaaS and
+  team-wide access, plus a tools/resources/prompts reference, example workflows,
+  verification, security and troubleshooting. Linked from `README.md` and
+  `mcp/README.md`.
+
+### Fixed
+
+- **MCP workflow relevance.** `improve_department` and `design_customer_solution`
+  previously filtered on the raw user term (e.g. `category="HR"`), matching no
+  category and silently falling back to a generic search. Added a normalized,
+  alias-aware category resolver (built from the corpus's actual stored
+  categories) with a filter-then-fallback strategy, so synonyms like HR/IT/
+  Technology/Business Strategy and industries (Retail, e-commerce) resolve
+  correctly; responses now include `matched_category` / `matched_industry`.
+- **Vercel deployment.** Set `framework` to `null` in `vercel.json` so
+  `api/index.py` is detected as a Python serverless function.
+
 ## [2.6.0] - 2026-06-27
 
 ### Added
