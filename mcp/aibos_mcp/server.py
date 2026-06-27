@@ -35,6 +35,23 @@ def _hits(query: str, top_k: int, **filters: str | None) -> list[dict]:
                                                   filters=clean or None)]
 
 
+def _doc_hits(query: str, top_k: int, **filters: str | None) -> list[dict]:
+    """Like _hits, but returns at most one (best) section per document so the
+    workflow tools list distinct documents rather than repeating a file."""
+    clean = {k: v for k, v in filters.items() if v}
+    raw = _backend.search(query, top_k=top_k * 4, filters=clean or None)
+    seen: set[str] = set()
+    out: list[dict] = []
+    for h in raw:
+        if h.path in seen:
+            continue
+        seen.add(h.path)
+        out.append(h.as_dict())
+        if len(out) >= top_k:
+            break
+    return out
+
+
 # --------------------------------------------------------------------------- #
 # Core retrieval tools
 # --------------------------------------------------------------------------- #
@@ -148,11 +165,11 @@ def design_customer_solution(business_need: str, industry: str | None = None,
     return {
         "business_need": business_need,
         "industry": industry,
-        "industry_blueprint": _hits(q, top_k, phase="Phase 13"),
-        "accelerator_packs": _hits(q, top_k, phase="Phase 14"),
-        "reference_implementations": _hits(integ_q, top_k, phase="Phase 15"),
-        "delivery_playbooks": _hits(business_need, top_k, phase="Phase 08"),
-        "reusable_templates": _hits(business_need, top_k, phase="Phase 09"),
+        "industry_blueprint": _doc_hits(q, top_k, phase="Phase 13"),
+        "accelerator_packs": _doc_hits(q, top_k, phase="Phase 14"),
+        "reference_implementations": _doc_hits(integ_q, top_k, phase="Phase 15"),
+        "delivery_playbooks": _doc_hits(business_need, top_k, phase="Phase 08"),
+        "reusable_templates": _doc_hits(business_need, top_k, phase="Phase 09"),
         "how_to_use": (
             "Open the highest-scoring paths with get_aibos_document, combine the "
             "industry blueprint (problem framing) with an accelerator pack "
@@ -186,15 +203,15 @@ def improve_department(department: str, objective: str | None = None,
     return {
         "department": department,
         "objective": objective,
-        "department_specification": _hits(q, top_k, category=department,
-                                          phase="Phase 04") or _hits(q, top_k,
-                                          phase="Phase 04"),
-        "applicable_skills": _hits(q, top_k, phase="Phase 05"),
-        "applicable_rules": _hits(q, top_k, phase="Phase 06"),
-        "applicable_checklists": _hits(q, top_k, phase="Phase 07"),
-        "applicable_playbooks": _hits(q, top_k, phase="Phase 08"),
-        "reusable_templates": _hits(q, top_k, phase="Phase 09"),
-        "knowledge": _hits(q, top_k, phase="Phase 10"),
+        "department_specification": _doc_hits(q, top_k, category=department,
+                                              phase="Phase 04") or _doc_hits(
+                                              q, top_k, phase="Phase 04"),
+        "applicable_skills": _doc_hits(q, top_k, phase="Phase 05"),
+        "applicable_rules": _doc_hits(q, top_k, phase="Phase 06"),
+        "applicable_checklists": _doc_hits(q, top_k, phase="Phase 07"),
+        "applicable_playbooks": _doc_hits(q, top_k, phase="Phase 08"),
+        "reusable_templates": _doc_hits(q, top_k, phase="Phase 09"),
+        "knowledge": _doc_hits(q, top_k, phase="Phase 10"),
         "how_to_use": (
             "Start from the department specification, then apply the rules and "
             "checklists as guardrails, the playbooks as step-by-step procedures, "
