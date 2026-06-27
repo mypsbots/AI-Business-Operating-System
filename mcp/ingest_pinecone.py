@@ -64,12 +64,13 @@ def main() -> None:
     for rec in _records():
         batch.append(rec)
         if len(batch) >= BATCH:
-            index.upsert_records(CONFIG.pinecone_namespace, batch)
+            index.upsert_records(namespace=CONFIG.pinecone_namespace,
+                                 records=batch)
             total += len(batch)
             print(f"  upserted {total} sections...", flush=True)
             batch = []
     if batch:
-        index.upsert_records(CONFIG.pinecone_namespace, batch)
+        index.upsert_records(namespace=CONFIG.pinecone_namespace, records=batch)
         total += len(batch)
 
     print(f"Done. Upserted {total} sections into '{name}' "

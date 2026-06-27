@@ -157,21 +157,26 @@ class PineconeBackend(SearchBackend):
     def search(self, query: str, top_k: int = 8,
                filters: dict | None = None) -> list[SearchHit]:
         index = self._get_index()
-        q: dict = {"top_k": top_k, "inputs": {"text": query}}
         flt = {k: {"$eq": v} for k, v in (filters or {}).items() if v}
-        if flt:
-            q["filter"] = flt
         resp = index.search(
             namespace=self.config.pinecone_namespace,
-            query=q,
+            top_k=top_k,
+            inputs={"text": query},
+            filter=flt or None,
             fields=["chunk_text", "title", "path", "phase", "category",
                     "section", "document_type"])
+        # Normalise the response to a plain dict across SDK versions.
+        try:
+            data = resp.to_dict()
+        except AttributeError:
+            data = resp if isinstance(resp, dict) else {}
         hits = []
-        for h in resp.get("result", {}).get("hits", []):
+        for h in data.get("result", {}).get("hits", []):
             f = h.get("fields", {})
             text = f.get("chunk_text", "")
+            score = h.get("score_", h.get("_score", h.get("score", 0.0)))
             hits.append(SearchHit(
-                score=float(h.get("_score", 0.0)),
+                score=float(score or 0.0),
                 title=f.get("title", ""), path=f.get("path", ""),
                 phase=f.get("phase", ""), category=f.get("category", ""),
                 section=f.get("section", ""),
