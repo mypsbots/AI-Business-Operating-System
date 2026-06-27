@@ -74,6 +74,7 @@ environment variables. It is never committed to the repository.
 |--------|-----------|--------------------|
 | Cursor (local) | stdio | `command` + `args` to the venv Python and `run_server.py` |
 | Cursor (remote) | HTTP | `url` + `Authorization` header |
+| Claude Code | HTTP (remote) or stdio (local) | `claude mcp add` (CLI) or `.mcp.json` |
 | Claude Desktop | stdio (local) or `mcp-remote` bridge | `command` / `args` |
 | VS Code | stdio (local) or HTTP (1.102+) | `.vscode/mcp.json` |
 | Windsurf | HTTP | `url` + `Authorization` header |
@@ -180,6 +181,12 @@ into your Claude Desktop `claude_desktop_config.json`
 
 Restart Claude Desktop; the AIBOS tools show under the tools (plug) menu.
 
+To use the **remote** (hosted) server from Claude Desktop instead, add it as a
+custom connector (Settings → Connectors) or use the `mcp-remote` bridge shown in
+[JetBrains, Zed, Cline and other stdio-only IDEs](#jetbrains-zed-cline-and-other-stdio-only-ides),
+pointing at `https://aibos-mcp.vercel.app/mcp` with the bearer token. For the
+command-line **Claude Code**, see [Claude Code](#claude-code).
+
 ### VS Code
 
 Copy [`mcp/clients/vscode_mcp.json`](mcp/clients/vscode_mcp.json) to
@@ -219,6 +226,42 @@ Use a URL-based entry in `.cursor/mcp.json` (no local Python needed):
 {
   "mcpServers": {
     "aibos": {
+      "url": "https://aibos-mcp.vercel.app/mcp",
+      "headers": { "Authorization": "Bearer <AIBOS_MCP_TOKEN>" }
+    }
+  }
+}
+```
+
+### Claude Code
+
+Claude Code (the CLI) connects to the remote server over HTTP. Run this in your
+**terminal** (not inside a Claude session); flags must come **before** the name.
+Set `AIBOS_MCP_TOKEN` in your shell first so the secret is not hardcoded:
+
+```bash
+export AIBOS_MCP_TOKEN="<your-token>"
+
+claude mcp add --transport http aibos https://aibos-mcp.vercel.app/mcp \
+  --header "Authorization: Bearer $AIBOS_MCP_TOKEN"
+```
+
+- Add `--scope user` (before the name) to enable it in every project, or
+  `--scope project` to write a shared `.mcp.json` for your team. The default
+  `local` scope is private to the current project.
+- Verify with `claude mcp list` or `claude mcp get aibos`; inside a session run
+  `/mcp` to see status and the AIBOS tools.
+- On Claude Code 2.1.1+ the JSON form is equivalent:
+  `claude mcp add-json aibos '{"type":"http","url":"https://aibos-mcp.vercel.app/mcp","headers":{"Authorization":"Bearer <AIBOS_MCP_TOKEN>"}}'`.
+
+Alternatively, commit a project-scoped `.mcp.json` at the repository root (Claude
+Code reads it automatically):
+
+```json
+{
+  "mcpServers": {
+    "aibos": {
+      "type": "http",
       "url": "https://aibos-mcp.vercel.app/mcp",
       "headers": { "Authorization": "Bearer <AIBOS_MCP_TOKEN>" }
     }
