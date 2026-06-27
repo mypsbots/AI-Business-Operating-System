@@ -1,0 +1,15 @@
+# Keep the image small and free of local-only artefacts/secrets.
+**/.venv/
+**/.index/
+**/__pycache__/
+**/*.py[cod]
+**/.env
+**/.env.*
+!**/.env.example
+.git/
+.github/
+node_modules/
+*.log
+.DS_Store
+agent-transcripts/
+terminals/

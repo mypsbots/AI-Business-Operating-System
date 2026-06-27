@@ -24,6 +24,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ingest CLIs (`build_local_index.py`, `ingest_pinecone.py`), ready-made client
   configs under `mcp/clients/`, and a setup/deploy/security guide in
   `mcp/README.md`.
+- **Remote deployment assets:** `mcp/Dockerfile` (builds the search index into
+  the image), `mcp/docker-compose.yml`, Fly.io and Render configs under
+  `mcp/deploy/`, an unauthenticated `/healthz` endpoint for load balancers, and
+  guides `mcp/DEPLOY.md` and `mcp/clients/OTHER_IDES.md` (direct HTTP and the
+  `mcp-remote` stdio bridge for other IDEs).
 
 ## [2.5.0] - 2026-06-26
 

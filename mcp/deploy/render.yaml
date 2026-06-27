@@ -1,0 +1,25 @@
+# Render.com Blueprint for the AIBOS MCP server.
+# In Render: New + -> Blueprint -> point at this repo. Render builds from the
+# repo root using the Dockerfile below, then asks you to set AIBOS_MCP_TOKEN.
+#
+# Your MCP endpoint will be: https://<service>.onrender.com/mcp
+services:
+  - type: web
+    name: aibos-mcp
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./mcp/Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: AIBOS_MCP_TRANSPORT
+        value: http
+      - key: AIBOS_MCP_HOST
+        value: 0.0.0.0
+      - key: AIBOS_MCP_PORT
+        value: "8000"
+      - key: AIBOS_BACKEND
+        value: local
+      - key: AIBOS_MCP_TOKEN
+        sync: false

@@ -90,19 +90,27 @@ Ready-made configs live in [`clients/`](clients):
   into `claude_desktop_config.json`.
 - **VS Code** — copy [`clients/vscode_mcp.json`](clients/vscode_mcp.json) to
   `.vscode/mcp.json`.
+- **Another IDE, remotely** (Windsurf, JetBrains, Zed, Cline, …) — see
+  [`clients/OTHER_IDES.md`](clients/OTHER_IDES.md) (direct HTTP and the
+  `mcp-remote` stdio bridge).
 - **ChatGPT, Gemini, Grok, your app, team** — see
   [`clients/REMOTE_CLIENTS.md`](clients/REMOTE_CLIENTS.md).
 
 The paths in the JSON files assume this repo's location; adjust if you move it.
 
-## Deploying for the team
+## Deploying for remote / team use
 
-1. Choose `AIBOS_BACKEND=pinecone` and run `ingest_pinecone.py` once (re-run when
-   content changes).
-2. Host `run_server.py` in HTTP mode behind HTTPS (reverse proxy, or Vercel /
-   Fly / Render / a container). Set `AIBOS_MCP_TOKEN`.
-3. Share the `https://<host>/mcp` URL + token with the team (prefer per-user
-   tokens or SSO at the proxy for revocability and audit).
+The server runs in HTTP mode with bearer-token auth and a `/healthz` endpoint;
+the local index is baked into the Docker image so it needs no external services.
+See [`DEPLOY.md`](DEPLOY.md) for full instructions covering:
+
+1. **Quick tunnel** (local server + `cloudflared`/`ngrok`) — reachable in minutes.
+2. **Docker / docker-compose** — run anywhere (VM, Cloud Run, ECS).
+3. **Fly.io** — [`deploy/fly.toml`](deploy/fly.toml).
+4. **Render.com** — [`deploy/render.yaml`](deploy/render.yaml).
+
+In all cases set a strong `AIBOS_MCP_TOKEN`, serve over HTTPS, and prefer
+per-user tokens (or SSO at a proxy) for revocability and audit.
 
 ## Security
 

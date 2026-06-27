@@ -287,20 +287,27 @@ def internal_excellence(department: str, objective: str = "") -> str:
 def _run_http() -> None:
     import uvicorn
     from starlette.middleware.base import BaseHTTPMiddleware
-    from starlette.responses import JSONResponse
+    from starlette.responses import JSONResponse, PlainTextResponse
+    from starlette.routing import Route
 
     token = CONFIG.token
+    # Unauthenticated health endpoint for load balancers / host health checks.
+    public_paths = {"/healthz"}
 
     class AuthMiddleware(BaseHTTPMiddleware):
         async def dispatch(self, request, call_next):
-            if token:
+            if token and request.url.path not in public_paths:
                 header = request.headers.get("authorization", "")
                 if header != f"Bearer {token}":
                     return JSONResponse({"error": "unauthorized"},
                                         status_code=401)
             return await call_next(request)
 
+    async def healthz(_request):
+        return PlainTextResponse("ok")
+
     app = mcp.streamable_http_app()
+    app.router.routes.append(Route("/healthz", healthz, methods=["GET"]))
     app.add_middleware(AuthMiddleware)
     uvicorn.run(app, host=CONFIG.host, port=CONFIG.port)
 

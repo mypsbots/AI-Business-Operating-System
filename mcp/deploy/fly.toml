@@ -1,0 +1,38 @@
+# Fly.io deployment for the AIBOS MCP server.
+# Deploy from the REPOSITORY ROOT so the corpus is in the build context:
+#
+#   fly launch --no-deploy --copy-config --config mcp/deploy/fly.toml --dockerfile mcp/Dockerfile
+#   fly secrets set AIBOS_MCP_TOKEN=<your-secret>
+#   fly deploy --config mcp/deploy/fly.toml --dockerfile mcp/Dockerfile
+#
+# Your MCP endpoint will be: https://<app-name>.fly.dev/mcp
+
+app = "aibos-mcp"
+primary_region = "lhr"
+
+[build]
+  dockerfile = "mcp/Dockerfile"
+
+[env]
+  AIBOS_MCP_TRANSPORT = "http"
+  AIBOS_MCP_HOST = "0.0.0.0"
+  AIBOS_MCP_PORT = "8000"
+  AIBOS_BACKEND = "local"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    method = "GET"
+    path = "/healthz"
+    interval = "30s"
+    timeout = "5s"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512

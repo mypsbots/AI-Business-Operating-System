@@ -1,0 +1,19 @@
+# Run the AIBOS MCP server locally or on a server with one command:
+#   docker compose -f mcp/docker-compose.yml up --build
+#
+# Reads AIBOS_MCP_TOKEN (and optional Pinecone settings) from mcp/.env.
+services:
+  aibos-mcp:
+    build:
+      context: ..
+      dockerfile: mcp/Dockerfile
+    image: aibos-mcp
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      AIBOS_MCP_TRANSPORT: http
+      AIBOS_MCP_HOST: 0.0.0.0
+      AIBOS_MCP_PORT: "8000"
+    restart: unless-stopped
