@@ -49,3 +49,6 @@ dist/
 build/
 out/
 .cache/
+
+# AIBOS MCP server local artefacts (rebuild with mcp/build_local_index.py)
+mcp/.index/

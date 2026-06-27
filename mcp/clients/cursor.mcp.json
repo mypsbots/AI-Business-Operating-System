@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "aibos": {
+      "command": "/Users/prakash/Documents/Personals/Learning/Automation/Skills/AI Business Operating System-AIBOS/mcp/.venv/bin/python",
+      "args": [
+        "/Users/prakash/Documents/Personals/Learning/Automation/Skills/AI Business Operating System-AIBOS/mcp/run_server.py"
+      ],
+      "env": {
+        "AIBOS_BACKEND": "local"
+      }
+    }
+  }
+}

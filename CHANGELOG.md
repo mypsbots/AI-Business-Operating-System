@@ -5,6 +5,26 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.0] - 2026-06-27
+
+### Added
+
+- **`mcp/` — AIBOS Model Context Protocol server.** Exposes the repository to AI
+  clients/agents with tools designed around two workflows: **client delivery**
+  (`design_customer_solution`) and **internal operations** (`improve_department`),
+  plus `search_aibos`, `get_aibos_document`, `get_best_practices`, `list_*`
+  navigation tools, MCP resources (`aibos://index/root`, `aibos://standard/{name}`)
+  and guided prompts (`client_engagement`, `internal_excellence`).
+- **Dual transport:** `stdio` for Cursor / Claude Desktop / VS Code, and
+  **Streamable-HTTP + bearer auth** for ChatGPT, Gemini, Grok, your own app and
+  team use.
+- **Two pluggable backends:** local SQLite FTS5 (no external services) and
+  Pinecone integrated-embedding semantic search; corpus is chunked by `##`
+  section with phase/category/document-type metadata for filtered retrieval.
+- Ingest CLIs (`build_local_index.py`, `ingest_pinecone.py`), ready-made client
+  configs under `mcp/clients/`, and a setup/deploy/security guide in
+  `mcp/README.md`.
+
 ## [2.5.0] - 2026-06-26
 
 ### Changed
