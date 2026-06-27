@@ -51,7 +51,51 @@ Or with compose (reads `mcp/.env`):
 docker compose -f mcp/docker-compose.yml up --build -d
 ```
 
-## 3. Fly.io (managed, global)
+## 3. Vercel (serverless — recommended if you already use Vercel)
+
+Vercel runs this as a Python function on Fluid Compute. The server is served in
+**stateless** Streamable-HTTP mode (each request is self-contained, safe across
+serverless instances) and uses the **Pinecone** backend (a managed data layer is
+the right choice on serverless). The corpus Markdown is bundled into the function
+via `includeFiles` so document retrieval works.
+
+Files already in the repo: [`../api/index.py`](../api/index.py),
+[`../vercel.json`](../vercel.json) and [`../requirements.txt`](../requirements.txt).
+
+**One-time: populate the Pinecone index** (from your machine):
+
+```bash
+echo 'PINECONE_API_KEY=<your-key>' >> mcp/.env
+AIBOS_BACKEND=pinecone PINECONE_API_KEY=<your-key> \
+  mcp/.venv/bin/python mcp/ingest_pinecone.py
+```
+
+**Deploy:**
+
+```bash
+npm i -g vercel            # if needed
+vercel link                # link to a project in your Vercel account
+
+# Set environment variables (Production + Preview)
+vercel env add AIBOS_MCP_TOKEN      # paste your bearer secret
+vercel env add PINECONE_API_KEY     # paste your Pinecone key
+
+vercel --prod              # deploy
+```
+
+Your MCP endpoint: `https://<project>.vercel.app/mcp`
+(health check: `https://<project>.vercel.app/healthz`).
+
+Notes:
+
+- `AIBOS_BACKEND` defaults to `pinecone` on Vercel (set in `api/index.py`); you
+  only need to provide `AIBOS_MCP_TOKEN` and `PINECONE_API_KEY`.
+- Rebuild/redeploy is just `vercel --prod`. Re-run `ingest_pinecone.py` only when
+  the artefacts change.
+- Vercel is "always available" (auto-scaling) rather than a single persistent
+  process — which is why we run stateless + Pinecone here.
+
+## 4. Fly.io (managed, global)
 
 ```bash
 fly launch --no-deploy --copy-config --config mcp/deploy/fly.toml --dockerfile mcp/Dockerfile
@@ -60,7 +104,7 @@ fly deploy --config mcp/deploy/fly.toml --dockerfile mcp/Dockerfile
 # endpoint: https://<app-name>.fly.dev/mcp
 ```
 
-## 4. Render.com (Blueprint)
+## 5. Render.com (Blueprint)
 
 Push the repo, then in Render: **New + → Blueprint** and select it. Render reads
 [`mcp/deploy/render.yaml`](deploy/render.yaml), builds the Docker image, and

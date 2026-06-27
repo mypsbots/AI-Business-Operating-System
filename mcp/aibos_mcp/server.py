@@ -284,14 +284,22 @@ def internal_excellence(department: str, objective: str = "") -> str:
 # --------------------------------------------------------------------------- #
 # Entry point: stdio (local) or Streamable-HTTP + auth (remote/team)
 # --------------------------------------------------------------------------- #
-def _run_http() -> None:
-    import uvicorn
+def build_asgi_app(stateless: bool = False):
+    """Build the Streamable-HTTP ASGI app with a bearer-auth gate and an
+    unauthenticated /healthz endpoint.
+
+    Set ``stateless=True`` for serverless hosts (e.g. Vercel) where requests may
+    land on different instances — each request is then fully self-contained.
+    """
     from starlette.middleware.base import BaseHTTPMiddleware
     from starlette.responses import JSONResponse, PlainTextResponse
     from starlette.routing import Route
 
+    if stateless:
+        mcp.settings.stateless_http = True
+        mcp.settings.json_response = True
+
     token = CONFIG.token
-    # Unauthenticated health endpoint for load balancers / host health checks.
     public_paths = {"/healthz"}
 
     class AuthMiddleware(BaseHTTPMiddleware):
@@ -309,7 +317,13 @@ def _run_http() -> None:
     app = mcp.streamable_http_app()
     app.router.routes.append(Route("/healthz", healthz, methods=["GET"]))
     app.add_middleware(AuthMiddleware)
-    uvicorn.run(app, host=CONFIG.host, port=CONFIG.port)
+    return app
+
+
+def _run_http() -> None:
+    import uvicorn
+    uvicorn.run(build_asgi_app(stateless=False), host=CONFIG.host,
+                port=CONFIG.port)
 
 
 def main() -> None:

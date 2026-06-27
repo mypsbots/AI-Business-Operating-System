@@ -1,0 +1,6 @@
+# Root requirements for the Vercel Python deployment of the AIBOS MCP server.
+# (Local development uses mcp/requirements.txt; Vercel installs from this file.)
+mcp[cli]>=1.6.0
+pinecone>=5.0.0
+PyYAML>=6.0.1
+starlette>=0.37.0

@@ -4,6 +4,7 @@ Once the server runs in HTTP mode (locally, via a tunnel, or hosted — see
 [`../DEPLOY.md`](../DEPLOY.md)), point any MCP-capable IDE at:
 
 - **Endpoint:** `https://<your-host>/mcp` (or `http://<host>:8000/mcp` for local)
+  - On Vercel this is `https://<project>.vercel.app/mcp`.
 - **Auth header:** `Authorization: Bearer <AIBOS_MCP_TOKEN>`
 
 There are two connection styles depending on what your IDE supports.

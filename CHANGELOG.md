@@ -29,6 +29,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `mcp/deploy/`, an unauthenticated `/healthz` endpoint for load balancers, and
   guides `mcp/DEPLOY.md` and `mcp/clients/OTHER_IDES.md` (direct HTTP and the
   `mcp-remote` stdio bridge for other IDEs).
+- **Vercel serverless deployment:** `api/index.py`, `vercel.json` and root
+  `requirements.txt` run the MCP server as a Python Fluid-Compute function in
+  stateless Streamable-HTTP mode with the Pinecone backend; `build_asgi_app()`
+  in `mcp/aibos_mcp/server.py` is shared by the local HTTP server and Vercel.
 
 ## [2.5.0] - 2026-06-26
 

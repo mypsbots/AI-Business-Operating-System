@@ -106,8 +106,10 @@ See [`DEPLOY.md`](DEPLOY.md) for full instructions covering:
 
 1. **Quick tunnel** (local server + `cloudflared`/`ngrok`) — reachable in minutes.
 2. **Docker / docker-compose** — run anywhere (VM, Cloud Run, ECS).
-3. **Fly.io** — [`deploy/fly.toml`](deploy/fly.toml).
-4. **Render.com** — [`deploy/render.yaml`](deploy/render.yaml).
+3. **Vercel** (serverless, recommended if you use Vercel) — `api/index.py` +
+   `vercel.json` run the server statelessly with the Pinecone backend.
+4. **Fly.io** — [`deploy/fly.toml`](deploy/fly.toml).
+5. **Render.com** — [`deploy/render.yaml`](deploy/render.yaml).
 
 In all cases set a strong `AIBOS_MCP_TOKEN`, serve over HTTPS, and prefer
 per-user tokens (or SSO at a proxy) for revocability and audit.
