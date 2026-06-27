@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Automatic Pinecone reindex on push.** New
+  `.github/workflows/reindex-pinecone.yml` rebuilds the hosted MCP search index
+  whenever corpus content (`00_ROOT`, `01_PHASES`, `02_ARTEFACTS`) or the
+  chunking/ingest code changes on `main` (also runnable manually). `ingest_pinecone.py`
+  gains a `--fresh` mode (env `AIBOS_REINDEX_FRESH=1`) that clears the namespace
+  first so deleted/renamed sections leave no stale chunks. Requires the
+  `PINECONE_API_KEY` Actions secret.
 - **`MCP_USAGE_GUIDE.md` — single authoritative guide** for using the AIBOS MCP
   server from every tool, IDE and AI client: Cursor, Claude Desktop, VS Code,
   Windsurf, JetBrains/Zed/Cline, ChatGPT, Gemini, Grok, your own app/SaaS and

@@ -3,10 +3,15 @@
 with the AIBOS corpus for semantic search.
 
     export PINECONE_API_KEY=...        # or put it in mcp/.env
-    python mcp/ingest_pinecone.py
+    python mcp/ingest_pinecone.py            # upsert (add/update sections)
+    python mcp/ingest_pinecone.py --fresh    # clear namespace first, then ingest
 
 Uses an integrated index, so Pinecone embeds the text server-side — no separate
 embedding provider/key is required. Re-running upserts over existing records.
+
+``--fresh`` (or env ``AIBOS_REINDEX_FRESH=1``) deletes every record in the
+namespace before ingesting, so removed/renamed documents leave no stale chunks.
+This is what CI uses to keep the hosted index perfectly in sync with the repo.
 """
 
 import os
@@ -40,6 +45,10 @@ def main() -> None:
     if not CONFIG.pinecone_api_key:
         sys.exit("PINECONE_API_KEY is not set. Add it to mcp/.env or export it.")
 
+    fresh = ("--fresh" in sys.argv
+             or str(os.getenv("AIBOS_REINDEX_FRESH", "")).strip().lower()
+             in {"1", "true", "yes", "on"})
+
     from pinecone import Pinecone
 
     pc = Pinecone(api_key=CONFIG.pinecone_api_key)
@@ -59,6 +68,13 @@ def main() -> None:
             time.sleep(2)
 
     index = pc.Index(name)
+
+    if fresh:
+        print(f"Clearing namespace '{CONFIG.pinecone_namespace}' before ingest...")
+        try:
+            index.delete(delete_all=True, namespace=CONFIG.pinecone_namespace)
+        except Exception as exc:  # namespace may not exist yet — that's fine.
+            print(f"  (nothing to clear: {exc})")
 
     batch, total = [], 0
     for rec in _records():

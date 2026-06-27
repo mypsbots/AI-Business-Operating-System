@@ -1,0 +1,59 @@
+name: Reindex Pinecone
+
+# Keep the hosted MCP search index in sync with the repository. Runs whenever
+# corpus content (or the chunking/ingest code) changes on main, and can also be
+# triggered manually. Requires the repository secret PINECONE_API_KEY.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "00_ROOT/**"
+      - "01_PHASES/**"
+      - "02_ARTEFACTS/**"
+      - "mcp/aibos_mcp/corpus.py"
+      - "mcp/aibos_mcp/config.py"
+      - "mcp/ingest_pinecone.py"
+      - ".github/workflows/reindex-pinecone.yml"
+  workflow_dispatch:
+
+# Never run two reindexes at once; cancel an in-flight run if a newer push lands.
+concurrency:
+  group: reindex-pinecone
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  reindex:
+    name: Rebuild Pinecone index
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade "pinecone>=5.0.0" "PyYAML>=6.0.1"
+
+      - name: Guard — require PINECONE_API_KEY
+        env:
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+        run: |
+          if [ -z "$PINECONE_API_KEY" ]; then
+            echo "::error::PINECONE_API_KEY secret is not set. Add it under" \
+                 "Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
+
+      - name: Reindex (fresh)
+        env:
+          AIBOS_BACKEND: pinecone
+          AIBOS_REINDEX_FRESH: "1"
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+        run: python mcp/ingest_pinecone.py --fresh
