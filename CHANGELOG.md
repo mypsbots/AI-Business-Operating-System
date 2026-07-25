@@ -5,6 +5,30 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.8.0] - 2026-07-25
+
+### Added
+
+- **Branding skill set (Phase 05).** New
+  [`02_ARTEFACTS/PHASE_05_SKILLS/Branding/`](02_ARTEFACTS/PHASE_05_SKILLS/Branding/README.md)
+  with 17 detailed, ready-to-use branding competency skills — Focus &
+  Simplification, Brand Positioning, Naming Expertise, Messaging Consistency,
+  Strategic Brand Extension, Category Leadership, Publicity & Media Relations,
+  Advertising & Promotion, Perception Management, Collaborative Networking
+  (Fellowship), Global Brand Building, Brand Monitoring & Adaptation, Crisis &
+  Change Management, Differentiation & Attribute Ownership, Competitor Analysis &
+  Positioning, Category Creation, and Persistence & Long-term Vision — plus a
+  [22 Immutable Laws of Branding](02_ARTEFACTS/PHASE_05_SKILLS/Branding/00_22_IMMUTABLE_LAWS_OF_BRANDING.md)
+  reference. Each skill maps to the relevant laws and is grounded in current
+  practice (Aaker & Keller brand-equity models, the positioning framework of
+  points of difference vs points of parity, a structured naming methodology, and
+  mental-availability / Category Entry Point measurement), with explicit
+  anti-patterns, KPIs and human-in-the-loop AI guidance.
+- **`tools/generate_branding_skills.py`** — deterministic generator for the
+  Branding set (overwrites only the `Branding/` folder). Linked from the Phase 05
+  index and the generation index; picked up automatically by the MCP corpus and
+  the Pinecone reindex workflow.
+
 ## [2.7.0] - 2026-06-27
 
 ### Added

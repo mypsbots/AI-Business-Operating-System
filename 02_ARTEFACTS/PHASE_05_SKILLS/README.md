@@ -2,6 +2,10 @@
 
 > **Navigate:** [Up](../README.md) · [Catalogue](../../ROOT_INDEX.md) · [Generated Index](../README.md)
 
+## Sections
+
+- [Branding](Branding/README.md) — specialised branding skill set (17 skills + the 22 Immutable Laws of Branding)
+
 ## Documents
 
 - [Executive Leadership Skill](01_EXECUTIVE_LEADERSHIP_SKILL.md)
