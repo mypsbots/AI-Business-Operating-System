@@ -5,6 +5,22 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.9.0] - 2026-07-28
+
+### Added
+
+- **Two more Branding skills (Phase 05 › Branding, now 19 total).** Added
+  [Consumer and Perception Research](02_ARTEFACTS/PHASE_05_SKILLS/Branding/18_CONSUMER_AND_PERCEPTION_RESEARCH_SKILL.md)
+  (research-driven, perception-first positioning: segmentation, perceptual
+  mapping, "the position you already own vs the one to create", creativity within
+  reality, big-picture thinking) and
+  [Repositioning](02_ARTEFACTS/PHASE_05_SKILLS/Branding/19_REPOSITIONING_SKILL.md)
+  (changing an established perception by attribute, segment or category frame —
+  including positioning against a leader and reframing the category, e.g. "the
+  uncola"). These close the gaps from the *Positioning: The Battle for Your Mind*
+  strategy/skill checklist; all other listed strategies were already covered
+  across the existing skills.
+
 ## [2.8.0] - 2026-07-25
 
 ### Added

@@ -65,6 +65,8 @@ mental-availability / Category Entry Point measurement).
 | 15 | [Competitor Analysis and Positioning](15_COMPETITOR_ANALYSIS_AND_POSITIONING_SKILL.md) | Brand Strategy | 17, 5, 8 |
 | 16 | [Creating New Categories](16_CATEGORY_CREATION_SKILL.md) | Brand Strategy | 2, 8, 3 |
 | 17 | [Persistence and Long-term Vision](17_PERSISTENCE_AND_LONG_TERM_VISION_SKILL.md) | Brand Leadership | 19, 20, 21 |
+| 18 | [Consumer and Perception Research](18_CONSUMER_AND_PERCEPTION_RESEARCH_SKILL.md) | Research & Insights | 5, 7, 22 |
+| 19 | [Repositioning](19_REPOSITIONING_SKILL.md) | Brand Strategy | 20, 17, 5 |
 
 ## Foundational Reference
 
@@ -93,4 +95,5 @@ mental-availability / Category Entry Point measurement).
 
 | Version | Date | Summary |
 | --- | --- | --- |
+| 1.1.0 | 2026-07-28 | Added Consumer & Perception Research and Repositioning skills (19 total). |
 | 1.0.0 | 2026-07-25 | Initial Branding skill set: 17 skills + 22-laws reference. |

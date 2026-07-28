@@ -1015,6 +1015,125 @@ SKILLS = [
   "ai": "AI can maintain longitudinal equity tracking, forecast category shifts, and quantify the long-term cost of short-term cuts. Holding the vision and the discipline to stay consistent through pressure is fundamentally a human leadership responsibility.",
   "example": "Through three CEOs and multiple downturns, a brand kept one position and visual system and protected a 60/40 investment split; a decade later it commanded a durable price premium while rivals that reinvented constantly stayed commoditised.",
 },
+{
+  "num": 18, "slug": "CONSUMER_AND_PERCEPTION_RESEARCH", "title": "Consumer and Perception Research",
+  "discipline": "Research & Insights",
+  "oneliner": "Learn what customers already believe about you and rivals, so positioning is built on reality — not ego.",
+  "collaborators": "Brand Positioning, Repositioning, Brand Monitoring, Competitor Analysis, Product Marketing",
+  "ai_level": "Heavily AI-assisted (survey design, synthesis, segmentation) with human framing and interpretation.",
+  "laws": [5, 7, 22],
+  "definition": [
+    "Consumer and perception research is the discipline of systematically learning what customers already think about the brand, the category and competitors before deciding how to position. Positioning happens inside the prospect's mind, so the first move is to map that mind rather than invent a message internally.",
+    "It covers segmentation, perceptual mapping and competitive perception, and answers the pivotal question: what position do we already own, versus the one we must create or change? It is the evidence base for positioning, naming, differentiation and repositioning.",
+  ],
+  "why": [
+    "Positioning is decided by consumer perception, not internal opinion; ego-driven positioning fails.",
+    "Research reveals the position you already own — often different from what leadership assumes.",
+    "It surfaces un-owned niches (creneaux) and defensible whitespace to claim.",
+    "It de-risks positioning, naming, extension and repositioning decisions with evidence.",
+  ],
+  "concepts": [
+    ("Map the mind first", "Positioning is what happens in the prospect's mind; research maps existing perceptions of you and competitors before any message is crafted."),
+    ("Segmentation", "Classify customers into meaningful segments and identify which one you can own and what it truly values."),
+    ("Perceptual mapping", "Plot brands on the attributes buyers actually use to reveal owned positions, crowded attributes and open space."),
+    ("Creativity within reality", "A position must connect to what is already in the mind; research keeps creative ideas grounded and believable, not clever but ignored."),
+    ("Big-picture landscape", "Understand the whole category and competitive dynamics so positioning fits the market, not just the product."),
+  ],
+  "steps": [
+    "Define the decision the research must inform (position, name, differentiate, reposition, extend).",
+    "Identify segments and the attributes / category entry points that drive choice.",
+    "Measure existing perceptions of the brand and competitors (surveys, interviews, listening, reviews, sales calls).",
+    "Build perceptual maps to reveal owned positions and open whitespace.",
+    "Determine the position you already own vs the one to create or change.",
+    "Translate insights into a positioning or repositioning recommendation grounded in reality.",
+    "Baseline the metrics so change can be tracked over time (hand off to Brand Monitoring).",
+  ],
+  "techniques": [
+    "Qualitative (interviews, focus groups) plus quantitative (surveys, conjoint, MaxDiff).",
+    "Perceptual / positioning maps and driver analysis.",
+    "Social listening, review and sales-call mining for the words customers actually use.",
+    "Segmentation and jobs-to-be-done research.",
+  ],
+  "antipatterns": [
+    "Positioning from internal opinion or the founder's ego instead of evidence.",
+    "Inventing a message with no anchor in existing perceptions.",
+    "Researching only current customers while ignoring non-buyers and competitors.",
+    "Confirmation-bias research designed only to validate a pre-chosen idea.",
+  ],
+  "metrics": [
+    "Clarity on the position currently owned vs desired.",
+    "Segment attractiveness and fit scores.",
+    "Perception baselines for tracked attributes / category entry points.",
+    "Research-to-decision cycle time.",
+  ],
+  "tools": [
+    "Survey / insight platforms (conjoint, MaxDiff)",
+    "Perceptual mapping and driver analysis",
+    "Social listening and review analytics",
+    "Segmentation frameworks; jobs-to-be-done",
+  ],
+  "ai": "AI accelerates survey and interview design, synthesises open-ended responses, mines reviews and calls for the language customers actually use, and clusters segments and perceptions at scale. Humans frame the questions, guard against bias, and interpret what the perception map means — unchecked AI over-fits patterns and invents plausible but unfounded conclusions.",
+  "example": "Before repositioning, a brand assumed it owned 'affordable'; perception research showed customers actually associated it with 'easy setup', and no one owned 'fastest support' — so it built its position on the un-owned, valued attribute instead of the one it wrongly believed it held.",
+},
+{
+  "num": 19, "slug": "REPOSITIONING", "title": "Repositioning",
+  "discipline": "Brand Strategy",
+  "oneliner": "Change an established perception — by attribute, segment or category frame — when the current position no longer wins.",
+  "collaborators": "Consumer and Perception Research, Competitor Analysis, Brand Positioning, Crisis and Change Management",
+  "ai_level": "AI-assisted (scenario modelling, message testing); humans own the strategic bet.",
+  "laws": [20, 17, 5],
+  "definition": [
+    "Repositioning is the deliberate skill of changing the place a brand — or a competitor — holds in the customer's mind when the existing position is blocked, eroding or no longer valuable. It works by shifting the attribute owned, targeting a different segment, or redefining the frame of reference, often by positioning against a leader rather than head-on.",
+    "It is distinct from a crisis-driven rebrand: repositioning is a proactive strategic move, made rarely and carefully, that preserves hard-won equity while changing what the brand stands for in the mind.",
+  ],
+  "why": [
+    "Leaders lose uniqueness over time; a challenger can win by repositioning against them.",
+    "When the owned position is crowded or devalued, changing perception restores advantage.",
+    "Redefining the category frame can convert a weakness into a strength (e.g. 'the uncola').",
+    "New segments or occasions can revive a stalled brand without a new product.",
+  ],
+  "concepts": [
+    ("Reposition the competitor", "Shift your position by reframing the leader — making its strength a limitation for a segment (the branding analogue of the Law of Color / being the opposite)."),
+    ("Change the frame of reference", "Redefining the category a brand is judged in ('the uncola' vs colas) can open an ownable position without changing the product."),
+    ("Change rarely and carefully", "Per the Law of Change, reposition only on strong evidence, gradually, and in a way customers accept — carry distinctive assets and equity through the move."),
+    ("New segment or attribute", "Repositioning may target a different segment or emphasise a different, un-owned attribute surfaced by research."),
+  ],
+  "steps": [
+    "Confirm via research that the current position is blocked, eroding or low-value.",
+    "Decide the repositioning lever: new attribute, new segment, or new category frame.",
+    "If challenging a leader, define the 'opposite' or reframe that turns their strength into a trade-off.",
+    "Validate the new position for defensibility, demand and believability.",
+    "Plan a gradual, evidence-based transition that preserves distinctive assets and equity.",
+    "Roll out consistently and reinforce the new perception over time.",
+    "Track the perception shift and adjust (hand off to Brand Monitoring).",
+  ],
+  "techniques": [
+    "Comparative / 'against' positioning and reframing the category.",
+    "Perceptual-map gap analysis to find the new space.",
+    "Message and concept testing before committing.",
+    "Phased migration that carries over distinctive assets.",
+  ],
+  "antipatterns": [
+    "Repositioning on a whim without research or evidence.",
+    "Chasing an attribute a stronger competitor already owns.",
+    "Abrupt changes that discard equity and confuse loyal customers.",
+    "Confusing repositioning (proactive strategy) with crisis rebranding (reactive).",
+  ],
+  "metrics": [
+    "Shift in the attribute / association the brand is known for.",
+    "Consideration and preference in the new segment or frame.",
+    "Equity retention through the transition.",
+    "Share change vs the repositioned frame of reference.",
+  ],
+  "tools": [
+    "Perceptual maps and gap analysis",
+    "Concept / message testing",
+    "Repositioning migration plan",
+    "Brand tracking (before / after)",
+  ],
+  "ai": "AI can model repositioning scenarios, test alternative frames and messages at scale, and monitor whether perception is actually shifting after launch. The decision to reposition — and the specific new frame to bet on — is a high-stakes strategic call for accountable humans.",
+  "example": "A lemon-lime drink stuck behind the cola giants repositioned as 'the uncola' — redefining the frame rather than the product — and won share by making the category leaders' defining attribute (cola) the very thing it was gloriously not.",
+},
 ]
 
 # --------------------------------------------------------------------------- #
@@ -1380,6 +1499,7 @@ mental-availability / Category Entry Point measurement).
 
 | Version | Date | Summary |
 | --- | --- | --- |
+| 1.1.0 | 2026-07-28 | Added Consumer & Perception Research and Repositioning skills (19 total). |
 | 1.0.0 | {CREATED} | Initial Branding skill set: 17 skills + 22-laws reference. |
 """
     return "\n".join(fm) + "\n\n" + body

@@ -4,7 +4,7 @@
 
 ## Sections
 
-- [Branding](Branding/README.md) — specialised branding skill set (17 skills + the 22 Immutable Laws of Branding)
+- [Branding](Branding/README.md) — specialised branding skill set (19 skills + the 22 Immutable Laws of Branding)
 
 ## Documents
 

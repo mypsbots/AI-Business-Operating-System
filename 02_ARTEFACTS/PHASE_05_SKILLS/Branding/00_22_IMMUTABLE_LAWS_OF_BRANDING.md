@@ -67,7 +67,7 @@ Advertising does not build a brand, it defends one; its job is to maintain a pos
 
 A brand should own a single word or idea in the prospect's mind.
 
-**Applied by skill(s):** Brand Positioning, Naming Expertise, Consistency in Messaging, Perception Management, Differentiation and Ownership of Attributes, Competitor Analysis and Positioning.
+**Applied by skill(s):** Brand Positioning, Naming Expertise, Consistency in Messaging, Perception Management, Differentiation and Ownership of Attributes, Competitor Analysis and Positioning, Consumer and Perception Research, Repositioning.
 
 ## Law 6: The Law of Credentials
 
@@ -79,7 +79,7 @@ An authentic proof of leadership (the 'credential') makes every other claim beli
 
 Quality matters, but brands are not built on quality alone; they are built on perception and a narrow focus.
 
-**Applied by skill(s):** Perception Management.
+**Applied by skill(s):** Perception Management, Consumer and Perception Research.
 
 ## Law 8: The Law of The Category
 
@@ -139,7 +139,7 @@ A brand's logotype should be designed to fit the eyes — both eyes, favouring a
 
 A brand should use a colour that is the opposite of its major competitor's.
 
-**Applied by skill(s):** Competitor Analysis and Positioning.
+**Applied by skill(s):** Competitor Analysis and Positioning, Repositioning.
 
 ## Law 18: The Law of Borders
 
@@ -157,7 +157,7 @@ A brand is built over years by staying consistent; do not change what a brand st
 
 Brands can be changed, but only rarely, and only very carefully.
 
-**Applied by skill(s):** Consistency in Messaging, Brand Monitoring and Adaptation, Crisis and Change Management, Persistence and Long-term Vision.
+**Applied by skill(s):** Consistency in Messaging, Brand Monitoring and Adaptation, Crisis and Change Management, Persistence and Long-term Vision, Repositioning.
 
 ## Law 21: The Law of Mortality
 
@@ -169,7 +169,7 @@ No brand lives forever; sometimes euthanasia (a graceful end) is the best option
 
 The most important aspect of a brand is its single-minded focus on one attribute or idea.
 
-**Applied by skill(s):** Focus and Simplification, Brand Positioning, Differentiation and Ownership of Attributes.
+**Applied by skill(s):** Focus and Simplification, Brand Positioning, Differentiation and Ownership of Attributes, Consumer and Perception Research.
 
 ## Vocabulary Cross-Map
 
@@ -206,6 +206,8 @@ canonical laws above as follows:
 - [Competitor Analysis and Positioning](15_COMPETITOR_ANALYSIS_AND_POSITIONING_SKILL.md) — applies Law 17, Law 5, Law 8
 - [Creating New Categories](16_CATEGORY_CREATION_SKILL.md) — applies Law 2, Law 8, Law 3
 - [Persistence and Long-term Vision](17_PERSISTENCE_AND_LONG_TERM_VISION_SKILL.md) — applies Law 19, Law 20, Law 21
+- [Consumer and Perception Research](18_CONSUMER_AND_PERCEPTION_RESEARCH_SKILL.md) — applies Law 5, Law 7, Law 22
+- [Repositioning](19_REPOSITIONING_SKILL.md) — applies Law 20, Law 17, Law 5
 
 ## Related Resources
 
