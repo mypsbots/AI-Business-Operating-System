@@ -5,6 +5,34 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.10.0] - 2026-07-30
+
+### Added
+
+- **Business Documentation skill set (Phase 05, 27 generate-ready UK documents).**
+  New
+  [`02_ARTEFACTS/PHASE_05_SKILLS/Business_Documentation/`](02_ARTEFACTS/PHASE_05_SKILLS/Business_Documentation/README.md)
+  turns AIBOS into a UK (England & Wales) business-document generator for AI,
+  automation, software, SaaS, consulting and implementation engagements. Each skill
+  embeds a full document blueprint, required inputs, UK legal/compliance notes and a
+  standing solicitor-review legal notice, so referencing the skill produces the
+  actual document. Covers the essential pack (Mutual NDA, Proposal, Quotation, MSA,
+  SOW, DPA, Change Request, Acceptance Certificate, Invoice) and the extended pack
+  (SLA, Security Schedule, AI & Responsible Use Schedule, Requirements Specification,
+  Project Plan, Risk Register, Data Mapping Questionnaire, Sub-processor List,
+  Customer Due-Diligence Checklist, Project Closure Report, Support & Maintenance,
+  Subcontractor, Independent Contractor, Data Sharing, Website Privacy Notice,
+  Website Cookie Notice, Business Customer T&Cs, Consumer Terms), plus a
+  [UK Contracting Framework](02_ARTEFACTS/PHASE_05_SKILLS/Business_Documentation/00_UK_CONTRACTING_FRAMEWORK.md)
+  reference (architecture, order of precedence, signing order, minimum-clause
+  checklist, IP/payment/liability principles, ICO/GOV.UK references). Grounded in the
+  `00_ROOT/Lemuran_Ltd_UK_Client_Engagement_Legal_Guide.md`; Lemuran Ltd is the
+  default example supplier with reusable Supplier/Customer placeholders.
+- **`tools/generate_business_docs.py`** — deterministic generator for the set
+  (overwrites only the `Business_Documentation/` folder). Linked from the Phase 05
+  index and generation index; picked up automatically by the MCP corpus and Pinecone
+  reindex workflow.
+
 ## [2.9.0] - 2026-07-28
 
 ### Added

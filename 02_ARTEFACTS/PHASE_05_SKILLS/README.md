@@ -5,6 +5,7 @@
 ## Sections
 
 - [Branding](Branding/README.md) — specialised branding skill set (19 skills + the 22 Immutable Laws of Branding)
+- [Business Documentation](Business_Documentation/README.md) — 27 generate-ready UK (England & Wales) business/legal document skills + contracting framework
 
 ## Documents
 
