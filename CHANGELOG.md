@@ -5,6 +5,24 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.11.0] - 2026-09-27
+
+### Added
+
+- **Per-agent bearer tokens for the MCP server.** The HTTP transport now accepts
+  multiple labelled tokens via the new `AIBOS_MCP_TOKENS` env
+  (`label:token,label:token`), so each client/agent (e.g. `hermes`, `cursor`) gets
+  its own credential. The matched label is logged on every request (audit) and a
+  single agent can be revoked by removing its entry and redeploying — without
+  affecting the others. The single `AIBOS_MCP_TOKEN` remains supported (label
+  `primary`) for backward compatibility. Documented in `mcp/.env.example`.
+
+### Security
+
+- Auth comparison now uses constant-time matching (`hmac.compare_digest`) across all
+  configured tokens, and unauthorised attempts are logged. Rotate any previously
+  shared `AIBOS_MCP_TOKEN` and issue per-agent tokens instead.
+
 ## [2.10.0] - 2026-07-30
 
 ### Added

@@ -438,6 +438,9 @@ def build_asgi_app(stateless: bool = False):
     Set ``stateless=True`` for serverless hosts (e.g. Vercel) where requests may
     land on different instances — each request is then fully self-contained.
     """
+    import hmac
+    import logging
+
     from starlette.middleware.base import BaseHTTPMiddleware
     from starlette.responses import JSONResponse, PlainTextResponse
     from starlette.routing import Route
@@ -446,16 +449,32 @@ def build_asgi_app(stateless: bool = False):
         mcp.settings.stateless_http = True
         mcp.settings.json_response = True
 
-    token = CONFIG.token
+    # {label: token}. Empty means "no auth" (trusted localhost only).
+    tokens = CONFIG.tokens
     public_paths = {"/healthz"}
+    logger = logging.getLogger("aibos.mcp.auth")
 
     class AuthMiddleware(BaseHTTPMiddleware):
         async def dispatch(self, request, call_next):
-            if token and request.url.path not in public_paths:
+            if tokens and request.url.path not in public_paths:
                 header = request.headers.get("authorization", "")
-                if header != f"Bearer {token}":
+                presented = header[7:] if header.startswith("Bearer ") else ""
+                label = None
+                if presented:
+                    # Constant-time compare against every configured token so a
+                    # match reveals which agent/client authenticated (audit) and
+                    # timing cannot be used to guess a valid token.
+                    for lbl, tok in tokens.items():
+                        if hmac.compare_digest(presented, tok):
+                            label = lbl
+                            break
+                if label is None:
+                    logger.warning("auth denied path=%s", request.url.path)
                     return JSONResponse({"error": "unauthorized"},
                                         status_code=401)
+                request.state.client_label = label
+                logger.info("auth ok client=%s path=%s", label,
+                            request.url.path)
             return await call_next(request)
 
     async def healthz(_request):
