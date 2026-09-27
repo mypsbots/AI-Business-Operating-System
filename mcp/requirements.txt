@@ -1,16 +1,19 @@
 # AIBOS MCP server dependencies
 # Install with:  pip install -r mcp/requirements.txt
 
+# Pinned to known-good versions for reproducible builds (matches the root
+# requirements.txt used by the Vercel deployment).
+
 # Model Context Protocol server SDK (FastMCP + CLI + HTTP transport).
-mcp[cli]>=1.6.0
+mcp[cli]==1.28.1
 
 # Front-matter / YAML parsing for artefact metadata.
-PyYAML>=6.0.1
+PyYAML==6.0.3
 
 # ASGI server + framework for the remote (Streamable-HTTP) transport.
-uvicorn>=0.30.0
-starlette>=0.37.0
+uvicorn==0.49.0
+starlette==1.3.1
 
 # Optional: only needed when AIBOS_BACKEND=pinecone (semantic search).
 # The local SQLite FTS backend needs nothing beyond the Python standard library.
-pinecone>=5.0.0
+pinecone==9.1.0
