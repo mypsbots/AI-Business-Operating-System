@@ -5,6 +5,34 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.12.0] - 2026-10-07
+
+### Added
+
+- **Partnership Documentation skill set (Phase 05, 13 generate-ready UK documents).**
+  New
+  [`02_ARTEFACTS/PHASE_05_SKILLS/Partnership_Documentation/`](02_ARTEFACTS/PHASE_05_SKILLS/Partnership_Documentation/README.md)
+  turns AIBOS into a UK (England & Wales) generator for company-to-company partnership
+  documents. Each skill embeds a full blueprint, required inputs, UK legal/compliance
+  notes (competition law, "no legal partnership"/agency, IP, data sharing, anti-bribery,
+  commercial-agents) and a standing solicitor-review legal notice, so referencing the
+  skill produces the actual document. Covers the Core (formation) pack — Letter of Intent
+  (Heads of Terms), Memorandum of Understanding, Strategic Partnership/Alliance Agreement,
+  Teaming Agreement, Partnership Statement of Work — and the Extended pack —
+  Reseller/Channel Partner Agreement, Referral/Introducer Agreement, Revenue Share and
+  Commission Schedule, Co-Marketing and Co-Branding Agreement, Joint Venture Agreement,
+  Partnership Data Sharing Agreement, Partnership Governance/Joint Steering Committee
+  Terms of Reference, Partnership Exit/Disengagement Deed — plus a
+  [UK Partnership Framework](02_ARTEFACTS/PHASE_05_SKILLS/Partnership_Documentation/00_UK_PARTNERSHIP_FRAMEWORK.md)
+  reference (lifecycle, binding vs non-binding, competition-law health check, IP,
+  revenue/tax, data sharing, governance, exit, CMA/ICO/GOV.UK references). It
+  cross-references, rather than duplicates, the Business Documentation Mutual NDA, DPA and
+  Data Sharing Agreement skills.
+- **`tools/generate_partnership_docs.py`** — deterministic generator for the set
+  (overwrites only the `Partnership_Documentation/` folder). Linked from the Phase 05
+  index and generation index; picked up automatically by the MCP corpus and Pinecone
+  reindex workflow.
+
 ## [2.11.0] - 2026-09-27
 
 ### Added
