@@ -2,6 +2,10 @@
 
 > **Navigate:** [Up](../README.md) · [Catalogue](../../../ROOT_INDEX.md) · [Generated Index](../../README.md)
 
+## Sections
+
+- [Lemuran UK Legal Pack](LEMURAN_UK_LEGAL_PACK/00_START_HERE.md) — Lemuran Ltd company-wide UK legal & compliance knowledge pack (authority register, business facts, domain references); backs the [Legal & Compliance (UK) skills](../../PHASE_05_SKILLS/Legal_Compliance_UK/README.md)
+
 ## Documents
 
 - [Strategy Knowledge Article](01_STRATEGY_KNOWLEDGE_ARTICLE.md)

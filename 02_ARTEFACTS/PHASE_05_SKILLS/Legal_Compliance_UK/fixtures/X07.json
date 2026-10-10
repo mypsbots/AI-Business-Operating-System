@@ -1,0 +1,26 @@
+{
+  "test_id": "X07",
+  "skill_id": "cross_cutting",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Filing API times out after possible success"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Reconcile receipt/status before any retry"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

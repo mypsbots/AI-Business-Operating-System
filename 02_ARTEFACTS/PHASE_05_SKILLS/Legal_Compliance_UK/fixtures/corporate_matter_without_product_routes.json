@@ -1,0 +1,26 @@
+{
+  "test_id": "corporate_matter_without_product_routes",
+  "skill_id": "LEMURAN-UK-INTAKE",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Board/filing matter with no product ID"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Route corporate work; do not demand FAQai.app details"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

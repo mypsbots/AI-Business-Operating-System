@@ -1,0 +1,26 @@
+{
+  "test_id": "X19",
+  "skill_id": "cross_cutting",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "UK Ltd with family employees"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Do not assume family exemption; check limited-company rules"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

@@ -1,0 +1,26 @@
+{
+  "test_id": "changed_document_invalidates_release",
+  "skill_id": "LEMURAN-UK-DOCUMENTS",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Final document edited after approval"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Block issue until exact revised version approved"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

@@ -1,0 +1,26 @@
+{
+  "test_id": "X03",
+  "skill_id": "cross_cutting",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Source is a consultation, wording says \u201cwill\u201d"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "No current LAW classification from future tense"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

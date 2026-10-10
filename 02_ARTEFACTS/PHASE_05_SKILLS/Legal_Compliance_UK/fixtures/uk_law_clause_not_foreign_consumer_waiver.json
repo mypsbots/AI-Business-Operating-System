@@ -1,0 +1,26 @@
+{
+  "test_id": "uk_law_clause_not_foreign_consumer_waiver",
+  "skill_id": "LEMURAN-UK-INTERNATIONAL",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "EU consumer; UK-law clause; local-law assessment absent"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Do not infer mandatory local rights displaced"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

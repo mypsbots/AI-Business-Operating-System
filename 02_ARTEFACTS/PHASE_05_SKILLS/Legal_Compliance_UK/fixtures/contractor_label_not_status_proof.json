@@ -1,0 +1,26 @@
+{
+  "test_id": "contractor_label_not_status_proof",
+  "skill_id": "LEMURAN-UK-PEOPLE",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Agreement says contractor; working practices not provided"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Return status unknown and request substantive facts"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

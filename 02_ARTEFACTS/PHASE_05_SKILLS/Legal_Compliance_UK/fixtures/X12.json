@@ -1,0 +1,26 @@
+{
+  "test_id": "X12",
+  "skill_id": "cross_cutting",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "EU SCCs supplied for UK restricted transfer without Addendum"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Flag mechanism gap unless another valid route evidenced"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

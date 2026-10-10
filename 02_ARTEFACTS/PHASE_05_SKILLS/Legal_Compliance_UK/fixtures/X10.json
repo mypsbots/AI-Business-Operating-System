@@ -1,0 +1,26 @@
+{
+  "test_id": "X10",
+  "skill_id": "cross_cutting",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Erasure request with live legal hold"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Scope/necessity review; no blanket erase or blanket indefinite retention"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

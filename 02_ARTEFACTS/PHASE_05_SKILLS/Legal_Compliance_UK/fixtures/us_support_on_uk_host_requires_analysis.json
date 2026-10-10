@@ -1,0 +1,26 @@
+{
+  "test_id": "us_support_on_uk_host_requires_analysis",
+  "skill_id": "LEMURAN-UK-TRANSFERS",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "UK storage; independent US vendor staff can access"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Analyse restricted transfer, receiver and mechanism; no UK-hosting exemption"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

@@ -1,0 +1,26 @@
+{
+  "test_id": "X20",
+  "skill_id": "cross_cutting",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Old EU AI timeline says all high-risk duties start August 2026"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Reconcile with checked 2026 changes; preserve unaffected obligations"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

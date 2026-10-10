@@ -1,0 +1,26 @@
+{
+  "test_id": "model_change_invalidates_related_tests",
+  "skill_id": "LEMURAN-UK-AI",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Approved release swaps model/config after review"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Require affected evaluation and approval refresh"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

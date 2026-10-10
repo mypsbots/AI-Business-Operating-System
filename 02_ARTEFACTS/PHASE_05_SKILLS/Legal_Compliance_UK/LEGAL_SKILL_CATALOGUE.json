@@ -1,0 +1,723 @@
+{
+  "schema_version": "1.0.0",
+  "pack_version": "1.1.0",
+  "generated_on": "2026-10-10",
+  "verified_on": "2026-10-09",
+  "status": "draft_for_review",
+  "scope": "Lemuran Ltd company-wide legal and compliance function",
+  "category": "Legal and Compliance (UK)",
+  "knowledge_pack": "02_ARTEFACTS/PHASE_10_KNOWLEDGE/Business/LEMURAN_UK_LEGAL_PACK",
+  "common_contract_doc": "00_COMMON_EXECUTION_CONTRACT.md",
+  "skills": [
+    {
+      "id": "LEMURAN-UK-GOVERNANCE",
+      "runtime_name": "uk-company-governance",
+      "doc": "01_GOVERNANCE_SKILL.md",
+      "owner_role": "Director",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "incorporation_change",
+        "director_or_psc_change",
+        "board_decision",
+        "monthly_review"
+      ],
+      "approval_gates": [
+        "G1"
+      ],
+      "knowledge_refs": [
+        "02_COMPANY_GOVERNANCE.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "director_is_also_psc_requires_separate_check"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-FILINGS",
+      "runtime_name": "uk-companies-house-calendar",
+      "doc": "02_FILINGS_SKILL.md",
+      "owner_role": "Director / authorised filer",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "year_end",
+        "confirmation_review",
+        "officer_change",
+        "deadline_alert"
+      ],
+      "approval_gates": [
+        "G1"
+      ],
+      "knowledge_refs": [
+        "02_COMPANY_GOVERNANCE.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "dormant_company_still_needs_filing_assessment"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-TAX",
+      "runtime_name": "uk-tax-and-payroll-review",
+      "doc": "03_TAX_SKILL.md",
+      "owner_role": "Accountant and director",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "accounting_period_end",
+        "payroll_event",
+        "trading_start",
+        "tax_change"
+      ],
+      "approval_gates": [
+        "G1"
+      ],
+      "knowledge_refs": [
+        "03_TAX_AND_VAT.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "short_period_adjusts_ct_thresholds"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-VAT",
+      "runtime_name": "uk-vat-sales-classification",
+      "doc": "04_VAT_SKILL.md",
+      "owner_role": "Accountant",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "monthly_turnover",
+        "large_new_contract",
+        "new_market",
+        "supplier_invoice"
+      ],
+      "approval_gates": [
+        "G1"
+      ],
+      "knowledge_refs": [
+        "03_TAX_AND_VAT.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "saas_60k_agency_35k_aggregate"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-PRIVACY",
+      "runtime_name": "uk-privacy-and-ico",
+      "doc": "05_PRIVACY_SKILL.md",
+      "owner_role": "Privacy lead",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_product",
+        "new_purpose",
+        "vendor_change",
+        "annual_fee_review"
+      ],
+      "approval_gates": [
+        "G2",
+        "G3"
+      ],
+      "knowledge_refs": [
+        "04_PRIVACY_AND_TRANSFERS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "billing_controller_customer_content_processor_split"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-DPIA",
+      "runtime_name": "uk-dpia-and-decision-safeguards",
+      "doc": "06_DPIA_SKILL.md",
+      "owner_role": "Privacy lead / counsel / director",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_ai_use",
+        "sensitive_data",
+        "children",
+        "significant_decision",
+        "material_change"
+      ],
+      "approval_gates": [
+        "G3"
+      ],
+      "knowledge_refs": [
+        "04_PRIVACY_AND_TRANSFERS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "rubber_stamp_review_not_meaningful"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-RIGHTS",
+      "runtime_name": "uk-data-rights-and-complaints",
+      "doc": "07_RIGHTS_SKILL.md",
+      "owner_role": "Privacy lead",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "rights_request",
+        "privacy_complaint"
+      ],
+      "approval_gates": [
+        "G4"
+      ],
+      "knowledge_refs": [
+        "04_PRIVACY_AND_TRANSFERS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "combined_sar_complaint_two_clocks"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-TRANSFERS",
+      "runtime_name": "uk-data-transfer-review",
+      "doc": "08_TRANSFERS_SKILL.md",
+      "owner_role": "Privacy lead / counsel",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_vendor",
+        "new_region",
+        "remote_support",
+        "subprocessor_change"
+      ],
+      "approval_gates": [
+        "G3"
+      ],
+      "knowledge_refs": [
+        "04_PRIVACY_AND_TRANSFERS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "us_support_on_uk_host_requires_analysis"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-PECR",
+      "runtime_name": "uk-pecr-cookie-review",
+      "doc": "09_PECR_SKILL.md",
+      "owner_role": "Privacy lead / engineering",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_tag",
+        "banner_change",
+        "analytics_change"
+      ],
+      "approval_gates": [
+        "G2",
+        "G6"
+      ],
+      "knowledge_refs": [
+        "05_PECR_AND_MARKETING.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "statistics_without_objection_fails"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-MARKETING",
+      "runtime_name": "uk-marketing-permission-review",
+      "doc": "10_MARKETING_SKILL.md",
+      "owner_role": "Marketing / privacy lead",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "campaign_draft",
+        "lead_import",
+        "claim_change"
+      ],
+      "approval_gates": [
+        "G2"
+      ],
+      "knowledge_refs": [
+        "05_PECR_AND_MARKETING.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "sole_trader_not_corporate_subscriber"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-SAAS",
+      "runtime_name": "uk-saas-contract-review",
+      "doc": "11_SAAS_SKILL.md",
+      "owner_role": "Counsel / authorised signatory",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_plan",
+        "enterprise_order",
+        "terms_change",
+        "renewal"
+      ],
+      "approval_gates": [
+        "G2"
+      ],
+      "knowledge_refs": [
+        "06_CONTRACTS_AND_CONSUMERS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "vendor_retention_conflict_blocks_promise"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-AGENCY",
+      "runtime_name": "uk-agency-msa-sow",
+      "doc": "12_AGENCY_SKILL.md",
+      "owner_role": "Project owner / signatory",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_project",
+        "scope_change",
+        "milestone",
+        "handover"
+      ],
+      "approval_gates": [
+        "G2"
+      ],
+      "knowledge_refs": [
+        "06_CONTRACTS_AND_CONSUMERS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "missing_acceptance_criteria_needs_facts"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-CONSUMER",
+      "runtime_name": "uk-consumer-sales-review",
+      "doc": "13_CONSUMER_SKILL.md",
+      "owner_role": "Counsel / product owner",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "consumer_launch",
+        "checkout_change",
+        "renewal",
+        "refund_request"
+      ],
+      "approval_gates": [
+        "G2",
+        "G6"
+      ],
+      "knowledge_refs": [
+        "06_CONTRACTS_AND_CONSUMERS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "consumer_no_refunds_clause_fails"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-IP",
+      "runtime_name": "uk-ip-and-licensing",
+      "doc": "14_IP_SKILL.md",
+      "owner_role": "Legal / engineering",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_asset",
+        "contractor_delivery",
+        "oss_dependency",
+        "crawl_source",
+        "brand_launch"
+      ],
+      "approval_gates": [
+        "G2"
+      ],
+      "knowledge_refs": [
+        "07_IP_AND_AI_GOVERNANCE.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "contractor_invoice_not_assignment"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-AI",
+      "runtime_name": "uk-ai-risk-release",
+      "doc": "15_AI_SKILL.md",
+      "owner_role": "Product owner / counsel / privacy",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_model",
+        "new_tool",
+        "new_use",
+        "material_drift",
+        "eu_launch"
+      ],
+      "approval_gates": [
+        "G3",
+        "G6"
+      ],
+      "knowledge_refs": [
+        "07_IP_AND_AI_GOVERNANCE.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "model_change_invalidates_related_tests"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-SECURITY",
+      "runtime_name": "uk-security-and-incident",
+      "doc": "16_SECURITY_SKILL.md",
+      "owner_role": "Incident lead / privacy / director",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "release",
+        "security_event",
+        "supplier_incident",
+        "restore_test"
+      ],
+      "approval_gates": [
+        "G4",
+        "G6"
+      ],
+      "knowledge_refs": [
+        "08_SECURITY_PEOPLE_AND_INSURANCE.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "weekend_breach_clock_continues"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-PEOPLE",
+      "runtime_name": "uk-people-contractor-compliance",
+      "doc": "17_PEOPLE_SKILL.md",
+      "owner_role": "HR / employment adviser / director",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "hire",
+        "contractor_start",
+        "role_change",
+        "exit"
+      ],
+      "approval_gates": [
+        "G5",
+        "G6"
+      ],
+      "knowledge_refs": [
+        "08_SECURITY_PEOPLE_AND_INSURANCE.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "contractor_label_not_status_proof"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-INSURANCE",
+      "runtime_name": "uk-insurance-commitment-review",
+      "doc": "18_INSURANCE_SKILL.md",
+      "owner_role": "Director / broker",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "hire",
+        "renewal",
+        "new_contract",
+        "claim_circumstance"
+      ],
+      "approval_gates": [
+        "G5"
+      ],
+      "knowledge_refs": [
+        "08_SECURITY_PEOPLE_AND_INSURANCE.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "expired_policy_fails_customer_claim"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-INTERNATIONAL",
+      "runtime_name": "uk-international-market-screen",
+      "doc": "19_INTERNATIONAL_SKILL.md",
+      "owner_role": "Director / counsel / accountant",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_country",
+        "new_sector",
+        "new_counterparty"
+      ],
+      "approval_gates": [
+        "G2",
+        "G3"
+      ],
+      "knowledge_refs": [
+        "09_INTERNATIONAL_DISPUTES_AND_RECORDS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "uk_law_clause_not_foreign_consumer_waiver"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-DISPUTES",
+      "runtime_name": "uk-dispute-and-legal-hold",
+      "doc": "20_DISPUTES_SKILL.md",
+      "owner_role": "Counsel / authorised owner",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "complaint",
+        "claim",
+        "regulator_letter",
+        "payment_dispute"
+      ],
+      "approval_gates": [
+        "G4",
+        "G5"
+      ],
+      "knowledge_refs": [
+        "09_INTERNATIONAL_DISPUTES_AND_RECORDS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "court_letter_urgent_not_normal_support"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-RETENTION",
+      "runtime_name": "uk-records-retention",
+      "doc": "21_RETENTION_SKILL.md",
+      "owner_role": "Data owner / privacy / legal",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_record_class",
+        "expiry",
+        "erasure",
+        "hold_release"
+      ],
+      "approval_gates": [
+        "G6"
+      ],
+      "knowledge_refs": [
+        "09_INTERNATIONAL_DISPUTES_AND_RECORDS.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "hold_blocks_only_scoped_deletion"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-MONITORING",
+      "runtime_name": "uk-legal-source-monitor",
+      "doc": "22_MONITORING_SKILL.md",
+      "owner_role": "Compliance maintainer / counsel",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "monthly_review",
+        "authority_update",
+        "source_stale"
+      ],
+      "approval_gates": [
+        "G2"
+      ],
+      "knowledge_refs": [
+        "10_OPERATIONS_AND_REVIEW.md",
+        "11_AUTHORITY_REGISTER.md"
+      ],
+      "acceptance_tests": [
+        "proposal_not_binding_requirement"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-INTAKE",
+      "runtime_name": "lemuran-legal-matter-intake",
+      "doc": "23_INTAKE_SKILL.md",
+      "owner_role": "Director / legal operations lead",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_matter",
+        "legal_notice",
+        "business_change"
+      ],
+      "approval_gates": [
+        "G4"
+      ],
+      "knowledge_refs": [
+        "20_LEGAL_TEAM_CHARTER.md",
+        "14_SKILL_IMPLEMENTATION_SPEC.md"
+      ],
+      "acceptance_tests": [
+        "corporate_matter_without_product_routes"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-PORTFOLIO",
+      "runtime_name": "lemuran-product-service-legal-onboarding",
+      "doc": "24_PORTFOLIO_SKILL.md",
+      "owner_role": "Product/service owner and legal lead",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "new_product",
+        "new_service",
+        "new_engagement",
+        "material_change",
+        "retirement"
+      ],
+      "approval_gates": [
+        "G2",
+        "G3"
+      ],
+      "knowledge_refs": [
+        "20_LEGAL_TEAM_CHARTER.md",
+        "14_SKILL_IMPLEMENTATION_SPEC.md"
+      ],
+      "acceptance_tests": [
+        "new_product_not_faqai_supported"
+      ]
+    },
+    {
+      "id": "LEMURAN-UK-DOCUMENTS",
+      "runtime_name": "lemuran-official-legal-document-control",
+      "doc": "25_DOCUMENTS_SKILL.md",
+      "owner_role": "Legal operations / authorised signatory",
+      "scope_type_examples": [
+        "corporate",
+        "internal_operations",
+        "all_current_and_future_products",
+        "all_services_and_engagements"
+      ],
+      "triggers": [
+        "document_request",
+        "negotiation",
+        "approval",
+        "signature",
+        "renewal",
+        "supersession"
+      ],
+      "approval_gates": [
+        "G1",
+        "G2",
+        "G4"
+      ],
+      "knowledge_refs": [
+        "20_LEGAL_TEAM_CHARTER.md",
+        "14_SKILL_IMPLEMENTATION_SPEC.md"
+      ],
+      "acceptance_tests": [
+        "changed_document_invalidates_release"
+      ]
+    }
+  ]
+}

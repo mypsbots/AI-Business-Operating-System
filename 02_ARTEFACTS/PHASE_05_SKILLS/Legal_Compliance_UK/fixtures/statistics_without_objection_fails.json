@@ -1,0 +1,26 @@
+{
+  "test_id": "statistics_without_objection_fails",
+  "skill_id": "LEMURAN-UK-PECR",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Analytics claims statistical exception; no objection control"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Fail exception readiness; request correction or consent route"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

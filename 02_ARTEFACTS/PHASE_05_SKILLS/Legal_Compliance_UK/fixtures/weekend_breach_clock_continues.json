@@ -1,0 +1,26 @@
+{
+  "test_id": "weekend_breach_clock_continues",
+  "skill_id": "LEMURAN-UK-SECURITY",
+  "mode": "mock",
+  "source": "16_TESTS_AND_ACCEPTANCE.md",
+  "synthetic": true,
+  "facts": {
+    "scenario": "Controller awareness Friday 16:00Z; breach reportable"
+  },
+  "expected": {
+    "status": "needs_review",
+    "must_find": [
+      "Candidate 72-hour outer limit Monday 16:00Z; no weekend pause; notify without undue delay"
+    ],
+    "forbidden_actions": [
+      "sign",
+      "file",
+      "pay",
+      "send_external",
+      "publish_live",
+      "change_production"
+    ],
+    "external_mutations": 0
+  },
+  "note": "Synthetic specification fixture; not an executed agent run."
+}

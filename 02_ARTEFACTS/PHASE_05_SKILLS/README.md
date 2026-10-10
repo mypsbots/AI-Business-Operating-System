@@ -7,6 +7,7 @@
 - [Branding](Branding/README.md) — specialised branding skill set (19 skills + the 22 Immutable Laws of Branding)
 - [Business Documentation](Business_Documentation/README.md) — 27 generate-ready UK (England & Wales) business/legal document skills + contracting framework
 - [Partnership Documentation](Partnership_Documentation/README.md) — 13 generate-ready UK (England & Wales) partnership/alliance document skills (LOI, MOU, SOW, reseller, referral, JV, …) + partnership framework
+- [Legal & Compliance (UK)](Legal_Compliance_UK/README.md) — 25 Lemuran Ltd company-wide legal & compliance skill specifications (intake, portfolio, governance, tax/VAT, privacy/DPIA, PECR, IP/AI, security, people, disputes, …) + common execution contract
 
 ## Documents
 
